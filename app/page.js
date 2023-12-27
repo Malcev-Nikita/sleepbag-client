@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import Header from '@/components/header'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,7 +9,6 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="container m-auto">
-
     </main>
   )
 }
