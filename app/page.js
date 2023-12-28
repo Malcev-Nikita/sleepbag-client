@@ -33,6 +33,16 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section className='section2'>
+        <div className='sec2_main'>
+          <div className='left_part'>
+            <p className='text_name'>SleepBag</p>
+            <p className='left_text'>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий</p>
+            <a href='#'>Читать больше</a>
+          </div>
+          <div className='right_part'>Фото</div>
+        </div>
+      </section>
     </main>
   )
 }
