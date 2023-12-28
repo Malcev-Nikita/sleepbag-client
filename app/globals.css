@@ -19,7 +19,13 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #43b3ae;
   }
-  main section{
+  main section:nth-child(1){
+    margin-top: 203px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  main section:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +39,7 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: #1F1F1F;
 }
 .circle{
     width: 1568px;
@@ -46,19 +53,19 @@ header{
 .nav_left{
     display: flex;
     flex-direction: row;
+    color: #fff;
     column-gap: 65px;
     align-items: center;
-    font-size: 19px;
-}
-q{
-    color: #fff;
+    font-size: 20px;
 }
 .header_logo{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 32px;
 }
 .header_searching{
     display: flex;
@@ -68,16 +75,19 @@ q{
     height: 35px;
 }
 .hsinput{
-    width: 100%;
+    width: 92%;
     height: 35px;
     background-color: #313131;
     border-radius: 15px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     padding: 10px;
     color: #fff;
+    transition: 0.2s;
 }
 .hsinput:focus{
   outline: none;
+  width: 100%;
+  height: 40px;
 }
 .header_searching svg{
   position: relative;
@@ -92,14 +102,27 @@ q{
 .main_part{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 30px;
+  row-gap: 15px;
 }
-.main_part h1{
+.mp_name{
   font-size: 30px;
   font-weight: 600;
   margin: 0;
+}
+.desc_text{
+  font-size: 16px;
+  width: 550px;
+  margin: 0;
+}
+.more{
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #000;
+  width: 200px;
+  height: 45px;
 }
 .main_slider{
   display: flex;
@@ -107,9 +130,6 @@ q{
   column-gap: 30px;
   align-items: center;
   justify-content: center;
-}
-.slider_svg1{
-  cursor: url(/public/icons/cursor_svg.svg) pointer;
 }
 .slider_svg1:hover{
   filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, .5));
@@ -138,15 +158,11 @@ q{
   height: 240px;
   border-radius: 30px;
 }
-.main_description{
+/* .main_description{
   display: flex;
   justify-content: center;
-}
-.desc_text{
-  text-align: center;
-  font-size: 16px;
-  width: 550px;
-}
+} */
+
 .sec2_main{
   display: flex;
   flex-direction: row;

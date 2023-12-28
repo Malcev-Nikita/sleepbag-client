@@ -4,13 +4,14 @@ import Image from 'next/image'
 export default function Header() {
     return (
         <header className="container m-auto">
+            {/* className="container m-auto" */}
             <div className='nav_left'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="20" viewBox="0 0 33 20" fill="none">
-                    <path d="M0 0H32.5926V2.5H0V0ZM0 8.75H21.7284V11.25H0V8.75ZM0 17.5H32.5926V20H0V17.5Z" fill="#333333"/>
+                    <path d="M0 0H32.5926V2.5H0V0ZM0 8.75H21.7284V11.25H0V8.75ZM0 17.5H32.5926V20H0V17.5Z" fill="#fff"/>
                 </svg>
                 <a href='#'>О НАС</a>
                 <a href='#'>КАТАЛОГ</a>
-                <q><a href='#'>КОНТАКТЫ</a></q>
+                <a href='#'>КОНТАКТЫ</a>
             </div>
             <a href="#">
                 <div className='header_logo'>
@@ -51,7 +52,7 @@ export default function Header() {
                 </div>
             </a>
             <div className='header_searching'>
-                <input className='hsinput' type="text" placeholder=''/>
+                <input className='hsinput' type="text" placeholder='Поиск по каталогу'/>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                     <path d="M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.125 13.125L10.4062 10.4062" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
