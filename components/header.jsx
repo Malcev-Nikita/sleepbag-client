@@ -8,46 +8,48 @@ export default function Header() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="20" viewBox="0 0 33 20" fill="none">
                     <path d="M0 0H32.5926V2.5H0V0ZM0 8.75H21.7284V11.25H0V8.75ZM0 17.5H32.5926V20H0V17.5Z" fill="#333333"/>
                 </svg>
-                <p>О НАС</p>
-                <p>КАТАЛОГ</p>
-                <q><p>КОНТАКТЫ</p></q>
+                <a href='#'>О НАС</a>
+                <a href='#'>КАТАЛОГ</a>
+                <q><a href='#'>КОНТАКТЫ</a></q>
             </div>
-            <div className='header_logo'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="17" viewBox="0 0 34 17" fill="none">
-                    <g clip-path="url(#clip0_29_75)">
-                    <mask id="mask0_29_75"  maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="17">
-                        <path d="M0.246857 -3.05176e-05H32.7686V16.7536H0.246857V-3.05176e-05Z" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask0_29_75)">
-                    <mask id="mask1_29_75"  maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="17">
-                        <path d="M0.847397 0.238647H32.0872V16.0221H0.847397V0.238647Z" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask1_29_75)">
-                    <path d="M31.1405 12.0416C31.4254 13.7317 30.2551 15.1175 28.542 15.1175H4.35471C2.63778 15.1175 1.49058 13.7355 1.80625 12.0493L3.25757 4.21148C3.56939 2.52534 5.23243 1.14331 6.94552 1.14331H26.1783C27.8952 1.14331 29.5352 2.52918 29.8201 4.21917L31.1405 12.0416Z" stroke="white" stroke-width="2.444" stroke-miterlimit="10"/>
-                    </g>
-                    <mask id="mask2_29_75"  maskUnits="userSpaceOnUse" x="15" y="0" width="3" height="6">
-                        <path d="M15.0295 0.238647H17.986V5.91301H15.0295V0.238647Z" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask2_29_75)">
-                    <path d="M16.4456 4.27692V1.14331" stroke="white" stroke-width="2.444" stroke-miterlimit="10"/>
-                    </g>
-                    <path d="M14.0132 4.27692H18.9869" stroke="white" stroke-width="2.444" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <mask id="mask3_29_75"  maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="17">
-                        <path d="M0.847397 0.238647H32.0872V16.0221H0.847397V0.238647Z" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask3_29_75)">
-                    <path d="M14.1474 15.1175L24.0679 9.55859M18.305 10.4017L27.7289 9.02353" stroke="white" stroke-width="2.444" stroke-miterlimit="10" stroke-linecap="round"/>
-                    </g>
-                    </g>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_29_75">
-                        <rect width="33.2609" height="17" fill="white"/>
-                        </clipPath>
-                    </defs>
+            <a href="#">
+                <div className='header_logo'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="17" viewBox="0 0 34 17" fill="none">
+                        <g clip-path="url(#clip0_29_75)">
+                        <mask id="mask0_29_75"  maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="17">
+                            <path d="M0.246857 -3.05176e-05H32.7686V16.7536H0.246857V-3.05176e-05Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_29_75)">
+                        <mask id="mask1_29_75"  maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="17">
+                            <path d="M0.847397 0.238647H32.0872V16.0221H0.847397V0.238647Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask1_29_75)">
+                        <path d="M31.1405 12.0416C31.4254 13.7317 30.2551 15.1175 28.542 15.1175H4.35471C2.63778 15.1175 1.49058 13.7355 1.80625 12.0493L3.25757 4.21148C3.56939 2.52534 5.23243 1.14331 6.94552 1.14331H26.1783C27.8952 1.14331 29.5352 2.52918 29.8201 4.21917L31.1405 12.0416Z" stroke="white" stroke-width="2.444" stroke-miterlimit="10"/>
+                        </g>
+                        <mask id="mask2_29_75"  maskUnits="userSpaceOnUse" x="15" y="0" width="3" height="6">
+                            <path d="M15.0295 0.238647H17.986V5.91301H15.0295V0.238647Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask2_29_75)">
+                        <path d="M16.4456 4.27692V1.14331" stroke="white" stroke-width="2.444" stroke-miterlimit="10"/>
+                        </g>
+                        <path d="M14.0132 4.27692H18.9869" stroke="white" stroke-width="2.444" stroke-miterlimit="10" stroke-linecap="round"/>
+                        <mask id="mask3_29_75"  maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="17">
+                            <path d="M0.847397 0.238647H32.0872V16.0221H0.847397V0.238647Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask3_29_75)">
+                        <path d="M14.1474 15.1175L24.0679 9.55859M18.305 10.4017L27.7289 9.02353" stroke="white" stroke-width="2.444" stroke-miterlimit="10" stroke-linecap="round"/>
+                        </g>
+                        </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_29_75">
+                            <rect width="33.2609" height="17" fill="white"/>
+                            </clipPath>
+                        </defs>
                     </svg>
-                <p>SleepBag</p>
-            </div>
+                    <p>SleepBag</p>
+                </div>
+            </a>
             <div className='header_searching'>
                 <input className='hsinput' type="text" placeholder=''/>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">

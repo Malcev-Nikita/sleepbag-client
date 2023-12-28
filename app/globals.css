@@ -27,11 +27,21 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+.circle{
+    width: 1568px;
+    height: 1658px;
+    position: absolute;
+    background-color: #313131;
+    border-radius: 50%;
+    z-index: 0;
+    right: -258px;
+}
 .nav_left{
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 65px;
     align-items: center;
+    font-size: 19px;
 }
 q{
     color: #fff;
@@ -48,17 +58,81 @@ q{
     justify-content: center;
     align-items: center;
     width: 15%;
-    height: 25px;
+    height: 35px;
 }
 .hsinput{
     width: 100%;
-    height: 25px;
+    height: 35px;
     background-color: #313131;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 2px solid #fff;
+    padding: 10px;
+    color: #fff;
+}
+.hsinput:focus{
+  outline: none;
+}
+.header_searching svg{
+  position: relative;
+  z-index: 1;
+  right: 30px;
 }
 .header_right_buttons{
     display: flex;
     flex-direction: row;
     column-gap: 25px;
+}
+.main_part{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+}
+.main_part h1{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+.main_slider{
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.slider_svg1{
+  cursor: url(/app/public/icons/cursor_svg.svg) pointer;
+}
+.slider_svg2{
+  transform: rotate(180deg);
+}
+.main_slider svg{
+  border-radius: 50px;
+  transition: 0.2s;
+}
+.main_slider svg:hover{
+  border-radius: 50px;
+  background: #F2F2F2;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .5));
+  cursor: ;
+}
+.slider_photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #43b3ae;
+  font-size: 30px;
+  width: 300px;
+  height: 240px;
+  border-radius: 30px;
+}
+.main_description{
+  display: flex;
+  justify-content: center;
+}
+.desc_text{
+  text-align: center;
+  font-size: 16px;
+  width: 550px;
 }
