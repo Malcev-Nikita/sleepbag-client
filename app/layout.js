@@ -7,7 +7,7 @@ import './globals.css';
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body className='h-[100vh]'>
+      <body>
         <Header/>
 
         {children}
