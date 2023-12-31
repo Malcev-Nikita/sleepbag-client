@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Header from '@/components/header'
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,8 +7,8 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="container m-auto">
-      <section>
+    <main className="container m-auto relative">
+      <section className='header_banners relative'>
         <div className='main_part'>
           <p className='mp_name'>Заголовок</p>
           <div className='main_description'>
@@ -17,7 +16,7 @@ export default function Page() {
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
             </p>
           </div>
-          <div className='more'>ПОДРОБНЕЕ</div>
+          <a href='#' className='button_nofill_curve more'>ПОДРОБНЕЕ</a>
         </div>
         <div className='main_slider'>
           <svg className='slider_svg1' xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" fill="none">
@@ -28,16 +27,6 @@ export default function Page() {
             <rect x="1" y="1" width="73" height="73" rx="36.5" stroke="#333333" stroke-width="2"/>
             <path d="M35.4699 38L43.9102 29.5664C44.5344 28.9422 44.5344 27.9328 43.9102 27.3152C43.2859 26.691 42.2766 26.6976 41.6523 27.3152L32.0898 36.8711C31.4856 37.4754 31.4723 38.4449 32.0434 39.0691L41.6457 48.6914C41.9578 49.0035 42.3695 49.1562 42.7746 49.1562C43.1797 49.1562 43.5914 49.0035 43.9035 48.6914C44.5277 48.0672 44.5277 47.0578 43.9035 46.4402L35.4699 38Z" fill="#333333"/>
           </svg>
-        </div>
-      </section>
-      <section className='section2'>
-        <div className='sec2_main'>
-          <div className='left_part'>
-            <p className='text_name'>SleepBag</p>
-            <p className='left_text'>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий</p>
-            <a href='#'>Читать больше</a>
-          </div>
-          <div className='right_part'>Фото</div>
         </div>
       </section>
     </main>
