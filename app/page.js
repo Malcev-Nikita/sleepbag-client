@@ -17,6 +17,10 @@ export default function Page() {
             </p>
           </div>
           <a href='#' className='button_nofill_curve more'>ПОДРОБНЕЕ</a>
+          <div className='main_buttons'>
+            <a href='#' className='button_nofill_curve more'>ИСТОРИЯ КОМПАНИИ</a>
+            <a href='#' className='button_nofill_curve more'>ПЛАНЫ И ЗАДАЧИ</a>
+          </div>
         </div>
         <div className='main_slider'>
           <svg className='slider_svg1' xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" fill="none">
@@ -27,6 +31,207 @@ export default function Page() {
             <rect x="1" y="1" width="73" height="73" rx="36.5" stroke="#333333" stroke-width="2"/>
             <path d="M35.4699 38L43.9102 29.5664C44.5344 28.9422 44.5344 27.9328 43.9102 27.3152C43.2859 26.691 42.2766 26.6976 41.6523 27.3152L32.0898 36.8711C31.4856 37.4754 31.4723 38.4449 32.0434 39.0691L41.6457 48.6914C41.9578 49.0035 42.3695 49.1562 42.7746 49.1562C43.1797 49.1562 43.5914 49.0035 43.9035 48.6914C44.5277 48.0672 44.5277 47.0578 43.9035 46.4402L35.4699 38Z" fill="#333333"/>
           </svg>
+        </div>
+      </section>
+      <section className='section_banners container m-auto'>
+        <div className='div_banners'>
+          <div>Баннер</div>
+          <div>Баннер</div>
+          <div>Баннер</div>
+        </div>
+      </section>
+      <section className='section_desc container m-auto'>
+        <div className='desc_parts'>
+          <div className='left_part'>ФОТО</div>
+          <div className='right_part'>
+            <p>SleepBag</p>
+            <p>
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+            </p>
+            <a href='#' className='button_nofill_curve more'>ПОДРОБНЕЕ</a>
+          </div>
+        </div>
+      </section>
+      <section className='section_catalog container m-auto'>
+        <div className='catalog_header'>
+          <div className='catalog_header_text'>
+            <p>Каталог товаров</p>
+            <p>
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+            </p>
+          </div>
+          <div>
+            <a href='#' className='button_nofill_curve more'>ВСЕ ТОВАРЫ</a>
+          </div>
+        </div>
+        <div className='main_catalog container m-auto'>
+          {/* Начинаются объекты каталога */}
+          <div className='catalog_object container m-auto'>
+            <div className='catalog_object_top'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
+              <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
+            </svg>
+            </div>
+            <div className='catalog_object_photo'>
+              ФОТО
+            </div>
+            <div className='catalog_object_text'>
+              <p>Название</p>
+              <p>
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+              </p>
+            </div>
+            <div className='catalog_object_bottom'>
+              <div className='catalog_object_price'>
+                <div className='price'>19 999</div>
+                <div className='currency'>₽</div>
+              </div>
+              <button className='catalog_button_basket'>
+                <div className='catalog_object_basket'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div className='catalog_object container m-auto'>
+            <div className='catalog_object_top'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
+              <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
+            </svg>
+            </div>
+            <div className='catalog_object_photo'>
+              ФОТО
+            </div>
+            <div className='catalog_object_text'>
+              <p>Название</p>
+              <p>
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+              </p>
+            </div>
+            <div className='catalog_object_bottom'>
+              <div className='catalog_object_price'>
+                <div className='price'>19 999</div>
+                <div className='currency'>₽</div>
+              </div>
+              <button className='catalog_button_basket'>
+                <div className='catalog_object_basket'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          
+          <div className='catalog_object container m-auto'>
+            <div className='catalog_object_top'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
+              <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
+            </svg>
+            </div>
+            <div className='catalog_object_photo'>
+              ФОТО
+            </div>
+            <div className='catalog_object_text'>
+              <p>Название</p>
+              <p>
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+              </p>
+            </div>
+            <div className='catalog_object_bottom'>
+              <div className='catalog_object_price'>
+                <div className='price'>19 999</div>
+                <div className='currency'>₽</div>
+              </div>
+              <button className='catalog_button_basket'>
+                <div className='catalog_object_basket'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div className='catalog_object container m-auto'>
+            <div className='catalog_object_top'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
+              <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
+            </svg>
+            </div>
+            <div className='catalog_object_photo'>
+              ФОТО
+            </div>
+            <div className='catalog_object_text'>
+              <p>Название</p>
+              <p>
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+              </p>
+            </div>
+            <div className='catalog_object_bottom'>
+              <div className='catalog_object_price'>
+                <div className='price'>19 999</div>
+                <div className='currency'>₽</div>
+              </div>
+              <button className='catalog_button_basket'>
+                <div className='catalog_object_basket'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div className='catalog_object container m-auto'>
+            <div className='catalog_object_top'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
+              <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
+            </svg>
+            </div>
+            <div className='catalog_object_photo'>
+              ФОТО
+            </div>
+            <div className='catalog_object_text'>
+              <p>Название</p>
+              <p>
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+              </p>
+            </div>
+            <div className='catalog_object_bottom'>
+              <div className='catalog_object_price'>
+                <div className='price'>19 999</div>
+                <div className='currency'>₽</div>
+              </div>
+              <button className='catalog_button_basket'>
+                <div className='catalog_object_basket'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          {/* Заканчиваются объекты каталога */}
+        </div>
+      </section>
+      <section className='section_contact container m-auto'>
+        <div className='contact_left'>Оставьте свой номер телефона и в ближайшее время мы перезвоним</div>
+        <div className='contact_right'>
+          <input placeholder='+7 (__)__-__-__'></input>
+          <a href='#' className='button_nofill_curve more'>Оставить заявку</a>
         </div>
       </section>
     </main>
