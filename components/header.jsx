@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import { getShortMenu } from '@/services/getShortMenu'
 
+export default async function Header() {
+    const shortMenu = await getShortMenu()
 
-export default function Header() {
     return (
         <header>
             <div className="container m-auto">
@@ -13,9 +15,9 @@ export default function Header() {
                     </button>
 
                     <ul className="nav">
-                        <a className='color-black' href='#about'><li>О КОМПАНИИ</li></a>
-                        <a className='color-black' href='#'><li>КАТАЛОГ</li></a>
-                        <a className='color-black' href='#'><li>КОНТАКТЫ</li></a>
+                        {shortMenu.data.map(menu => (
+                            <a className='color-black' href={menu.attributes.link} key={menu.id}><li>{menu.attributes.name}</li></a>
+                        ))}
                     </ul>
                 </div>
                 <a href="#">
@@ -35,35 +37,38 @@ export default function Header() {
                         <h1>SleepBag</h1>
                     </a>
                 </a>
-                <div className='header_searching'>
-                    <input className='hsinput' type="text" placeholder='Поиск по каталогу'/>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                        <path d="M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.125 13.125L10.4062 10.4062" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
 
-                <div className='header_right_buttons'>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                            <path d="M19 7C19 10.3138 16.3138 13 13 13C9.68621 13 7 10.3138 7 7C7 3.68621 9.68621 1 13 1C16.3138 1 19 3.68621 19 7Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
-                            <path d="M8.28028 14C7.88281 14.1923 7.34723 14.4947 6.79473 14.9561C6.13511 15.5073 5.76584 16.0276 5.45294 16.4711C4.98219 17.1453 4.28874 18.1347 4.07733 19.5036C4.02377 19.8496 4.01531 20.2521 4.00404 21.0544C3.98994 21.849 4.01531 22.5104 4.04068 22.9667C9.9716 23.0103 15.9053 22.9564 21.8391 23C21.8955 22.6411 21.9603 22.2412 21.9828 21.6491C22.0026 21.1877 22.0364 20.3443 21.8757 19.5036C21.6136 18.1347 20.9201 17.1837 20.424 16.5044C19.5868 15.356 18.6143 14.546 17.8165 14" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                <div className="nav_right">
+                    <div className='header_searching'>
+                        <input className='hsinput' type="text" placeholder='Поиск по каталогу'/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path d="M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.125 13.125L10.4062 10.4062" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </a>
+                    </div>
 
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                            <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="white" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+                    <div className='header_right_buttons'>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                <path d="M19 7C19 10.3138 16.3138 13 13 13C9.68621 13 7 10.3138 7 7C7 3.68621 9.68621 1 13 1C16.3138 1 19 3.68621 19 7Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+                                <path d="M8.28028 14C7.88281 14.1923 7.34723 14.4947 6.79473 14.9561C6.13511 15.5073 5.76584 16.0276 5.45294 16.4711C4.98219 17.1453 4.28874 18.1347 4.07733 19.5036C4.02377 19.8496 4.01531 20.2521 4.00404 21.0544C3.98994 21.849 4.01531 22.5104 4.04068 22.9667C9.9716 23.0103 15.9053 22.9564 21.8391 23C21.8955 22.6411 21.9603 22.2412 21.9828 21.6491C22.0026 21.1877 22.0364 20.3443 21.8757 19.5036C21.6136 18.1347 20.9201 17.1837 20.424 16.5044C19.5868 15.356 18.6143 14.546 17.8165 14" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                            </svg>
+                        </a>
 
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                            <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="white" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.13544 2.13541H4.21877L6.9896 15.0729C7.09125 15.5467 7.35489 15.9703 7.73514 16.2707C8.11539 16.5711 8.58846 16.7295 9.07294 16.7187H19.2604C19.7346 16.718 20.1943 16.5555 20.5636 16.2582C20.9329 15.9608 21.1897 15.5464 21.2917 15.0833L23.0104 7.34374H5.33335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
