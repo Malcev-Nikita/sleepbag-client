@@ -76,13 +76,15 @@ export default async function Page() {
           {/* Начинаются объекты каталога */}
           <div className='catalog_object'>
             <div className='catalog_object_top'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
-              <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
-            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 25 25" fill="none">
+                <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="black" stroke-width="1.5"/>
+              </svg>
             </div>
+
             <div className='catalog_object_photo'>
               ФОТО
             </div>
+
             <div className='catalog_object_text'>
               <p>Название</p>
               <p>
@@ -338,6 +340,7 @@ export default async function Page() {
           {/* Заканчиваются объекты каталога */}
         </div>
       </section>
+      
       <section className='section_contact'>
         <div className='contact_left'>Оставьте свой номер телефона и в ближайшее время мы перезвоним</div>
         <div className='contact_right'>
