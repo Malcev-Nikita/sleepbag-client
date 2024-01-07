@@ -157,7 +157,9 @@ header::before {
     flex-direction: row;
     column-gap: 25px;
 }
-
+.header_right_buttons a svg:hover, .header_right_buttons button svg:hover{
+  fill: #fff;
+}
 .main_part {
   display: flex;
   flex-direction: column;
@@ -186,7 +188,11 @@ header::before {
   background-color: transparent;
   border: 1px solid #000;
 }
-
+.button_nofill_curve:hover{
+  transition: 0.3s;
+  color: #fff;
+  background-color: #000;
+}
 .main_slider {
   position: absolute;
   bottom: 20vh;
