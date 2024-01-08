@@ -319,21 +319,22 @@ header::before {
   margin-bottom: 150px;
 }
 
-.section_catalog::before {
+/* .section_catalog::before {
   content: "";
-  /* aspect-ratio: 80/21; */
+  aspect-ratio: 1/1;
   display: block;
   position: absolute;
-  width: 200vw;
-  bottom: -30vh;
-  left: -120vw;
+  width: 70vw;
+  height: 120vh;
+  bottom: -60vh;
+  left: -20vw;
   border-radius: 70000px;
   border: 2px solid #000;
   background-color: #1F1F1F;
   background-position: 0% 100%;
   background-size: auto 25%;
   z-index: -1;
-}
+} */
 .catalog_header{
   display: flex;
   flex-direction: row;
