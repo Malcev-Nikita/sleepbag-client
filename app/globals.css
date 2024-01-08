@@ -318,6 +318,22 @@ header::before {
   row-gap: 50px;
   margin-bottom: 150px;
 }
+
+.section_catalog::before {
+  content: "";
+  /* aspect-ratio: 80/21; */
+  display: block;
+  position: absolute;
+  width: 200vw;
+  bottom: -30vh;
+  left: -120vw;
+  border-radius: 70000px;
+  border: 2px solid #000;
+  background-color: #1F1F1F;
+  background-position: 0% 100%;
+  background-size: auto 25%;
+  z-index: -1;
+}
 .catalog_header{
   display: flex;
   flex-direction: row;
@@ -426,6 +442,7 @@ header::before {
 }
 .contact_left{
   font-size: 35px;
+  color: #fff;
   width: 50%;
 }
 .contact_right{
@@ -458,4 +475,23 @@ footer {
 footer a {
   text-decoration: underline;
   color: #fff;
+}
+.burger_menu{
+  width: calc(480px - 20%);
+  height: 750px;
+  background-color: #1F1F1F;
+}
+.burger_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.burger_main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  width: 80%;
 }
