@@ -137,7 +137,7 @@ export default async function Page() {
             </div>
           ))}
         </div>
-        <a href='#' className='m-auto'>
+        <a href='#' className='down_button m-auto'>
           <button>
             Смотреть все товары
             <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">

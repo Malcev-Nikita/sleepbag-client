@@ -20,7 +20,7 @@ export default function Works({works}) {
                     <h1>НАШИ РАБОТЫ</h1>
                 </div>
                 
-                <div className="relative">
+                <div className="relative works_items">
                     {works.map(work => {
                         function description() {
                             return {__html: markdown.toHTML(work.attributes.description)};
@@ -46,19 +46,22 @@ export default function Works({works}) {
                                     </div>
                                 </div> 
                                 
-                                <Swiper className='h-[100%]' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
-                                    {work.attributes.gallery.data.map(image => (
-                                        <SwiperSlide className='w-[100%]'>
-                                            <Image className='aspect-video object-cover w-40' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080}/>
-                                        </SwiperSlide>  
-                                    ))}
-                                </Swiper>
+                                <div className='small_photos'>
+                                    <Swiper className='h-[100%]' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
+                                        {work.attributes.gallery.data.map(image => (
+                                            <SwiperSlide className='w-[100%]'>
+                                                <Image className='aspect-video object-cover w-40' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080}/>
+                                            </SwiperSlide>  
+                                        ))}
+                                    </Swiper>
+                                </div>
+
                             </div>
                         )
                     })}
                 </div>
                 
-                <a href='#'>
+                <a className='down_button' href='#'>
                     <button className='m-auto'>
                         Смотреть все работы 
 

@@ -19,7 +19,9 @@ input:focus{
 .header_banner .container p {
   font-family: Manrope;
 }
-
+.swiper-wrapper{
+    width: 500px !important;
+}
 .swiper-pagination-bullet {
   width: 95px !important;
   height: 2px !important;
@@ -91,6 +93,9 @@ section{
   row-gap: 20px;
   font-size: 42px;
 }
+.question.active .content li{
+  color: #000;
+}
 .under_header_text{
   font-size: 18px;
   margin-left: 100px;
@@ -160,9 +165,11 @@ section{
   font-weight: 700;
 }
 .section_catalog{
-  row-gap: 70px;
   display: flex;
   flex-direction: column;
+}
+.section_catalog .section_header{
+  padding-bottom: 50px;
 }
 .catalog_main{
   display: flex;
@@ -255,12 +262,74 @@ section{
 .reason_text span{
   font-size: 23px;
 }
-.section_our_works{
+.markdown li{
+  list-style-type: disc;
+}
+.works_items .content h4{
+  color: #fff;
+  font-size: 24px;
+}
+.section_our_works .section_header{
+  padding-bottom: 70px;
+}
+.down_button{
+  margin-top: 100px;
+}
+.works_items .top_content .swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  aspect-ratio: 16/12;
+}
+.works_items{
+  display: flex;
+  margin-bottom: 100px;
+  flex-direction: row;
+}
+.works_items .content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
 }
+.works_items .item{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.works_items .item .small_photos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.small_photos{
+  margin-left: 12px;
+}
+.small_photos .swiper-slide-thumb-active{
+  border: 2px solid #95F35A;
+  border-radius: 7px;
+}
+.small_photos .swiper-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.small_photos .swiper-slide{
+  height: 66px;
+  width: 70px;
+  object-fit: cover;
+}
+.small_photos .swiper-slide img{
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.works_items .item .swiper{
+  display: flex;
+  flex-direction: column;
+} 
 a button{
   display: flex;
   justify-content: center;
@@ -365,7 +434,10 @@ a button{
   font-size: 18px;
   font-weight: 500;
 }
-.contact_text a{
+.text_button a{
+  text-decoration: none;
+}
+.text_link a{
   text-decoration: underline;
   cursor: pointer;
 }
@@ -399,14 +471,13 @@ footer{
   height: 265px;
   column-gap: 150px;
 }
-li{
-  list-style-type: none;
-}
 
 .footer_menu_border {
   position: relative;
 }
-
+.footer_menu, .footer_lawyer, .footer_contacts, .footer_questions{
+  list-style-type: none;
+}
 .footer_menu_border::before {
   content: "";
   height: 30%;
