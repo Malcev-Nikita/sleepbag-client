@@ -60,7 +60,7 @@ input:focus{
   font-family: Manrope;
 }
 ul, span{
-  color: #95F35A;
+  color: #fff;
 }
 section{
   padding-top: 100px;
@@ -281,12 +281,13 @@ section{
   height: 100%;
   object-fit: cover;
   border-radius: 7px;
-  aspect-ratio: 16/12;
+  aspect-ratio: 16/10;
 }
 .works_items{
   display: flex;
   margin-bottom: 100px;
   flex-direction: row;
+  justify-content: space-between;
 }
 .works_items .content{
   display: flex;
@@ -295,14 +296,18 @@ section{
   gap: 20px;
 }
 .works_items .item{
-  width: 50%;
+  width: calc(50% - 13px);
   display: flex;
   flex-direction: row;
+}
+.works_items .item .top_content {
+  width: calc(100% - 70px - 13px);
 }
 .works_items .item .small_photos{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 70px;
 }
 .small_photos{
   margin-left: 12px;
@@ -315,10 +320,11 @@ section{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100% !important;
 }
 .small_photos .swiper-slide{
   height: 66px;
-  width: 70px;
+  width: 100% !important;
   object-fit: cover;
 }
 .small_photos .swiper-slide img{
