@@ -53,7 +53,7 @@ export default function FAQ({data}) {
                             <div className="content">
                                 <span/>
                                 
-                                <div dangerouslySetInnerHTML={description()}/>
+                                <div className='markdown' dangerouslySetInnerHTML={description()}/>
                             </div>
                         </div>
                     )

@@ -1,16 +1,17 @@
 'use client'
 
 import Image from 'next/image'
+import React, { useState } from 'react';
 import { Pagination, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { markdown } from 'markdown'
 
 
-export default function Works() {
-    // const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+export default function Works({works}) {
+    console.log(works)
     return (
         <section className='section_our_works'>
             <div className="container m-auto">
@@ -19,20 +20,42 @@ export default function Works() {
                     <h1>НАШИ РАБОТЫ</h1>
                 </div>
                 
-                <div className="flex flex-wrap justify-between">
-                    <Swiper className='h-[100%] header_banner' modules={[Pagination]} navigation pagination={{ clickable: true }}>
-                        <SwiperSlide>
-                            <p>1</p>
-                            {/* <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/> */}
-                        </SwiperSlide>        
-                    </Swiper>
+                <div className="relative">
+                    {works.map(work => {
+                        function description() {
+                            return {__html: markdown.toHTML(work.attributes.description)};
+                        }
 
-                    <Swiper className='h-[100%] header_banner' modules={[Pagination]} navigation pagination={{ clickable: true }}>
-                        <SwiperSlide>
-                            <p>1</p>
-                            {/* <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/> */}
-                        </SwiperSlide>        
-                    </Swiper>
+                        const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+                        return (
+                            <div className="item">
+                                <div className="top_content">
+                                    <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
+                                        {work.attributes.gallery.data.map(image => (
+                                            <SwiperSlide className='w-[100%]'>
+                                                <Image className='aspect-video object-cover w-40' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080}/>
+                                            </SwiperSlide>  
+                                        ))} 
+                                    </Swiper>  
+
+                                    <div className="content">
+                                        <h4>{work.attributes.header}</h4>
+
+                                        <div className='markdown' dangerouslySetInnerHTML={description()}/>
+                                    </div>
+                                </div> 
+                                
+                                <Swiper className='h-[100%]' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
+                                    {work.attributes.gallery.data.map(image => (
+                                        <SwiperSlide className='w-[100%]'>
+                                            <Image className='aspect-video object-cover w-40' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080}/>
+                                        </SwiperSlide>  
+                                    ))}
+                                </Swiper>
+                            </div>
+                        )
+                    })}
                 </div>
                 
                 <a href='#'>

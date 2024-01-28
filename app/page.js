@@ -169,7 +169,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <Works data={works.data}/>
+      <Works works={works.data}/>
 
       <FAQ data={faq}/>
 
