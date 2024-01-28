@@ -109,7 +109,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className='section_catalog'>
+      <section className='section_catalog relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
           <h1>НАШ КАТАЛОГ</h1>
@@ -145,9 +145,24 @@ export default async function Page() {
             </svg>
           </button>
         </a>
+
+        <div className='absolute top-[0px] left-[100px]'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="648" height="648" viewBox="0 0 648 648" fill="none">
+            <g opacity="0.7" filter="url(#filter0_f_729_321)">
+              <circle cx="324" cy="324" r="74" fill="#95F35A"/>
+            </g>
+            <defs>
+              <filter id="filter0_f_729_321" x="0" y="0" width="648" height="648" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_729_321"/>
+              </filter>
+            </defs>
+          </svg>
+        </div>
       </section>
       
-      <section className='section_reasons'>
+      <section className='section_reasons relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
           <h1>6 ПРИЧИН СОТРУДНИЧАТЬ С НАМИ</h1>
@@ -167,13 +182,30 @@ export default async function Page() {
             </div>
           ))}
         </div>
+
+        <div className='absolute top-[0px] left-[400px]'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="634" height="634" viewBox="0 0 634 634" fill="none">
+            <g opacity="0.7" filter="url(#filter0_f_729_322)">
+              <circle cx="317" cy="317" r="67" fill="#95F35A"/>
+            </g>
+            <defs>
+              <filter id="filter0_f_729_322" x="0" y="0" width="634" height="634" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_729_322"/>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+
+        <div className='absolute right-0 top-[400px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
       </section>
 
       <Works works={works.data}/>
 
       <FAQ data={faq}/>
 
-      <section className='section_contact pb-[150px]'>
+      <section className='section_contact pb-[150px] relative'>
         <div className='container m-auto'>
           <div className='section_header'>
             <div className='section_header_inside'>
@@ -202,6 +234,8 @@ export default async function Page() {
             </div>
           </div>      
         </div> 
+
+        <div className='absolute left-0 top-[200px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
       </section>
     </main>
   )
