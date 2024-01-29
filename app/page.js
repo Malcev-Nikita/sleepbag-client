@@ -23,9 +23,9 @@ export default async function Page() {
 
   return (
     <main className="relative bg-[#262626]">
-      <HeaderBanners data={banners.data}/>
+      <div id="main"><HeaderBanners data={banners.data}/></div>
       
-      <section className='section_aboutus relative'>
+      <section id='aboutus' className='section_aboutus relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
           <h1>НЕМНОГО О НАШЕЙ <span>КОМПАНИИ!</span></h1>
@@ -109,7 +109,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className='section_catalog relative'>
+      <section id='catalog' className='section_catalog relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
           <h1>НАШ КАТАЛОГ</h1>
@@ -161,7 +161,7 @@ export default async function Page() {
           </svg>
         </div>
       </section>
-      
+      <div className='absolute right-0 top-[3400px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
       <section className='section_reasons relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
@@ -198,14 +198,13 @@ export default async function Page() {
           </svg>
         </div>
 
-        <div className='absolute right-0 top-[400px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
       </section>
 
-      <Works works={works.data}/>
+      <div id='production'><Works works={works.data}/></div>
 
       <FAQ data={faq}/>
 
-      <section className='section_contact pb-[150px] relative'>
+      <section id='contacts' className='section_contact pb-[150px] relative'>
         <div className='container m-auto'>
           <div className='section_header'>
             <div className='section_header_inside'>

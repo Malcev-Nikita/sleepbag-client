@@ -75,18 +75,6 @@ export default function Works({works}) {
             <div className='absolute left-0 top-[200px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
 
             <div className="absolute left-[300px] top-0 w-[120px] h-[120px]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="622" height="622" viewBox="0 0 622 622" fill="none">
-                    <g opacity="0.8" filter="url(#filter0_f_729_323)">
-                        <circle cx="311" cy="311" r="61" fill="#95F35A"/>
-                    </g>
-                    <defs>
-                        <filter id="filter0_f_729_323" x="0" y="0" width="622" height="622" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                        <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_729_323"/>
-                        </filter>
-                    </defs>
-                </svg>
             </div>
         </section>
     )

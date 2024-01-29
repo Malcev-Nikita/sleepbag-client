@@ -14,11 +14,11 @@ export default async function Header() {
                 </a>
 
                 <div className='flex gap-[35px]'>
-                    <a href="#" className='text-[#f4f4f4] opacity-80 text-[18px]'>Главная</a>
-                    <a href="#" className='text-[#f4f4f4] opacity-80 text-[18px]'>О компании</a>
-                    <a href="#" className='list-level-0 text-[#f4f4f4] text-[18px] opacity-80'>Каталог</a>
-                    <a href="#" className='text-[#f4f4f4] opacity-80 text-[18px]'>О продукции</a>
-                    <a href="#" className='text-[#f4f4f4] opacity-80 text-[18px]'>Контакты</a>
+                    <a href="#main" className='text-[#f4f4f4] opacity-80 text-[18px]'>Главная</a>
+                    <a href="#aboutus" className='text-[#f4f4f4] opacity-80 text-[18px]'>О компании</a>
+                    <a href="#catalog" className='list-level-0 text-[#f4f4f4] text-[18px] opacity-80'>Каталог</a>
+                    <a href="#production" className='text-[#f4f4f4] opacity-80 text-[18px]'>О продукции</a>
+                    <a href="#contacts" className='text-[#f4f4f4] opacity-80 text-[18px]'>Контакты</a>
                 </div>
 
                 <div className="flex gap-[30px]">
