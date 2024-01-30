@@ -21,11 +21,11 @@ export default function Footer() {
                 <div className='footer_right'>
                     <div className='footer_menu footer_menu_border'>
                         <ul>Меню</ul>
-                        <a href='#'><li>Главная</li></a>
-                        <a href='#'><li>О нас</li></a>
-                        <a href='#'><li>Каталог</li></a>
-                        <a href='#'><li>Портфолио</li></a>
-                        <a href='#'><li>Контакты</li></a>
+                        <a href='#main'><li>Главная</li></a>
+                        <a href='#aboutus'><li>О нас</li></a>
+                        <a href='#catalog'><li>Каталог</li></a>
+                        <a href='#production'><li>Портфолио</li></a>
+                        <a href='#contacts'><li>Контакты</li></a>
                     </div>
 
                     <div className='footer_lawyer footer_menu_border'>
