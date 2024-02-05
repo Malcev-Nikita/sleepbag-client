@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import FAQ from '../faq'
 
 
 export const metadata = {
@@ -8,8 +9,113 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="container m-auto">
+    <main className="">
+        
+        <header className='container m-auto'>
+          <h1><span>КАТАЛОГ</span></h1>
+          <p>Всё для вашего автомобиля - широкий выбор, надёжность и качество!</p>
+        </header>
+        
+        <section className='choose_category container m-auto'>
+          
+          <div className='section_header container m-auto'>
+            <div className='header_line'></div>
+            <h1>ВЫБОР КАТЕГОРИИ</h1>
+          </div>
+          
+          <div className='catalog_categories'>
+            
+            <div className='catalog_category'>
+              <svg></svg>
+              <p>Органайзеры</p>
+            </div>
+            
+            <div className='catalog_category'>
+              <svg></svg>
+              <p>Сумки</p>
+            </div>
+            
+            <div className='catalog_category'>
+              <svg></svg>
+              <p>Коврики для груза</p>
+            </div>
+            
+            <div className='catalog_category'>
+              <svg></svg>
+              <p>Матрасы</p>
+            </div>
+            
+            <div className='catalog_category'>
+              <svg></svg>
+              <p>Подстаканники</p>
+            </div>
+            
+            <div className='catalog_view_all'>
+              <button className='m-auto'>
+                  Смотреть все категории
+                  <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#95F35A" stroke-linecap="square"/>
+                  </svg>
+              </button>
+            </div>
+          
+          </div>
 
+        </section>
+        
+        <section>
+          
+          <div className='section_header container m-auto'>
+            <div className='header_line'></div>
+            <h1>ФИЛЬТРЫ</h1>
+          </div>
+          
+          <div className='catalog_filters'>
+            <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
+            <input className='catalog_filter' placeholder='Введите ширину багажного автомобиля'></input>
+            <button className='filter_button'>Применить фильтры</button>
+          </div>
+        
+        </section>
+        
+        <section className='catalog_main'>
+          
+        </section>
+
+        <FAQ data={faq}/>
+
+        <section id='contacts' className='section_contact pb-[150px] relative'>
+          <div className='container m-auto'>
+            <div className='section_header'>
+              <div className='section_header_inside'>
+                <div className='header_line'></div>
+                <h1>ОСТАЛИСЬ <span>ВОПРОСЫ</span>?</h1>
+              </div>
+              <p className='under_header_text'>Оставьте заявку и мы свяжемся с вами в ближайшее время, чтобы ответить на все ваши вопросы!</p>
+            </div> 
+
+            <div className='contact_main mt-[40px]'>
+              <div className='contact_inputs'>
+                <div className='inputs_up'>
+                  <input placeholder='Ваше имя'></input>
+                  <input placeholder='Ваш телефон'></input>
+                  <input placeholder='Ваш e-mail'></input>
+                </div>
+                <div className='inputs_down'>
+                  <input placeholder='Распишите ваши вопросы'></input>
+                </div>
+              </div>
+              <div className='contact_text'>
+                <a href=''><button className='text_button'>Отправить</button></a>
+                <div className='text_link'>
+                  <p>Нажимая на кнопку Отправить, я соглашаюсь с <a>офертой на обработку персональных данных.</a></p>
+                </div>
+              </div>
+            </div>      
+          </div> 
+
+          <div className='absolute left-0 top-[200px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
+        </section>
     </main>
   )
 }
