@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import FAQ from '../faq'
+import FAQ from '../../components/faq'
 
 
 export const metadata = {

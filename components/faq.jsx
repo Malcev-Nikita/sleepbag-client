@@ -50,9 +50,9 @@ export default function FAQ({data}) {
                                 <Image className='arrow_down' src="/icons/arrow_down.svg" width={25} height={13}/>
                             </button>
 
+                            <span/>
+
                             <div className="content">
-                                <span/>
-                                
                                 <div className='markdown' dangerouslySetInnerHTML={description()}/>
                             </div>
                         </div>

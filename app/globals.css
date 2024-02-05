@@ -101,7 +101,7 @@ section{
   row-gap: 20px;
   font-size: 42px;
 }
-.question.active .content li{
+.question .content li{
   color: #000;
 }
 .under_header_text{
@@ -389,19 +389,25 @@ a button{
   width: 100%;
   max-height: 0px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .question.active .content{
   width: 100%;
-  max-height: 700px;
-  overflow: hidden;
+  max-height: 400px;
+  overflow-y: auto;
+  transition: 0.8s !important;
 }
-.question .content span {
+.question span {
   display: block;
-  margin: 28px 0 18px 0;
-  background: #B9B9B9;
+  margin: 0px;
+  background: #fff;
   height: 1px;
   width: 50%;
+  transition: 0.2s;
+}
+.question.active span {
+  margin: 28px 0 18px 0;
+  background: #B9B9B9;
 }
 .question .content div {
   color: #1A1A1A;
