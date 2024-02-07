@@ -1,6 +1,7 @@
 'use client'
 
 import anime from "animejs"
+import { addFavorite } from "@/services/favorites"
 
 
 function LikeClick() {
@@ -10,28 +11,23 @@ function LikeClick() {
         anime({
             targets: 'main',
             filter: "blur(0px)",
-            // filter: "brightness(100%)",
             duration: 500,
             easing: 'spring(1, 100, 20, 10)'
         })
 
         anime({
             targets: '.cart',
-            // left: '-50%',
             top: '100vh',
             duration: 500,
             easing: 'spring(1, 100, 20, 10)'
         })
     }
     else {
-        // document.querySelector('.burger').classList.remove('active')
         document.querySelector('.cart').classList.add('active')
 
-        // document.querySelector('main').style.filter = ''
         anime({
             targets: 'main',
             filter: "blur(4px)",
-            // filter: "brightness(80%)",
             duration: 500,
             easing: 'spring(1, 100, 20, 10)'
         })
@@ -39,7 +35,6 @@ function LikeClick() {
         anime({
             targets: '.cart.active',
             top: '10vh',
-            // left: '-20%',
             duration: 700,
             easing: 'spring(1, 100, 15, 5)'
         })
@@ -49,6 +44,16 @@ function LikeClick() {
 export function Like() {
     return (
         <button onClick={() => LikeClick()}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="white" stroke-width="1.5"/>
+            </svg>
+        </button>
+    )
+}
+
+export function LikeCatalog({productId}) {
+    return (
+        <button id={productId} onClick={async () => await addFavorite('jwt', 'userId', productId)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="white" stroke-width="1.5"/>
             </svg>
