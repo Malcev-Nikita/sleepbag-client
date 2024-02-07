@@ -6,7 +6,6 @@ import { markdown } from 'markdown'
 
 
 function QuestionsClick(element) {
-    console.log(element.target.closest('.question'))
     if(element.target.closest('.question').classList.contains('active')) {
         element.target.closest('.question').classList.remove('active')
 

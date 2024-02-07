@@ -11,7 +11,6 @@ import { markdown } from 'markdown'
 
 
 export default function Works({works}) {
-    console.log(works)
     return (
         <section className='section_our_works relative'>
             <div className="container m-auto">
