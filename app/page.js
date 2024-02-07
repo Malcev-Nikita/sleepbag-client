@@ -81,13 +81,16 @@ export default async function Page() {
               </div>
               <div className='object_desc'>
                 <h1>{product.attributes.name}</h1>
-                <p>{product.attributes.description}</p>
                 <p>В наличии - {product.attributes.count} шт.</p>
+                <p className='object_desc_text'>{product.attributes.description}</p>
                 <div className='object_price'>
                   <p>{product.attributes.price}</p>
                   <p>₽</p>
                 </div>
-                <a href={product.attributes.slug + '/'}><button className='object_button1'>Подробнее</button></a>
+                <div className='object_buttons'>
+                  <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                  <button className='object_button2'>Добавить в корзину</button>
+                </div>
               </div>
             </div>
           ))}

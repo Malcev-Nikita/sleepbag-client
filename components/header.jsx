@@ -21,7 +21,7 @@ export default async function Header() {
                 <div className='flex gap-[35px]'>
                     <a href="#main" className='text-[#f4f4f4] opacity-80 text-[18px]'>Главная</a>
                     <a href="#aboutus" className='text-[#f4f4f4] opacity-80 text-[18px]'>О компании</a>
-                    <a href="#catalog" className='list-level-0 text-[#f4f4f4] text-[18px] opacity-80'>Каталог</a>
+                    <a href="/catalog" className='list-level-0 text-[#f4f4f4] text-[18px] opacity-80'>Каталог</a>
                     <a href="#production" className='text-[#f4f4f4] opacity-80 text-[18px]'>О продукции</a>
                     <a href="#contacts" className='text-[#f4f4f4] opacity-80 text-[18px]'>Контакты</a>
                 </div>
@@ -51,30 +51,30 @@ export default async function Header() {
             </div>
 
             <div className="cart absolute right-[5vw] top-[100vh] h-[85vh] w-[40vw] bg-[#262626] rounded-[33px]">
-                <div className="flex justify-between px-[52px] pt-[38px] pb-[100px]">
+                <div className="flex justify-between px-[52px] pt-[38px] pb-[0px]">
                     <h3 className='text-[#95F35A] text-[24px] font-semibold uppercase'>Избранные товары</h3> 
                     <LikeClose/> 
                 </div>
-
+                <div className='cart_hr'/>
                 <div className="content px-[52px]">
                     {favorite.favorites.map(favorite => (
-                        <div className="flex justify-between m-auto w-[100%]">
-                            <div className="w-[80%]">
-                                <div className="w-[20%]">
+                        <div className="favorite_product flex justify-between m-auto w-[100%]">
+                            <div className="favorite_product_desc w-[80%]">
+                                <div className="w-[50%]">
                                     {products.data.map(product => {
                                         if(product.id == favorite.id) {
                                             return (
-                                                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
+                                                <Image key={product.id} src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
                                             )
                                         }
                                     })}
                                 </div>
 
-                                <div className="w-[100%]">
+                                <div className="product_desription w-[100%]">
                                     <h3>{favorite.name}</h3>
                                     <p>В наличии - {favorite.count} шт.</p>
                                     
-                                    <div className="">
+                                    <div className="buy_buttons">
                                         <button>-</button>
                                         <span>1</span>
                                         <button>+</button>

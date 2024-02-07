@@ -20,7 +20,7 @@ export default function Footer() {
                         <ul>Меню</ul>
                         <a href='#main'><li>Главная</li></a>
                         <a href='#aboutus'><li>О нас</li></a>
-                        <a href='#catalog'><li>Каталог</li></a>
+                        <a href='/catalog'><li>Каталог</li></a>
                         <a href='#production'><li>Портфолио</li></a>
                         <a href='#contacts'><li>Контакты</li></a>
                     </div>
