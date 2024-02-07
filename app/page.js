@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import HeaderBanners from './header_banners'
-import Works from './works'
+import HeaderBanners from '@/components/Index-page/header_banners'
+import Works from '@/components/Index-page/works'
 import FAQ from '@/components/faq'
 import Questions from '@/components/questions'
 import { LikeCatalog } from '@/components/like'
