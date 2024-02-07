@@ -31,8 +31,6 @@ export default function Questions() {
                     </div>
                 </div>      
             </div> 
-
-            <div className='absolute left-0 top-[200px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
         </section>
     )
 }

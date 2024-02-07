@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import HeaderBanners from './header_banners'
-import Works from './works'
+import HeaderBanners from '@/components/Index-page/header_banners'
+import Works from '@/components/Index-page/works'
 import FAQ from '@/components/faq'
 import Questions from '@/components/questions'
-
+import { LikeCatalog } from '@/components/like'
 import { getStats, getTeasers, getFAQ, getBanners, getProducts, getWorks } from '@/services/IndexPage'
 
 
@@ -62,51 +62,6 @@ export default async function Page() {
             </div>
           </div>
         </div>
-
-        <div className='absolute top-[-130px] left-[180px]'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="648" height="648" viewBox="0 0 648 648" fill="none">
-            <g opacity="0.7" filter="url(#filter0_f_729_320)">
-              <circle cx="324" cy="324" r="74" fill="#95F35A"/>
-            </g>
-            <defs>
-              <filter id="filter0_f_729_320" x="0" y="0" width="648" height="648" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_729_320"/>
-              </filter>
-            </defs>
-          </svg>
-        </div>
-
-        <div className='absolute top-[260px] right-[0px]'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="298" height="696" viewBox="0 0 298 696" fill="none">
-            <g filter="url(#filter0_f_707_447)">
-              <ellipse cx="330" cy="348" rx="80" ry="98" fill="#95F35A"/>
-            </g>
-            <defs>
-              <filter id="filter0_f_707_447" x="0" y="0" width="660" height="696" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_707_447"/>
-              </filter>
-            </defs>
-          </svg>
-        </div>
-
-        <div className='absolute bottom-[0px] left-[0px]'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="271" height="696" viewBox="0 0 271 696" fill="none">
-            <g filter="url(#filter0_f_707_444)">
-              <ellipse cx="-42" cy="348" rx="63" ry="98" fill="#95F35A"/>
-            </g>
-            <defs>
-              <filter id="filter0_f_707_444" x="-355" y="0" width="626" height="696" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_707_444"/>
-              </filter>
-            </defs>
-          </svg>
-        </div>
       </section>
 
       <section id='catalog' className='section_catalog relative'>
@@ -119,10 +74,9 @@ export default async function Page() {
           {products.data.map(product => (
             <div className='catalog_object'>
               <div className='object_photo'>
-                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}></Image>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                  <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="white" stroke-width="1.5"/>
-                </svg>
+                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
+                
+                <LikeCatalog/>
               </div>
               <div className='object_desc'>
                 <h1>{product.attributes.name}</h1>
@@ -140,6 +94,7 @@ export default async function Page() {
             </div>
           ))}
         </div>
+
         <a href='#' className='down_button m-auto'>
           <button>
             Смотреть все товары
@@ -148,23 +103,8 @@ export default async function Page() {
             </svg>
           </button>
         </a>
-
-        <div className='absolute top-[0px] left-[100px]'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="648" height="648" viewBox="0 0 648 648" fill="none">
-            <g opacity="0.7" filter="url(#filter0_f_729_321)">
-              <circle cx="324" cy="324" r="74" fill="#95F35A"/>
-            </g>
-            <defs>
-              <filter id="filter0_f_729_321" x="0" y="0" width="648" height="648" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_729_321"/>
-              </filter>
-            </defs>
-          </svg>
-        </div>
       </section>
-      <div className='absolute right-0 top-[3400px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
+
       <section className='section_reasons relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
@@ -185,22 +125,6 @@ export default async function Page() {
             </div>
           ))}
         </div>
-
-        <div className='absolute top-[0px] left-[400px]'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="634" height="634" viewBox="0 0 634 634" fill="none">
-            <g opacity="0.7" filter="url(#filter0_f_729_322)">
-              <circle cx="317" cy="317" r="67" fill="#95F35A"/>
-            </g>
-            <defs>
-              <filter id="filter0_f_729_322" x="0" y="0" width="634" height="634" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_729_322"/>
-              </filter>
-            </defs>
-          </svg>
-        </div>
-
       </section>
 
       <div id='production'><Works works={works.data}/></div>

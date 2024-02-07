@@ -71,11 +71,6 @@ export default function Works({works}) {
                     </button>
                 </a>
             </div>
-
-            <div className='absolute left-0 top-[200px] w-[50px] h-[300px] rounded-[513px] bg-[#95F35A] blur-[125px]'></div>
-
-            <div className="absolute left-[300px] top-0 w-[120px] h-[120px]">
-            </div>
         </section>
     )
 }

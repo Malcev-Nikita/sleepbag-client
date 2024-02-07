@@ -1,3 +1,6 @@
+// ---------------------- // 
+// ----- Статистика ----- //
+// ---------------------- //
 export const getStats = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/stats`, { 
         method: 'GET',
@@ -11,6 +14,10 @@ export const getStats = async () => {
     return response.json();
 };
 
+
+// ------------------ // 
+// ----- Тизеры ----- //
+// ------------------ //
 export const getTeasers = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/teaser-index?populate=*`, { 
         method: 'GET',
@@ -24,6 +31,10 @@ export const getTeasers = async () => {
     return response.json();
 };
 
+
+// ------------------------------------ // 
+// ----- Часто задоваемые вопросы ----- //
+// ------------------------------------ //
 export const getFAQ = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/faqs`, { 
         method: 'GET',
@@ -37,6 +48,10 @@ export const getFAQ = async () => {
     return response.json();
 };
 
+
+// ------------------------------ // 
+// ----- Баннеры на главной ----- //
+// ------------------------------ //
 export const getBanners = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/banner-header?populate=*`, { 
         method: 'GET',
@@ -50,6 +65,10 @@ export const getBanners = async () => {
     return response.json();
 };
 
+
+// ------------------ // 
+// ----- Товары ----- //
+// ------------------ //
 export const getProducts = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/products?populate=*`, { 
         method: 'GET',
@@ -63,6 +82,10 @@ export const getProducts = async () => {
     return response.json();
 };
 
+
+// ------------------ // 
+// ----- Работы ----- //
+// ------------------ //
 export const getWorks = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/works?populate=*`, { 
         method: 'GET',
