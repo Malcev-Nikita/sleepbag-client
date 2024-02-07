@@ -37,6 +37,15 @@ header .cart .content{
   color: #fff;
   gap: 20px;
 }
+.favorite_svgs svg{
+  transition: 0.2s;
+}
+.favorite_svgs svg:hover{
+  stroke: #95F35A;
+  fill: #95F35A;
+  cursor: pointer;
+}
+
 .favorite_product{
   display: flex;
   flex-direction: row;
