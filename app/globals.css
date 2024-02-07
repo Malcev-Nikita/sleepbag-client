@@ -241,6 +241,9 @@ section{
   display: flex;
   flex-direction: column;
 }
+.section_catalog .section_header{
+  padding-bottom: 50px;
+}
 .section_catalog{
   padding-bottom: 50px;
 }
@@ -358,6 +361,7 @@ section{
 }
 .reason_text span{
   font-size: 23px;
+  color: #95F35A;
 }
 .markdown li{
   list-style-type: disc;
