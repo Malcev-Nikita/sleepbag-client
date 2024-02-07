@@ -2,9 +2,11 @@ import Image from 'next/image'
 import { Burger, BurgerClose } from './burger';
 import { Like, LikeClose } from './like';
 import { Favorite, Cart } from '@/services/cart';
+import { getProducts } from '@/services/IndexPage';
 
 export default async function Header() {
     const favorite = await Favorite('jwt')
+    const products = await getProducts()
 
     return (
         <header className='fixed w-[100%] z-10 top-[22px] left-[50%] translate-x-[-50%]'>
@@ -59,7 +61,13 @@ export default async function Header() {
                         <div className="flex justify-between m-auto w-[100%]">
                             <div className="w-[80%]">
                                 <div className="w-[20%]">
-                                    {/* <Image/> */}
+                                    {products.data.map(product => {
+                                        if(product.id == favorite.id) {
+                                            return (
+                                                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
+                                            )
+                                        }
+                                    })}
                                 </div>
 
                                 <div className="w-[100%]">
