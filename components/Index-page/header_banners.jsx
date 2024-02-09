@@ -17,7 +17,7 @@ export default function HeaderBanners(data) {
                         <SwiperSlide>
                             <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/>
 
-                            <div className='container z-5 absolute top-[35%] translate-[-50%] translate-x-[-50%] left-[50%]'>
+                            <div className='container  z-5 absolute top-[35%] translate-[-50%] translate-x-[-50%] left-[50%]'>
                                 <h3 className='text-[#F4F4F4] text-[55px] uppercase w-[80%] font-bold'>{item.attributes.header}</h3>
 
                                 <p className='text-[#F4F4F4] text-[20px] font-semibold mt-[18px]'>{item.attributes.description}</p>
