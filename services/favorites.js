@@ -1,7 +1,7 @@
 // ----------------------------------------- // 
 // ----- Избранные товары пользователя ----- //
 // ----------------------------------------- //
-export const Favorite = async (jwt) => {
+export const getFavorites = async (jwt) => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/users/me?populate=*`, { 
         method: 'GET',
         headers: {

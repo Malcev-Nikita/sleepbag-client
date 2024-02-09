@@ -1,5 +1,7 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { Provider } from 'react-redux';
+import { store } from '@/lib/store';
 
 import './globals.css';
 
@@ -14,11 +16,13 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className='overflow-x-hidden'>
-        <Header/>
+        <Provider store={store}>
+          <Header/>
 
-        {children}
+          {children}
 
-        <Footer/>
+          <Footer/>
+        </Provider>
       </body>
     </html>
   );

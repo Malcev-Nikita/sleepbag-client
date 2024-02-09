@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { Like, LikeClose } from './like';
-import { Favorite } from '@/services/favorites';
+import { getFavorites } from '@/services/favorites';
 import { getProducts } from '@/services/IndexPage';
 import Favorites from './favorites';
 
 
 export default async function Header() {
-    const favorite = await Favorite('jwt')
+    const favorite = await getFavorites('jwt')
     const products = await getProducts()
 
     return (
