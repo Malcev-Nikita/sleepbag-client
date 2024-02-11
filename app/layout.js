@@ -1,7 +1,9 @@
+'use client'
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import { Provider } from 'react-redux';
-import { store } from '@/lib/store';
+
+import StoreProvider from '@/store/StoreProvider';
 
 import './globals.css';
 
@@ -16,13 +18,13 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className='overflow-x-hidden'>
-        <Provider store={store}>
+        <StoreProvider>
           <Header/>
 
           {children}
 
           <Footer/>
-        </Provider>
+        </StoreProvider>
       </body>
     </html>
   );
