@@ -1,45 +1,50 @@
-import { createSlice, createEntityAdapter } from '@reduxjs/toolkit'
-import { getFavorites } from '@/services/favorites'
+import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { addFavorite } from '@/services/favorites';
 
-
-const favoritesAdapter = createEntityAdapter();
 
 const initialState = {
-    items: favoritesAdapter.getInitialState({ loadingStatus: 'idle', error: null }), 
+  items: null,
+  loading: 'idle',
 }
+
+export const getFavorites = createAsyncThunk(
+  'user/favorites',
+  async (jwt) => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/users/me?populate=*`, { 
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA3MTg4NjgyLCJleHAiOjE3MDk3ODA2ODJ9.YyDDxq3xl6eWHtXuV1Cw6FFj8tJ8Tqil7BT75QsHvvo',
+      },
+    });
+      
+    return response.json();
+  }
+);
 
 export const favoritesSlice = createSlice({
   name: 'favorites',
   initialState,
   reducers: {
     changeFavorites: (state, action) => {
-        const product = action.payload
-        const isExist = state.favorites.some(p => p.id === product.id)
+      const product = action.payload.product
+      const isExist = state.items.favorites.some(p => p.id === product.id)
 
-        if(isExist) {
-            state.favorites = state.favorites.filter(p => p.id !== product.id)
-        }
-        else {
-            state.favorites.push(product)
-        }
+      if(isExist) {
+        state.items.favorites = state.items.favorites.filter(p => p.id !== product.id)
+      }
+      else {
+        state.items.favorites.push(product)
+      }
+
+      addFavorite('jwt', 'userId', state.items.favorites)
     },
   },
   extraReducers: (builder) => {
-    builder
-      .addCase(getFavorites.pending, (state) => {
-        state.loadingStatus = 'loading';
-        state.error = null;
-      })
-      .addCase(getFavorites.fulfilled, (state, action) => {
-        // favoritesAdapter.addOne(state, action);
-        state.items = action.payload
-        state.loadingStatus = 'resolved';
-        state.error = null;
-      })
-      .addCase(getFavorites.rejected, (state, action) => {
-        state.loadingStatus = 'failed';
-        state.error = action.error;
-      });
+    builder.addCase(getFavorites.fulfilled, (state, action) => {
+      state.items = action.payload
+    })
   },
 })
 

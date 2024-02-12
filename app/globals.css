@@ -774,3 +774,6 @@ footer{
 .cart h3 {
   font-family: 'Unbounded';
 }
+.favorite_like[active="true"] svg {
+  fill: #fff;
+}
