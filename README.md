@@ -11,6 +11,7 @@
 * Next JS
 * Redux
 * Anime JS
+* Tailwind
 * Strapi CMS
 
 **Функциональные возможности:**
