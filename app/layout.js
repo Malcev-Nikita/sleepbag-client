@@ -8,6 +8,7 @@ import StoreProvider from '@/store/StoreProvider';
 import './globals.css';
 
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
