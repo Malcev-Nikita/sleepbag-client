@@ -3,6 +3,7 @@ import { getFAQ } from '@/services/IndexPage'
 import FAQ from '@/components/faq'
 import { getProducts } from '@/services/IndexPage'
 import { LikeCatalog } from '@/components/like'
+import Catalog from '@/components/Index-page/catalog'
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +12,8 @@ export const metadata = {
 
 export default async function Page() {
   const faq = await getFAQ();
-  const products = await getProducts();
+  // const products = await getProducts();
+  
   return (
     <main className="">        
         <header className='catalog_header'>
@@ -87,32 +89,7 @@ export default async function Page() {
         
         </section>
         
-        <section className='catalog_main_part'>
-          <div className='catalog_main container m-auto'>
-            {products.data.map(product => (
-              <div className='catalog_object'>
-                <div className='object_photo'>
-                  <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}></Image>
-                  
-                  <LikeCatalog productId={product.id}/>
-                </div>
-                <div className='object_desc'>
-                  <h1>{product.attributes.name}</h1>
-                  <p>В наличии - {product.attributes.count} шт.</p>
-                  <p className='object_desc_text'>{product.attributes.description}</p>
-                  <div className='object_price'>
-                    <p>{product.attributes.price}</p>
-                    <p>₽</p>
-                  </div>
-                  <div className='object_buttons'>
-                    <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
-                    <button className='object_button2'>Добавить в корзину</button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        <Catalog />
 
         <FAQ data={faq}/>
 
