@@ -1,6 +1,7 @@
+** В РАЗРАБОТКЕ **
 **Название проекта:** Интернет-магазин "SleepBag"
 
-**Ссылка на репозиторий:** https://github.com/Malcev-Nikita/sleepbag-client
+**Ссылка на сайт:** http://sleep-bag-shop.ru/
 
 **Описание:**
 
