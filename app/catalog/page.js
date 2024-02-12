@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import { getFAQ } from '@/services/IndexPage'
 import FAQ from '@/components/faq'
-import { getProducts } from '@/services/IndexPage'
-import { LikeCatalog } from '@/components/like'
-import Catalog from '@/components/Index-page/catalog'
+import Catalog from '@/components/catalog/catalog'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,8 +10,7 @@ export const metadata = {
 
 export default async function Page() {
   const faq = await getFAQ();
-  // const products = await getProducts();
-  
+
   return (
     <main className="">        
         <header className='catalog_header'>
