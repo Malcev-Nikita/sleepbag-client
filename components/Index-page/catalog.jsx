@@ -22,15 +22,18 @@ export default function Catalog() {
                         <div className='catalog_object'>
                             <div className='object_photo'>
                                 <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
-                                
-                                {favoritesItems.favorites.map(favorite => {
-                                    if(product.id == favorite.id) {
-                                        return (<LikeCatalog id={product.id} active='true' />)
-                                    }
-                                    else {
-                                        return (<LikeCatalog id={product.id} active='false' />)
-                                    }
-                                })}
+
+                                {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : ('')}
+                                {
+                                    favoritesItems.favorites.map(favorite => {
+                                        if(product.id == favorite.id) {
+                                            return (<LikeCatalog id={product.id} active='true' />)
+                                        }
+                                        else {
+                                            return (<LikeCatalog id={product.id} active='false' />)
+                                        }
+                                    })
+                                }
                             </div>
 
                             <div className='object_desc'>
