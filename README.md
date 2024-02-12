@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Название проекта:** Интернет-магазин "SleepBag"
 
-## Getting Started
+**Ссылка на репозиторий:** https://github.com/Malcev-Nikita/sleepbag-client
 
-First, run the development server:
+**Описание:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Интернет-магазин "SleepBag" - это веб-приложение, разработанное для продажи спальников и органайзеров для машины. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Технологии:**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* Next JS
+* Redux
+* Anime JS
+* Strapi CMS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Функциональные возможности:**
 
-## Learn More
+* Избранное
+* Корзина
+* Оплата
+* Личный кабинет
+* Интеграция с "Мой склад"
 
-To learn more about Next.js, take a look at the following resources:
+**Скриншоты:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Вставьте изображения вашего интернет-магазина]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Как запустить:**
 
-## Deploy on Vercel
+1. Клонируйте репозиторий.
+2. Установите зависимости.
+3. В корне проекта нужно разместить файл .env.local
+4. В .env.local вставить строку "NEXT_PUBLIC_STRAPI_API_URL=http://cms.sleep-bag-shop.ru"
+5. Запустите сервер командой npm run dev.
+6. Перейдите в браузере по адресу `localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Дополнительная информация:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Документация Next JS: [https://nextjs.org/docs/](https://nextjs.org/docs/)
+* Документация Redux: [https://redux.js.org/](https://redux.js.org/)
+* Документация Anime JS: [https://animejs.com/](https://animejs.com/)
+* Документация Strapi CMS: [https://strapi.io/documentation/](https://strapi.io/documentation/)
+
+**Благодарности:**
+
+* https://github.com/Oitlovich
