@@ -32,7 +32,7 @@
 1. Клонируйте репозиторий.
 2. Установите зависимости.
 3. В корне проекта нужно разместить файл .env.local
-4. В .env.local вставить строку "NEXT_PUBLIC_STRAPI_API_URL=http://cms.sleep-bag-shop.ru"
+4. В .env.local вставить строку `NEXT_PUBLIC_STRAPI_API_URL=http://cms.sleep-bag-shop.ru`
 5. Запустите сервер командой npm run dev.
 6. Перейдите в браузере по адресу `localhost:3000`.
 
