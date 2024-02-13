@@ -22,7 +22,7 @@ export default async function Page() {
   const works = await getWorks();
 
   return (
-    <main className="relative bg-[#262626]">
+    <main className="relative bg-[#fff]">
       <div id="main"><HeaderBanners data={banners.data}/></div>
       
       <section id='aboutus' className='section_aboutus relative'>
@@ -99,7 +99,7 @@ export default async function Page() {
           <button>
             Смотреть все товары
             <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#95F35A" stroke-linecap="square"/>
+              <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
             </svg>
           </button>
         </a>
