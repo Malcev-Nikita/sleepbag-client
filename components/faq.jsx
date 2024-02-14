@@ -26,7 +26,7 @@ function QuestionsClick(element) {
 
 export default function FAQ({data}) {
     return (
-        <section className='section_faq relative pb-[100px]'>
+        <section className='section_faq relative pb-[50px]'>
             <div className='section_header container m-auto'>
                 <div className='section_header_inside'>
                     <div className='header_line'></div>
