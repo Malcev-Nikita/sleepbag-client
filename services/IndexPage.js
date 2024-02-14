@@ -67,23 +67,6 @@ export const getBanners = async () => {
 
 
 // ------------------ // 
-// ----- Товары ----- //
-// ------------------ //
-export const getProducts = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/products?populate=*`, { 
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
-  
-    if (!response.ok) throw new Error("Unable to fetch posts.");
-  
-    return response.json();
-};
-
-
-// ------------------ // 
 // ----- Работы ----- //
 // ------------------ //
 export const getWorks = async () => {

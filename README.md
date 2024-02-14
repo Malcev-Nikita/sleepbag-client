@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**В РАЗРАБОТКЕ**
 
-## Getting Started
+**Название проекта:** Интернет-магазин "SleepBag"
 
-First, run the development server:
+**Ссылка на сайт:** http://sleep-bag-shop.ru/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Описание:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Интернет-магазин "SleepBag" - это веб-приложение, разработанное для продажи спальников и органайзеров для машины. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Технологии:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Next JS
+* Redux
+* Anime JS
+* Tailwind
+* Strapi CMS
 
-## Learn More
+**Функциональные возможности:**
 
-To learn more about Next.js, take a look at the following resources:
+* Избранное
+* Корзина
+* Оплата
+* Личный кабинет
+* Интеграция с "Мой склад"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Скриншоты:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Вставьте изображения вашего интернет-магазина]
 
-## Deploy on Vercel
+**Как запустить:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Клонируйте репозиторий командой `git clone https://github.com/Malcev-Nikita/sleepbag-client.git`.
+2. Установите зависимости командой `npm install`.
+3. В корне проекта нужно разместить файл `.env.local`
+4. В .env.local вставить строку `NEXT_PUBLIC_STRAPI_API_URL=http://cms.sleep-bag-shop.ru`
+5. Запустите сервер командой `npm run dev`.
+6. Перейдите в браузере по адресу `localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Дополнительная информация:**
+
+* Документация Next JS: [https://nextjs.org/docs/](https://nextjs.org/docs/)
+* Документация Redux: [https://redux.js.org/](https://redux.js.org/)
+* Документация Anime JS: [https://animejs.com/](https://animejs.com/)
+* Документация Strapi CMS: [https://strapi.io/documentation/](https://strapi.io/documentation/)
+
+**Благодарности:**
+
+* https://github.com/Oitlovich

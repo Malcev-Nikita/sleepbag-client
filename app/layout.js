@@ -1,7 +1,12 @@
+'use client'
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
+import StoreProvider from '@/store/StoreProvider';
+
 import './globals.css';
+
 
 
 export default function RootLayout({ children }) {
@@ -14,11 +19,13 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className='overflow-x-hidden'>
-        <Header/>
+        <StoreProvider>
+          <Header/>
 
-        {children}
+          {children}
 
-        <Footer/>
+          <Footer/>
+        </StoreProvider>
       </body>
     </html>
   );

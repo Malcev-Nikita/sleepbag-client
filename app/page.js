@@ -4,8 +4,8 @@ import HeaderBanners from '@/components/Index-page/header_banners'
 import Works from '@/components/Index-page/works'
 import FAQ from '@/components/faq'
 import Questions from '@/components/questions'
-import { LikeCatalog } from '@/components/like'
-import { getStats, getTeasers, getFAQ, getBanners, getProducts, getWorks } from '@/services/IndexPage'
+import { getStats, getTeasers, getFAQ, getBanners, getWorks } from '@/services/IndexPage'
+import Catalog from '@/components/Index-page/catalog'
 
 
 export const metadata = {
@@ -18,8 +18,8 @@ export default async function Page() {
   const teasers = await getTeasers();
   const faq = await getFAQ();
   const banners = await getBanners();
-  const products = await getProducts();
   const works = await getWorks();
+  
 
   return (
     <main className="relative bg-[#fff]">
@@ -73,46 +73,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id='catalog' className='section_catalog relative'>
-        <div className='section_header container m-auto'>
-          <div className='header_line'></div>
-          <h1>НАШ КАТАЛОГ</h1>
-        </div>
-        
-        <div className='catalog_main container m-auto'>
-          {products.data.map(product => (
-            <div className='catalog_object'>
-              <div className='object_photo'>
-                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
-                
-                <LikeCatalog/>
-              </div>
-              <div className='object_desc'>
-                <h1>{product.attributes.name}</h1>
-                <p>В наличии - {product.attributes.count} шт.</p>
-                <p className='object_desc_text'>{product.attributes.description}</p>
-                <div className='object_price'>
-                  <p>{product.attributes.price}</p>
-                  <p>₽</p>
-                </div>
-                <div className='object_buttons'>
-                  <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
-                  <button className='object_button2'>Добавить в корзину</button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <a href='/catalog' className='down_button m-auto'>
-          <button>
-            Смотреть все товары
-            <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
-            </svg>
-          </button>
-        </a>
-      </section>
+      <Catalog />
 
       <section className='section_reasons relative'>
         <div className='section_header container m-auto'>

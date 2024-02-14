@@ -1,13 +1,22 @@
-import Image from 'next/image'
+'use client'
+
+import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getFavorites } from '@/store/favorites/favorites.slice';
+import { getProducts } from '@/store/products/products.slice';
+
 import { Like, LikeClose } from './like';
-import { Favorite } from '@/services/favorites';
-import { getProducts } from '@/services/IndexPage';
 import Favorites from './favorites';
 
 
 export default async function Header() {
-    const favorite = await Favorite('jwt')
-    const products = await getProducts()
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getFavorites('jwt'))
+        dispatch(getProducts())
+    }, [dispatch]);
 
     return (
         <header className='fixed w-[100%] z-10 top-[22px] left-[50%] translate-x-[-50%]'>
@@ -58,7 +67,7 @@ export default async function Header() {
                 </div>
                 <div className='cart_hr'/>
                 
-                <Favorites favorite={favorite} products={products}/>
+                <Favorites />
             </div>
         </header>
     );
