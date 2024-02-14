@@ -22,6 +22,11 @@ export default function HeaderBanners(data) {
 
                                 <p className='text-[#F4F4F4] text-[20px] font-semibold mt-[18px]'>{item.attributes.description}</p>
                             </div>
+                            
+                            <div className='banners_buttons container m-auto'>
+                                <a className='banners_button1'>Посмотреть каталог</a>
+                                <button className='banners_button2'>Оставить заявку</button>
+                            </div>
                         </SwiperSlide>        
                     )
                 })}

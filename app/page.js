@@ -22,33 +22,42 @@ export default async function Page() {
   
 
   return (
-    <main className="relative bg-[#262626]">
+    <main className="relative bg-[#fff]">
       <div id="main"><HeaderBanners data={banners.data}/></div>
       
       <section id='aboutus' className='section_aboutus relative'>
-        <div className='section_header container m-auto'>
+        <div className='section_header container m-auto pb-[100px]'>
           <div className='header_line'></div>
           <h1>НЕМНОГО О НАШЕЙ <span>КОМПАНИИ!</span></h1>
         </div>
         <div className='aboutus_parts container m-auto'>
           <div className='aboutus_part1'>
             <div className='part1_left w-[50%]'>
-              <h1>Команда профессионалов</h1>
-              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+              <h1>Органайзер для автомобилей всех классов с удобной системой быстрого снятия для перевозки грузов</h1>
+              {/* <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h2> */}
+              <p>В большой части автомобилей сиденья складываются таким образом, что не образуют ровной поверхности достаточной для организации полноценного отдыха.
+                <br/> <br/>Основной недостаток принципиальной схемы стационарных органайзеров заключается том, что его необходимо устанавливать раз и навсегда, хотя потребители пользуются спальным/погрузочным местом далеко не каждый день.
+                <br/> <br/><span>Суть Sleepbag</span> заключается в разработке простой конструкции укладывающейся в сложенном состоянии в размер 100Х100Х15 см, упакованной в сумку по аналогии с туристическими раскладушками, а в разобранном образующими ровную поверхность.</p>
             </div>
             <div className='part1_right w-[50%]'>
-              <Image src='/images/command1.png' alt='' width={1650} height={700}/>
+              <Image src='/images/aboutusphoto1.png' alt='' width={1650} height={700}/>
             </div>
           </div>
           <div className='aboutus_part2'>
             <div className='part2_left w-[50%]'>
-              <Image src='/images/command2.png' alt='' width={1150} height={500}/>
+              <Image src='/images/aboutusphoto2.png' alt='' width={1150} height={500}/>
             </div>
             <div className='part2_right w-[50%]'>
               <div className='part2_right_text'>
-                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати в то время некий Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+                <h1>Органайзер можно:</h1>
+                <p>
+                  -хранить на балконе, кладовке или в гараже<br/>
+                  -перевозить в сложенном состоянии в упаковочном мешке не занимая много места<br/>
+                  -установить в багажнике и разделить его по высоте на 2 части, что позволит в свою очередь грамотно разложить вещи и пользоваться без необходимости не вынимать их все<br/>
+                  -сложив задние сиденья можно организовать спальное место для 2х взрослых<br/>
+                  -то же самое использовать для перевозки любых грузов в том числе стройматериалов<br/>
+                  -упаковав груз в чехол можно перевозить любые материалы без риска позврапать или запылить салон<br/>
+                </p>
               </div>
 
               <div className='ratings'>
@@ -89,6 +98,46 @@ export default async function Page() {
       </section>
 
       <div id='production'><Works works={works.data}/></div>
+
+      <section id='section_aboutproduction'>
+        <div className='section_header container m-auto'>
+          <div className='header_line'></div>
+          <h1>О ПРОДУКЦИИ</h1>
+        </div>
+        <div className='abprod container m-auto'>
+          <div className='abprod_left w-[50%]'>
+            <h1>1.</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+          </div>
+          <div className='abprod_right'>
+            <Image src='/images/abprod.png' alt='' width={643} height={510}></Image>
+          </div>
+        </div>
+        <div className='abprod container m-auto'>
+          <div className='abprod_right'>
+            <Image src='/images/abprod2.png' alt='' width={643} height={510}></Image>
+          </div>
+          <div className='abprod_left w-[50%]'>
+            <h1>2.</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+          </div>
+        </div>
+        <div className='abprod container m-auto'>
+          <div className='abprod_left w-[50%]'>
+            <h1>3.</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+          </div>
+          <div className='abprod_right'>
+            <Image src='/images/adprod3.png' alt='' width={643} height={510}></Image>
+          </div>
+        </div>
+      </section>
 
       <FAQ data={faq}/>
 
