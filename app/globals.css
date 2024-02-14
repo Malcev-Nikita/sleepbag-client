@@ -186,7 +186,7 @@ section{
   font-size: 23px;
 }
 .aboutus_parts h1{
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 700;
 }
 .header_line{
@@ -211,10 +211,15 @@ section{
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  font-size: 20px;
+}
+.part1_left span{
+  color: #F97316;
 }
 .part2_right_text{
   display: flex;
   row-gap: 20px;
+  font-size: 20px;
   flex-direction: column;
 }
 .part2_right{
@@ -352,7 +357,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8FEC56;
+  background-color: #e6e9ec;
   padding: 20px;
   border-radius: 20px;
 }
@@ -448,6 +453,32 @@ a button{
   width: 235px;
   height: 47px;
   gap: 10px;
+}
+#section_aboutproduction{
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.abprod{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.abprod_left{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.abprod_left h1{
+  font-size: 48px;
+  font-weight: 700;
+}
+.abprod_left h2{
+  font-size: 23px;
+  font-weight: 500;
+}
+.abprod_left p{
+  font-size: 18px;
 }
 .section_faq h4{
  color: #000;
