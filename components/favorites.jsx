@@ -10,7 +10,7 @@ export default function Favorites() {
     const productsItems = useSelector(state => state.products.items)
     const dispatch = useDispatch()
 
-    if(favoritesItems != null) {
+    if(favoritesItems != null && productsItems != null) {
         return (
             <div className="content px-[52px]">
                 {favoritesItems.favorites.map(favorite => (
@@ -27,7 +27,7 @@ export default function Favorites() {
                             </div>
     
                             <div className="product_desription w-[100%]">
-                                <h3>{favorite.name}</h3>
+                                <h3 className='text-white'>{favorite.name}</h3>
                                 <p>В наличии - {favorite.count} шт.</p>
                                 
                                 {/* <div className="buy_buttons">
@@ -39,7 +39,7 @@ export default function Favorites() {
                         </div>
     
                         <div className="w-[20%] flex items-end flex-col">
-                            <div className="text-[#95F35A] text-[18px] font-semibold font-[Manrope]">{favorite.price} ₽</div>
+                            <div className="text-[#F97316] text-[18px] font-semibold font-[Manrope]">{favorite.price} ₽</div>
     
                             <div className="flex mt-[35px] gap-[15px]">
                                 <div className="favorite_svgs">

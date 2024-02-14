@@ -324,7 +324,7 @@ section{
   cursor: pointer;
 }
 .object_photo svg:hover{
-  fill: #fff;
+  fill: #F97316;
 }
 .object_buttons{
   display: flex;
@@ -895,7 +895,7 @@ footer .container{
   font-family: 'Unbounded';
 }
 .favorite_like[active="true"] svg {
-  fill: #fff;
+  fill: #F97316;
 }
 
 #preloader {
