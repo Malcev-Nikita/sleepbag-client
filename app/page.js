@@ -117,7 +117,7 @@ export default async function Page() {
         </div>
         <div className='abprod container m-auto'>
           <div className='abprod_right'>
-            <Image src='/images/abprod2.png' alt='' width={643} height={510}></Image>
+            <Image src='/images/abprod2.png' alt='' width={843} height={510}></Image>
           </div>
           <div className='abprod_left w-[50%]'>
             <h1>2.</h1>

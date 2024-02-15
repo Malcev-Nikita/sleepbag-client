@@ -595,6 +595,7 @@ a button{
   border-radius: 10px;
   font-size: 18px;
   width: 100%;
+  color: #000;
   height: 65px;
 }
 .contacts_inputs button{

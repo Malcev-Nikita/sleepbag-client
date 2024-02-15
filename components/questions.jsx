@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Questions() {
     return (
         <section id='contacts' className='section_contact relative'>
-          <Image className='question_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/question_img.png' width={1920} height={1080}/>
+          <Image className='question_img aspect-video w-[100%] h-[100vh] translate-y-[2px] object-cover' src='/bg/question_img.png' width={1920} height={1080}/>
             <div className='container m-auto'>
                 <div className="contacts_main_part z-5 absolute translate-[-50%] translate-y-[-120%] translate-x-[-50%] left-[50%]">
                     <div className='section_header container m-auto'>
