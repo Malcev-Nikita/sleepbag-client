@@ -1,11 +1,15 @@
 import Image from 'next/image'
 
 import HeaderBanners from '@/components/Index-page/header_banners'
+import AboutUs from '@/components/Index-page/about_us'
+import Catalog from '@/components/Index-page/catalog'
+import Reasons from '@/components/Index-page/reasons'
 import Works from '@/components/Index-page/works'
+import AboutProduction from '@/components/Index-page/about_production'
 import FAQ from '@/components/faq'
 import Questions from '@/components/questions'
+
 import { getStats, getTeasers, getFAQ, getBanners, getWorks } from '@/services/IndexPage'
-import Catalog from '@/components/Index-page/catalog'
 
 
 export const metadata = {
@@ -20,124 +24,19 @@ export default async function Page() {
   const banners = await getBanners();
   const works = await getWorks();
   
-
   return (
     <main className="relative bg-[#fff]">
-      <div id="main"><HeaderBanners data={banners.data}/></div>
+      <HeaderBanners data={banners.data}/>
       
-      <section id='aboutus' className='section_aboutus relative'>
-        <div className='section_header container m-auto pb-[100px]'>
-          <div className='header_line'></div>
-          <h1>НЕМНОГО О НАШЕЙ <span>КОМПАНИИ!</span></h1>
-        </div>
-        <div className='aboutus_parts container m-auto'>
-          <div className='aboutus_part1'>
-            <div className='part1_left w-[50%]'>
-              <h1>Органайзер для автомобилей всех классов с удобной системой быстрого снятия для перевозки грузов</h1>
-              {/* <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h2> */}
-              <p>В большой части автомобилей сиденья складываются таким образом, что не образуют ровной поверхности достаточной для организации полноценного отдыха.
-                <br/> <br/>Основной недостаток принципиальной схемы стационарных органайзеров заключается том, что его необходимо устанавливать раз и навсегда, хотя потребители пользуются спальным/погрузочным местом далеко не каждый день.
-                <br/> <br/><span>Суть Sleepbag</span> заключается в разработке простой конструкции укладывающейся в сложенном состоянии в размер 100Х100Х15 см, упакованной в сумку по аналогии с туристическими раскладушками, а в разобранном образующими ровную поверхность.</p>
-            </div>
-            <div className='part1_right w-[50%]'>
-              <Image src='/images/aboutusphoto1.png' alt='' width={1650} height={700}/>
-            </div>
-          </div>
-          <div className='aboutus_part2'>
-            <div className='part2_left w-[50%]'>
-              <Image src='/images/aboutusphoto2.png' alt='' width={1150} height={500}/>
-            </div>
-            <div className='part2_right w-[50%]'>
-              <div className='part2_right_text'>
-                <h1>Органайзер можно:</h1>
-                <p>
-                  -хранить на балконе, кладовке или в гараже<br/>
-                  -перевозить в сложенном состоянии в упаковочном мешке не занимая много места<br/>
-                  -установить в багажнике и разделить его по высоте на 2 части, что позволит в свою очередь грамотно разложить вещи и пользоваться без необходимости не вынимать их все<br/>
-                  -сложив задние сиденья можно организовать спальное место для 2х взрослых<br/>
-                  -то же самое использовать для перевозки любых грузов в том числе стройматериалов<br/>
-                  -упаковав груз в чехол можно перевозить любые материалы без риска позврапать или запылить салон<br/>
-                </p>
-              </div>
-
-              <div className='ratings'>
-                {stats.data.map(stat => (
-                  <div className='rating'>
-                    <p><span>{stat.attributes.Count}{stat.attributes.Postfix_Name}</span></p>
-                    <p>{stat.attributes.Name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutUs stats={stats} />
 
       <Catalog />
 
-      <section className='section_reasons relative'>
-        <div className='section_header container m-auto'>
-          <div className='header_line'></div>
-          <h1>6 ПРИЧИН СОТРУДНИЧАТЬ С НАМИ</h1>
-        </div>
+      <Reasons teasers={teasers} />
 
-        <div className='reasons container m-auto'>
-          {teasers.data.map(teaser => (
-            <div className='reason'>
-              <div className='reason_icon'>
-                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + teaser.attributes.image.data.attributes.url} alt='' width={70} height={70}/>
-              </div>
+      <Works works={works.data}/>
 
-              <div className='reason_text'>
-                <p><span>{teaser.attributes.header}</span></p>
-                <p>{teaser.attributes.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div id='production'><Works works={works.data}/></div>
-
-      <section id='section_aboutproduction'>
-        <div className='section_header container m-auto'>
-          <div className='header_line'></div>
-          <h1>О ПРОДУКЦИИ</h1>
-        </div>
-        <div className='abprod container m-auto'>
-          <div className='abprod_left w-[50%]'>
-            <h1>1.</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
-          </div>
-          <div className='abprod_right'>
-            <Image src='/images/abprod.png' alt='' width={643} height={510}></Image>
-          </div>
-        </div>
-        <div className='abprod container m-auto'>
-          <div className='abprod_right'>
-            <Image src='/images/abprod2.png' alt='' width={643} height={510}></Image>
-          </div>
-          <div className='abprod_left w-[50%]'>
-            <h1>2.</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
-          </div>
-        </div>
-        <div className='abprod container m-auto'>
-          <div className='abprod_left w-[50%]'>
-            <h1>3.</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
-          </div>
-          <div className='abprod_right'>
-            <Image src='/images/adprod3.png' alt='' width={643} height={510}></Image>
-          </div>
-        </div>
-      </section>
+      <AboutProduction />
 
       <FAQ data={faq}/>
 
