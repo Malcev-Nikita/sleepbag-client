@@ -21,7 +21,7 @@ export default function Catalog() {
                     {productsItems.data.map(product => (
                         <div className='catalog_object'>
                             <div className='object_photo'>
-                                <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
+                                <Image className='w-[100%] h-[100%] aspect-[16/11] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={100} height={100} />
 
                                 {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : ('')}
                                 {

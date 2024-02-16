@@ -9,18 +9,18 @@
   margin-top: 95px;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 30px;
 }
 .banners_button1, .banners_button2{
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 10px;
   background-color: #F97316;
-  width: 300px;
-  height: 60px;
+  padding: 18px 54px;
+  font-weight: 600;
 }
 .banners_button2{
   background-color: transparent;
