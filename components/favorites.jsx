@@ -29,12 +29,6 @@ export default function Favorites() {
                             <div className="product_desription w-[100%]">
                                 <h3 className='text-white'>{favorite.name}</h3>
                                 <p>В наличии - {favorite.count} шт.</p>
-                                
-                                {/* <div className="buy_buttons">
-                                    <button>-</button>
-                                    <span>1</span>
-                                    <button>+</button>
-                                </div> */}
                             </div>
                         </div>
     

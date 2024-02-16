@@ -8,7 +8,6 @@ import StoreProvider from '@/store/StoreProvider';
 import './globals.css';
 
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
@@ -20,11 +19,11 @@ export default function RootLayout({ children }) {
 
       <body className='overflow-x-hidden'>
         <StoreProvider>
-          <Header/>
+            <Header/>
 
-          {children}
+            {children}
 
-          <Footer/>
+            <Footer/>
         </StoreProvider>
       </body>
     </html>
