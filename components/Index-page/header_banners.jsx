@@ -18,15 +18,20 @@ export default function HeaderBanners(data) {
                             <SwiperSlide>
                                 <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/>
 
-                                <div className='container  z-5 absolute top-[35%] translate-[-50%] translate-x-[-50%] left-[50%]'>
-                                    <h3 className='text-[#F4F4F4] text-[55px] uppercase w-[80%] font-bold'>{item.attributes.header}</h3>
+                                <div className='container z-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+                                    <h3 className='text-[#F4F4F4] text-[55px] uppercase w-[100%] font-bold'>{item.attributes.header}</h3>
 
                                     <p className='text-[#F4F4F4] text-[20px] font-semibold mt-[18px]'>{item.attributes.description}</p>
-                                </div>
-                                
-                                <div className='banners_buttons container m-auto'>
-                                    <a className='banners_button1'>Посмотреть каталог</a>
-                                    <button className='banners_button2'>Оставить заявку</button>
+
+                                    <div className='banners_buttons container m-auto'>
+                                        {item.attributes.text_first_button != null && item.attributes.link_first_button != null ? (
+                                            <a className='banners_button1' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</a>
+                                        ): ( '' )}
+
+                                        {item.attributes.text_second_button != null && item.attributes.link_second_button ? (
+                                            <a className='banners_button2' href={item.attributes.link_second_button}>{item.attributes.text_second_button}</a>
+                                        ): ( '' )}
+                                    </div>
                                 </div>
                             </SwiperSlide>        
                         )
