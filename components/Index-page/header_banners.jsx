@@ -14,9 +14,14 @@ export default function HeaderBanners(data) {
             <section className='h-[100vh] pt-0'>
                 <Swiper className='h-[100%] header_banner' modules={[Pagination]} navigation pagination={{ clickable: true }}>
                     {data.data.map(item => {
+                        console.log(item.attributes.bg_photo.data.attributes)
                         return (
                             <SwiperSlide>
-                                <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/>
+                                {item.attributes.bg_photo.data.attributes.mime.includes('video') ? (
+                                    <video autoplay="autoplay" loop muted loading="lazy" className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url}></video>
+                                ) : (
+                                    <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/>
+                                )}
 
                                 <div className='container z-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
                                     <h3 className='text-[#F4F4F4] text-[55px] uppercase w-[100%] font-bold'>{item.attributes.header}</h3>

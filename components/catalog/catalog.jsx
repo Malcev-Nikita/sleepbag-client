@@ -11,7 +11,7 @@ export default function Catalog() {
 
     if(productsItems != null && favoritesItems != null) {
         return (
-            <section id='catalog' className='section_catalog relative'>            
+            <section id='catalog' className='section_catalog relative pt-0'>            
                 <div className='catalog_main container m-auto'>
                     {productsItems.data.map(product => (
                         <div className='catalog_object'>
