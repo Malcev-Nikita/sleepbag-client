@@ -14,7 +14,6 @@ export default function HeaderBanners(data) {
             <section className='h-[100vh] pt-0'>
                 <Swiper className='h-[100%] header_banner' modules={[Pagination]} navigation pagination={{ clickable: true }}>
                     {data.data.map(item => {
-                        console.log(item.attributes.bg_photo.data.attributes)
                         return (
                             <SwiperSlide>
                                 {item.attributes.bg_photo.data.attributes.mime.includes('video') ? (

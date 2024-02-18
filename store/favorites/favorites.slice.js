@@ -3,11 +3,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { addFavorite } from '@/services/favorites';
 
 
-const initialState = {
-  items: null,
-  loading: 'idle',
-}
-
 export const getFavorites = createAsyncThunk(
   'user/favorites',
   async (jwt) => {
@@ -22,6 +17,12 @@ export const getFavorites = createAsyncThunk(
     return response.json();
   }
 );
+
+
+const initialState = {
+  items: null,
+  loading: 'idle',
+}
 
 export const favoritesSlice = createSlice({
   name: 'favorites',
