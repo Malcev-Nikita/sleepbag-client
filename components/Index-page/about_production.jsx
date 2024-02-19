@@ -2,11 +2,13 @@ import Image from 'next/image'
 
 
 export default function AboutProduction({data}) {
+    const production_header = () => ({__html: data.production_header})
+
     return (
         <section id='section_aboutproduction'>
             <div className='section_header container m-auto'>
                 <div className='header_line'></div>
-                <h1>О ПРОДУКЦИИ</h1>
+                <h1 dangerouslySetInnerHTML={production_header()} />
             </div>
 
             <div className='abprod container m-auto'>

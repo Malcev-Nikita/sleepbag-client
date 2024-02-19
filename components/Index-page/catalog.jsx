@@ -5,16 +5,19 @@ import { useSelector } from 'react-redux'
 import { LikeCatalog } from '../like'
 
 
-export default function Catalog() {
+export default function Catalog({data}) {
     const productsItems = useSelector(state => state.products.items)
     const favoritesItems = useSelector(state => state.favorites.items)
+    
+    const catalog_header = () => ({__html: data.catalog_header})
+    const catalog_button = () => ({__html: data.catalog_button})
 
     if(productsItems != null && favoritesItems != null) {
         return (
             <section id='catalog' className='section_catalog relative'>
                 <div className='section_header container m-auto'>
                     <div className='header_line'></div>
-                    <h1>НАШ КАТАЛОГ</h1>
+                    <h1 dangerouslySetInnerHTML={catalog_header()} />
                 </div>
             
                 <div className='catalog_main container m-auto'>
@@ -57,7 +60,7 @@ export default function Catalog() {
     
             <a href='/catalog' className='down_button m-auto'>
                 <button>
-                    Смотреть все товары
+                    <span dangerouslySetInnerHTML={catalog_button()} />
 
                     <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>

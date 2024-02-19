@@ -24,7 +24,7 @@ function QuestionsClick(element) {
     }
 }
 
-export default function FAQ({data}) {
+export default function FAQ({faq}) {
     return (
         <section className='section_faq relative pb-[50px]'>
             <div className='section_header container m-auto'>
@@ -37,7 +37,7 @@ export default function FAQ({data}) {
             </div>
 
             <div className='questions container m-auto'>
-                {data.data.map(item => {
+                {faq.map(item => {
                     function description() {
                         return {__html: markdown.toHTML(item.attributes.description)};
                     }

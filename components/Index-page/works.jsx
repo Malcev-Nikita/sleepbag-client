@@ -10,14 +10,17 @@ import 'swiper/css/pagination';
 import { markdown } from 'markdown'
 
 
-export default function Works({works}) {
+export default function Works({data, works}) {
+    const works_header = () => ({__html: data.works_header})
+    const works_button = () => ({__html: data.works_button})
+
     return (
         <div id='production'>
             <section className='section_our_works relative'>
                 <div className="container m-auto">
                     <div className='section_header container m-auto'>
                         <div className='header_line'></div>
-                        <h1>НАШИ РАБОТЫ</h1>
+                        <h1 dangerouslySetInnerHTML={works_header()} />
                     </div>
                     
                     <div className="relative works_items">
@@ -63,7 +66,7 @@ export default function Works({works}) {
                     
                     <a className='down_button' href='#'>
                         <button className='m-auto'>
-                            Смотреть все работы 
+                            <span dangerouslySetInnerHTML={works_button()} />
 
                             <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>

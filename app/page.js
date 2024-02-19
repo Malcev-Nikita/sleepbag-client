@@ -10,6 +10,7 @@ import FAQ from '@/components/faq'
 import Questions from '@/components/questions'
 
 import { getStats, getTeasers, getFAQ, getBanners, getWorks } from '@/services/IndexPage'
+import { getIndexPageContent } from '@/services/Index_page/page'
 
 
 export const metadata = {
@@ -18,29 +19,32 @@ export const metadata = {
 }
 
 export default async function Page() {
+  const data = await getIndexPageContent();
   const stats = await getStats();
   const teasers = await getTeasers();
   const faq = await getFAQ();
   const banners = await getBanners();
   const works = await getWorks();
+
+  console.log(data.data.attributes)
   
   return (
     <main className="relative bg-[#fff]">
-      <HeaderBanners data={banners.data}/>
+      <HeaderBanners banners={banners.data}/>
       
-      <AboutUs stats={stats} />
+      <AboutUs data={data.data.attributes} stats={stats.data} />
 
-      <Catalog />
+      <Catalog data={data.data.attributes} />
 
-      <Reasons teasers={teasers} />
+      <Reasons data={data.data.attributes} teasers={teasers.data} />
 
-      <Works works={works.data}/>
+      <Works data={data.data.attributes} works={works.data}/>
 
-      <AboutProduction />
+      <AboutProduction data={data.data.attributes} />
 
-      <FAQ data={faq}/>
+      <FAQ data={data.data.attributes} faq={faq.data}/>
 
-      <Questions/>
+      <Questions data={data.data.attributes} />
     </main>
   )
 }
