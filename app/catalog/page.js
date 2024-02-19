@@ -88,11 +88,6 @@ export default async function Page() {
         </section> */}
         
         <Catalog />
-
-        <FAQ data={faq}/>
-
-        <Questions/>
-
     </main>
   )
 }

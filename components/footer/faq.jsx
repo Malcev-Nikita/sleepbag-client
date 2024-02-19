@@ -24,16 +24,19 @@ function QuestionsClick(element) {
     }
 }
 
-export default function FAQ({faq}) {
+export default function FAQ({data, faq}) {
+    const faq_header = () => ({__html: data.faq_header})
+    const faq_description = () => ({__html: data.faq_description})
+
     return (
         <section className='section_faq relative pb-[50px]'>
             <div className='section_header container m-auto'>
                 <div className='section_header_inside'>
                     <div className='header_line'></div>
-                    <h1>РАЗДЕЛ <span>FAQ</span></h1>
+                    <h1 dangerouslySetInnerHTML={faq_header()} />
                 </div>
 
-                <p className='under_header_text'>Ответы на самые часто задаваемые вопросы наших клиентов.</p>
+                <p className='under_header_text' dangerouslySetInnerHTML={faq_description()} />
             </div>
 
             <div className='questions container m-auto'>
