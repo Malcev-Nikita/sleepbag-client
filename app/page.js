@@ -7,7 +7,8 @@ import Reasons from '@/components/index-page/reasons'
 import Works from '@/components/index-page/works'
 import AboutProduction from '@/components/index-page/about_production'
 
-import { getStats, getTeasers, getBanners, getWorks } from '@/services/IndexPage'
+import { getProductionContent, getStats, getTeasers, getBanners, getWorks } from '@/services/index_page/page'
+
 import { getIndexPageContent } from '@/services/index_page/page'
 
 
@@ -22,6 +23,7 @@ export default async function Page() {
   const teasers = await getTeasers();
   const banners = await getBanners();
   const works = await getWorks();
+  const productions = await getProductionContent();
   
   return (
     <main className="relative bg-[#fff]">
@@ -35,7 +37,7 @@ export default async function Page() {
 
       <Works data={data.data.attributes} works={works.data}/>
 
-      <AboutProduction data={data.data.attributes} />
+      <AboutProduction data={data.data.attributes} productions={productions.data} />
     </main>
   )
 }

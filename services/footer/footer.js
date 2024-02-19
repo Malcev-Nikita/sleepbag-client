@@ -13,3 +13,19 @@ export const getFooterContent = async () => {
   
     return response.json();
 };
+
+// ------------------------------------ // 
+// ----- Часто задоваемые вопросы ----- //
+// ------------------------------------ //
+export const getFAQ = async () => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/faqs`, { 
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+  
+    if (!response.ok) throw new Error("Unable to fetch posts.");
+  
+    return response.json();
+};

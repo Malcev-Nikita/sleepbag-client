@@ -1,8 +1,11 @@
 import Image from 'next/image'
+import { markdown } from 'markdown'
 
 
-export default function AboutProduction({data}) {
+export default function AboutProduction({data, productions}) {
     const production_header = () => ({__html: data.production_header})
+    const production_media = () => ({__html: data.production_media})
+    let index = 0
 
     return (
         <section id='section_aboutproduction'>
@@ -11,43 +14,37 @@ export default function AboutProduction({data}) {
                 <h1 dangerouslySetInnerHTML={production_header()} />
             </div>
 
-            <div className='abprod container m-auto'>
-                <div className='abprod_left w-[50%]'>
-                    <h1>1.</h1>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
-                </div>
+            <div className="content">
+                {productions.map(production => {
+                    let description = () => ({__html: markdown.toHTML(production.attributes.description)})
+                    index++
 
-                <div className='abprod_right'>
-                    <Image src='/images/abprod.png' alt='' width={643} height={510}></Image>
-                </div>
+                    if(index % 2 != 0) {
+                        return (
+                            <div className='abprod container m-auto'>
+                                <div className='abprod_left w-[50%] flex justify-center' dangerouslySetInnerHTML={description()} />
+                
+                                <div className='abprod_right'>
+                                    <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + production.attributes.photo.data.attributes.url} alt='' width={643} height={510} />
+                                </div>
+                            </div>
+                        )
+                    }
+                    else {
+                        return (
+                            <div className='abprod container m-auto'>
+                                <div className='abprod_right'>
+                                    <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + production.attributes.photo.data.attributes.url} alt='' width={643} height={510} />
+                                </div>
+
+                                <div className='abprod_left w-[50%] flex justify-center' dangerouslySetInnerHTML={description()} />
+                            </div>
+                        )
+                    }
+                })}
             </div>
-            <div className='abprod container m-auto'>
-                <div className='abprod_right'>
-                    <Image src='/images/abprod2.png' alt='' width={643} height={510}></Image>
-                </div>
 
-                <div className='abprod_left w-[50%]'>
-                    <h1>2.</h1>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
-                </div>
-            </div>
-
-            <div className='abprod container m-auto'>
-                <div className='abprod_left w-[50%]'>
-                    <h1>3.</h1>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
-                </div>
-
-                <div className='abprod_right'>
-                    <Image src='/images/adprod3.png' alt='' width={643} height={510}></Image>
-                </div>
-            </div>
+            <div className="container m-auto h-[550px] rounded-[10px] overflow-hidden" dangerouslySetInnerHTML={production_media()} />
         </section>
     )
 }
