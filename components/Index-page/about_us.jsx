@@ -6,12 +6,6 @@ export default function AboutUs({data, stats}) {
     const about_header = () => ({__html: data.about_header})
     const about_first_description = () => ({__html: markdown.toHTML(data.about_first_description)})
     const about_second_description = () => ({__html: markdown.toHTML(data.about_second_description)})
-    const faq_header = () => ({__html: data.faq_header})
-    const faq_description = () => ({__html: data.faq_description})
-    const questions_header = () => ({__html: data.questions_header})
-    const questions_description = () => ({__html: data.questions_description})
-    const questions_button = () => ({__html: data.questions_button})
-    const questons_offert = () => ({__html: data.questons_offert})
 
     return (
         <section id='aboutus' className='section_aboutus relative'>

@@ -1,16 +1,14 @@
 import Image from 'next/image'
 
-import HeaderBanners from '@/components/Index-page/header_banners'
-import AboutUs from '@/components/Index-page/about_us'
-import Catalog from '@/components/Index-page/catalog'
-import Reasons from '@/components/Index-page/reasons'
-import Works from '@/components/Index-page/works'
-import AboutProduction from '@/components/Index-page/about_production'
-import FAQ from '@/components/faq'
-import Questions from '@/components/questions'
+import HeaderBanners from '@/components/index-page/header_banners'
+import AboutUs from '@/components/index-page/about_us'
+import Catalog from '@/components/index-page/catalog'
+import Reasons from '@/components/index-page/reasons'
+import Works from '@/components/index-page/works'
+import AboutProduction from '@/components/index-page/about_production'
 
-import { getStats, getTeasers, getFAQ, getBanners, getWorks } from '@/services/IndexPage'
-import { getIndexPageContent } from '@/services/Index_page/page'
+import { getStats, getTeasers, getBanners, getWorks } from '@/services/IndexPage'
+import { getIndexPageContent } from '@/services/index_page/page'
 
 
 export const metadata = {
@@ -22,11 +20,8 @@ export default async function Page() {
   const data = await getIndexPageContent();
   const stats = await getStats();
   const teasers = await getTeasers();
-  const faq = await getFAQ();
   const banners = await getBanners();
   const works = await getWorks();
-
-  console.log(data.data.attributes)
   
   return (
     <main className="relative bg-[#fff]">
@@ -41,10 +36,6 @@ export default async function Page() {
       <Works data={data.data.attributes} works={works.data}/>
 
       <AboutProduction data={data.data.attributes} />
-
-      <FAQ data={data.data.attributes} faq={faq.data}/>
-
-      <Questions data={data.data.attributes} />
     </main>
   )
 }

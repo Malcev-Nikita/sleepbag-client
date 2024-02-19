@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { getFAQ } from '@/services/IndexPage'
-import Questions from '@/components/questions'
-import FAQ from '@/components/faq'
+import Questions from '@/components/footer/questions'
+import FAQ from '@/components/footer/faq'
 import Catalog from '@/components/catalog/catalog'
 
 export const metadata = {
