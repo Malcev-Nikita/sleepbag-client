@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Catalog from '@/components/catalog/catalog'
-import { getCatalogPageContent } from '@/services/catalog/page'
+import { getCatalogPageContent, getCategoriesProducts } from '@/services/catalog/page'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,6 +9,7 @@ export const metadata = {
 
 export default async function Page() {
   const data = await getCatalogPageContent()
+  const categoriesProducts = await getCategoriesProducts()
 
   const header = () => ({__html: data.data.attributes.header})
   const description = () => ({__html: data.data.attributes.description})
@@ -33,32 +34,16 @@ export default async function Page() {
           </div>
           
           <div className='catalog_categories'>
-            
-            <div className='catalog_category'>
-              <Image src='/icons/catalog_png1.png' width={26} height={27}/>
-              <p>Органайзеры</p>
-            </div>
-            
-            <div className='catalog_category'>
-              <Image src='/icons/catalog_png2.png' width={26} height={27}/>
-              <p>Сумки</p>
-            </div>
-            
-            <div className='catalog_category'>
-              <Image src='/icons/catalog_png3.png' width={26} height={27}/>
-              <p>Коврики для груза</p>
-            </div>
-            
-            <div className='catalog_category'>
-              <Image src='/icons/catalog_png4.png' width={26} height={27}/>
-              <p>Матрасы</p>
-            </div>
-            
-            <div className='catalog_category'>
-              <Image src='/icons/catalog_png5.png' width={26} height={27}/>
-              <p>Подстаканники</p>
-            </div>
+            {categoriesProducts.data.map(categorie => {
+              let svg = () => ({__html: categorie.attributes.svg})
 
+              return (
+                <div data-category-slug={categorie.attributes.slug} className='catalog_category'>
+                  <div dangerouslySetInnerHTML={svg()} />
+                  <p>{categorie.attributes.name}</p>
+                </div>
+              )
+            })}
           </div>
             
           <div className='catalog_view_all'>
