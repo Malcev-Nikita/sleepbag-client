@@ -16,7 +16,7 @@ export default function Works({works}) {
             <div className="container m-auto">
                 <div className='section_header container m-auto'>
                     <div className='header_line'></div>
-                    <h1>НАШИ РАБОТЫ</h1>
+                    <h2>НАШИ РАБОТЫ</h2>
                 </div>
                 
                 <div className="relative works_items">

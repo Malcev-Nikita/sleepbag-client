@@ -681,6 +681,12 @@ a button{
   flex-direction: row;
   column-gap: 48px;
 }
+.info_right label{
+  cursor: pointer;
+}
+.info_right label:hover, .info_right label:hover input{
+  background-color: #e9e6e6;
+}
 .link_path span{
   color: #F97316;
   font-weight: 500;
@@ -1017,8 +1023,94 @@ li span{
       transform: rotate(360deg);
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px){
+@media (max-width: 1400px) and (min-width: 1025px){
   header .cart{
     top: 111vh;
+  }
+  .swiper-slide .container h3{
+    font-size: 49px;
+  }
+  .contacts_main_part{
+    top: 21vh;
+    left: 20vw;
+  }
+  .contacts_main_part h2{
+    font-size: 42px;
+  }
+  .contacts_main_part p:nth-child(2){
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
+  }
+  .contacts_inputs textarea{
+    height: 55px;
+    width: 85%;
+    padding: 15px 0px 0px 10px;
+  }
+  .contacts_inputs button{
+    height: 55px;
+    width: 85%;
+    font-size: 18px;
+  }
+  .footer_links{
+    gap: 25px;
+  }
+  .abprod_left{
+    row-gap: 10px;
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px){
+  header .flex{
+    gap: 18px;
+  }
+  .swiper-slide .container h3{
+    font-size: 39px;
+  }
+  header .flex a{
+    font-size: 16px;
+  }
+  .logo_link svg{
+    width: 135px;
+  }
+  .part1_left h3, .part2_right_text h3{
+    font-size: 20px;
+  }
+  .part1_left p, .part2_right_text{
+    font-size: 16px;
+  }
+  .object_button1, .object_button2{
+    font-size: 18px;
+  }
+  .object_photo{
+    padding: 15px;
+  }
+  .reason_text span{
+    font-size: 21px;
+  }
+  .reason_text p{
+    font-size: 18px;
+  }
+  .section_header h2{
+    font-size: 40px;
+  }
+  .abprod_left{
+    row-gap: 10px;
+  }
+  .footer_top{
+    gap: 10px;
+  }
+  .footer_logo svg{
+    width: 170px;
+  }
+  .footer ul{
+    font-size: 17px;
+  }
+  .footer li{
+    font-size: 15px;
+  }
+  .question{
+    padding: 21px 30px;
+  }
+  .contacts_main_part{
+    left: 16vw;
   }
 }

@@ -21,7 +21,6 @@ export default function Footer() {
                             <li><a href="#contacts">Контакты</a></li>
                             <li><a href="#">Калькулятор</a></li>
                         </div>
-                        <div className="footer_menu_border"></div>
                         <div className="footer_links_column">
                             <ul>Юридическая информация</ul>
                             <li><a href="#">Политика конфиденциальности</a></li>

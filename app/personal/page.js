@@ -12,39 +12,37 @@ export default function Page() {
         <article className='link_path pt-[13vh]'>Главная / <span>Личный кабинет</span></article>
         <section className='userpage_info pt-[40px]'>
             <div className='info_left'>
-                <Image src="/images/user_photo.png" alt='Фото пользователя' width={488} height={488} className="rounded"></Image>
+                <svg xmlns="http://www.w3.org/2000/svg" width="410" height="410" viewBox="0 0 25 25" fill="none">
+                    <path d="M19 7C19 10.3138 16.3138 13 13 13C9.68621 13 7 10.3138 7 7C7 3.68621 9.68621 1 13 1C16.3138 1 19 3.68621 19 7Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M8.28028 14C7.88281 14.1923 7.34723 14.4947 6.79473 14.9561C6.13511 15.5073 5.76584 16.0276 5.45294 16.4711C4.98219 17.1453 4.28874 18.1347 4.07733 19.5036C4.02377 19.8496 4.01531 20.2521 4.00404 21.0544C3.98994 21.849 4.01531 22.5104 4.04068 22.9667C9.9716 23.0103 15.9053 22.9564 21.8391 23C21.8955 22.6411 21.9603 22.2412 21.9828 21.6491C22.0026 21.1877 22.0364 20.3443 21.8757 19.5036C21.6136 18.1347 20.9201 17.1837 20.424 16.5044C19.5868 15.356 18.6143 14.546 17.8165 14" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                </svg>
             </div>
             <div className='info_right w-[60%]'>
                 <hr/>
-                <div className='info_right_block'>
-                  <p>Логин</p>
-                  <p>Test#1</p>
-                </div>
-                <hr/>
-                <div className='info_right_block'>
+                <label for="email" className='info_right_block'>
                   <p>Адрес электронной почты</p>
-                  <p>info@text.ru</p>
-                </div>
+                  <input id='email' placeholder='E-mail'></input>
+                </label>
                 <hr/>
-                <div className='info_right_block'>
+                <label for="name" className='info_right_block'>
                   <p>Имя</p>
-                  <p>Иван</p>
-                </div>
+                  <input id='name' placeholder='Имя'></input>
+                </label>
                 <hr/>
-                <div className='info_right_block'>
+                <label for="first_name" className='info_right_block'>
                   <p>Фамилия</p>
-                  <p>Дружин</p>
-                </div>
+                  <input id='first_name' placeholder='Фамилия'></input>
+                </label>
                 <hr/>
-                <div className='info_right_block'>
+                <label for="phone" className='info_right_block'>
                   <p>Телефон</p>
-                  <p>+7 999 999 99 99</p>
-                </div>
+                  <input id='phone' placeholder='Телефон'></input>
+                </label>
                 <hr/>
-                <div className='info_right_block'>
+                <label for="password" className='info_right_block'>
                   <p>Пароль</p>
-                  <p>*************</p>
-                </div>
+                  <input id='password' placeholder='password'></input>
+                </label>
                 <hr/>
             </div>
             <div>
@@ -86,14 +84,6 @@ export default function Page() {
                 </svg>
               </div>
               <p>Смотреть</p>
-          </a>
-          <a className='blocks_block' href='#'>
-              <div>
-                <h2>Способы оплаты</h2>
-                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.03694 6.33333C1 7.03361 1 7.89367 1 9C1 11.485 1 12.7275 1.41866 13.7076C1.97688 15.0145 3.04759 16.0527 4.39524 16.594C5.40598 17 6.68732 17 9.25 17H14.75C17.3127 17 18.594 17 19.6048 16.594C20.9524 16.0527 22.0231 15.0145 22.5813 13.7076C23 12.7275 23 11.485 23 9C23 7.89367 23 7.03361 22.9631 6.33333M1.03694 6.33333C1.08298 5.46066 1.18639 4.83612 1.41866 4.29236C1.97688 2.98554 3.04759 1.94728 4.39524 1.40598C5.40598 1 6.68732 1 9.25 1H14.75C17.3127 1 18.594 1 19.6048 1.40598C20.9524 1.94728 22.0231 2.98554 22.5813 4.29236C22.8136 4.83612 22.917 5.46066 22.9631 6.33333M1.03694 6.33333H22.9631M17.5 9.88889H19.3333" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
           </a>
         </section>
     </main>
