@@ -168,11 +168,11 @@ section{
 .section_header span{
   color: #F97316;
 }
-.section_header h1{
+.section_header h2{
   font-family: unbounded;
 
 }
-.section_header h1, .section_parts h1{
+.section_header h2, .section_parts h1{
   font-weight: 700;
 }
 .section_faq .section_header, .section_contact .section_header{
