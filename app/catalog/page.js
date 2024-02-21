@@ -24,9 +24,9 @@ export default async function Page() {
 
         <section className='choose_category container m-auto'>
           
-          <div className='section_header container m-auto'>
+          <div className='section_header'>
             <div className='header_line'></div>
-            <h1>ВЫБОР КАТЕГОРИИ</h1>
+            <h2>ВЫБОР КАТЕГОРИИ</h2>
           </div>
           
           <div className='catalog_categories'>
@@ -70,22 +70,22 @@ export default async function Page() {
 
         </section>
         
-        {/* <section className='section_filters'>
+        <section className='section_filters'>
           
-          <div className='filter_line_first container m-auto'></div>
+          <div className='filter_line_first'></div>
 
-          <div className='section_header container m-auto'>
+          <div className='section_header'>
             <div className='header_line'></div>
-            <h1>ФИЛЬТРЫ</h1>
+            <h2>ФИЛЬТРЫ</h2>
           </div>
           
-          <div className='catalog_filters container m-auto'>
+          <div className='catalog_filters'>
             <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
             <input className='catalog_filter' placeholder='Введите ширину багажного автомобиля'></input>
             <button className='filter_button'>Применить фильтры</button>
           </div>
         
-        </section> */}
+        </section>
         
         <Catalog />
 

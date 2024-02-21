@@ -27,10 +27,10 @@ function QuestionsClick(element) {
 export default function FAQ({data}) {
     return (
         <section className='section_faq relative pb-[50px]'>
-            <div className='section_header container m-auto'>
+            <div className='section_header'>
                 <div className='section_header_inside'>
                     <div className='header_line'></div>
-                    <h1>РАЗДЕЛ <span>FAQ</span></h1>
+                    <h2>РАЗДЕЛ <span>FAQ</span></h2>
                 </div>
 
                 <p className='under_header_text'>Ответы на самые часто задаваемые вопросы наших клиентов.</p>

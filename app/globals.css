@@ -171,11 +171,10 @@ section{
 .section_header span{
   color: #F97316;
 }
-.section_header h1{
+.section_header h2{
   font-family: unbounded;
-
 }
-.section_header h1, .section_parts h1{
+.section_header h2, .section_parts h1{
   font-weight: 700;
 }
 .section_faq .section_header, .section_contact .section_header{
@@ -203,11 +202,7 @@ section{
   color: #000;
   font-size: 42px;
 }
-.aboutus_parts h2{
-  font-weight: 600;
-  font-size: 23px;
-}
-.aboutus_parts h1{
+.aboutus_parts h3{
   font-size: 26px;
   font-weight: 700;
 }
@@ -301,7 +296,7 @@ section{
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.object_desc h1{
+.object_desc h3{
   font-weight: 700;
 }
 .object_photo{
@@ -491,11 +486,11 @@ a button{
   flex-direction: column;
   row-gap: 30px;
 }
-.abprod_left h1{
+.abprod_left h3{
   font-size: 48px;
   font-weight: 700;
 }
-.abprod_left h2{
+.abprod_left h4{
   font-size: 23px;
   font-weight: 500;
 }
@@ -673,45 +668,33 @@ a button{
   border-radius: 5px;
   height: 65px;
 }
-footer{
-  width: 100%;
-  height: 393px;
-  display: flex;
-  justify-content: space-around;
-  background-color: #1a1a1a;
-  align-items: center;
-  padding-top: 70px;
-}
-footer .container{
-  display: flex;
-  flex-direction: column;
-}
-.footer_main_part{
-  display: flex;
-  flex-direction: row;
-}
-.footer_left{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 265px;
-}
-.footer_right{
-  display: flex;
-  flex-direction: row;
-  height: 265px;
-  column-gap: 150px;
-  position: relative;
-  left: 180px;
-}
 
-.footer_menu_border {
-  position: relative;
+
+footer{ 
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  margin: 0;
+  height: 100%;
 }
-.footer_menu, .footer_lawyer, .footer_contacts, .footer_questions{
+.footer_top, .footer_links{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.footer_top{
+  justify-content: space-around;
+}
+.footer_links{
+  gap: 54px;
   list-style-type: none;
 }
-.footer_menu_border::before {
+.footer_logo{
+  display: flex;
+  justify-content: center;
+}
+.footer_menu_border::before{
   content: "";
   height: 40%;
   display: block;
@@ -720,49 +703,68 @@ footer .container{
   border: 1px dashed #F97316;
   opacity: 0.3;
 }
-
-.footer_menu, .footer_lawyer, .footer_questions, .footer_contact{
+.footer_links_column{
   display: flex;
   flex-direction: column;
-  row-gap: 4px;
-  color: #fff;
 }
-.footer_right ul{
+footer ul{
   color: #F97316;
-}
-.footer_lawyer{
-  display: flex;
-  width: 280px;
-}
-.footer_contacts ul{
   font-weight: 700;
 }
+.footer_links_column li{
+  color: #fff;
+}
 .footer_contacts{
-  color: #8F8F8F;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
-  width: 280px;
+  gap: 10px;
 }
-.footer_copyright{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  color: #7b7b7b;
-}
-.contacts{
+.footer_contacts li{
   display: flex;
   flex-direction: row;
-  column-gap: 5px;
+  align-items: center;
+  color: #8f8f8f;
+  gap: 6px;
 }
-.contacts div{
+li span{
+  color: #F97316;
+}
+.footer_contacts li div{
+  border-radius: 50%;
+  background-color: #272727;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer_contacts_socials{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 20px;
+}
+.contacts_socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #4e4e4e;
   border-radius: 50%;
-  background-color: #272727;
-  height: 27px;
-  width: 27px;
+}
+.footer_bottom{
+  display: flex;
+  justify-content: space-between;
+  color: #7b7b7b;
+  font-weight: 500;
+  height: 70px;
+  margin-top: 45px;
+  align-items: center;
+}
+.footer_bottom a{
+  color: #F97316;
+  text-decoration: underline;
 }
 /* --------------- */
 .catalog_header{
@@ -857,6 +859,7 @@ footer .container{
   border-radius: 10px;
   padding: 15px;
   font-size: 18px;
+  background-color: #e6e9ec;
 }
 .filter_button{
   display: flex;
@@ -969,5 +972,10 @@ footer .container{
       -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
       transform: rotate(360deg);
+  }
+}
+@media (max-width: 1440px) and (min-width: 1025px){
+  header .cart{
+    top: 111vh;
   }
 }

@@ -14,7 +14,7 @@ export default function Catalog() {
             <section id='catalog' className='section_catalog relative'>
                 <div className='section_header container m-auto'>
                     <div className='header_line'></div>
-                    <h1>НАШ КАТАЛОГ</h1>
+                    <h2>НАШ КАТАЛОГ</h2>
                 </div>
             
                 <div className='catalog_main container m-auto'>
@@ -37,7 +37,7 @@ export default function Catalog() {
                             </div>
 
                             <div className='object_desc'>
-                                <h1>{product.attributes.name}</h1>
+                                <h3>{product.attributes.name}</h3>
                                 <p>В наличии - {product.attributes.count} шт.</p>
                                 <p className='object_desc_text'>{product.attributes.description}</p>
 

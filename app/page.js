@@ -28,12 +28,12 @@ export default async function Page() {
       <section id='aboutus' className='section_aboutus relative'>
         <div className='section_header container m-auto pb-[100px]'>
           <div className='header_line'></div>
-          <h1>НЕМНОГО О НАШЕЙ <span>КОМПАНИИ!</span></h1>
+          <h2>НЕМНОГО О НАШЕЙ <span>КОМПАНИИ!</span></h2>
         </div>
         <div className='aboutus_parts container m-auto'>
           <div className='aboutus_part1'>
             <div className='part1_left w-[50%]'>
-              <h1>Органайзер для автомобилей всех классов с удобной системой быстрого снятия для перевозки грузов</h1>
+              <h3>Органайзер для автомобилей всех классов с удобной системой быстрого снятия для перевозки грузов</h3>
               {/* <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h2> */}
               <p>В большой части автомобилей сиденья складываются таким образом, что не образуют ровной поверхности достаточной для организации полноценного отдыха.
                 <br/> <br/>Основной недостаток принципиальной схемы стационарных органайзеров заключается том, что его необходимо устанавливать раз и навсегда, хотя потребители пользуются спальным/погрузочным местом далеко не каждый день.
@@ -49,7 +49,7 @@ export default async function Page() {
             </div>
             <div className='part2_right w-[50%]'>
               <div className='part2_right_text'>
-                <h1>Органайзер можно:</h1>
+                <h3>Органайзер можно:</h3>
                 <p>
                   -хранить на балконе, кладовке или в гараже<br/>
                   -перевозить в сложенном состоянии в упаковочном мешке не занимая много места<br/>
@@ -78,7 +78,7 @@ export default async function Page() {
       <section className='section_reasons relative'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
-          <h1>6 ПРИЧИН СОТРУДНИЧАТЬ С НАМИ</h1>
+          <h2>6 ПРИЧИН СОТРУДНИЧАТЬ С НАМИ</h2>
         </div>
 
         <div className='reasons container m-auto'>
@@ -102,12 +102,12 @@ export default async function Page() {
       <section id='section_aboutproduction'>
         <div className='section_header container m-auto'>
           <div className='header_line'></div>
-          <h1>О ПРОДУКЦИИ</h1>
+          <h2>О ПРОДУКЦИИ</h2>
         </div>
         <div className='abprod container m-auto'>
           <div className='abprod_left w-[50%]'>
-            <h1>1.</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
+            <h3>1.</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h4>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
           </div>
@@ -120,16 +120,16 @@ export default async function Page() {
             <Image src='/images/abprod2.png' alt='' width={843} height={510}></Image>
           </div>
           <div className='abprod_left w-[50%]'>
-            <h1>2.</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
+            <h3>2.</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h4>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
           </div>
         </div>
         <div className='abprod container m-auto'>
           <div className='abprod_left w-[50%]'>
-            <h1>3.</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h2>
+            <h3>3.</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h4>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             <br/><br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
           </div>
