@@ -1,11 +1,14 @@
 import FAQ from '@/components/footer/faq'
 import Questions from '@/components/footer/questions'
-import { getFooterContent, getFAQ } from '@/services/footer/footer';
+import { getFooterContent, getFAQ, getIndexMenus, getInfoMenus, getOtherMenus } from '@/services/footer/footer';
 
 
 export default async function Footer() {
     const data = await getFooterContent();
     const faq = await getFAQ();
+    const index_menu = await getIndexMenus();
+    const info_menu = await getInfoMenus();
+    const other_menu = await getOtherMenus();
 
     const menu_header = () => ({__html: data.data.attributes.menu_header})
     const info_header = () => ({__html: data.data.attributes.info_header})
@@ -41,24 +44,26 @@ export default async function Footer() {
                         <div className='footer_right'>
                             <div className='footer_menu footer_menu_border'>
                                 <ul dangerouslySetInnerHTML={menu_header()} />
-                                <a href='/'><li>Главная</li></a>
-                                <a href='#aboutus'><li>О нас</li></a>
-                                <a href='/catalog'><li>Каталог</li></a>
-                                <a href='#production'><li>Портфолио</li></a>
-                                <a href='#contacts'><li>Контакты</li></a>
+
+                                {index_menu.data.map(element => (
+                                    <a href={element.attributes.link}><li>{element.attributes.name}</li></a>
+                                ))}
                             </div>
 
                             <div className='footer_lawyer footer_menu_border'>
                                 <ul dangerouslySetInnerHTML={info_header()} />
-                                <a href='#'><li>Политика конфеденциальности</li></a>
-                                <a href='#'><li>Пользовательское соглашение</li></a>
+                                
+                                {info_menu.data.map(element => (
+                                    <a href={element.attributes.link}><li>{element.attributes.name}</li></a>
+                                ))}
                             </div>
 
                             <div className='footer_questions'>
                                 <ul dangerouslySetInnerHTML={other_header()} />
-                                <a href='#'><li>Как сделать заказ</li></a>
-                                <a href='#'><li>Техническая поддержка</li></a>
-                                <a href='#'><li>Вопрос-ответ</li></a>
+                                
+                                {other_menu.data.map(element => (
+                                    <a href={element.attributes.link}><li>{element.attributes.name}</li></a>
+                                ))}
                             </div>
 
                             <div className='footer_contacts'>

@@ -38,10 +38,10 @@ export default async function Page() {
               let svg = () => ({__html: categorie.attributes.svg})
 
               return (
-                <div data-category-slug={categorie.attributes.slug} className='catalog_category'>
+                <button data-category-slug={categorie.attributes.slug} className='catalog_category'>
                   <div dangerouslySetInnerHTML={svg()} />
                   <p>{categorie.attributes.name}</p>
-                </div>
+                </button>
               )
             })}
           </div>

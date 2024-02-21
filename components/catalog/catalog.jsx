@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
-import { LikeCatalog } from '../like'
+import { LikeCatalog } from '../header/like'
 
 
 export default function Catalog() {
