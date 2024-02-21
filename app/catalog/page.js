@@ -18,53 +18,20 @@ export default async function Page() {
 
   return (
     <main>        
-        <header className='catalog_header'>
-          <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
-          <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
-            <h1 dangerouslySetInnerHTML={header()} />
-            <p dangerouslySetInnerHTML={description()} />
-          </div>
-        </header>
-        <div className='container m-auto'>
-          <section className='choose_category'>
-            
-            <div className='section_header'>
-              <div className='header_line'></div>
-              <h2>ВЫБОР КАТЕГОРИИ</h2>
-            </div>
-            
-            <div className='catalog_categories'>
-              
-              <div className='catalog_category'>
-                <Image src='/icons/catalog_png1.png' width={26} height={27}/>
-                <p>Органайзеры</p>
-              </div>
-              
-              <div className='catalog_category'>
-                <Image src='/icons/catalog_png2.png' width={26} height={27}/>
-                <p>Сумки</p>
-              </div>
-              
-              <div className='catalog_category'>
-                <Image src='/icons/catalog_png3.png' width={26} height={27}/>
-                <p>Коврики для груза</p>
-              </div>
-              
-              <div className='catalog_category'>
-                <Image src='/icons/catalog_png4.png' width={26} height={27}/>
-                <p>Матрасы</p>
-              </div>
-              
-              <div className='catalog_category'>
-                <Image src='/icons/catalog_png5.png' width={26} height={27}/>
-                <p>Подстаканники</p>
-              </div>
+      <header className='catalog_header'>
+        <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
+        <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
+          <h1 dangerouslySetInnerHTML={header()} />
+          <p dangerouslySetInnerHTML={description()} />
+        </div>
+      </header>
 
+      <div className='container m-auto'>
         <section className='choose_category container m-auto'>
           
           <div className='section_header container m-auto'>
             <div className='header_line'></div>
-            <h1 dangerouslySetInnerHTML={categories_header()} />
+            <h2 dangerouslySetInnerHTML={categories_header()} />
           </div>
           
           <div className='catalog_categories'>
@@ -90,12 +57,12 @@ export default async function Page() {
             </button>
           </div>
 
-            <div className='section_header'>
+            <div className='section_header mb-[40px]'>
               <div className='header_line'></div>
               <h2>ФИЛЬТРЫ</h2>
             </div>
             
-            <div className='catalog_filters'>
+            <div className='catalog_filters mb-[70px]'>
               <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
               <input className='catalog_filter' placeholder='Введите ширину багажного автомобиля'></input>
               <button className='filter_button'>Применить фильтры</button>
@@ -103,6 +70,7 @@ export default async function Page() {
           
           </section>
         </div>
+        
         <Catalog />
     </main>
   )
