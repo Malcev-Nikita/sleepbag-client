@@ -50,7 +50,7 @@ export default async function Header() {
                         
                         <Like/>
 
-                        <a href="#" className='flex items-center'>
+                        <a href="/personal" className='flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                                 <path d="M19 7C19 10.3138 16.3138 13 13 13C9.68621 13 7 10.3138 7 7C7 3.68621 9.68621 1 13 1C16.3138 1 19 3.68621 19 7Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
                                 <path d="M8.28028 14C7.88281 14.1923 7.34723 14.4947 6.79473 14.9561C6.13511 15.5073 5.76584 16.0276 5.45294 16.4711C4.98219 17.1453 4.28874 18.1347 4.07733 19.5036C4.02377 19.8496 4.01531 20.2521 4.00404 21.0544C3.98994 21.849 4.01531 22.5104 4.04068 22.9667C9.9716 23.0103 15.9053 22.9564 21.8391 23C21.8955 22.6411 21.9603 22.2412 21.9828 21.6491C22.0026 21.1877 22.0364 20.3443 21.8757 19.5036C21.6136 18.1347 20.9201 17.1837 20.424 16.5044C19.5868 15.356 18.6143 14.546 17.8165 14" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>

@@ -186,6 +186,9 @@ section{
   row-gap: 20px;
   font-size: 42px;
 }
+.section_contact{
+  justify-content: center;
+}
 .question .content li{
   color: #000;
 }
@@ -569,14 +572,17 @@ a button{
 }
 .contacts_main_part .section_header{
   display: flex;
+  font-size: 50px;
   flex-direction: row;
   padding: 0;
   align-items: center;
   justify-content: center;
   color: #fff;
 }
-.contacts_main_part p{
+.contacts_main_part p:nth-child(2){
   padding: 35px 0px 35px 0px;
+  font-size: 22px;
+  width: 78%;
 }
 .contacts_inputs{
   display: flex;
@@ -585,8 +591,8 @@ a button{
   align-items: center;
   row-gap: 15px;
 }
-.contacts_inputs input{
-  padding: 0px 0px 0px 20px;
+.contacts_inputs textarea{
+  padding: 20px 0px 0px 20px;
   border-radius: 10px;
   font-size: 18px;
   width: 100%;
@@ -599,15 +605,16 @@ a button{
   font-size: 18px;
   background-color: #F97316;
   border-radius: 10px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
 }
 .inputs_text{
   text-align: center;
   color: #fff;
-  font-size: 18px;
-  width: 80%;
-}
-.inputs_text p{
   font-weight: 500;
+  font-size: 18px;
+  width: 60%;
 }
 .contacts_inputs a{
   text-decoration: underline;
@@ -668,15 +675,71 @@ a button{
   border-radius: 5px;
   height: 65px;
 }
+/* ---------------Страничка пользователя------------------ */
+.userpage_info{
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+}
+.link_path span{
+  color: #F97316;
+  font-weight: 500;
+}
+.info_right_block{
+  display: flex;
+  justify-content: space-between;
+  font-size: 21px;
+  font-weight: 500;
+  align-items: center;
+  height: 80px;
+}
+.info_right hr{
+  border-bottom: 2px solid #707070;
+  opacity: 0.3;
+}
+.userpage_blocks{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10%;
+  row-gap: 30px;
+}
+.blocks_block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 68px 0px 68px 66px;
+  border-radius: 10px;
+  width: calc(538px - 10%);
+  height: 218px;
+  transition: 0.4s;
+  gap: 20px;
+}
+.blocks_block:hover{
+  box-shadow: 0px 0px 15px -5px #454545;
+  cursor: pointer;
+}
+.blocks_block div h2{
+  font-size: 22px;
+  font-weight: 500;
+}
+.blocks_block p{
+  color: #F97316;
+}
+.blocks_block div{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
 
-
+/* ---------------Страничка пользователя------------------ */
 footer{ 
   padding-top: 60px;
   display: flex;
   flex-direction: column;
   background-color: #1a1a1a;
   margin: 0;
-  height: 100%;
 }
 .footer_top, .footer_links{
   display: flex;
@@ -684,17 +747,18 @@ footer{
   flex-direction: row;
 }
 .footer_top{
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .footer_links{
   gap: 54px;
+  font-size: 18px;
   list-style-type: none;
 }
 .footer_logo{
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
-.footer_menu_border::before{
+/* .footer_menu_border::before{
   content: "";
   height: 40%;
   display: block;
@@ -702,7 +766,7 @@ footer{
   right: -70px;
   border: 1px dashed #F97316;
   opacity: 0.3;
-}
+} */
 .footer_links_column{
   display: flex;
   flex-direction: column;
@@ -755,9 +819,11 @@ li span{
 }
 .footer_bottom{
   display: flex;
+  font-family: Unbounded;
   justify-content: space-between;
   color: #7b7b7b;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 13px;
   height: 70px;
   margin-top: 45px;
   align-items: center;
@@ -872,29 +938,6 @@ li span{
   color: #F97316;
 }
 /* --------------- */
-.footer_copyright a{
-  color: #F97316;
-  text-decoration: underline;
-}
-.socials{
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
-  margin-top: 15px;
-}
-.contact_soc_icon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #383838;
-  height: 30px;
-  width: 30px;
-  border: none;
-}
-.footer_copyright p:nth-child(1){
-  font-weight: 700;
-}
 .cart h3 {
   font-family: 'Unbounded';
 }
