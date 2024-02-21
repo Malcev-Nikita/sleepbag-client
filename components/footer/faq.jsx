@@ -33,7 +33,8 @@ export default function FAQ({data, faq}) {
             <div className='section_header container m-auto'>
                 <div className='section_header_inside'>
                     <div className='header_line'></div>
-                    <h1 dangerouslySetInnerHTML={faq_header()} />
+
+                    <h2 dangerouslySetInnerHTML={faq_header()} />
                 </div>
 
                 <p className='under_header_text' dangerouslySetInnerHTML={faq_description()} />

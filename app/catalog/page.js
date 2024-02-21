@@ -17,7 +17,7 @@ export default async function Page() {
   const categories_button = () => ({__html: data.data.attributes.categories_button})
 
   return (
-    <main className="">        
+    <main>        
         <header className='catalog_header'>
           <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
           <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
@@ -25,6 +25,40 @@ export default async function Page() {
             <p dangerouslySetInnerHTML={description()} />
           </div>
         </header>
+        <div className='container m-auto'>
+          <section className='choose_category'>
+            
+            <div className='section_header'>
+              <div className='header_line'></div>
+              <h2>ВЫБОР КАТЕГОРИИ</h2>
+            </div>
+            
+            <div className='catalog_categories'>
+              
+              <div className='catalog_category'>
+                <Image src='/icons/catalog_png1.png' width={26} height={27}/>
+                <p>Органайзеры</p>
+              </div>
+              
+              <div className='catalog_category'>
+                <Image src='/icons/catalog_png2.png' width={26} height={27}/>
+                <p>Сумки</p>
+              </div>
+              
+              <div className='catalog_category'>
+                <Image src='/icons/catalog_png3.png' width={26} height={27}/>
+                <p>Коврики для груза</p>
+              </div>
+              
+              <div className='catalog_category'>
+                <Image src='/icons/catalog_png4.png' width={26} height={27}/>
+                <p>Матрасы</p>
+              </div>
+              
+              <div className='catalog_category'>
+                <Image src='/icons/catalog_png5.png' width={26} height={27}/>
+                <p>Подстаканники</p>
+              </div>
 
         <section className='choose_category container m-auto'>
           
@@ -55,27 +89,20 @@ export default async function Page() {
                 </svg>
             </button>
           </div>
-          
 
-        </section>
-        
-        {/* <section className='section_filters'>
+            <div className='section_header'>
+              <div className='header_line'></div>
+              <h2>ФИЛЬТРЫ</h2>
+            </div>
+            
+            <div className='catalog_filters'>
+              <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
+              <input className='catalog_filter' placeholder='Введите ширину багажного автомобиля'></input>
+              <button className='filter_button'>Применить фильтры</button>
+            </div>
           
-          <div className='filter_line_first container m-auto'></div>
-
-          <div className='section_header container m-auto'>
-            <div className='header_line'></div>
-            <h1>ФИЛЬТРЫ</h1>
-          </div>
-          
-          <div className='catalog_filters container m-auto'>
-            <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
-            <input className='catalog_filter' placeholder='Введите ширину багажного автомобиля'></input>
-            <button className='filter_button'>Применить фильтры</button>
-          </div>
-        
-        </section> */}
-        
+          </section>
+        </div>
         <Catalog />
     </main>
   )
