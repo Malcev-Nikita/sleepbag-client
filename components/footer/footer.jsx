@@ -3,7 +3,7 @@ import Questions from '@/components/footer/questions'
 import { getFooterContent, getFAQ, getIndexMenus, getInfoMenus, getOtherMenus } from '@/services/footer/footer';
 
 
-export default async function Footer() {
+export default async function Footer({footer}) {
     const data = await getFooterContent();
     const faq = await getFAQ();
     const index_menu = await getIndexMenus();
@@ -22,12 +22,17 @@ export default async function Footer() {
     const developer = () => ({__html: data.data.attributes.developer})
     const vk = data.data.attributes.vk
     const ok = data.data.attributes.ok
+    
 
     return (
         <div className="main">
-            <FAQ data={data.data.attributes} faq={faq.data}/>
+            {footer == 'long' ? (
+                <div>
+                    <FAQ data={data.data.attributes} faq={faq.data}/>
 
-            <Questions data={data.data.attributes} />
+                    <Questions data={data.data.attributes} />
+                </div>
+            ) : ('')}
             
             <footer>
                 <div className='container m-auto flex'>

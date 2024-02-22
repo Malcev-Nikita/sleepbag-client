@@ -15,66 +15,60 @@ export default function Works({data, works}) {
     const works_button = () => ({__html: data.works_button})
 
     return (
-        <div id='production'>
-            <section className='section_our_works relative'>
-                <div className="container m-auto">
-                    <div className='section_header container m-auto'>
-                        <div className='header_line'></div>
-                        <h1 dangerouslySetInnerHTML={works_header()} />
-                    </div>
-                    
-                    <div className="relative works_items">
-                        {works.map(work => {
-                            function description() {
-                                return {__html: markdown.toHTML(work.attributes.description)};
-                            }
+        <section id='production' className='container m-auto' aria-label="Our Works Section" role="main">
+            <div className='flex items-center gap-[25px]' role="banner">
+                <div className='w-[5vw] h-[1px] bg-[#F97316]' />
+                <h2 className='font-bold font-[unbounded] text-[42px]' dangerouslySetInnerHTML={works_header()} />
+            </div>
 
-                            const [thumbsSwiper, setThumbsSwiper] = useState(null);
+            <div className="flex flex-wrap justify-between mt-[100px]" role="list">
+                {works.map((work, index) => {
+                    function description() {
+                        return { __html: markdown.toHTML(work.attributes.description) };
+                    }
 
-                            return (
-                                <div className="item">
-                                    <div className="top_content">
-                                        <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
-                                            {work.attributes.gallery.data.map(image => (
-                                                <SwiperSlide className='w-[100%]'>
-                                                    <Image className='aspect-video object-cover w-40' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080}/>
-                                                </SwiperSlide>  
-                                            ))} 
-                                        </Swiper>  
+                    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-                                        <div className="content">
-                                            <h4>{work.attributes.header}</h4>
+                    return (
+                        <article key={index} className="w-[49%] flex justify-between gap-[12px]" role="listitem">
+                            <div className="w-[100%]">
+                                <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
+                                    {work.attributes.gallery.data.map((image, idx) => (
+                                        <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
+                                            <Image className='aspect-[16/11] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
 
-                                            <div className='markdown' dangerouslySetInnerHTML={description()}/>
-                                        </div>
-                                    </div> 
-                                    
-                                    <div className='small_photos'>
-                                        <Swiper className='h-[100%]' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
-                                            {work.attributes.gallery.data.map(image => (
-                                                <SwiperSlide className='w-[100%]'>
-                                                    <Image className='aspect-video object-cover w-40' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080}/>
-                                                </SwiperSlide>  
-                                            ))}
-                                        </Swiper>
-                                    </div>
-
+                                <div className="mt-[15px]">
+                                    <h4 className='font-semibold text-[24px] font-[Manrope]'>{work.attributes.header}</h4>
+                                    <div className='text-[14px] font-normal font-[Manrope]' dangerouslySetInnerHTML={description()} />
                                 </div>
-                            )
-                        })}
-                    </div>
-                    
-                    <a className='down_button' href='#'>
-                        <button className='m-auto'>
-                            <span dangerouslySetInnerHTML={works_button()} />
+                            </div>
 
-                            <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
-                            </svg>
-                        </button>
-                    </a>
-                </div>
-            </section>
-        </div>
+                            <div className='w-[70px]'>
+                                <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
+                                    {work.attributes.gallery.data.map((image, idx) => (
+                                        <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
+                                            <Image className='aspect-[16/13] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
+                        </article>
+                    );
+                })}
+            </div>
+
+            <div className="flex items-center flex-col w-[100%]">
+                <a className='py-[17px] px-[35px] rounded-[7px] border-[#F97316] border-[1px] inline-flex gap-[6px] items-center mt-[100px]' href='#' role="link">
+                    <span className='text-[#F97316] text-[14px] font-semibold font-[Manrope]' dangerouslySetInnerHTML={works_button()} />
+
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" strokeLinecap="square" />
+                    </svg>
+                </a>
+            </div>
+        </section>
     )
 }

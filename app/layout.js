@@ -5,10 +5,14 @@ import Footer from '@/components/footer/footer';
 
 import StoreProvider from '@/store/StoreProvider';
 
+import { usePathname } from 'next/navigation'
+
 import './globals.css';
 
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname()
+
   return (
     <html lang="ru">
       <head>
@@ -23,7 +27,11 @@ export default function RootLayout({ children }) {
 
             {children}
 
-            <Footer/>
+            {pathname.includes('personal') ? (
+              <Footer footer='short' />
+            ) : (
+              <Footer footer='long' />
+            )}
         </StoreProvider>
       </body>
     </html>

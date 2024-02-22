@@ -10,38 +10,34 @@ import 'swiper/css/pagination';
 
 export default function HeaderBanners({banners}) {
     return (
-        <div id="main">
-            <section className='h-[100vh] pt-0'>
-                <Swiper className='h-[100%] header_banner' modules={[Pagination]} navigation pagination={{ clickable: true }}>
-                    {banners.map(item => {
-                        return (
-                            <SwiperSlide>
-                                {item.attributes.bg_photo.data.attributes.mime.includes('video') ? (
-                                    <video autoplay="autoplay" loop muted loading="lazy" className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url}></video>
-                                ) : (
-                                    <Image className='header_banner_bg aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080}/>
-                                )}
+        <section className='h-[100vh] pt-0' aria-label="Header Banner Section">
+            <Swiper className='h-[100%]' modules={[Pagination]} navigation pagination={{ clickable: true }}>
+                {banners.map((item, index) => (
+                    <SwiperSlide key={index} role="banner" aria-label={`Banner ${index + 1}`}>
+                        {item.attributes.bg_photo.data.attributes.mime.includes('video') ? (
+                            <video autoPlay loop muted loading="lazy" className='header_banner_bg  aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url}></video>
+                        ) : (
+                            <Image className='header_banner_bg  aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url} width={1920} height={1080} alt={item.attributes.header} />
+                        )}
 
-                                <div className='container z-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-                                    <h3 className='text-[#F4F4F4] text-[55px] uppercase w-[100%] font-bold'>{item.attributes.header}</h3>
+                        <div className='container z-5 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+                            <h3 className='text-[#F4F4F4] text-[55px] uppercase w-[100%] font-bold font-[unbounded]' aria-label="Banner Header">{item.attributes.header}</h3>
 
-                                    <p className='text-[#F4F4F4] text-[20px] font-semibold mt-[18px]'>{item.attributes.description}</p>
+                            <p className='text-[#F4F4F4] text-[20px] font-semibold mt-[18px]' aria-label="Banner Description">{item.attributes.description}</p>
 
-                                    <div className='banners_buttons container m-auto'>
-                                        {item.attributes.text_first_button != null && item.attributes.link_first_button != null ? (
-                                            <a className='banners_button1' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</a>
-                                        ): ( '' )}
+                            <div className='mt-[90px] flex gap-[30px]' role="group" aria-label="Banner Buttons">
+                                {item.attributes.text_first_button != null && item.attributes.link_first_button != null ? (
+                                    <a className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] bg-[#F97316] rounded-[6px]' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</a>
+                                ) : ('')}
 
-                                        {item.attributes.text_second_button != null && item.attributes.link_second_button ? (
-                                            <a className='banners_button2' href={item.attributes.link_second_button}>{item.attributes.text_second_button}</a>
-                                        ): ( '' )}
-                                    </div>
-                                </div>
-                            </SwiperSlide>        
-                        )
-                    })}
-                </Swiper>
-            </section>
-        </div>
+                                {item.attributes.text_second_button != null && item.attributes.link_second_button ? (
+                                    <a className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] rounded-[6px] border-[1px] text-[#fff] border-[#F97316]' href={item.attributes.link_second_button}>{item.attributes.text_second_button}</a>
+                                ) : ('')}
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </section>
     )
 }

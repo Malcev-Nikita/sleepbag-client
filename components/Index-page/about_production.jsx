@@ -5,46 +5,45 @@ import { markdown } from 'markdown'
 export default function AboutProduction({data, productions}) {
     const production_header = () => ({__html: data.production_header})
     const production_media = () => ({__html: data.production_media})
-    let index = 0
 
     return (
-        <section id='section_aboutproduction'>
-            <div className='section_header container m-auto'>
-                <div className='header_line'></div>
-                <h1 dangerouslySetInnerHTML={production_header()} />
-            </div>
+        <section className='container m-auto' id='section_aboutproduction' itemscope itemtype="http://schema.org/Product">
+            <header className='flex items-center gap-[25px]' role="banner">
+                <div className='w-[5vw] h-[1px] bg-[#F97316]' />
+                <h2 className='font-bold font-[unbounded] text-[42px]' itemprop="name" dangerouslySetInnerHTML={production_header()} />
+            </header>
 
-            <div className="content">
-                {productions.map(production => {
-                    let description = () => ({__html: markdown.toHTML(production.attributes.description)})
+            <article className="flex flex-col gap-[50px]" role="article">
+                {productions.map((production, index) => {
+                    let description = () => ({ __html: markdown.toHTML(production.attributes.description) })
                     index++
-
-                    if(index % 2 != 0) {
+                    
+                    if(index % 2 == 0) {
                         return (
-                            <div className='abprod container m-auto'>
-                                <div className='abprod_left w-[50%] flex justify-center' dangerouslySetInnerHTML={description()} />
-                
-                                <div className='abprod_right'>
-                                    <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + production.attributes.photo.data.attributes.url} alt='' width={643} height={510} />
+                            <div className='flex justify-between content-center items-center gap-[50px]' key={index} role="group" itemscope itemtype="http://schema.org/Article">
+                                <div className='w-[50%] text-[20px]' itemprop="articleBody" dangerouslySetInnerHTML={description()} />
+    
+                                <div className='w-[50%]'>
+                                    <Image className='w-[100%] h-[100%] object-cover aspect-[16/11] rounded-[10px]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + production.attributes.photo.data.attributes.url} alt={production.attributes.photo.data.attributes.alt} width={643} height={510} itemprop="image" />
                                 </div>
                             </div>
-                        )
+                        );
                     }
                     else {
                         return (
-                            <div className='abprod container m-auto'>
-                                <div className='abprod_right'>
-                                    <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + production.attributes.photo.data.attributes.url} alt='' width={643} height={510} />
+                            <div className='flex justify-between content-center items-center gap-[50px]' key={index} role="group" itemscope itemtype="http://schema.org/Article">
+                                <div className='w-[50%]'>
+                                    <Image className='w-[100%] h-[100%] object-cover aspect-[16/11] rounded-[10px]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + production.attributes.photo.data.attributes.url} alt={production.attributes.photo.data.attributes.alt} width={643} height={510} itemprop="image" />
                                 </div>
 
-                                <div className='abprod_left w-[50%] flex justify-center' dangerouslySetInnerHTML={description()} />
+                                <div className='w-[50%] text-[20px]' itemprop="articleBody" dangerouslySetInnerHTML={description()} />
                             </div>
-                        )
+                        );
                     }
                 })}
-            </div>
+            </article>
 
-            <div className="container m-auto h-[550px] rounded-[10px] overflow-hidden" dangerouslySetInnerHTML={production_media()} />
+            <footer className="h-[550px] rounded-[10px] overflow-hidden p-0" role="contentinfo" itemprop="manufacturer" dangerouslySetInnerHTML={production_media()} />
         </section>
     )
 }
