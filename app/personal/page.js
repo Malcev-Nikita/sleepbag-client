@@ -9,50 +9,53 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="container m-auto">
-        <article className='link_path pt-[13vh]'>Главная / <span>Личный кабинет</span></article>
+        <article className='link_path pt-[13vh]'><a href='/'>Главная</a> / <span>Личный кабинет</span></article>
         <section className='userpage_info pt-[40px]'>
-            <div className='info_left'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="410" height="410" viewBox="0 0 25 25" fill="none">
-                    <path d="M19 7C19 10.3138 16.3138 13 13 13C9.68621 13 7 10.3138 7 7C7 3.68621 9.68621 1 13 1C16.3138 1 19 3.68621 19 7Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/>
-                    <path d="M8.28028 14C7.88281 14.1923 7.34723 14.4947 6.79473 14.9561C6.13511 15.5073 5.76584 16.0276 5.45294 16.4711C4.98219 17.1453 4.28874 18.1347 4.07733 19.5036C4.02377 19.8496 4.01531 20.2521 4.00404 21.0544C3.98994 21.849 4.01531 22.5104 4.04068 22.9667C9.9716 23.0103 15.9053 22.9564 21.8391 23C21.8955 22.6411 21.9603 22.2412 21.9828 21.6491C22.0026 21.1877 22.0364 20.3443 21.8757 19.5036C21.6136 18.1347 20.9201 17.1837 20.424 16.5044C19.5868 15.356 18.6143 14.546 17.8165 14" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                </svg>
+            <div className='info_left flex justify-center items-center w-[30%]'>
+            <svg width="237" height="295" viewBox="0 0 237 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M204.706 85.9875C204.706 131.82 166.003 168.975 118.26 168.975C70.518 168.975 31.8151 131.82 31.8151 85.9875C31.8151 40.1548 70.518 3 118.26 3C166.003 3 204.706 40.1548 204.706 85.9875Z" fill="#DFDFDF"/>
+              <path d="M118.26 168.975C166.003 168.975 204.706 131.82 204.706 85.9875C204.706 40.1548 166.003 3 118.26 3C70.518 3 31.8151 40.1548 31.8151 85.9875C31.8151 131.82 70.518 168.975 118.26 168.975ZM118.26 168.975C3 168.975 3 218.515 3 279.625M118.26 168.975C233.521 171.38 233.521 218.515 233.521 279.625" stroke="#DFDFDF" stroke-width="5" stroke-linecap="round"/>
+              <path d="M1 257.154L7.5 229.5L9 223.5L11.5 217.5L15.5 207.5L24.5 190.923L71.5 172L111 170.5L149.833 172L189 181.462L209.5 192.5L221 209L227 222L236 257.154V295H1V257.154Z" fill="#DFDFDF"/>
+            </svg>
             </div>
             <div className='info_right w-[60%]'>
                 <hr/>
                 <label for="email" className='info_right_block'>
                   <p>Адрес электронной почты</p>
-                  <input id='email' placeholder='E-mail'></input>
+                  <input className='focus:outline-none' id='email' placeholder='E-mail'></input>
                 </label>
                 <hr/>
                 <label for="name" className='info_right_block'>
                   <p>Имя</p>
-                  <input id='name' placeholder='Имя'></input>
+                  <input className='focus:outline-none' id='name' placeholder='Имя'></input>
                 </label>
                 <hr/>
                 <label for="first_name" className='info_right_block'>
                   <p>Фамилия</p>
-                  <input id='first_name' placeholder='Фамилия'></input>
+                  <input className='focus:outline-none' id='first_name' placeholder='Фамилия'></input>
                 </label>
                 <hr/>
                 <label for="phone" className='info_right_block'>
                   <p>Телефон</p>
-                  <input id='phone' placeholder='Телефон'></input>
+                  <input className='focus:outline-none' id='phone' placeholder='Телефон'></input>
                 </label>
                 <hr/>
                 <label for="password" className='info_right_block'>
                   <p>Пароль</p>
-                  <input id='password' placeholder='password'></input>
+                  <input className='focus:outline-none' id='password' placeholder='Пароль'></input>
                 </label>
                 <hr/>
             </div>
             <div>
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.5">
-                <path d="M12.3145 3.39977C12.9665 2.69332 13.2925 2.3401 13.639 2.13406C14.4749 1.63691 15.5042 1.62145 16.3541 2.09328C16.7063 2.28882 17.0423 2.63211 17.7144 3.31867C18.3865 4.00523 18.7225 4.34851 18.914 4.70831C19.3758 5.57648 19.3607 6.62794 18.874 7.48187C18.6723 7.83576 18.3266 8.1688 17.635 8.83488L9.4068 16.76C8.09627 18.0223 7.441 18.6534 6.62205 18.9733C5.80311 19.2931 4.9028 19.2696 3.10219 19.2225L2.85721 19.2161C2.30904 19.2018 2.03496 19.1946 1.87564 19.0138C1.71631 18.833 1.73807 18.5538 1.78157 17.9954L1.80519 17.6922C1.92763 16.1206 1.98885 15.3348 2.29574 14.6284C2.60264 13.9221 3.13201 13.3485 4.19075 12.2014L12.3145 3.39977Z" stroke="#707070" stroke-width="1.5" stroke-linejoin="round"/>
-                <path d="M11.375 3.5L17.5 9.625" stroke="#707070" stroke-width="1.5" stroke-linejoin="round"/>
-                <path d="M12.25 19.25L19.25 19.25" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-              </svg>
+              <label className='cursor-pointer' for='email'>
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                  <path d="M12.3145 3.39977C12.9665 2.69332 13.2925 2.3401 13.639 2.13406C14.4749 1.63691 15.5042 1.62145 16.3541 2.09328C16.7063 2.28882 17.0423 2.63211 17.7144 3.31867C18.3865 4.00523 18.7225 4.34851 18.914 4.70831C19.3758 5.57648 19.3607 6.62794 18.874 7.48187C18.6723 7.83576 18.3266 8.1688 17.635 8.83488L9.4068 16.76C8.09627 18.0223 7.441 18.6534 6.62205 18.9733C5.80311 19.2931 4.9028 19.2696 3.10219 19.2225L2.85721 19.2161C2.30904 19.2018 2.03496 19.1946 1.87564 19.0138C1.71631 18.833 1.73807 18.5538 1.78157 17.9954L1.80519 17.6922C1.92763 16.1206 1.98885 15.3348 2.29574 14.6284C2.60264 13.9221 3.13201 13.3485 4.19075 12.2014L12.3145 3.39977Z" stroke="#707070" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M11.375 3.5L17.5 9.625" stroke="#707070" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M12.25 19.25L19.25 19.25" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                </svg>
+              </label>
             </div>
         </section>
         <section className='userpage_blocks pb-[40px]'>
