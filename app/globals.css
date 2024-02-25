@@ -19,6 +19,12 @@
   border-width: 2px;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  width: calc(var(--swiper-navigation-size) / 44* 27) !important;
+  height: var(--swiper-navigation-size) !important;
+  color: #fff !important;
+}
+
 
 
 
