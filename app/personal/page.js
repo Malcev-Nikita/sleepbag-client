@@ -9,7 +9,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="container m-auto">
-        <article className='link_path pt-[13vh]'><a href='/'>Главная</a> / <span>Личный кабинет</span></article>
+        <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><span>Личный кабинет</span></article>
         <section className='userpage_info pt-[40px]'>
             <div className='info_left flex justify-center items-center w-[30%]'>
             <svg width="237" height="295" viewBox="0 0 237 295" fill="none" xmlns="http://www.w3.org/2000/svg">

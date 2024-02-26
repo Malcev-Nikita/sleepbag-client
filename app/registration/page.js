@@ -22,7 +22,7 @@ export default function Page() {
                     
                     <div className='h-[80px] w-[100%] text-right text-base'>
                         <p className='m-[0px] text-gray-600'>Уже есть аккаунт?</p>
-                        <a className='m-[0px] text-orange-500 font-semibold' href='/authorisation'>Войти</a>
+                        <a className='m-[0px] text-[#f97316] font-semibold' href='/authorisation'>Войти</a>
                     </div>
                 
                 </div>

@@ -42,8 +42,8 @@ export default function Page() {
                         </div>
 
                         <div className='flex flex-row justify-end gap-[50px]'>
-                            <a href='/forgot_password' className='text-right font-semibold text-orange-500 pt-[15px]'>Назад</a>
-                            <a href='#' className='text-right font-semibold text-orange-500 pt-[15px]'>Отправить код повторно</a>
+                            <a href='/forgot_password' className='text-right font-semibold text-[#f97316] pt-[15px]'>Назад</a>
+                            <a href='#' className='text-right font-semibold text-[#f97316] pt-[15px]'>Отправить код повторно</a>
                         </div>
                     
                     </form>
