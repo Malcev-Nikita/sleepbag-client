@@ -53,6 +53,8 @@ export default async function Footer({footer}) {
                                     <li><a href={element.attributes.link}>{element.attributes.name}</a></li>
                                 ))}
                             </div>
+                            
+                            <div className='footer_menu_border'></div>
 
                             <div className="footer_menu_border"></div>
 

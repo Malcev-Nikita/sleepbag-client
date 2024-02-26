@@ -796,6 +796,7 @@ footer{
   display: block;
   position: absolute;
   right: -70px;
+  z-index: 1;
   border: 1px dashed #F97316;
   opacity: 0.3;
 } */

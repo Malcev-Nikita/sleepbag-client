@@ -18,26 +18,26 @@ export default function Questions({data}) {
                 <div className="contacts_main_part z-5 absolute translate-[-50%] translate-y-[-120%] translate-x-[-50%] left-[50%]">
                     <div className='section_header container m-auto'>
                         <div className='header_line'></div>
-                        <h1 dangerouslySetInnerHTML={questions_header()} />
+                        <h1 className="font-[Unbounded] font-bold" dangerouslySetInnerHTML={questions_header()} />
                     </div>
 
-                    <p dangerouslySetInnerHTML={questions_description()} />.
+                    <p dangerouslySetInnerHTML={questions_description()} />
 
                     <div className="contacts_inputs">
                         {questions_input_name != null ? (
-                            <input name="NAME" placeholder={questions_input_name} />
+                            <input className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="NAME" placeholder={questions_input_name} />
                         ) : ('')}
 
                         {questions_input_phone != null ? (
-                            <input name="PHONE" placeholder={questions_input_phone} />
+                            <input className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="PHONE" placeholder={questions_input_phone} />
                         ) : ('')}
 
                         {questions_input_email != null ? (
-                            <input name="EMAIL" placeholder={questions_input_email} />
+                            <input className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="EMAIL" placeholder={questions_input_email} />
                         ) : ('')}
 
                         {questions_input_quesion != null ? (
-                            <input name="QUESTION" placeholder={questions_input_quesion} />
+                            <input className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="QUESTION" placeholder={questions_input_quesion} />
                         ) : ('')}
 
                         <button dangerouslySetInnerHTML={questions_button()} />

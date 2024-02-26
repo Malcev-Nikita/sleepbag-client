@@ -18,11 +18,11 @@ export default function Page() {
             <div className='w-[591px] h-[873px] bg-[#fff] p-[48px] translate-y-[-108%] absolute z-1 rounded-3xl shadow-2xl'>
                 
                 <div className='auth_header w-[100%] items-end flex flex-row'>
-                    <h1 className='items-end font-bold m-[0px] font-Unbounded text-5xl'>Регистрация</h1>
+                    <h1 className='items-end font-bold m-[0px] font-[Unbounded] text-4xl'>Регистрация</h1>
                     
-                    <div className='h-[120px] w-[100%] text-right text-base'>
+                    <div className='h-[80px] w-[100%] text-right text-base'>
                         <p className='m-[0px] text-gray-600'>Уже есть аккаунт?</p>
-                        <a className='m-[0px] text-orange-500' href='/authorisation'>Войти</a>
+                        <a className='m-[0px] text-orange-500 font-semibold' href='/authorisation'>Войти</a>
                     </div>
                 
                 </div>
@@ -32,27 +32,27 @@ export default function Page() {
                 <div className='main_auth'>
                     
                     <form className='flex flex-col' action='/login' method='post'>
-                        <label for='email' className='pb-[15px]'>Введите ваш адрес эл. почты</label>
+                        <label for='email' className='text-xl pb-[15px]'>Введите ваш адрес эл. почты</label>
                         <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
                         
                         <div className='flex flex-row gap-[20px]'>
                             <div className='flex flex-col w-[50%]'>
-                                <label for='name' className='pb-[15px] pt-[25px]'>Введите имя</label>
+                                <label for='name' className='text-xl pb-[15px] pt-[25px]'>Введите имя</label>
                                 <input type='name' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иван' id='name' name='name' required/>
                             </div>
                             <div className='flex flex-col w-[50%]'>
-                                <label for='firstname' className='pb-[15px] pt-[25px]'>Введите имя</label>
+                                <label for='firstname' className='text-xl pb-[15px] pt-[25px]'>Введите имя</label>
                                 <input type='name' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов' id='firstname' name='firstname' required/>
                             </div>
                         </div>
                         
-                        <label for='phone' className='pb-[15px] pt-[25px]'>Введите ваш номер телефона</label>
+                        <label for='phone' className='text-xl pb-[15px] pt-[25px]'>Введите ваш номер телефона</label>
                         <input type='phone' className='pb-[25px] focus:outline-orange-500 flex justify-end w-[100%] h-[62px] border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' id='phone' name='phone' placeholder='+7 999 999 99-99' required/>
                         
-                        <label for='password' className='pb-[15px] pt-[25px]'>Придумайте пароль</label>
+                        <label for='password' className='text-xl pb-[15px] pt-[25px]'>Придумайте пароль</label>
                         <input type='password' className='pb-[25px] focus:outline-orange-500 flex justify-end w-[100%] h-[62px] border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' id='password' name='password' placeholder='********' required/>
                         
-                        <button type='submit' className='mt-[35px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-xl rounded-xl'>Зарегистрироваться</button>
+                        <button type='submit' className='mt-[35px] flex justify-center items-center font-semibold text-white bg-[#f97316] h-[62px] text-xl rounded-xl'>Зарегистрироваться</button>
                     </form>
                 </div>
             </div>
