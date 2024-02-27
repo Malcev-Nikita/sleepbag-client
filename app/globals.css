@@ -742,7 +742,6 @@ a button{
   justify-content: space-between;
   padding: 68px 0px 68px 66px;
   border-radius: 10px;
-  width: calc(538px - 10%);
   height: 218px;
   transition: 0.4s;
   gap: 20px;
@@ -764,7 +763,15 @@ a button{
   gap: 20px;
   align-items: center;
 }
-
+.pen1{
+  display: none;
+}
+.right_block1:hover .pen1{
+  display: block;
+}
+.display_block{
+  display: block;
+}
 /* ---------------Страничка пользователя------------------ */
 footer{ 
   padding-top: 60px;
