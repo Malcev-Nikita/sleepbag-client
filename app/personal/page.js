@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import { getJWT } from '@/components/personal'
 
 export const metadata = {
   title: 'Create Next App',
