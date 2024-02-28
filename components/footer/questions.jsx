@@ -37,7 +37,7 @@ export default function Questions({data}) {
                         ) : ('')}
 
                         {questions_input_quesion != null ? (
-                            <input className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="QUESTION" placeholder={questions_input_quesion} />
+                            <textarea className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="QUESTION" placeholder={questions_input_quesion} />
                         ) : ('')}
 
                         <button dangerouslySetInnerHTML={questions_button()} />

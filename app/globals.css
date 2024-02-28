@@ -205,7 +205,7 @@ section{
   display: flex;
   justify-content: start;
   flex-direction: column;
-  align-items: start;
+  /* align-items: start; */
   color: #000;
   row-gap: 20px;
   font-size: 42px;
@@ -763,7 +763,7 @@ a button{
   gap: 20px;
   align-items: center;
 }
-.pen1{
+/* .pen1{
   display: none;
 }
 .right_block1:hover .pen1{
@@ -771,7 +771,7 @@ a button{
 }
 .display_block{
   display: block;
-}
+} */
 /* ---------------Страничка пользователя------------------ */
 footer{ 
   padding-top: 60px;
@@ -896,9 +896,6 @@ li span{
   font-family: Unbounded;
   font-weight: 700;
 }
-.catalog_header_img{
-  filter: brightness(0.4);  
-}
 .catalog_categories{
   display: flex;
   align-items: center;
@@ -927,7 +924,7 @@ li span{
 }
 .catalog_view_all{
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
   align-items: center;
   height: 80px;
 }

@@ -35,7 +35,7 @@ export default async function Header() {
                     <a href='#contacts' className="nofill-button">Задать вопрос</a>
 
                     <div className='flex gap-[25px]'>
-                        <a href="#" className='flex items-center'>
+                        <a href="/cart" className='flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                                 <path d="M8.33335 22.9167C8.90865 22.9167 9.37502 22.4503 9.37502 21.875C9.37502 21.2997 8.90865 20.8333 8.33335 20.8333C7.75806 20.8333 7.29169 21.2997 7.29169 21.875C7.29169 22.4503 7.75806 22.9167 8.33335 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

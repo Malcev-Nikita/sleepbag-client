@@ -54,9 +54,7 @@ export default async function Footer({footer}) {
                                 ))}
                             </div>
                             
-                            <div className='footer_menu_border'></div>
-
-                            <div className="footer_menu_border"></div>
+                            <div className='footer_menu_border h-[50%] border-dashed border-[#f97316] w-[1px] opacity-40'/>
 
                             <div className="footer_links_column">
                                 <ul dangerouslySetInnerHTML={info_header()} />
@@ -66,6 +64,8 @@ export default async function Footer({footer}) {
                                 ))}
                             </div>
 
+                            <div className='footer_menu_border h-[50%] border-dashed border-[#f97316] w-[1px] opacity-40'/>
+
                             <div className="footer_links_column">
                                 <ul dangerouslySetInnerHTML={other_header()} />
 
@@ -73,6 +73,9 @@ export default async function Footer({footer}) {
                                     <li><a href={element.attributes.link}>{element.attributes.name}</a></li>
                                 ))}
                             </div>
+
+                            <div className='footer_menu_border h-[50%] border-dashed border-[#f97316] w-[1px] opacity-40'/>
+
                         </div>
                         
                         <div className="footer_contacts">
