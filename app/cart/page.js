@@ -23,8 +23,11 @@ export default function Page() {
           <form className='bg-[#f4f4f4] mt-[32px] rounded-[32px] p-[53px] flex flex-col'>
             
             <div className='flex flex-row font-semibold justify-end'>
-              <label><input type="checkbox"></input> Выбрать всё</label>
-              <h3 className='ml-[14%]'>Товар</h3>
+              <label className='flex flex-row'>
+                <label for='all' className='absolute'>
+                  <input id='all' type="checkbox" className='option-input checkbox top-[-17px] right-[37px] absolute hidden translate-y-[20px] translate-x-[10px]'/>
+                </label> Выбрать всё</label>
+              <h3 className='ml-[13%]'>Товар</h3>
               <div className='ml-[45%] flex flex-row justify-between w-[30%]'>
                 <h3>Цена за шт.</h3>
                 <h3>Количество</h3>
@@ -37,8 +40,10 @@ export default function Page() {
             <div className='flex flex-row justify-end'>
               
               <label for='product1'>
-                <input id='product1' type="checkbox" className='absolute translate-y-[20px] translate-x-[10px]'/>
-                <Image src='/images/catalog_photo.png' width='241' height='137' className='w-[100%] h-[100%]'></Image>
+                <label for='product1' className='absolute'>
+                  <input id='product1' type="checkbox" className='option-input checkbox absolute hidden translate-y-[20px] translate-x-[10px]'/>
+                </label>
+                <Image alt='Изображение товара' src='/images/catalog_photo.png' width='241' height='137' className='w-[100%] h-[100%]'></Image>
               </label>
 
               <div className='flex flex-col w-[31%] ml-[4%]'>

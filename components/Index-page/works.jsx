@@ -35,7 +35,7 @@ export default function Works({data, works}) {
                                 <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
                                     {work.attributes.gallery.data.map((image, idx) => (
                                         <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-                                            <Image className='aspect-[16/11] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
+                                            <Image className='aspect-[16/11] object-cover w-[100%]' alt='Главное изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
@@ -50,7 +50,7 @@ export default function Works({data, works}) {
                                 <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
                                     {work.attributes.gallery.data.map((image, idx) => (
                                         <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-                                            <Image className='aspect-[16/13] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
+                                            <Image className='aspect-[16/13] object-cover w-[100%]' alt='Второстепенное изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>

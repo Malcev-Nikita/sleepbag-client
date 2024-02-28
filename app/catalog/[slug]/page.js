@@ -1,3 +1,4 @@
+import Catalog from '@/components/Index-page/catalog'
 import Image from 'next/image'
 
 
@@ -13,67 +14,72 @@ export default function Page({params}) {
     <main className="container m-auto">
         <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>PRODUCT_NAME</span></article>
 
-        <section className='product_card'>
+        <section className='product_card flex flex-row'>
             <div className='w-[50%]'>
                
             </div>
 
             <div className='w-[50%]'>
-                <div className='flex flex-col gap-[20px]'>
+                <div className='flex flex-col gap-[20px] pb-[20px]'>
                     <h2 className='font-bold text-[30px]'>Органайзер "SleepBag 01"</h2>
-                    <p className='text-[32px] text-[#f97316]'>30 000₽</p>
-                    <p className='text-[15px] text-[#8d8d8d]'>Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam venenatis neque.</p>
+                    <p className='text-[32px] font-[600] text-[#f97316]'>30 000₽</p>
+                    <p className='text-[20px] text-[#8d8d8d]'>Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam venenatis neque.</p>
                 </div>
-                <div className='flex flex-col gap-[12px]'>
-                    <ul><h3 className='text-[#000] underline'>ЦВЕТ</h3>
-                    <li className='text-[#f97316]'><p className='text-[#8d8d8d]'>Оранжевый</p></li>
-                    <li><p className='text-[#8d8d8d]'>Зелёный</p></li>
-                    <li><p className='text-[#8d8d8d]'>Синий</p></li>
-                    <li><p className='text-[#8d8d8d]'>Чёрный</p></li></ul>
-                </div>
-                <div className='flex flex-col gap-[12px]'>
-                    <ul><h3 className='text-[#000] underline'>РАЗМЕР</h3>
-                    <li><p className='text-[#8d8d8d]'>XL</p></li>
-                    <li><p className='text-[#8d8d8d]'>L</p></li>
-                    <li><p className='text-[#8d8d8d]'>M</p></li>
-                    <li><p className='text-[#8d8d8d]'>S</p></li></ul>
-                </div>
-                <div className='flex flex-col gap-[12px]'>
-                    <p>20 шт. в наличии</p>
-                    <div className='flex flex-row gap-[6px]'>
-                        <button className='bg-[#e6e9ec] items-center justify-center w-[20%]'>-</button>
-                        <input className='border-solid border-[#e6e9ec] text-center'></input>
-                        <button className='bg-[#e6e9ec] items-center justify-center w-[20%]'>+</button>
+                <div className='flex flex-col gap-[12px] pb-[20px]'>
+                    <h3 className='text-[#000] text-[20px] font-[600] underline'>ЦВЕТ</h3>
+                    <div className='catalog_object_buttons flex gap-[20px]'>
+                        <button className='text-[20px] text-[#8d8d8d]'>Оранжевый</button>
+                        <button className='text-[20px] text-[#8d8d8d]'>Зелёный</button>
+                        <button className='text-[20px] text-[#8d8d8d]'>Синий</button>
+                        <button className='text-[20px] text-[#8d8d8d]'>Чёрный</button>
                     </div>
                 </div>
-                <div className='flex flex-col gap-[15px]'>
-                    <button className='bg-[#f97316] items-center justify-center tracking-[10%]'>Добавить в корзину</button>
-                    <button className='border-solid border-[#000] border-[1px] items-center justify-center'>Купить сейчас</button>
+                <div className='flex flex-col gap-[12px] text-[20px] font-[600] pb-[20px]'>
+                    <h3 className='text-[#000] underline'>РАЗМЕР</h3>
+                    <div className='catalog_object_buttons flex gap-[20px]'>
+                        <button className='text-[#8d8d8d] font-[400]'>XL</button>
+                        <button className='text-[#8d8d8d] font-[400]'>L</button>
+                        <button className='text-[#8d8d8d] font-[400]'>M</button>
+                        <button className='text-[#8d8d8d] font-[400]'>S</button>
+                    </div>
+                </div>
+                <div className='flex flex-col pb-[20px] gap-[12px]'>
+                    <p>20 шт. в наличии</p>
+                    <div className='flex flex-row gap-[6px]'>
+                        <button className='bg-[#e6e9ec] items-center justify-center aspect-square w-[7%]'>-</button>
+                        <input className='border-solid border-[1px] border-[#e6e9ec] w-[13%] text-center' value={1}></input>
+                        <button className='bg-[#e6e9ec] items-center justify-center aspect-square w-[7%]'>+</button>
+                    </div>
+                </div>
+                <div className='flex flex-row items-center pb-[20px] gap-[15px]'>
+                    <button className='bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>Добавить в корзину</button>
+                    <button className='border-solid border-[#000] border-[1px] tracking-widest w-[35%] h-[56px] text-[18px] items-center justify-center'>Купить сейчас</button>
+                    <svg width="24" height="21" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="#333333" stroke-width="1.5"/></svg>
                 </div>
                 <p className='text-[#8d8d8d]'>Категория: Органайзеры</p>
             </div>
 
         </section>
 
-        <section>
-            <div>
-                <h3>ОПИСАНИЕ</h3>
+        <section className='mb-[50px]'>
+            <div className='flex flex-row text-[20px] gap-[60px]'>
+                <h3 className='text-[#f97316]'>ОПИСАНИЕ</h3>
                 <h3>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
             </div>
-            <hr className='pt-[20px] pb-[20px] h-[2px] bg-[#000] opacity-40'/>
+            <hr className='mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
             <p>Характеристики товара:
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Donec consectetuer ligula vulputate sem tristique cursus.
             Ширина
             Длина
             Высота
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
-            <hr className='pt-[20px] pb-[20px] h-[2px] bg-[#000] opacity-40'/>
+            <hr className='mt-[15px] h-[2px] bg-[#000] opacity-40'/>
         </section>
         
         <section>
-                <h3>СМОТРИТЕ ТАКЖЕ</h3>
+                <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
 
-
+                {/* <Catalog/> */}
         </section>
 
     </main>

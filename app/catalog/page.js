@@ -19,7 +19,7 @@ export default async function Page() {
   return (
     <main>        
       <header className='catalog_header'>
-        <Image className='catalog_header_img brightness-[40%] aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
+        <Image alt='Изображение в шапке каталога' className='catalog_header_img brightness-[40%] aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
         <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
           <h1 dangerouslySetInnerHTML={header()} />
           <p dangerouslySetInnerHTML={description()} />
@@ -27,14 +27,14 @@ export default async function Page() {
       </header>
 
       <div className='container m-auto'>
-        <section className='choose_category container m-auto'>
+        <section className='choose_category'>
           
-          <div className='section_header container m-auto'>
+          <div className='section_header flex items-center'>
             <div className='header_line'></div>
             <h2 dangerouslySetInnerHTML={categories_header()} />
           </div>
           
-          <div className='catalog_categories'>
+          <div className='catalog_categories pb-[43px]'>
             {categoriesProducts.data.map(categorie => {
               let svg = () => ({__html: categorie.attributes.svg})
 
@@ -47,9 +47,9 @@ export default async function Page() {
             })}
           </div>
             
-          <div className='catalog_view_all'>
-            <button className=''>
-                <span dangerouslySetInnerHTML={categories_button()} />
+          <div className='catalog_view_all justify-end pb-[70px]'>
+            <button>
+                <span className='text-[#f97316]' dangerouslySetInnerHTML={categories_button()} />
 
                 <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
@@ -57,7 +57,7 @@ export default async function Page() {
             </button>
           </div>
 
-            <div className='section_header mb-[40px]'>
+            <div className='section_header flex items-center mb-[40px]'>
               <div className='header_line'></div>
               <h2>ФИЛЬТРЫ</h2>
             </div>
