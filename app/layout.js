@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
 
             {children}
 
-            {pathname.includes('personal') ? (
-              <Footer footer='short' />
-            ) : (
+            {pathname == '/' || pathname.includes('catalog') ? (
               <Footer footer='long' />
+            ) : (
+              <Footer footer='short' />
             )}
         </StoreProvider>
       </body>

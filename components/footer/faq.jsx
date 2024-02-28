@@ -29,8 +29,8 @@ export default function FAQ({data, faq}) {
     const faq_description = () => ({__html: data.faq_description})
 
     return (
-        <section className='section_faq relative pb-[50px]'>
-            <div className='section_header container m-auto'>
+        <section className='section_faq relative pb-[50px] container m-auto'>
+            <div className='section_header items-start w-[100%]'>
                 <div className='section_header_inside'>
                     <div className='header_line'></div>
 
@@ -40,7 +40,7 @@ export default function FAQ({data, faq}) {
                 <p className='under_header_text' dangerouslySetInnerHTML={faq_description()} />
             </div>
 
-            <div className='questions container m-auto'>
+            <div className='questions w-[100%]'>
                 {faq.map(item => {
                     function description() {
                         return {__html: markdown.toHTML(item.attributes.description)};

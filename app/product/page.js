@@ -1,13 +1,7 @@
-'use client'
+
 
 import Image from 'next/image'
-// import React, { useState } from 'react';
-// import { Pagination, Thumbs } from 'swiper/modules';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import { markdown } from 'markdown'
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,37 +9,12 @@ export const metadata = {
 }
 
 export default function Page() {
-    // const works_header = () => ({__html: data.works_header})
-    // const works_button = () => ({__html: data.works_button})
   return (
     <main className="container m-auto">
         <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>PRODUCT_NAME</span></article>
         <section className='product_card'>
             <div className='w-[50%]'>
-                {/* <div className="w-[100%]">
-                    <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
-                        {work.attributes.gallery.data.map((image, idx) => (
-                            <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-                                <Image className='aspect-[16/11] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-
-                    <div className="mt-[15px]">
-                        <h4 className='font-semibold text-[24px] font-[Manrope]'>{work.attributes.header}</h4>
-                        <div className='text-[14px] font-normal font-[Manrope]' dangerouslySetInnerHTML={description()} />
-                    </div>
-                </div>
-
-                <div className='w-[70px]'>
-                    <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
-                        {work.attributes.gallery.data.map((image, idx) => (
-                            <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-                                <Image className='aspect-[16/13] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div> */}
+               
             </div>
 
             <div className='w-[50%]'>
@@ -72,7 +41,7 @@ export default function Page() {
                     <p>20 шт. в наличии</p>
                     <div className='flex flex-row gap-[6px]'>
                         <button className='bg-[#e6e9ec] items-center justify-center w-[20%]'>-</button>
-                        <input className='border-solid border-[#e6e9ec] text-center'>1</input>
+                        <input className='border-solid border-[#e6e9ec] text-center'></input>
                         <button className='bg-[#e6e9ec] items-center justify-center w-[20%]'>+</button>
                     </div>
                 </div>
@@ -103,7 +72,7 @@ export default function Page() {
         <section>
                 <h3>СМОТРИТЕ ТАКЖЕ</h3>
 
-                <Catalog />
+
         </section>
 
     </main>

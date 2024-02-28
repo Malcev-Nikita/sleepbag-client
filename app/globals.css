@@ -25,6 +25,27 @@
   color: #fff !important;
 }
 
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 22px !important;
+}
+
+.swiper-button-prev {
+  left: 3% !important; 
+}
+
+.swiper-button-next {
+  right: 3% !important; 
+}
+
+.info_right_block:hover .pen1{
+  opacity: 1 !important;
+  transition: 0.2s;
+}
+
+.info_right label:hover, .info_right label:hover input{
+  background-color: #e9e6e6;
+  transition: 0.2s;
+}
 
 
 
@@ -187,7 +208,6 @@ section{
 .section_header{
   display: flex;
   flex-direction: row;
-  align-items: center;
   column-gap: 10px;
   color: #000;
   font-size: 42px;
@@ -710,20 +730,10 @@ a button{
 .info_right label{
   cursor: pointer;
 }
-.info_right label:hover, .info_right label:hover input{
-  background-color: #e9e6e6;
-}
+
 .link_path span{
   color: #F97316;
   font-weight: 500;
-}
-.info_right_block{
-  display: flex;
-  justify-content: space-between;
-  font-size: 21px;
-  font-weight: 500;
-  align-items: center;
-  height: 80px;
 }
 .info_right hr{
   border-bottom: 2px solid #707070;
@@ -763,15 +773,7 @@ a button{
   gap: 20px;
   align-items: center;
 }
-/* .pen1{
-  display: none;
-}
-.right_block1:hover .pen1{
-  display: block;
-}
-.display_block{
-  display: block;
-} */
+
 /* ---------------Страничка пользователя------------------ */
 footer{ 
   padding-top: 60px;
