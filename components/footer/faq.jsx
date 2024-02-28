@@ -50,7 +50,7 @@ export default function FAQ({data, faq}) {
                         <div className='question' key={item.id}>
                             <button onClick={(element) => QuestionsClick(element)}>
                                 <h4>{item.attributes.header}</h4>
-                                <Image className='arrow_down' src="/icons/arrow_down.svg" width={25} height={13}/>
+                                <Image className='arrow_down' src="/icons/arrow_down.svg" alt='Иконка развёртывания вопроса' width={25} height={13}/>
                             </button>
 
                             <span/>

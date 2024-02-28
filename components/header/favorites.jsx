@@ -20,7 +20,7 @@ export default function Favorites() {
                                 {productsItems.data.map(product => {
                                     if(product.id == favorite.id) {
                                         return (
-                                            <Image key={product.id} src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
+                                            <Image key={product.id} src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={364} height={320}/>
                                         )
                                     }
                                 })}

@@ -14,18 +14,18 @@ export default function Catalog({data}) {
 
     if(productsItems != null && favoritesItems != null) {
         return (
-            <section id='catalog' className='section_catalog relative'>
-                <div className='section_header container m-auto'>
+            <section id='catalog' className='section_catalog container m-auto relative'>
+                <div className='section_header flex items-center'>
                     <div className='header_line'></div>
 
                     <h2 dangerouslySetInnerHTML={catalog_header()} />
                 </div>
             
-                <div className='catalog_main container m-auto'>
+                <div className='catalog_main'>
                     {productsItems.data.map(product => (
                         <div className='catalog_object' key={product.id}>
                             <div className='object_photo'>
-                                <Image className='w-[100%] h-[100%] aspect-[16/11] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={100} height={100} />
+                                <Image className='w-[100%] h-[100%] aspect-[16/11] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={100} height={100} />
 
                                 {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : ('')}
                                 {favoritesItems.favorites.map(favorite => {
@@ -56,16 +56,17 @@ export default function Catalog({data}) {
                         </div>
                     ))}
                 </div>
-    
-            <a href='/catalog' className='down_button m-auto'>
-                <button>
-                    <span dangerouslySetInnerHTML={catalog_button()} />
+                <div className='flex justify-center'>
+                    <a href='/catalog' className='down_button'>
+                        <button>
+                            <span className='text-[#f97316]' dangerouslySetInnerHTML={catalog_button()} />
 
-                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
-                    </svg>
-                </button>
-            </a>
+                            <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
           </section>
         )
     } 
