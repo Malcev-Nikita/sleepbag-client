@@ -7,9 +7,75 @@ export const metadata = {
 }
 
 export default function Page({params}) {
+  console.log(params)
+  
   return (
     <main className="container m-auto">
-      
+        <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>PRODUCT_NAME</span></article>
+
+        <section className='product_card'>
+            <div className='w-[50%]'>
+               
+            </div>
+
+            <div className='w-[50%]'>
+                <div className='flex flex-col gap-[20px]'>
+                    <h2 className='font-bold text-[30px]'>Органайзер "SleepBag 01"</h2>
+                    <p className='text-[32px] text-[#f97316]'>30 000₽</p>
+                    <p className='text-[15px] text-[#8d8d8d]'>Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam venenatis neque.</p>
+                </div>
+                <div className='flex flex-col gap-[12px]'>
+                    <ul><h3 className='text-[#000] underline'>ЦВЕТ</h3>
+                    <li className='text-[#f97316]'><p className='text-[#8d8d8d]'>Оранжевый</p></li>
+                    <li><p className='text-[#8d8d8d]'>Зелёный</p></li>
+                    <li><p className='text-[#8d8d8d]'>Синий</p></li>
+                    <li><p className='text-[#8d8d8d]'>Чёрный</p></li></ul>
+                </div>
+                <div className='flex flex-col gap-[12px]'>
+                    <ul><h3 className='text-[#000] underline'>РАЗМЕР</h3>
+                    <li><p className='text-[#8d8d8d]'>XL</p></li>
+                    <li><p className='text-[#8d8d8d]'>L</p></li>
+                    <li><p className='text-[#8d8d8d]'>M</p></li>
+                    <li><p className='text-[#8d8d8d]'>S</p></li></ul>
+                </div>
+                <div className='flex flex-col gap-[12px]'>
+                    <p>20 шт. в наличии</p>
+                    <div className='flex flex-row gap-[6px]'>
+                        <button className='bg-[#e6e9ec] items-center justify-center w-[20%]'>-</button>
+                        <input className='border-solid border-[#e6e9ec] text-center'></input>
+                        <button className='bg-[#e6e9ec] items-center justify-center w-[20%]'>+</button>
+                    </div>
+                </div>
+                <div className='flex flex-col gap-[15px]'>
+                    <button className='bg-[#f97316] items-center justify-center tracking-[10%]'>Добавить в корзину</button>
+                    <button className='border-solid border-[#000] border-[1px] items-center justify-center'>Купить сейчас</button>
+                </div>
+                <p className='text-[#8d8d8d]'>Категория: Органайзеры</p>
+            </div>
+
+        </section>
+
+        <section>
+            <div>
+                <h3>ОПИСАНИЕ</h3>
+                <h3>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
+            </div>
+            <hr className='pt-[20px] pb-[20px] h-[2px] bg-[#000] opacity-40'/>
+            <p>Характеристики товара:
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Donec consectetuer ligula vulputate sem tristique cursus.
+            Ширина
+            Длина
+            Высота
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
+            <hr className='pt-[20px] pb-[20px] h-[2px] bg-[#000] opacity-40'/>
+        </section>
+        
+        <section>
+                <h3>СМОТРИТЕ ТАКЖЕ</h3>
+
+
+        </section>
+
     </main>
   )
 }

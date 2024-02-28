@@ -42,7 +42,7 @@ export default function Catalog() {
                                 </div>
 
                                 <div className='object_buttons'>
-                                    <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                                    <a className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</a>
                                     <button className='object_button2'>Добавить в корзину</button>
                                 </div>
                             </div>
