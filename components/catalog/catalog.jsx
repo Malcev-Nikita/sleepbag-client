@@ -14,7 +14,7 @@ export default function Catalog() {
             <section id='catalog' className='section_catalog relative pt-0'>            
                 <div className='catalog_main container m-auto'>
                     {productsItems.data.map(product => (
-                        <div className='catalog_object'>
+                        <div className='catalog_object' key={product.id}>
                             <div className='object_photo'>
                                 <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='' width={364} height={320}/>
 

@@ -50,7 +50,7 @@ export default async function Footer({footer}) {
                                 <ul dangerouslySetInnerHTML={menu_header()} />
 
                                 {index_menu.data.map(element => (
-                                    <li><a href={element.attributes.link}>{element.attributes.name}</a></li>
+                                    <li key={element.id}><a href={element.attributes.link}>{element.attributes.name}</a></li>
                                 ))}
                             </div>
                             
@@ -60,7 +60,7 @@ export default async function Footer({footer}) {
                                 <ul dangerouslySetInnerHTML={info_header()} />
                                 
                                 {info_menu.data.map(element => (
-                                    <li><a href={element.attributes.link}>{element.attributes.name}</a></li>
+                                    <li key={element.id}><a href={element.attributes.link}>{element.attributes.name}</a></li>
                                 ))}
                             </div>
 
@@ -70,7 +70,7 @@ export default async function Footer({footer}) {
                                 <ul dangerouslySetInnerHTML={other_header()} />
 
                                 {other_menu.data.map(element => (
-                                    <li><a href={element.attributes.link}>{element.attributes.name}</a></li>
+                                    <li key={element.id}><a href={element.attributes.link}>{element.attributes.name}</a></li>
                                 ))}
                             </div>
 

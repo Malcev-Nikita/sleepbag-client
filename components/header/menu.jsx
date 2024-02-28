@@ -7,7 +7,7 @@ export default async function HeaderMenu() {
     return (
         <div className='flex gap-[35px]'>
             {index_menu.data.map(element => (
-                <a href={element.attributes.link} className='text-[#f4f4f4] opacity-80 text-[18px]'>{element.attributes.name}</a>
+                <a key={element.id} href={element.attributes.link} className='text-[#f4f4f4] opacity-80 text-[18px]'>{element.attributes.name}</a>
             ))}
         </div>
     )

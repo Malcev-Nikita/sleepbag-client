@@ -14,7 +14,7 @@ export default function Favorites() {
         return (
             <div className="content px-[52px]">
                 {favoritesItems.favorites.map(favorite => (
-                    <div className="favorite_product flex justify-between m-auto w-[100%]">
+                    <div className="favorite_product flex justify-between m-auto w-[100%]" key={favorite.id}>
                         <div className="favorite_product_desc w-[80%]">
                             <div className="w-[50%]">
                                 {productsItems.data.map(product => {
