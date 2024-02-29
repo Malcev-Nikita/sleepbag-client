@@ -1,5 +1,5 @@
 'use client'
 
-export const getJWT = () => {
-    return document.cookie
+export function getCookie(name) {
+    return document.cookie.split(';')
 }
