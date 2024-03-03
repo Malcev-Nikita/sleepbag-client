@@ -18,7 +18,7 @@ export default function Questions({data}) {
                 <div className="contacts_main_part z-5 absolute translate-[-50%] translate-y-[-120%] translate-x-[-50%] left-[50%]">
                     <div className='section_header container m-auto'>
                         <div className='header_line'></div>
-                        <h1 className="font-[Unbounded] font-bold" dangerouslySetInnerHTML={questions_header()} />
+                        <h2 className="font-[Unbounded] font-bold" dangerouslySetInnerHTML={questions_header()} />
                     </div>
 
                     <p dangerouslySetInnerHTML={questions_description()} />

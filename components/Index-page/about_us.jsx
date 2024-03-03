@@ -15,15 +15,19 @@ export default function AboutUs({data, stats}) {
             </header>
 
             <div className='flex flex-col gap-[34px]' role="main">
-                <div className='flex gap-[25px] items-center' role="article" itemscope itemtype="http://schema.org/Article">
+                <div className='aboutus_desc flex gap-[25px] items-center' role="article" itemscope itemtype="http://schema.org/Article">
+                    <div className='w-[50%] aboutus_for_mobile hidden'>
+                        <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + data.about_first_media.data.attributes.url} alt={data.about_first_media.data.attributes.alt} width={1650} height={700} itemprop="image" />
+                    </div>
+                    
                     <div className='w-[50%] text-[20px]' itemprop="articleBody" dangerouslySetInnerHTML={about_first_description()} />
 
-                    <div className='w-[50%]'>
+                    <div className='w-[50%] aboutus_default_img'>
                         <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + data.about_first_media.data.attributes.url} alt={data.about_first_media.data.attributes.alt} width={1650} height={700} itemprop="image" />
                     </div>
                 </div>
 
-                <div className='flex gap-[65px] items-center' role="article" itemscope itemtype="http://schema.org/Article">
+                <div className='aboutus_desc flex gap-[65px] items-center' role="article" itemscope itemtype="http://schema.org/Article">
                     <div className='w-[50%]'>
                         <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + data.about_second_media.data.attributes.url} alt={data.about_second_media.data.attributes.alt} width={1150} height={500} itemprop="image" />
                     </div>

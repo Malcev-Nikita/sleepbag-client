@@ -8,7 +8,7 @@ export default function AboutProduction({data, productions}) {
 
     return (
         <section className='container m-auto' id='section_aboutproduction' itemscope itemtype="http://schema.org/Product">
-            <header className='flex items-center gap-[25px]' role="banner">
+            <header className='flex section_header items-center gap-[25px]' role="banner">
                 <div className='w-[5vw] h-[1px] bg-[#F97316]' />
                 <h2 className='font-bold font-[unbounded] text-[42px]' itemprop="name" dangerouslySetInnerHTML={production_header()} />
             </header>
@@ -43,7 +43,7 @@ export default function AboutProduction({data, productions}) {
                 })}
             </article>
 
-            <footer className="h-[550px] rounded-[10px] overflow-hidden p-0" role="contentinfo" itemprop="manufacturer" dangerouslySetInnerHTML={production_media()} />
+            <footer className="h-[550px] aboutus_footer rounded-[10px] overflow-hidden p-0" role="contentinfo" itemprop="manufacturer" dangerouslySetInnerHTML={production_media()} />
         </section>
     )
 }

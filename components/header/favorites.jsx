@@ -12,7 +12,7 @@ export default function Favorites() {
 
     if(favoritesItems != null && productsItems != null) {
         return (
-            <div className="content px-[52px]">
+            <div className="favorite content px-[52px]">
                 {favoritesItems.favorites.map(favorite => (
                     <div className="favorite_product flex justify-between m-auto w-[100%]" key={favorite.id}>
                         <div className="favorite_product_desc w-[80%]">

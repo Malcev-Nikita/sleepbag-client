@@ -16,12 +16,12 @@ export default function Works({data, works}) {
 
     return (
         <section id='production' className='container m-auto' aria-label="Our Works Section" role="main">
-            <div className='flex items-center gap-[25px]' role="banner">
+            <div className='flex section_header items-center gap-[25px]' role="banner">
                 <div className='w-[5vw] h-[1px] bg-[#F97316]' />
                 <h2 className='font-bold font-[unbounded] text-[42px]' dangerouslySetInnerHTML={works_header()} />
             </div>
 
-            <div className="flex flex-wrap justify-between mt-[100px]" role="list">
+            <div className="flex production_main flex-wrap justify-between mt-[100px]" role="list">
                 {works.map((work, index) => {
                     function description() {
                         return { __html: markdown.toHTML(work.attributes.description) };
@@ -30,7 +30,7 @@ export default function Works({data, works}) {
                     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
                     return (
-                        <article key={index} className="w-[49%] flex justify-between gap-[12px]" role="listitem">
+                        <article key={index} className="prod_object w-[49%] flex justify-between gap-[12px]" role="listitem">
                             <div className="w-[100%]">
                                 <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
                                     {work.attributes.gallery.data.map((image, idx) => (
