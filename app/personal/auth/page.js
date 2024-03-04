@@ -22,7 +22,7 @@ export default async function Page() {
                         
                         <div className='h-[80px] text-right text-base'>
                             <p className='m-[0px] text-gray-600'>У вас ещё нет аккаунта?</p>
-                            <a className='m-[0px] text-[#f97316] font-semibold' href='/registration'>Зарегистрироваться</a>
+                            <a className='m-[0px] text-[#f97316] font-semibold' href='/personal/reg'>Зарегистрироваться</a>
                         </div>
                     
                     </div>
