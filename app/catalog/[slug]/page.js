@@ -51,20 +51,23 @@ export default function Page({params}) {
                         <button className='bg-[#e6e9ec] items-center justify-center aspect-square w-[7%]'>+</button>
                     </div>
                 </div>
-                <div className='flex flex-row items-center pb-[20px] gap-[15px]'>
-                    <button className='bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>Добавить в корзину</button>
-                    <button className='border-solid border-[#000] border-[1px] tracking-widest w-[35%] h-[56px] text-[18px] items-center justify-center'>Купить сейчас</button>
-                    <svg width="24" height="21" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="#333333" stroke-width="1.5"/></svg>
+                <div className='product_buttons flex flex-row items-center pb-[20px] gap-[15px]'>
+                    <button className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>Добавить в корзину</button>
+                    <button className='rounded-[10px] border-solid border-[#000] border-[1px] tracking-widest w-[35%] h-[56px] text-[18px] items-center justify-center'>Купить сейчас</button>
+                    <div className='add_favorite flex flex-row gap-[17px]'>
+                        <svg width="24" height="21" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="#8d8d8d" stroke-width="1.5"/></svg>
+                        <p className='hidden font-[500] text-[#8d8d8d]'>Добавить в избранное</p>
+                    </div>
                 </div>
                 <p className='text-[#8d8d8d]'>Категория: Органайзеры</p>
             </div>
 
         </section>
 
-        <section className='mb-[50px]'>
+        <section className='next_info mb-[50px]'>
             <div className='flex flex-row text-[20px] gap-[60px]'>
                 <h3 className='text-[#f97316]'>ОПИСАНИЕ</h3>
-                <h3>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
+                <h3 className='additional'>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
             </div>
             <hr className='mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
             <p>Характеристики товара:
@@ -73,10 +76,16 @@ export default function Page({params}) {
             Длина
             Высота
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
-            <hr className='mt-[15px] h-[2px] bg-[#000] opacity-40'/>
+            <hr className='mt-[15px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
+            <div className='add_info576 hidden'>
+                <h3>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
+                <hr className='mt-[15px] h-[2px] bg-[#000] opacity-40'/>
+            </div>
+        
         </section>
         
-        <section>
+        <section className='similar'>
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
 
                 {/* <Catalog/> */}
