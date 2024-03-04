@@ -17,14 +17,17 @@ export default async function Page() {
   const categories_button = () => ({__html: data.data.attributes.categories_button})
 
   return (
-    <main>        
-      <header className='catalog_header'>
-        <Image alt='Изображение в шапке каталога' className='catalog_header_img brightness-[40%] aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
-        <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
-          <h1 dangerouslySetInnerHTML={header()} />
-          <p dangerouslySetInnerHTML={description()} />
-        </div>
-      </header>
+    <main className="">        
+        <header className='catalog_header'>
+          
+          <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
+          
+          <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
+            <h1 dangerouslySetInnerHTML={header()} />
+            <p dangerouslySetInnerHTML={description()} />
+          </div>
+
+        </header>
 
       <div className='container m-auto'>
         <section className='choose_category'>
