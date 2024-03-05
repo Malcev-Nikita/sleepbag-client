@@ -40,7 +40,7 @@ export default function Questions({data}) {
                             <textarea className="w-[100%] h-[20%] focus:outline-none text-black font-semibold rounded pl-[24px] pt-[18px] pb-[18px]" name="QUESTION" placeholder={questions_input_quesion} />
                         ) : ('')}
 
-                        <button dangerouslySetInnerHTML={questions_button()} />
+                        <button className="text=[#fff]" dangerouslySetInnerHTML={questions_button()} />
                         <div className="inputs_text"> <p dangerouslySetInnerHTML={questons_offert()} /> </div>
                     </div>
                 </div>

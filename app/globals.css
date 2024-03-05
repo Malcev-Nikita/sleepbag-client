@@ -12,8 +12,8 @@
   height: 20px;
   width: 20px;
   transition: all 0.15s ease-out 0s;
-  background: #cbd1d8;
-  border: none;
+  background: #ffffff;
+  border: 1px solid #8d8d8d;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -24,7 +24,7 @@
   border-radius: 5px;
 }
 .option-input:hover {
-  background: #9faab7;
+  background: #ccd2d9;
 }
 .option-input:checked {
   background: #F97316;
@@ -696,7 +696,7 @@ a button{
   font-size: 18px;
   background-color: #F97316;
   border-radius: 10px;
-  color: #000;
+  color: #fff;
   font-size: 22px;
   font-weight: 500;
 }
@@ -912,7 +912,6 @@ li span{
 /* --------------- */
 .catalog_header{
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1188,6 +1187,9 @@ li span{
     left: 0;
     transform: translateX(30px);
   }
+  .logo_link svg{
+    width: 135px;
+  }
   .header_nav{
     padding-left: 40px;
     padding-right: 40px;
@@ -1230,7 +1232,7 @@ li span{
     transform: translateX(30px);
   }
   #aboutus, .header_text, .main_reasons{
-    width: 90%;
+    width: 95%;
   }
   .aboutus_desc{
     display: flex;
@@ -1251,6 +1253,21 @@ li span{
   .catalog_object{
     width: calc(52% - 40px);
   }
+  .catalog_header img{
+    filter: brightness(0.3);
+  }
+  .catalog_header div{
+    transform: translateY(-120%);
+    left: 20px;
+  }
+  .img_line{
+    padding-top: 20px;
+    height: 1px;
+    background-color: #F97316;
+    width: 50%;
+    padding-bottom: 20px;
+    display: block;
+  }
   .section_header h2{
     font-size: 27px;
   }
@@ -1263,7 +1280,7 @@ li span{
     padding-left: 30px;
   }
   .prod_object{
-    width: 90%;
+    width: 95%;
   }
   .production_main{
     display: flex;
@@ -1275,15 +1292,17 @@ li span{
   #section_aboutproduction article div{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 95%;
   }
   #section_aboutproduction article, .aboutus_footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .aboutus_footer{
     width: 90%;
-    margin-left: 35px;
+    margin-left: 25px;
   }
   #section_aboutproduction article div div{
     width: 100%;
@@ -1299,7 +1318,10 @@ li span{
     padding: 32px 22px;
   }
   .question_img{
-    height: 140vh;
+    height: 110vh;
+  }
+  .section_contact .section_header h2{
+    font-size: 24px
   }
   .contacts_main_part{
     width: 90%;
@@ -1347,6 +1369,80 @@ li span{
   }
   .catalog_header h1, .catalog_header p{
     text-align: left;
+  }
+  .catalog_header_img{
+    height: 70vh;
+  }
+  .catalog_header h1{
+    font-size: 24px;
+  }
+  .catalog_header p{
+    font-weight: 300;
     font-size: 20px;
+  }
+  .product_card{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+  .product_card div{
+    width: 100%;
+  }
+  .product_card, .link_path, .next_info, .similar, .cart_header, .contact_desc{
+    width: 95%;
+    padding-left: 5%;
+  }
+  .mobile_form{
+    width: 95%;
+    display: block;
+    background-color: transparent;
+  }
+  .cart_main_part{
+    display: none;
+  }
+  .similar{
+    padding: 0;
+  }
+  .additional{
+    display: none;
+  }
+  .add_info576{
+    display: block;
+  }
+  .personal_link{
+    display: none;
+  }
+  .add_favorite p{
+    display: block;
+  }
+  .product_buttons{
+    flex-direction: column;
+  }
+  .product_buttons button, .product_buttons div{
+    width: 100%;
+  }
+  .col_all{
+    width: 95%;
+  }
+  .cart_header{
+    gap: 15px;
+  }
+  .cart_header p{
+    font-size: 22px
+  }
+  .two_parts{
+    flex-direction: column;
+  }
+  .hidden_hr{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .contact_mails, .contact_address{
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+  .section_contact{
+    display: none;
   }
 }
