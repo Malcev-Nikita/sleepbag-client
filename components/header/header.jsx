@@ -60,7 +60,7 @@ export default async function Header() {
                 </div>
             </div>
 
-            <div className="cart absolute right-[5vw] top-[100vh] h-[85vh] w-[40vw] bg-[#262626] rounded-[33px]">
+            <div className="cart absolute right-[5vw] top-[-100vh] h-[85vh] w-[40vw] bg-[#262626] rounded-[33px]">
                 <div className="flex justify-between px-[52px] pt-[38px] pb-[0px]">
                     <h3 className='text-[#F97316] text-[24px] font-semibold uppercase'>Избранные товары</h3> 
                     <LikeClose/> 

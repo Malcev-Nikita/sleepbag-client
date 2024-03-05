@@ -92,6 +92,10 @@
   transition: 0.2s;
 }
 
+.catalog_header img{
+  filter: brightness(0.5);
+}
+
 
 
 
@@ -593,6 +597,7 @@ a button{
 .section_faq h4{
  color: #000;
  font-size: 22px;
+ text-align: left;
 }
 .section_faq{
   display: flex;
@@ -681,15 +686,7 @@ a button{
   align-items: center;
   row-gap: 15px;
 }
-.contacts_inputs textarea{
-  padding: 20px 0px 0px 20px;
-  border-radius: 10px;
-  font-size: 18px;
-  width: 100%;
-  color: #000;
-  height: 65px;
-  color: #000;
-}
+
 .contacts_inputs button{
   width: 100%;
   height: 65px;
@@ -1198,10 +1195,10 @@ li span{
     display: none;
   }
   .burger_button{
-    display: block;
+    display: block !important;
   }
   .swiper-button-prev, .swiper-button-next{
-    display: none;
+    display: none !important;
   }
   .header_text h3{
     font-size: 23px;
@@ -1252,9 +1249,6 @@ li span{
   }
   .catalog_object{
     width: calc(52% - 40px);
-  }
-  .catalog_header img{
-    filter: brightness(0.3);
   }
   .catalog_header div{
     transform: translateY(-120%);

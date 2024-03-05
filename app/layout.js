@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet"/>
+        {/* <link rel="stylesheet" href="./globals.css"/> */}
       </head>
 
       <body className='overflow-x-hidden'>
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
 
             {children}
 
-            {pathname == '/' || pathname.includes('catalog') ? (
+            {pathname == '/' || pathname.includes('/catalog') ? (
               <Footer footer='long' />
             ) : (
               <Footer footer='short' />

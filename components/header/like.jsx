@@ -17,7 +17,7 @@ function LikeClick() {
 
         anime({
             targets: '.cart',
-            top: '100vh',
+            top: '-100vh',
             duration: 500,
             easing: 'spring(1, 100, 20, 10)'
         })
