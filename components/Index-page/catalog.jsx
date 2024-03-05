@@ -17,8 +17,8 @@ export default function Catalog({data}) {
             <section id='catalog' className='section_catalog container m-auto relative'>
                 <div className='section_header flex items-center'>
                     <div className='header_line'></div>
-
                     <h2 dangerouslySetInnerHTML={catalog_header()} />
+                    <div className='header_line_mobile hidden'/>
                 </div>
             
                 <div className='catalog_main'>

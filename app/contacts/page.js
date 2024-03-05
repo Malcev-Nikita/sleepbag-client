@@ -69,10 +69,10 @@ export default function Page() {
                 <Ymap/>
             </div>
             
-            <section className='section_contact relative'>
+            <section className='section_contact relative flex flex-col items-center'>
                <Image alt='Фоновое изображение' className='question_img aspect-video w-[100%] h-[50vh] object-cover' src='/bg/question_img.png' width={1920} height={1080}/>
                 
-                <div className='container m-auto'>
+                <div className='container m-auto flex flex-col items-center'>
                     <div className="z-5 absolute translate-y-[-150%] flex flex-col gap-[30px]">
                         <div className='section_header container m-auto'>
                             <h2 className="font-[Unbounded] font-[600] w-[70%] text-[#fff] text-[28px]">Оставьте заявку и мы свяжемся с вами в ближайшее время, чтобы ответить на все ваши вопросы!</h2>

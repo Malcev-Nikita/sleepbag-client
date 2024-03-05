@@ -9,9 +9,10 @@ export default function AboutUs({data, stats}) {
 
     return (
         <section className="container m-auto relative" id='aboutus' itemscope itemtype="http://schema.org/Organization">
-            <header className='flex items-center gap-[25px] pb-[100px]' role="banner">
-                <div className='w-[5vw] h-[1px] bg-[#F97316]' />
+            <header className='section_header flex items-center gap-[25px] pb-[100px]' role="banner">
+                <div className='header_line w-[5vw] h-[1px] bg-[#F97316]' />
                 <h2 className='font-bold font-[unbounded] text-[42px]' itemprop="name" dangerouslySetInnerHTML={about_header()} />
+                <div className='header_line_mobile hidden'/>
             </header>
 
             <div className='flex flex-col gap-[34px]' role="main">

@@ -1,55 +1,44 @@
-// 'use client'
+'use client'
 
-// import Image from 'next/image'
-// import React, { useState } from 'react';
-// import { Pagination, Thumbs } from 'swiper/modules';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import { markdown } from 'markdown'
+import Image from 'next/image'
+import React, { useState } from 'react';
+import { Pagination, Thumbs } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { markdown } from 'markdown'
 
 
-// export default function productSwiper({data, works}) {
-//     const works_header = () => ({__html: data.works_header})
-//     const works_button = () => ({__html: data.works_button})
+export default function productSwiper({catalog}) {
 
-//     return (
-//         {works.map((work, index) => {
-//             function description() {
-//                 return { __html: markdown.toHTML(work.attributes.description) };
-//             }
-
-//             const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-//             return (
-//                 <article key={index} className="w-[49%] flex justify-between gap-[12px]" role="listitem">
-//                     <div className="w-[100%]">
-//                         <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
-//                             {work.attributes.gallery.data.map((image, idx) => (
-//                                 <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-//                                     <Image className='aspect-[16/11] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
-//                                 </SwiperSlide>
-//                             ))}
-//                         </Swiper>
-
-//                         <div className="mt-[15px]">
-//                             <h4 className='font-semibold text-[24px] font-[Manrope]'>{work.attributes.header}</h4>
-//                             <div className='text-[14px] font-normal font-[Manrope]' dangerouslySetInnerHTML={description()} />
-//                         </div>
-//                     </div>
-
-//                     <div className='w-[70px]'>
-//                         <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
-//                             {work.attributes.gallery.data.map((image, idx) => (
-//                                 <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-//                                     <Image className='aspect-[16/13] object-cover w-[100%]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
-//                                 </SwiperSlide>
-//                             ))}
-//                         </Swiper>
-//                     </div>
-//                 </article>
-//             );
-//         })}
-//     )
-// }
+    return (
+        <article className="w-[49%] flex justify-between gap-[12px]" role="listitem">
+                    
+            <div className='w-[70px]'>
+                <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
+                    <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
+                        <Image className='aspect-[16/13] object-cover w-[100%]' src='/images/abprod.png' width={1920} height={1080} />
+                    </SwiperSlide>
+                    <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
+                        <Image className='aspect-[16/13] object-cover w-[100%]' src='/images/abprod2.png' width={1920} height={1080} />
+                    </SwiperSlide>
+                    <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
+                        <Image className='aspect-[16/13] object-cover w-[100%]' src='/images/abprod3.png' width={1920} height={1080} />
+                    </SwiperSlide>
+                    <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
+                        <Image className='aspect-[16/13] object-cover w-[100%]' src='/images/abprod.png' width={1920} height={1080} />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+            
+            <div className="w-[100%]">
+                <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
+                    <SwiperSlide className='w-[100%] rounded-[7px] overflow-hidden'>
+                        <Image className='aspect-[16/11] object-cover w-[100%]' src='/images/abprod.png' width={1920} height={1080} />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+        </article>
+    )
+}

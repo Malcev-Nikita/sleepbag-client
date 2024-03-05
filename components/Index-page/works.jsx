@@ -17,8 +17,9 @@ export default function Works({data, works}) {
     return (
         <section id='production' className='container m-auto' aria-label="Our Works Section" role="main">
             <div className='flex section_header items-center gap-[25px]' role="banner">
-                <div className='w-[5vw] h-[1px] bg-[#F97316]' />
+                <div className='header_line w-[5vw] h-[1px] bg-[#F97316]' />
                 <h2 className='font-bold font-[unbounded] text-[42px]' dangerouslySetInnerHTML={works_header()} />
+                <div className='header_line_mobile hidden'/>
             </div>
 
             <div className="flex production_main flex-wrap justify-between mt-[100px]" role="list">

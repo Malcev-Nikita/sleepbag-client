@@ -33,8 +33,8 @@ export default function FAQ({data, faq}) {
             <div className='section_header items-start w-[100%]'>
                 <div className='section_header_inside'>
                     <div className='header_line'></div>
-
                     <h2 dangerouslySetInnerHTML={faq_header()} />
+                    <div className='header_line_mobile hidden'/>
                 </div>
 
                 <p className='under_header_text' dangerouslySetInnerHTML={faq_description()} />

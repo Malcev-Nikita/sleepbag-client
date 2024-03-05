@@ -35,6 +35,7 @@ export default async function Page() {
           <div className='section_header flex items-center'>
             <div className='header_line'></div>
             <h2 dangerouslySetInnerHTML={categories_header()} />
+            <div className='header_line_mobile hidden'></div>
           </div>
           
           <div className='catalog_categories pb-[43px]'>
@@ -63,12 +64,13 @@ export default async function Page() {
             <div className='section_header flex items-center mb-[40px]'>
               <div className='header_line'></div>
               <h2>ФИЛЬТРЫ</h2>
+              <div className='header_line_mobile hidden'></div>
             </div>
             
             <div className='catalog_filters mb-[70px]'>
               <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
-              <input className='catalog_filter' placeholder='Введите ширину багажного автомобиля'></input>
-              <button className='filter_button'>Применить фильтры</button>
+              <input className='catalog_filter focus:outline-none' placeholder='Введите ширину багажного автомобиля'></input>
+              <button className='filter_button focus:outline-none'>Применить фильтры</button>
             </div>
           
           </section>

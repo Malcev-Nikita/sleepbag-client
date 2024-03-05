@@ -1,5 +1,6 @@
 import Catalog from '@/components/Index-page/catalog'
 import Image from 'next/image'
+import productSwiper from '@/components/catalog/slug/slider'
 
 
 export const metadata = {
@@ -8,7 +9,6 @@ export const metadata = {
 }
 
 export default function Page({params}) {
-  console.log(params)
   
   return (
     <main className="container m-auto">
@@ -16,7 +16,7 @@ export default function Page({params}) {
 
         <section className='product_card flex flex-row'>
             <div className='w-[50%]'>
-               
+                <productSwiper/>           
             </div>
 
             <div className='w-[50%]'>
@@ -59,17 +59,18 @@ export default function Page({params}) {
                         <p className='hidden font-[500] text-[#8d8d8d]'>Добавить в избранное</p>
                     </div>
                 </div>
-                <p className='text-[#8d8d8d]'>Категория: Органайзеры</p>
+                <p className='category_text text-[#8d8d8d]'>Категория: Органайзеры</p>
             </div>
 
         </section>
 
         <section className='next_info mb-[50px]'>
-            <div className='flex flex-row text-[20px] gap-[60px]'>
+            <hr className='next_info_hr hidden mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
+            <div className='next_info_h3 flex flex-row text-[20px] gap-[60px]'>
                 <h3 className='text-[#f97316]'>ОПИСАНИЕ</h3>
                 <h3 className='additional'>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
             </div>
-            <hr className='mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
+            <hr className='next_info_hr2 mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
             <p>Характеристики товара:
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Donec consectetuer ligula vulputate sem tristique cursus.
             Ширина

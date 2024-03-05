@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 export default function HeaderBanners({banners}) {
     return (
-        <section className='h-[100vh] pt-0' aria-label="Header Banner Section">
+        <section className='section_header_banners h-[100vh] pt-0' aria-label="Header Banner Section">
             <Swiper className='h-[100%]' modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} loop={true}>
                 {banners.map((item, index) => (
                     <SwiperSlide key={index} role="banner" aria-label={`Banner ${index + 1}`}>

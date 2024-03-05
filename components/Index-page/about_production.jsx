@@ -9,8 +9,9 @@ export default function AboutProduction({data, productions}) {
     return (
         <section className='container m-auto' id='section_aboutproduction' itemscope itemtype="http://schema.org/Product">
             <header className='flex section_header items-center gap-[25px]' role="banner">
-                <div className='w-[5vw] h-[1px] bg-[#F97316]' />
+                <div className='header_line w-[5vw] h-[1px] bg-[#F97316]' />
                 <h2 className='font-bold font-[unbounded] text-[42px]' itemprop="name" dangerouslySetInnerHTML={production_header()} />
+                <div className='header_line_mobile hidden'/>
             </header>
 
             <article className="flex flex-col gap-[50px]" role="article">
