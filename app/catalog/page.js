@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Catalog from '@/components/catalog/catalog'
 import { getCatalogPageContent, getCategoriesProducts } from '@/services/catalog/page'
+import Categories from '@/components/catalog/categories'
 
 export const metadata = {
   title: 'Create Next App',
@@ -38,18 +39,7 @@ export default async function Page() {
             <div className='header_line_mobile hidden'></div>
           </div>
           
-          <div className='catalog_categories pb-[43px]'>
-            {categoriesProducts.data.map(categorie => {
-              let svg = () => ({__html: categorie.attributes.svg})
-
-              return (
-                <button key={categorie.id} data-category-slug={categorie.attributes.slug} className='catalog_category'>
-                  <div dangerouslySetInnerHTML={svg()} />
-                  <p>{categorie.attributes.name}</p>
-                </button>
-              )
-            })}
-          </div>
+          <Categories data={categoriesProducts.data} />
             
           <div className='catalog_view_all justify-end pb-[70px]'>
             <button>
