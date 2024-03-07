@@ -48,7 +48,7 @@ export default function Page() {
               </label>
 
               <div className='prod_desc flex flex-col w-[31%] ml-[4%]'>
-                <h4 className='font-semibold text-[20px]'>Органайзер "SleepBag01"</h4>
+                <h4 className='font-semibold text-[20px]'>Органайзер SleepBag01</h4>
                 <p className='text-[18px]'>В наличии - 20 шт.</p>
               </div>
 
@@ -124,7 +124,7 @@ export default function Page() {
 
               <div className='ml-[7%] flex flex-col justify-between w-[70%]'>
   
-                <h4 className='font-semibold w-[100%] text-[23px]'>Органайзер "SleepBag01"</h4>
+                <h4 className='font-semibold w-[100%] text-[23px]'>Органайзер SleepBag01</h4>
 
                 <p className='font-semibold text-[28px] text-[#f97316]'>30 000 ₽</p>
 

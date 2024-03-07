@@ -21,7 +21,7 @@ export default async function Page() {
     <main className="">        
         <header className='catalog_header'>
           
-          <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
+          <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080} alt="bg_catalog" />
           
           <div className='container z-5 absolute translate-[-50%] translate-x-[-50%] left-[50%]'>
             <h1 dangerouslySetInnerHTML={header()} />

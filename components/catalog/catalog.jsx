@@ -57,10 +57,10 @@ export default function Catalog() {
                                                     {
                                                         favoritesItems.favorites.map(favorite => {
                                                             if(product.id == favorite.id) {
-                                                                return (<LikeCatalog id={product.id} active='true' />)
+                                                                return (<LikeCatalog id={product.id} key={product.id} active='true' />)
                                                             }
                                                             else {
-                                                                return (<LikeCatalog id={product.id} active='false' />)
+                                                                return (<LikeCatalog id={product.id} key={product.id} active='false' />)
                                                             }
                                                         })
                                                     }

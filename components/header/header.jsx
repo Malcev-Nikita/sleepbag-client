@@ -11,7 +11,7 @@ import { Like, LikeClose } from './like';
 import Favorites from './favorites';
 
 
-export default async function Header() {
+export default function Header() {
     const dispatch = useDispatch()
 
     useEffect(() => {

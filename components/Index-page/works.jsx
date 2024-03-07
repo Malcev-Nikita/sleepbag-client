@@ -1,12 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import React, { useState } from 'react';
-import { Thumbs } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import WorksSlider from './works_slider'
 import { markdown } from 'markdown'
 
 
@@ -24,40 +18,11 @@ export default function Works({data, works}) {
 
             <div className="flex production_main flex-wrap justify-between mt-[100px]" role="list">
                 {works.map((work, index) => {
-                    function description() {
-                        return { __html: markdown.toHTML(work.attributes.description) };
-                    }
-
-                    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+                    const description = {__html: markdown.toHTML(work.attributes.description)}
 
                     return (
-                        <article key={index} className="prod_object w-[49%] flex justify-between gap-[12px]" role="listitem">
-                            <div className="w-[100%]">
-                                <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
-                                    {work.attributes.gallery.data.map((image, idx) => (
-                                        <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-                                            <Image className='aspect-[16/11] object-cover w-[100%]' alt='Главное изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-
-                                <div className="mt-[15px]">
-                                    <h4 className='font-semibold text-[24px] font-[Manrope]'>{work.attributes.header}</h4>
-                                    <div className='text-[14px] font-normal font-[Manrope]' dangerouslySetInnerHTML={description()} />
-                                </div>
-                            </div>
-
-                            <div className='w-[70px]'>
-                                <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
-                                    {work.attributes.gallery.data.map((image, idx) => (
-                                        <SwiperSlide key={idx} className='w-[100%] rounded-[7px] overflow-hidden'>
-                                            <Image className='aspect-[16/13] object-cover w-[100%]' alt='Второстепенное изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + image.attributes.url} width={1920} height={1080} />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </div>
-                        </article>
-                    );
+                        <WorksSlider key={index} work={work} index={index} description={description} />
+                    )
                 })}
             </div>
 
