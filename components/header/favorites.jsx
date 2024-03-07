@@ -10,7 +10,9 @@ export default function Favorites() {
     const productsItems = useSelector(state => state.products.items)
     const dispatch = useDispatch()
 
-    if(favoritesItems != null && productsItems != null) {
+
+    if(favoritesItems != null && productsItems != null && !favoritesItems.error) {
+        console.log(favoritesItems)
         return (
             <div className="favorite content px-[52px]">
                 {favoritesItems.favorites.map(favorite => (

@@ -22,40 +22,69 @@ export default function Catalog({data}) {
                 </div>
             
                 <div className='catalog_main'>
-                    {productsItems.data.map(product => (
-                        <div className='catalog_object' key={product.id}>
-                            <div className='object_photo'>
-                                <Image className='catalog_main_photo w-[100%] h-[100%] aspect-[16/11] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={100} height={100} />
+                    {productsItems.data.map(product => {
+                       if(favoritesItems.error) {
+                            return (
+                                <div className='catalog_object' key={product.id}>
+                                    <div className='object_photo'>
+                                        <Image className='catalog_main_photo w-[100%] h-[100%] aspect-[16/11] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={100} height={100} />
+                                    </div>
 
-                                {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : ('')}
+                                    <div className='object_desc'>
+                                        <h3>{product.attributes.name}</h3>
+                                        <p>В наличии - {product.attributes.count} шт.</p>
+                                        <p className='object_desc_text'>{product.attributes.description}</p>
 
-                                {favoritesItems.favorites.map(favorite => {
-                                    if(product.id == favorite.id) {
-                                        return (<LikeCatalog id={favorite.id} active='true' />)
-                                    }
-                                    else {
-                                        return (<LikeCatalog id={favorite.id} active='false' />)
-                                    }
-                                })}
-                            </div>
+                                        <div className='object_price'>
+                                            <p>{product.attributes.price}</p>
+                                            <p>₽</p>
+                                        </div>
 
-                            <div className='object_desc'>
-                                <h3>{product.attributes.name}</h3>
-                                <p>В наличии - {product.attributes.count} шт.</p>
-                                <p className='object_desc_text'>{product.attributes.description}</p>
+                                        <div className='object_buttons'>
+                                            <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                                            <button className='object_button2'>Добавить в корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                       } 
+                       else {
+                        return (
+                            <div className='catalog_object' key={product.id}>
+                                <div className='object_photo'>
+                                    <Image className='catalog_main_photo w-[100%] h-[100%] aspect-[16/11] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={100} height={100} />
 
-                                <div className='object_price'>
-                                    <p>{product.attributes.price}</p>
-                                    <p>₽</p>
+                                    {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : ('')}
+
+                                    {favoritesItems.favorites.map(favorite => {
+                                        if(product.id == favorite.id) {
+                                            return (<LikeCatalog id={favorite.id} active='true' />)
+                                        }
+                                        else {
+                                            return (<LikeCatalog id={favorite.id} active='false' />)
+                                        }
+                                    })}
                                 </div>
 
-                                <div className='object_buttons'>
-                                    <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
-                                    <button className='object_button2'>Добавить в корзину</button>
+                                <div className='object_desc'>
+                                    <h3>{product.attributes.name}</h3>
+                                    <p>В наличии - {product.attributes.count} шт.</p>
+                                    <p className='object_desc_text'>{product.attributes.description}</p>
+
+                                    <div className='object_price'>
+                                        <p>{product.attributes.price}</p>
+                                        <p>₽</p>
+                                    </div>
+
+                                    <div className='object_buttons'>
+                                        <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                                        <button className='object_button2'>Добавить в корзину</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                       }
+                    })}
                 </div>
                 <div className='flex justify-center'>
                     <a href='/catalog' className='down_button'>
