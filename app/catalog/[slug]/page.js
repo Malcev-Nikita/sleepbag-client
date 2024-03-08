@@ -1,7 +1,9 @@
 import Catalog from '@/components/Index-page/catalog'
 import productSwiper from '@/components/catalog/slug/slider'
 import { getProductSlug } from '@/services/catalog/page'
+import ProductTabs from './productTabs'
 import { cookies } from 'next/headers'
+import { markdown } from 'markdown'
 
 
 export const metadata = {
@@ -15,9 +17,18 @@ export default async function Page({params}) {
 
     const productData = await getProductSlug(params.slug)
 
+    let detailDescription = null
+    let otherInfo = null
+
+    if(productData.data[0].attributes.detail_description != null)
+        detailDescription = {__html: markdown.toHTML(productData.data[0].attributes.detail_description)}
+    
+    if(productData.data[0].attributes.other_info != null)
+        otherInfo = {__html: markdown.toHTML(productData.data[0].attributes.other_info)}
+
     return (
         <main className="container m-auto">
-            <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>productData.data_NAME</span></article>
+            <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>{productData.data[0].attributes.name}</span></article>
 
             <section className='productData.data_card flex flex-row'>
                 <div className='w-[50%]'>
@@ -76,32 +87,12 @@ export default async function Page({params}) {
 
             </section>
 
-            <section className='next_info mb-[50px]'>
-                <hr className='next_info_hr hidden mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
-                <div className='next_info_h3 flex flex-row text-[20px] gap-[60px]'>
-                    <h3 className='text-[#f97316]'>ОПИСАНИЕ</h3>
-                    <h3 className='additional'>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
-                </div>
-                <hr className='next_info_hr2 mt-[20px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
-                <p>Характеристики товара:
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Donec consectetuer ligula vulputate sem tristique cursus.
-                Ширина
-                Длина
-                Высота
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
-                <hr className='mt-[15px] mb-[15px] h-[2px] bg-[#000] opacity-40'/>
-                <div className='add_info576 hidden'>
-                    <h3>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
-                    <hr className='mt-[15px] h-[2px] bg-[#000] opacity-40'/>
-                </div>
-            
-            </section>
+            <ProductTabs detailDescription={detailDescription} otherInfo={otherInfo} />
             
             <section className='similar'>
-                    <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
+                <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
 
-                    {/* <Catalog/> */}
+                {/* <Catalog/> */}
             </section>
 
         </main>
