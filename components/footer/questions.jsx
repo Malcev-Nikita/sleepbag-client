@@ -13,7 +13,9 @@ export default function Questions({data}) {
 
     return (
         <section id='contacts' className='section_contact relative overflow-hidden aspect-video flex justify-center items-center'>
+            
             <Image alt='Фоновое изображение' className='question_img w-[100%] h-[100vh] object-cover absolute' src='/bg/question_img.png' width={1920} height={1080}/>
+            <Image alt='Фоновое изображение' className='question_img_mobile hidden w-[100%] h-[100vh] object-cover absolute' src='/bg/questions_mobile.png' width={1920} height={1080}/>
             
             <div className='container m-auto relative flex justify-center'>
                 <div className="contacts_main_part">
