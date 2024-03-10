@@ -1,4 +1,4 @@
-import Catalog from '@/components/Index-page/catalog'
+import Catalog from '@/components/catalog/slug/catalog'
 import productSwiper from '@/components/catalog/slug/slider'
 import { getProductSlug } from '@/services/catalog/page'
 import ProductTabs from './productTabs'
@@ -92,7 +92,7 @@ export default async function Page({params}) {
             <section className='similar'>
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
 
-                {/* <Catalog/> */}
+                <Catalog categoryes={productData.data[0].attributes.categories.data} productIndex={productData.data[0]} />
             </section>
 
         </main>

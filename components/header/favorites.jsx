@@ -12,7 +12,6 @@ export default function Favorites() {
 
 
     if(favoritesItems != null && productsItems != null && !favoritesItems.error) {
-        console.log(favoritesItems)
         return (
             <div className="favorite content px-[52px]">
                 {favoritesItems.favorites.map(favorite => (

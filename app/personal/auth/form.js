@@ -4,16 +4,6 @@ import React, { useState } from "react"
 import userData from "./userData"
 
 
-export function UserAddCookie(jwt) {
-    if(jwt == null) {
-        alert("Данные введены неверно")
-    }
-    else {
-        document.cookie = `userJWT=${jwt}`
-        document.location.href = '/personal'
-    }
-}
-
 export default function AuthForm() {
     const [identifier, setIdentifier] = useState('')
     const [password, setPassword] = useState('')

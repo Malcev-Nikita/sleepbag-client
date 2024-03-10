@@ -16,9 +16,9 @@ export const getProducts = createAsyncThunk(
   }
 );
 
-
 const initialState = {
   items: null,
+  itemsCategory: null,
   loading: 'idle',
   category: 'all'
 }
