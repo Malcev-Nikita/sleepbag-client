@@ -83,15 +83,14 @@ export default function Page() {
             <hr className='mt-[20px] h-[2px] opacity-30 bg-[#8d8d8d] mb-[20px]'/>
           
             <div className='text-[20px] text-[#8d8d8d] font-[200] flex flex-col text-right'>
-              <p>Общий вес: 50кг</p>
-              <p>Доставка: Бесплатно</p>
+              <p>Стоимость доставки: <a className='underline' href='#'>Выбрать способ доставки</a></p>
               <p>Сумма: 30 000 ₽</p>
             </div>
             
             <p className='text-[30px] mt-[16px] text-right text-[#f97316] font-semibold'>Итого: 30 000 ₽</p>
             <div className='flex justify-end'>
               <button className='mt-[16px] rounded bg-[#202020] w-[20%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
-                Оформить заказ
+                Перейти к оформлению
                 <svg width="18" height="13" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#fff" stroke-linecap="square"/>
                 </svg>
@@ -102,7 +101,7 @@ export default function Page() {
 
 {/* -------------------------------------------------------- */}
           
-          <form className='mobile_form hidden bg-[#f4f4f4] rounded-[32px] ml-[2%] mt-[20px] p-[15px] flex flex-col'>
+          <form className='mobile_form bg-[#f4f4f4] rounded-[32px] ml-[2%] mt-[20px] p-[15px] flex flex-col'>
             
             <div className='flex flex-row justify-end'>
               <label className='flex col_all text-[22px] flex-row'>

@@ -46,9 +46,9 @@ export default function Page() {
             </section>
         <div className='mobile_none container m-auto flex justify-center'>
 
-            <div className='absolute w-[637px] h-[919px] bg-[#fff] translate-y-[-105%] z-0 opacity-50 rounded-3xl'/>
+            <div className='absolute w-[637px] h-[919px] bg-[#fff] translate-y-[-115%] z-0 opacity-50 rounded-3xl'/>
 
-            <div className='w-[591px] h-[873px] bg-[#fff] p-[48px] translate-y-[-108%] absolute z-1 rounded-3xl shadow-2xl'>
+            <div className='w-[591px] h-[873px] bg-[#fff] p-[48px] translate-y-[-118%] absolute z-1 rounded-3xl shadow-2xl'>
                 
                 <div className='auth_header w-[100%] items-end flex flex-row'>
                     <h1 className='items-end font-bold m-[0px] font-[Unbounded] text-4xl'>Регистрация</h1>
