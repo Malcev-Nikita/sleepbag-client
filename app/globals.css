@@ -95,9 +95,15 @@
 .catalog_header img{
   filter: brightness(0.5);
 }
-
-
-
+.mobile_block{
+  display: none;
+}
+.mobile_none {
+  padding: 0;
+}
+.cart_main_part{
+  margin-bottom: 130px;
+}
 
 .header_banner_bg {
   filter: brightness(0.6);
@@ -1432,7 +1438,7 @@ li span{
     align-items: flex-start;
     padding-left: 5%;
   }
-  .mobile_none, .header_main_links, .nofill-button, .aboutus_default_img, .personal_link, .header_line, .question_img, .catalog_header_img, .additional, .cart_main_part, .footer_logo{
+  .mobile_block, .mobile_none, .header_main_links, .nofill-button, .aboutus_default_img, .personal_link, .header_line, .question_img, .catalog_header_img, .additional, .cart_main_part, .footer_logo{
     display: none;
   }
   .mobile_block, .aboutus_for_mobile, .next_info_hr, .category_text, .next_info_hr2, .footer_menu_border, .add_info576, .add_favorite p, .header_line_mobile, .question_img_mobile, .catalog_header_img_mobile, .forgot_pass_mobile{
@@ -1466,4 +1472,7 @@ li span{
     width: 100%;
     height: 100vh;
   }
+  .catalog_header_img_mobile{
+    height: 65vh;
+  } 
 }
