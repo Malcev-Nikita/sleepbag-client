@@ -39,7 +39,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className='mobile_none container m-auto flex justify-center'>
+        <section className='mobile_none container m-auto flex justify-center p-[0]'>
             <div className='absolute w-[637px] h-[919px] bg-[#fff] translate-y-[-115%] z-0 opacity-50 rounded-3xl'></div>
             
             <div className='w-[591px] h-[873px] bg-[#fff] p-[48px] translate-y-[-118%] absolute z-1 rounded-3xl shadow-2xl'>

@@ -21,7 +21,7 @@ export default function Page() {
             <p>(Количество товаров в корзине)</p>
           </header>
 
-          <form className='cart_main_part bg-[#f4f4f4] mt-[32px] rounded-[32px] p-[53px] flex flex-col'>
+          <form className='cart_main_part bg-[#f4f4f4] mt-[32px] mb-[130px] rounded-[32px] p-[53px] flex flex-col'>
             
             <div className='flex flex-row font-semibold justify-end'>
               <label className='flex col_all flex-row'>
@@ -84,6 +84,7 @@ export default function Page() {
           
             <div className='text-[20px] text-[#8d8d8d] font-[200] flex flex-col text-right'>
               <p>Стоимость доставки: <a className='underline' href='#'>Выбрать способ доставки</a></p>
+              <p>Доставка: Бесплатно</p>
               <p>Сумма: 30 000 ₽</p>
             </div>
             
@@ -91,10 +92,13 @@ export default function Page() {
             <div className='flex justify-end'>
               <button className='mt-[16px] rounded bg-[#202020] w-[20%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
                 Перейти к оформлению
+              </button>
+              <a href='/personal/cart/order' className='mt-[16px] rounded bg-[#202020] w-[25%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
+                Перейти к оформлению заказа
                 <svg width="18" height="13" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#fff" stroke-linecap="square"/>
                 </svg>
-              </button>
+              </a>
             </div>
 
           </form>
@@ -128,9 +132,9 @@ export default function Page() {
                 <p className='font-semibold text-[28px] text-[#f97316]'>30 000 ₽</p>
 
                 <div className='flex flex-row gap-[10px]'>
-                  <button className='rounded-[10px] text-[#8d8d8d] justify-center bg-[#e6e9ec] w-[52px] h-[52px] text-[35px] flex justify-center items-center'>-</button>
+                  <button className='rounded-[10px] text-[#8d8d8d] justify-center bg-[#e6e9ec] w-[52px] h-[52px] text-[35px] flex items-center'>-</button>
                   <p className='text-[35px]'>1</p>
-                  <button className='rounded-[10px] text-[#8d8d8d] justify-center bg-[#e6e9ec] w-[52px] h-[52px] text-[35px] flex justify-center items-center mr-[40px]'>+</button>
+                  <button className='rounded-[10px] text-[#8d8d8d] justify-center bg-[#e6e9ec] w-[52px] h-[52px] text-[35px] flex items-center mr-[40px]'>+</button>
                   
                   <div className='flex flex-row gap-[20px] items-center justify-end'>
                     <svg className='cursor-pointer' width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,19 +153,18 @@ export default function Page() {
             <hr className='mt-[20px] h-[2px] opacity-30 bg-[#8d8d8d] mb-[20px]'/>
           
             <div className='text-[20px] text-[#8d8d8d] font-[300] flex flex-col text-right gap-[10px]'>
-              <p>Общий вес: 50кг</p>
               <p>Доставка: Бесплатно</p>
               <p>Сумма: 30 000 ₽</p>
             </div>
             
             <p className='text-[25px] mt-[16px] text-right text-[#f97316] font-semibold'>Итого: 30 000 ₽</p>
             <div className='flex justify-end mb-[80px]'>
-              <button className='mt-[16px] rounded bg-[#f97316] w-[100%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
-                Оформить заказ
+              <a href='/personal/cart/order' className='mt-[16px] rounded bg-[#f97316] w-[100%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
+                Перейти к оформлению заказа
                 <svg width="18" height="13" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#fff" stroke-linecap="square"/>
                 </svg>
-              </button>
+              </a>
             </div>
 
           </form>

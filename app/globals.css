@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.option-input {
+.option-input, .option-input2{
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -23,13 +23,17 @@
   z-index: 1000;
   border-radius: 5px;
 }
-.option-input:hover {
+.option-input2{
+  width: 30px;
+  height: 30px;
+}
+.option-input:hover, .option-input2:hover {
   background: #ccd2d9;
 }
-.option-input:checked {
+.option-input:checked, .option-input2:checked {
   background: #F97316;
 }
-.option-input:checked::before {
+.option-input:checked::before, .option-input2:checked::before {
   width: 20px;
   height: 20px;
   display:flex;
@@ -40,12 +44,36 @@
   align-items:center;
   justify-content:center;
 }
-.option-input:checked::after {
+.option-input2:checked::before{
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+.option-input:checked::after, .option-input2:checked::after {
   background: #40e0d0;
   content: '';
   display: block;
   position: relative;
   z-index: 100;
+}
+
+.input_radio{
+  box-shadow: 0px 0px 0px 1px #6d6d6d;
+  font-size: 3em;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 4px solid #fff;
+  background-clip: border-box;
+  border-radius: 50%;
+  appearance: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+}
+.input_radio:checked {
+  box-shadow: 0px 0px 0px 4px #000;
+  background-color: #fff;
 }
 
 .productions__thumbswiper .swiper-wrapper {
@@ -98,12 +126,16 @@
 .mobile_block{
   display: none;
 }
+<<<<<<< HEAD
 .mobile_none {
   padding: 0;
 }
 .cart_main_part{
   margin-bottom: 130px;
 }
+=======
+
+>>>>>>> origin/branch12.03.2024
 
 .header_banner_bg {
   filter: brightness(0.6);
@@ -388,7 +420,10 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
+}
+.object_desc h1, .object_desc p{
+  margin-left: 10px;
 }
 .object_desc_text{
   height: 3lh;
@@ -398,11 +433,8 @@ section{
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.object_desc h3{
-  font-weight: 700;
-}
 .object_photo{
-  padding: 20px;
+  padding: 5px;
   position: relative;
 }
 .object_price{
@@ -410,7 +442,7 @@ section{
   flex-direction: row;
   column-gap: 5px;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 28px;
   padding-top: 10px;
   padding-bottom: 25px;
 }
@@ -1402,9 +1434,6 @@ li span{
     display: block;
     background-color: transparent;
   }
-  .similar{
-    padding: 0;
-  }
   .product_buttons{
     flex-direction: column;
   }
@@ -1465,6 +1494,9 @@ li span{
     display: block;
     width: 15% !important;
   }
+  .section_header_catalog{
+    margin-top: 130px;
+  }
   .question_img_mobile, .forgot_pass_mobile{
     filter: brightness(40%);
   }
@@ -1475,4 +1507,7 @@ li span{
   .catalog_header_img_mobile{
     height: 65vh;
   } 
+  .order_section .section_header{
+    padding-left: 0;
+  }
 }
