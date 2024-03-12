@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import HeaderBanners from '@/components/index-page/header_banners'
 import AboutUs from '@/components/index-page/about_us'
 import Catalog from '@/components/index-page/catalog'

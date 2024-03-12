@@ -1,14 +1,13 @@
 'use client'
 
-import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getFavorites } from '@/store/favorites/favorites.slice';
 import { getProducts } from '@/store/products/products.slice';
-import HeaderMenu from './menu';
 
-import { Like, LikeClose } from './like';
+import HeaderMenu from './menu';
 import Favorites from './favorites';
+import { Like, LikeClose } from './like';
 
 
 export default function Header() {
@@ -18,6 +17,7 @@ export default function Header() {
         dispatch(getFavorites('jwt'))
         dispatch(getProducts())
     }, [dispatch]);
+
 
     return (
         <header className='header fixed z-10 top-[22px] left-[50%] translate-x-[-50%]'>
