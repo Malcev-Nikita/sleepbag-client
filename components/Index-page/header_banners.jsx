@@ -27,7 +27,7 @@ export default function HeaderBanners({banners}) {
 
                             <div className='header_banner_buttons mt-[90px] flex gap-[30px]' role="group" aria-label="Banner Buttons">
                                 {item.attributes.text_first_button != null && item.attributes.link_first_button != null ? (
-                                    <a className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] bg-[#F97316] rounded-[6px]' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</a>
+                                    <a className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] text-[#fff] bg-[#F97316] rounded-[6px]' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</a>
                                 ) : ('')}
 
                                 {item.attributes.text_second_button != null && item.attributes.link_second_button ? (

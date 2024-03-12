@@ -23,15 +23,15 @@ export default function Catalog({categoryes, productIndex}) {
                                     
                                     if(favoritesItems.error) {
                                         return (
-                                            <div className='catalog_object' key={product.id}>
+                                            <div className='catalog_object rounded-[10px]' key={product.id}>
                                                 <div className='object_photo'>
-                                                    <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={364} height={320}/>
+                                                    <Image className='rounded-[10px]' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={364} height={320}/>
                                                 </div>
                 
                                                 <div className='object_desc'>
-                                                    <h1>{product.attributes.name}</h1>
-                                                    <p>В наличии - {product.attributes.count} шт.</p>
-                                                    <p className='object_desc_text'>{product.attributes.description}</p>
+                                                    <h1 className='font-[700] text-[16px] mb-[10px]'>{product.attributes.name}</h1>
+                                                    <p className='text-[20px]'>В наличии - {product.attributes.count} шт.</p>
+                                                    <p className='object_desc_text text-[20px]'>{product.attributes.description}</p>
                 
                                                     <div className='object_price'>
                                                         <p>{product.attributes.price}</p>
