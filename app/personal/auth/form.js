@@ -28,6 +28,7 @@ export default function AuthForm() {
             <input type='password' value={password} onChange={e => setPassword(e.target.value)} id='password' name='PASSWORD' placeholder='********' required className='pb-[20px] focus:outline-orange-500 flex justify-end w-[100%] h-[62px] border-[1px] border-gray-500 text-xl pl-[27px] pt-[20px] rounded-xl'/>
             
             <button type="submit" className='mt-[25px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-xl rounded-xl'>Авторизоваться</button>
+            
             <a href='/personal/misspass' className='text-right font-semibold text-[#f97316] pt-[15px]'>Забыли пароль?</a>
         </form>
     )

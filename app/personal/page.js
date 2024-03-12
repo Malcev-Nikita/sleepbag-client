@@ -1,5 +1,4 @@
-import { redirect } from 'next/navigation'
-import getJWT from '@/components/getJWT'
+import CheckAuthUser from "@/components/checkAuthUser"
 
 export const metadata = {
   title: 'Create Next App',
@@ -7,13 +6,10 @@ export const metadata = {
 }
 
 export default function Page() {
-    console.log(getJWT())
-    if(getJWT == undefined) {
-        redirect('/personal/auth')
-    }
-
     return (
         <main className="container m-auto">
+            <CheckAuthUser />
+
             <article className='link_path mobile_none pt-[13vh]'>
                 <a href='/' className='text-[#000] opacity-70'>Главная / </a><span>Личный кабинет</span>
             </article>

@@ -14,7 +14,9 @@ export default function Header() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getFavorites('jwt'))
+        if(localStorage.getItem('userJWT')) {
+            dispatch(getFavorites(localStorage.getItem('userJWT')))
+        }
         dispatch(getProducts())
     }, [dispatch]);
 
