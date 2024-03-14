@@ -185,7 +185,7 @@ export default function Page() {
                             <h3 className='font-[500] text-[24px]'>Личные данные</h3>
                         </div>
                         <div className=''>
-                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 1/3</p>
+                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 1/4</p>
                         </div>
                     </div>
                     
@@ -216,7 +216,7 @@ export default function Page() {
                             <h3 className='font-[500] text-[24px]'>Адрес доставки</h3>
                         </div>
                         <div className=''>
-                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 2/3</p>
+                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 2/4</p>
                         </div>
                     </div>
                     
@@ -253,7 +253,7 @@ export default function Page() {
                             <h3 className='font-[500] text-[24px]'>Способ оплаты</h3>
                         </div>
                         <div className=''>
-                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 3/3</p>
+                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 3/4</p>
                         </div>
                     </div>
 
@@ -276,7 +276,40 @@ export default function Page() {
                     </button>
                     
                     <a href='#' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к адресу доставки</a>
-                
+                    
+
+                    <div className='flex flex-row items-center mb-[25px] justify-between w-[100%]'>
+                        <div className='flex flex-row items-center w-[80%] gap-[15px]'>
+                            <div className='bg-[#e6e9ec] w-[34px] text-[24px] h-[34px] flex justify-center items-center'>4</div>
+                            <h3 className='font-[500] text-[24px]'>Способы оплаты</h3>
+                        </div>
+                        <div className=''>
+                            <p className='text-[#8d8d8d] text-[21px]'>Шаг 4/4</p>
+                        </div>
+                    </div>
+                    <label for='kassa_mobile' className='p-[10px] my-[25px] border-gray-500 border-[1px] border-solid rounded-[10px] flex items-center flex-row gap-[10px]'>
+                        <div className='mx-[15px]'>
+                            <Image src="/icons/kassa_logo.png" width={45} height={32}></Image>
+                        </div>
+                        <div className='w-[90%]'>
+                            <h5 className='font-[500]'>Kassa</h5>
+                            <p>Оплата картами или СБП</p>
+                        </div>
+                        <div>
+                            <input id='kassa_mobile' className='input_radio' type='radio'></input>
+                        </div>
+                    </label>
+                    <div className='flex flex-col gap-[15px]'>
+                        <div>
+                            <h3 className='font-[500] text-[21px]'>Комментарий к заказу</h3>
+                        </div>
+                        <div>
+                            <textarea className="w-[100%] h-[140px] border-[2px] border-gray-400 border-solid focus:outline-orange-500 text-black font-semibold rounded-[10px] pl-[24px] pt-[18px] pb-[18px] resize-none" name="QUESTION"/>
+                        </div>
+                    </div>
+                    <button className='text-center mt-[35px] flex flex-row items-center justify-center gap-[10px] mb-[15px] text-[#fff] text-[22px] rounded-[10px] w-[100%] h-[6vh] bg-[#f97316]'>Оплатить заказ</button>
+                    
+                    <a href='/personal/cart' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к корзине</a>
                 </form>
             </div>
 

@@ -123,8 +123,8 @@
 .catalog_header img{
   filter: brightness(0.5);
 }
-.mobile_block{
-  display: none;
+.mobile_block, .mobile_block_link{
+  display: none !important;
 }
 <<<<<<< HEAD
 .mobile_none {
@@ -1509,5 +1509,13 @@ li span{
   } 
   .order_section .section_header{
     padding-left: 0;
+  }
+  .contacts_main_part .section_header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mobile_block_link{
+    display: flex;
   }
 }

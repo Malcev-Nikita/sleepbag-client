@@ -13,7 +13,7 @@ export default function Page() {
         <Image alt='Фоновое изображение' className='forgot_pass_mobile hidden aspect-video w-[100%] h-[110vh] object-cover' src='/bg/forgot_pass_mobile.png' width={1920} height={1080}/>
 
         <section className='mobile_block absolute translate-y-[-110%] container m-auto flex justify-center'>
-            <header className='text-[28px] font-[Unbounded] font-[700] text-[#F97316]'>АВТОРИЗАЦИЯ</header>
+            <header className='text-[28px] font-[Unbounded] font-[700] text-[#F97316]'>РЕГИСТРАЦИЯ</header>
                 <hr className='my-[30px] opacity-60 h-[2px] bg-[#cacaca]'/>
                 <div className='mobile_block_code flex flex-col'>
                     <div className='flex flex-col gap-[30px]'>
@@ -24,15 +24,15 @@ export default function Page() {
                         </div>
                         <div>
                             <p className='text-[#fff] text-[23px] mb-[15px]'>Введите имя</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
+                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иван' id='email' name='email' required/>
                         </div>
                         <div>
                             <p className='text-[#fff] text-[23px] mb-[15px]'>Введите фамилию</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
+                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов' id='email' name='email' required/>
                         </div>
                         <div>
                             <p className='text-[#fff] text-[23px] mb-[15px]'>Введите ваш номер телефона</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
+                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='+7 999 999 99 99' id='email' name='email' required/>
                         </div>
                         <div>
                             <p className='text-[#fff] text-[23px] mb-[15px]'>Придумайте пароль</p>
@@ -47,9 +47,9 @@ export default function Page() {
         </section>
 
         <div className='mobile_none container m-auto flex justify-center'>
-            <div className='absolute w-[637px] h-[919px] bg-[#fff] translate-y-[-115%] z-0 opacity-50 rounded-3xl'/>
+            <div className='absolute w-[637px] h-[919px] bg-[#fff] translate-y-[-105%] z-0 opacity-50 rounded-3xl'/>
 
-            <div className='w-[591px] h-[873px] bg-[#fff] p-[48px] translate-y-[-118%] absolute z-1 rounded-3xl shadow-2xl'>
+            <div className='w-[591px] h-[873px] bg-[#fff] p-[48px] translate-y-[-108%] absolute z-1 rounded-3xl shadow-2xl'>
                 <div className='auth_header w-[100%] items-end flex flex-row'>
                     <h1 className='items-end font-bold m-[0px] font-[Unbounded] text-4xl'>Регистрация</h1>
                     
