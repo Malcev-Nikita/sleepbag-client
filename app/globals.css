@@ -126,16 +126,12 @@
 .mobile_block, .mobile_block_link{
   display: none !important;
 }
-<<<<<<< HEAD
 .mobile_none {
   padding: 0;
 }
 .cart_main_part{
   margin-bottom: 130px;
 }
-=======
-
->>>>>>> origin/branch12.03.2024
 
 .header_banner_bg {
   filter: brightness(0.6);
