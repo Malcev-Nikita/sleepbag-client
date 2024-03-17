@@ -76,7 +76,11 @@ export function addFavoritesItem(id, productsItems, dispatch) {
         }
         productClone.id = productPush.id
 
-        dispatch(changeFavorites({product: productClone}))
+        dispatch(changeFavorites({
+            product: productClone,
+            jwt: localStorage.getItem('userJWT'),
+            userId: JSON.parse(localStorage.getItem('userData')).id
+        }))
     }
 }
 

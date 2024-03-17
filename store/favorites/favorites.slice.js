@@ -39,7 +39,7 @@ export const favoritesSlice = createSlice({
         state.items.favorites.push(product)
       }
 
-      addFavorite('jwt', 'userId', state.items.favorites)
+      addFavorite(action.payload.jwt, action.payload.userId, state.items.favorites)
     },
   },
   extraReducers: (builder) => {

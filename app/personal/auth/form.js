@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { authUser } from "@/services/personal/auth"
+import { userInfo } from "@/services/personal/personal"
 
 
 export default function AuthForm() {
@@ -14,7 +15,10 @@ export default function AuthForm() {
         const data = await authUser(identifier, password)
 
         if(data != null) {
+            const dataUser = await userInfo(data.jwt)
+
             localStorage.setItem('userJWT', data.jwt)
+            localStorage.setItem('userInfo', dataUser.data)
             window.location.href = "/personal";
         }
     }
