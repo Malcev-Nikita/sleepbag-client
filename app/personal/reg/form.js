@@ -23,7 +23,7 @@ export default function RegForm() {
     }
 
     return (
-        <form className='flex flex-col' onSubmit={onSubmit}>
+        <form className='flex flex-col font-[Manrope]' onSubmit={onSubmit}>
             <label for='email' className='text-xl pb-[15px]'>Введите ваш адрес эл. почты</label>
             <input type='email' id='email' name='email' onChange={(e) => setEmail(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' required/>
             

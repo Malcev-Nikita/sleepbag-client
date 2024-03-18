@@ -8,10 +8,10 @@ export default function AboutUs({data, stats}) {
     const about_second_description = () => ({__html: markdown.toHTML(data.about_second_description)})
 
     return (
-        <section className="container m-auto relative" id='aboutus' itemscope itemtype="http://schema.org/Organization">
+        <section className="container m-auto relative font-[Manrope]" id='aboutus' itemscope itemtype="http://schema.org/Organization">
             <header className='section_header flex items-center gap-[25px] pb-[100px]' role="banner">
                 <div className='header_line w-[5vw] h-[1px] bg-[#F97316]' />
-                <h2 className='font-bold font-[unbounded] text-[42px]' itemprop="name" dangerouslySetInnerHTML={about_header()} />
+                    <h2 className='font-bold font-[unbounded] text-[42px]' itemprop="name" dangerouslySetInnerHTML={about_header()} />
                 <div className='header_line_mobile hidden'/>
             </header>
 

@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="container m-auto">
+    <main className="container m-auto font-[Manrope]">
         
         <article className='link_path pt-[17vh]'>
           <a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/personal/cart' className='text-[#000] opacity-70'>Корзина / </a><span className='text-orange-500'>Оформление заказа</span>

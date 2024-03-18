@@ -39,7 +39,7 @@ export default function Header() {
                 <HeaderMenu />
 
                 <div className="nav_links flex gap-[30px]">
-                    <a href='#contacts' className="nofill-button">Задать вопрос</a>
+                    <a href='/contacts' className="nofill-button">Задать вопрос</a>
 
                     <div className='flex gap-[25px]'>
                         <a href="/personal/cart" className='flex items-center'>

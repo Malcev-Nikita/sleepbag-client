@@ -18,7 +18,7 @@ export default async function Page() {
   const categories_button = () => ({__html: data.data.attributes.categories_button})
 
   return (
-    <main className="">        
+    <main className="font-[Manrope]">        
         <header className='catalog_header'>
           
           <Image className='catalog_header_img aspect-video w-[100%] h-[100vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080} alt="bg_catalog" />

@@ -24,7 +24,7 @@ export default async function Page() {
   const productions = await getProductionContent();
   
   return (
-    <main className="relative bg-[#fff]">
+    <main className="relative font-[Manrope] bg-[#fff]">
       <HeaderBanners banners={banners.data}/>
       
       <AboutUs data={data.data.attributes} stats={stats.data} />

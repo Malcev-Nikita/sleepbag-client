@@ -27,12 +27,14 @@ export default function Works({data, works}) {
             </div>
 
             <div className="flex items-center flex-col w-[100%]">
-                <a className='py-[17px] px-[35px] rounded-[7px] border-[#F97316] border-[1px] inline-flex gap-[6px] items-center mt-[100px]' href='#' role="link">
-                    <span className='text-[#F97316] text-[14px] font-semibold font-[Manrope]' dangerouslySetInnerHTML={works_button()} />
+                <a className='down_button' href='#' role="link">
+                    <button>
+                        <span className='text-[#F97316] text-[14px] font-semibold font-[Manrope]' dangerouslySetInnerHTML={works_button()} />
 
-                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" strokeLinecap="square" />
-                    </svg>
+                        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" strokeLinecap="square" />
+                        </svg>
+                    </button>
                 </a>
             </div>
         </section>

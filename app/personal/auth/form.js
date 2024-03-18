@@ -24,7 +24,7 @@ export default function AuthForm() {
     }
 
     return (
-        <form className='flex flex-col' onSubmit={onSubmit}>
+        <form className='flex font-[Manrope] flex-col' onSubmit={onSubmit}>
             <label for='email' className='text-xl pb-[15px]'>Введите ваш адрес эл. почты</label>
             <input type='email' value={identifier} onChange={e => setIdentifier(e.target.value)} placeholder='E-mail' id='email' name='EMAIL' required className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl'/>
             

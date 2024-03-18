@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <main className="container m-auto">
+        <main className="container m-auto personal_page font-[Manrope]">
             <CheckAuthUser />
 
             <GetUserInfo />
@@ -72,8 +72,8 @@ export default function Page() {
                 </a>
             
                 <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
-                    <h2>Чеки</h2>
                     <div>
+                    <h2>Чеки</h2>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.2129 1C16.2108 1 15.3984 3.41766 15.3984 6.4H17.2129C18.0873 6.4 18.5245 6.4 18.7952 6.09809C19.0658 5.79618 19.0187 5.3986 18.9245 4.60343C18.6757 2.50429 18.0033 1 17.2129 1Z" stroke="#1A1A1A" stroke-width="1.5"/>
                         <path d="M15.4 6.44883V15.9812C15.4 17.3417 15.4 18.022 14.9842 18.2898C14.3048 18.7274 13.2544 17.8097 12.7262 17.4766C12.2897 17.2013 12.0715 17.0636 11.8293 17.0557C11.5675 17.0471 11.3454 17.1791 10.8738 17.4766L9.154 18.5611C8.69009 18.8537 8.45811 19 8.2 19C7.94189 19 7.70991 18.8537 7.246 18.5611L5.52621 17.4766C5.08973 17.2013 4.87149 17.0636 4.62928 17.0557C4.36755 17.0471 4.14543 17.1791 3.67379 17.4766C3.14555 17.8097 2.09519 18.7274 1.41576 18.2898C1 18.022 1 17.3417 1 15.9812V6.44883C1 3.88023 1 2.59593 1.79081 1.79796C2.58162 1 3.85442 1 6.4 1H17.2" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

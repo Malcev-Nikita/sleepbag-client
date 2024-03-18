@@ -27,7 +27,7 @@ export default async function Page({params}) {
         otherInfo = {__html: markdown.toHTML(productData.data[0].attributes.other_info)}
 
     return (
-        <main className="container m-auto">
+        <main className="container m-auto font-[Manrope]">
             <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>{productData.data[0].attributes.name}</span></article>
 
             <section className='productData.data_card mobile_none flex flex-row'>

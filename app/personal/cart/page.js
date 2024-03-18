@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="container m-auto">
+    <main className="container m-auto font-[Manrope]">
         
         <article className='link_path pt-[17vh]'>
           <a href='/' className='text-[#000] opacity-70'>Главная / </a><span className='text-orange-500'>Корзина</span>
@@ -90,10 +90,7 @@ export default function Page() {
             
             <p className='text-[30px] mt-[16px] text-right text-[#f97316] font-semibold'>Итого: 30 000 ₽</p>
             <div className='flex justify-end'>
-              <button className='mt-[16px] rounded bg-[#202020] w-[20%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
-                Перейти к оформлению
-              </button>
-              <a href='/personal/cart/order' className='mt-[16px] rounded bg-[#202020] w-[25%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
+              <a href='/personal/cart/order' className='mt-[16px] rounded bg-[#202020] w-[30%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
                 Перейти к оформлению заказа
                 <svg width="18" height="13" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#fff" stroke-linecap="square"/>

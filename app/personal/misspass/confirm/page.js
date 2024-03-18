@@ -9,9 +9,9 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main>
+    <main className='font-[Manrope]'>
         <Image alt='Фоновое изображение' className='catalog_header_img aspect-video w-[100%] h-[110vh] object-cover' src='/bg/catalog_bg_img.png' width={1920} height={1080}/>
-        <Image alt='Фоновое изображение' className='forgot_pass_mobile hidden aspect-video w-[100%] h-[90vh] object-cover' src='/bg/forgot_pass_mobile.png' width={1920} height={1080}/>
+        <Image alt='Фоновое изображение' className='forgot_pass_mobile hidden aspect-video w-[100%] h-[100vh] object-cover' src='/bg/forgot_pass_mobile.png' width={1920} height={1080}/>
         <section className='mobile_block absolute translate-y-[-185%] container m-auto flex justify-center'>
           <header className='text-[27px] font-[Unbounded] font-[700] text-[#F97316]'>ПОДТВЕРЖДЕНИЕ ЛИЧНОСТИ</header>
           <p className='text-[#fff] text-[22px] mt-[15px]'>Введите код который мы вам отправили на адрес <span className='font-[500] text-[#fff] text-[22px]'>E-MAIL ПОЛЬЗОВАТЕЛЯ</span></p>

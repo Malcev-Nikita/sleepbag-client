@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <main className="">
+        <main className="font-[Manrope]">
             <div className='container m-auto'>
                 <article className='link_path pt-[17vh]'>
-                    <a href='/' className='text-[#000] opacity-70'>Главная / </a><span className='text-orange-500'>КОНТАКТЫ</span>
+                    <a href='/' className='text-[#000] opacity-70'>Главная / </a><span className='text-orange-500'>Контакты</span>
                 </article>
                 
                 <section className='pt-[50px]'>
@@ -56,7 +56,7 @@ export default function Page() {
                                 <h2 className='font-[600] text-[24px]'>Как нас найти:</h2>
                             </div>
                             
-                            <p className='contact_address text-[#8d8d8d] text-[18px] pb-[50px] font-[400]'>214000, г. Смоленск, ул. Пушкина, д. 6, 2-й этаж, оф. 12</p>
+                            <p className='contact_address text-[#8d8d8d] text-[18px] pb-[30px] font-[400]'>214000, г. Смоленск, ул. Пушкина, д. 6, 2-й этаж, оф. 12</p>
 
                             <p className='text-[#8d8d8d] text-[18px] font-[400]'>Пожалуйста, согласуйте с нами время вашего визитка заранее по любому из указанных контактных телефонов.</p>
                 
@@ -69,7 +69,7 @@ export default function Page() {
                 <Ymap/>
             </div>
             
-            <section className='section_contact relative flex flex-col items-center'>
+            <section className='section_contact mobile_none relative flex flex-col items-center'>
                <Image alt='Фоновое изображение' className='question_img aspect-video w-[100%] h-[50vh] object-cover' src='/bg/question_img.png' width={1920} height={1080}/>
                 
                 <div className='container m-auto flex flex-col items-center'>
