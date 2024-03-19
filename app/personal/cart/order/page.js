@@ -158,7 +158,7 @@ export default function Page() {
                         <label for='accept' className='absolute w-[30px] h-[30px]'>
                             <input id='accept' type="checkbox" className='option-input2 w-[30px] h-[30px] checkbox absolute hidden translate-y-[20px] translate-x-[10px]'/>
                         </label>
-                        <p className='ml-[60px] text-[20px] text-[#505050]'>Я принимаю условия <Link className='text-[20px] text-[#000] underline'>публичной оферты</Link> и <Link className='text-[20px] text-[#000] underline'>политики конфеденциальности</Link>, а также даю согласие на обработку персональных данных</p>
+                        <p className='ml-[60px] text-[20px] text-[#505050]'>Я принимаю условия <Link href='#' className='text-[20px] text-[#000] underline'>публичной оферты</Link> и <Link href='#' className='text-[20px] text-[#000] underline'>политики конфеденциальности</Link>, а также даю согласие на обработку персональных данных</p>
                     </label>
                 </div>
                 <div className='flex flex-col gap-[17px] h-[10%]'>

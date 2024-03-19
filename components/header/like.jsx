@@ -32,12 +32,22 @@ function LikeClick() {
             easing: 'spring(1, 100, 20, 10)'
         })
         
-        anime({
-            targets: '.cart.active',
-            top: '10vh',
-            duration: 700,
-            easing: 'spring(1, 100, 15, 5)'
-        })
+        if(window.innerWidth > 768) {
+            anime({
+                targets: '.cart.active',
+                top: '10vh',
+                duration: 700,
+                easing: 'spring(1, 100, 15, 5)'
+            })
+        }
+        else {
+            anime({
+                targets: '.cart.active',
+                top: '0vh',
+                duration: 700,
+                easing: 'spring(1, 100, 15, 5)'
+            })
+        }
     }
 }
 

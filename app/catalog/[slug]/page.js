@@ -100,6 +100,7 @@ export default async function Page({params}) {
                     </div>
                     <div className='flex flex-col pb-[20px] gap-[12px]'>
                         <p className='text-[20px]'>{productData.data[0].attributes.count} шт. в наличии</p>
+                        
                         <div className='flex flex-row gap-[6px]'>
                             <button className='bg-[#e6e9ec] text-[35px] items-center justify-center aspect-square w-[12%]'>-</button>
                             <input className='border-solid border-[1px] text-[25px] border-[#e6e9ec] w-[23%] text-center' value={1}></input>
