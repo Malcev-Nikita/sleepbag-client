@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import { getFavorites } from '@/store/favorites/favorites.slice';
 import { getProducts } from '@/store/products/products.slice';
 
+import anime from "animejs"
+
 import HeaderMenu from './menu';
 import Favorites from './favorites';
 import { Like, LikeClose } from './like';
@@ -21,14 +23,39 @@ export default function Header() {
         dispatch(getProducts())
     }, [dispatch]);
 
+    function BurgerClick() {
+        if(document.querySelector('.burger_menu').classList.contains('active')) {
+            document.querySelector('.burger_menu').classList.remove('active')
+    
+            anime({
+                targets: '.burger_menu',
+                top: '-100vh',
+                duration: 500,
+                easing: 'spring(1, 100, 20, 10)'
+            })
+        }
+        else {
+            document.querySelector('.burger_menu').classList.add('active')
+            
+            anime({
+                targets: '.burger_menu.active',
+                top: '0vh',
+                duration: 700,
+                easing: 'spring(1, 100, 15, 5)'
+            })
+        }
+    }
+
 
     return (
         <header className='header fixed z-10 top-[22px] left-[50%] translate-x-[-50%]'>
             <div className="header_nav w-[90vw] m-auto bg-[#1A1A1A] rounded-[23px] flex items-center justify-between px-[70px] py-[18px]">
             
-                <svg width="32" height="16" className='burger_button hidden' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
+                <button onClick={() => BurgerClick()}>
+                    <svg width="32" height="16" className='burger_button hidden' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
 
                 <Link className='logo_link' href='/'>                    
                     <svg width="192" height="32" viewBox="0 0 192 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +98,15 @@ export default function Header() {
                 <div className='cart_hr'/>
                 
                 <Favorites />
+            </div>
+
+
+            <div className="burger_menu absolute left-[0px] top-[-100vh] h-[85vh] w-screen bg-[#262626] rounded-[7px]">
+                <button className="close" onClick={() => BurgerClick()}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M18.1213 16L24.0588 10.0625C24.3406 9.78121 24.4991 9.3995 24.4994 9.00133C24.4998 8.60317 24.342 8.22118 24.0607 7.93938C23.7794 7.65759 23.3977 7.49908 22.9995 7.49873C22.6013 7.49838 22.2193 7.65621 21.9375 7.93751L16 13.875L10.0625 7.93751C9.78075 7.65572 9.39855 7.49741 9.00004 7.49741C8.60152 7.49741 8.21933 7.65572 7.93754 7.93751C7.65575 8.2193 7.49744 8.60149 7.49744 9.00001C7.49744 9.39852 7.65575 9.78072 7.93754 10.0625L13.875 16L7.93754 21.9375C7.65575 22.2193 7.49744 22.6015 7.49744 23C7.49744 23.3985 7.65575 23.7807 7.93754 24.0625C8.21933 24.3443 8.60152 24.5026 9.00004 24.5026C9.39855 24.5026 9.78075 24.3443 10.0625 24.0625L16 18.125L21.9375 24.0625C22.2193 24.3443 22.6015 24.5026 23 24.5026C23.3986 24.5026 23.7807 24.3443 24.0625 24.0625C24.3443 23.7807 24.5026 23.3985 24.5026 23C24.5026 22.6015 24.3443 22.2193 24.0625 21.9375L18.1213 16Z" fill="white"/>
+                    </svg>
+                </button>
             </div>
         </header>
     );
