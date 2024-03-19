@@ -89,7 +89,7 @@ export default function Page() {
                                 <button className="w-[30%] rounded-[5px] text-[20px] text-[#fff] bg-[#f97316]">Отправить</button>
                         </div>
 
-                        <div className="flex text-[#fff] justify-end"> <p className='w-[26%] text-center font-[500]'>Нажмите на кнопку Отправить, я соглашаюсь с <Link className='underline font-[300]'>офертой на обработку персональных данных.</Link></p> </div>
+                        <div className="flex text-[#fff] justify-end"> <p className='w-[26%] text-center font-[500]'>Нажмите на кнопку Отправить, я соглашаюсь с <Link href='#' className='underline font-[300]'>офертой на обработку персональных данных.</Link></p> </div>
 
                     </div>
                 </div> 
