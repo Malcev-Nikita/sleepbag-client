@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { regUser } from "@/services/personal/reg"
+import InputMask from "react-input-mask";
 
 
 export default function RegForm() {
@@ -40,7 +41,7 @@ export default function RegForm() {
             </div>
             
             <label for='phone' className='text-xl pb-[15px] pt-[25px]'>Введите ваш номер телефона</label>
-            <input type='phone' id='phone' name='phone' onChange={(e) => setPhone(e.target.value)} className='pb-[25px] focus:outline-orange-500 flex justify-end w-[100%] h-[62px] border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='+7 999 999 99-99' required/>
+            <InputMask mask="+7 (999) 999-99-99" onChange={e => setPhone(e.target.value)} value={phone} id='phone' name='phone' className='pb-[25px] focus:outline-orange-500 flex justify-end w-[100%] h-[62px] border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Телефон' required />
             
             <label for='password' className='text-xl pb-[15px] pt-[25px]'>Придумайте пароль</label>
             <input type='password' id='password' name='password' onChange={(e) => setPassword(e.target.value)} className='pb-[25px] focus:outline-orange-500 flex justify-end w-[100%] h-[62px] border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='********' required/>
