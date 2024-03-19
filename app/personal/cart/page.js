@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 export const metadata = {
@@ -11,7 +12,7 @@ export default function Page() {
     <main className="container m-auto font-[Manrope]">
         
         <article className='link_path pt-[17vh]'>
-          <a href='/' className='text-[#000] opacity-70'>Главная / </a><span className='text-orange-500'>Корзина</span>
+          <Link href='/' className='text-[#000] opacity-70'>Главная / </Link><span className='text-orange-500'>Корзина</span>
         </article>
         
         <section className='m-0 pt-[33px] w-[100%] flex flex-col'>
@@ -83,19 +84,19 @@ export default function Page() {
             <hr className='mt-[20px] h-[2px] opacity-30 bg-[#8d8d8d] mb-[20px]'/>
           
             <div className='text-[20px] text-[#8d8d8d] font-[200] flex flex-col text-right'>
-              <p>Стоимость доставки: <a className='underline' href='#'>Выбрать способ доставки</a></p>
+              <p>Стоимость доставки: <Link className='underline' href='#'>Выбрать способ доставки</Link></p>
               <p>Доставка: Бесплатно</p>
               <p>Сумма: 30 000 ₽</p>
             </div>
             
             <p className='text-[30px] mt-[16px] text-right text-[#f97316] font-semibold'>Итого: 30 000 ₽</p>
             <div className='flex justify-end'>
-              <a href='/personal/cart/order' className='mt-[16px] rounded bg-[#202020] w-[30%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
+              <Link href='/personal/cart/order' className='mt-[16px] rounded bg-[#202020] w-[30%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
                 Перейти к оформлению заказа
                 <svg width="18" height="13" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#fff" stroke-linecap="square"/>
                 </svg>
-              </a>
+              </Link>
             </div>
 
           </form>
@@ -156,12 +157,12 @@ export default function Page() {
             
             <p className='text-[25px] mt-[16px] text-right text-[#f97316] font-semibold'>Итого: 30 000 ₽</p>
             <div className='flex justify-end mb-[80px]'>
-              <a href='/personal/cart/order' className='mt-[16px] rounded bg-[#f97316] w-[100%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
+              <Link href='/personal/cart/order' className='mt-[16px] rounded bg-[#f97316] w-[100%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
                 Перейти к оформлению заказа
                 <svg width="18" height="13" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#fff" stroke-linecap="square"/>
                 </svg>
-              </a>
+              </Link>
             </div>
 
           </form>

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -11,7 +12,7 @@ import 'swiper/css/pagination';
 export default function HeaderBanners({banners}) {
     return (
         <section className='section_header_banners h-[100vh] pt-0' aria-label="Header Banner Section">
-            <Swiper className='h-[100%]' modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} loop={true}>
+            <Swiper className='h-[100%] w-screen' modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} loop={true}>
                 {banners.map((item, index) => (
                     <SwiperSlide key={index} role="banner" aria-label={`Banner ${index + 1}`}>
                         {item.attributes.bg_photo.data.attributes.mime.includes('video') ? (
@@ -27,11 +28,11 @@ export default function HeaderBanners({banners}) {
 
                             <div className='header_banner_buttons mt-[90px] flex gap-[30px]' role="group" aria-label="Banner Buttons">
                                 {item.attributes.text_first_button != null && item.attributes.link_first_button != null ? (
-                                    <a className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] text-[#fff] bg-[#F97316] rounded-[6px]' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</a>
+                                    <Link className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] text-[#fff] bg-[#F97316] rounded-[6px]' href={item.attributes.link_first_button}>{item.attributes.text_first_button}</Link>
                                 ) : ('')}
 
                                 {item.attributes.text_second_button != null && item.attributes.link_second_button ? (
-                                    <a className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] rounded-[6px] border-[1px] text-[#fff] border-[#F97316]' href={item.attributes.link_second_button}>{item.attributes.text_second_button}</a>
+                                    <Link className='px-[54px] py-[18px] text-[20px] font-semibold font-[Manrope] rounded-[6px] border-[1px] text-[#fff] border-[#F97316]' href={item.attributes.link_second_button}>{item.attributes.text_second_button}</Link>
                                 ) : ('')}
                             </div>
                         </div>

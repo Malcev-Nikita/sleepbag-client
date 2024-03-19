@@ -2,6 +2,7 @@
 
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
+import Preloader from '@/components/preloader';
 
 import StoreProvider from '@/store/StoreProvider';
 

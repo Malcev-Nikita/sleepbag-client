@@ -1,7 +1,6 @@
+import Link from 'next/link'
 import Catalog from '@/components/catalog/slug/catalog'
-import productSwiper from '@/components/catalog/slug/slider'
 import { getProductSlug } from '@/services/catalog/page'
-import ProductTabs from './productTabs'
 import { cookies } from 'next/headers'
 import { markdown } from 'markdown'
 
@@ -28,7 +27,7 @@ export default async function Page({params}) {
 
     return (
         <main className="container m-auto font-[Manrope]">
-            <article className='link_path pt-[13vh]'><a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/catalog' className='text-[#000] opacity-70'>Каталог / </a><span>{productData.data[0].attributes.name}</span></article>
+            <article className='link_path pt-[13vh]'><Link href='/' className='text-[#000] opacity-70'>Главная / </Link><Link href='/catalog' className='text-[#000] opacity-70'>Каталог / </Link><span>{productData.data[0].attributes.name}</span></article>
 
             <section className='productData.data_card mobile_none flex flex-row'>
                 <div className='w-[50%]'>

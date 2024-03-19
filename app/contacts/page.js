@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import Ymap from './map';
 
 export const metadata = {
@@ -11,7 +12,7 @@ export default function Page() {
         <main className="font-[Manrope]">
             <div className='container m-auto'>
                 <article className='link_path pt-[17vh]'>
-                    <a href='/' className='text-[#000] opacity-70'>Главная / </a><span className='text-orange-500'>Контакты</span>
+                    <Link href='/' className='text-[#000] opacity-70'>Главная / </Link><span className='text-orange-500'>Контакты</span>
                 </article>
                 
                 <section className='pt-[50px]'>
@@ -88,7 +89,7 @@ export default function Page() {
                                 <button className="w-[30%] rounded-[5px] text-[20px] text-[#fff] bg-[#f97316]">Отправить</button>
                         </div>
 
-                        <div className="flex text-[#fff] justify-end"> <p className='w-[26%] text-center font-[500]'>Нажмите на кнопку Отправить, я соглашаюсь с <a className='underline font-[300]'>офертой на обработку персональных данных.</a></p> </div>
+                        <div className="flex text-[#fff] justify-end"> <p className='w-[26%] text-center font-[500]'>Нажмите на кнопку Отправить, я соглашаюсь с <Link className='underline font-[300]'>офертой на обработку персональных данных.</Link></p> </div>
 
                     </div>
                 </div> 

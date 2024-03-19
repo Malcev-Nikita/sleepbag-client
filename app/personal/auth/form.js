@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import React, { useState } from "react"
 import { authUser } from "@/services/personal/auth"
 import { userInfo } from "@/services/personal/personal"
@@ -33,7 +34,7 @@ export default function AuthForm() {
             
             <button type="submit" className='mt-[25px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-xl rounded-xl'>Авторизоваться</button>
             
-            <a href='/personal/misspass' className='text-right font-semibold text-[#f97316] pt-[15px]'>Забыли пароль?</a>
+            <Link href='/personal/misspass' className='text-right font-semibold text-[#f97316] pt-[15px]'>Забыли пароль?</Link>
         </form>
     )
 }

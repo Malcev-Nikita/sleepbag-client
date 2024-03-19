@@ -1,5 +1,5 @@
-import { Span } from 'next/dist/trace'
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 export const metadata = {
@@ -34,7 +34,7 @@ export default function Page() {
               <input id='input7' className='focus:outline-orange-500 border-[1px] border-[#fff] bg-transparent w-[12%] h-[100px] rounded-[10px] text-[#fff] font-[600] font-[Unbounded] text-[40px] text-center'/>
             </div>
             <div className='flex flex-row justify-end gap-[60px] text-[#F97316] font-[500] text-[21px] mt-[30px]'>
-              <a href='/personal/misspass'>Назад</a>
+              <Link href='/personal/misspass'>Назад</Link>
               <button>Отправить повторно</button>
             </div>
           </div>
@@ -71,8 +71,8 @@ export default function Page() {
                         </div>
 
                         <div className='flex flex-row justify-end gap-[50px]'>
-                            <a href='/forgot_password' className='text-right font-semibold text-[#f97316] pt-[15px]'>Назад</a>
-                            <a href='#' className='text-right font-semibold text-[#f97316] pt-[15px]'>Отправить код повторно</a>
+                            <Link href='/forgot_password' className='text-right font-semibold text-[#f97316] pt-[15px]'>Назад</Link>
+                            <Link href='#' className='text-right font-semibold text-[#f97316] pt-[15px]'>Отправить код повторно</Link>
                         </div>
                     
                     </form>

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link';
 import { useSelector } from 'react-redux'
 import { LikeCatalog } from '../header/like'
 
@@ -42,7 +43,7 @@ export default function Catalog({data}) {
                                         </div>
 
                                         <div className='object_buttons'>
-                                            <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                                            <Link className='object_button1' href={product.attributes.slug + '/'}>Подробнее</Link>
                                             <button className='object_button2'>Добавить в корзину</button>
                                         </div>
                                     </div>
@@ -78,7 +79,7 @@ export default function Catalog({data}) {
                                     </div>
 
                                     <div className='object_buttons'>
-                                        <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                                        <Link className='object_button1' href={`/catalog/${product.attributes.slug}`}>Подробнее</Link>
                                         <button className='object_button2'>Добавить в корзину</button>
                                     </div>
                                 </div>
@@ -88,7 +89,7 @@ export default function Catalog({data}) {
                     })}
                 </div>
                 <div className='flex justify-center'>
-                    <a href='/catalog' className='down_button'>
+                    <Link href='/catalog' className='down_button'>
                         <button>
                             <span className='text-[#f97316]' dangerouslySetInnerHTML={catalog_button()} />
 
@@ -96,7 +97,7 @@ export default function Catalog({data}) {
                                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
                             </svg>
                         </button>
-                    </a>
+                    </Link>
                 </div>
           </section>
         )
@@ -129,7 +130,7 @@ export default function Catalog({data}) {
                                     </div>
 
                                     <div className='object_buttons'>
-                                        <a className='object_button1' href={product.attributes.slug + '/'}>Подробнее</a>
+                                        <Link className='object_button1' href={`/catalog/${product.attributes.slug}`}>Подробнее</Link>
                                         <button className='object_button2'>Добавить в корзину</button>
                                     </div>
                                 </div>
@@ -138,7 +139,7 @@ export default function Catalog({data}) {
                     })}
                 </div>
                 <div className='flex justify-center'>
-                    <a href='/catalog' className='down_button'>
+                    <Link href='/catalog' className='down_button'>
                         <button>
                             <span className='text-[#f97316]' dangerouslySetInnerHTML={catalog_button()} />
 
@@ -146,7 +147,7 @@ export default function Catalog({data}) {
                                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
                             </svg>
                         </button>
-                    </a>
+                    </Link>
                 </div>
           </section>
         )

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link';
 import { useSelector } from 'react-redux'
 import { LikeCatalog } from '../header/like'
 
@@ -40,7 +41,7 @@ export default function Catalog() {
                                                     </div>
                 
                                                     <div className='object_buttons'>
-                                                        <a className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</a>
+                                                        <Link className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</Link>
                                                         <button className='object_button2'>Добавить в корзину</button>
                                                     </div>
                                                 </div>
@@ -77,7 +78,7 @@ export default function Catalog() {
                                                     </div>
                 
                                                     <div className='object_buttons'>
-                                                        <a className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</a>
+                                                        <Link className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</Link>
                                                         <button className='object_button2'>Добавить в корзину</button>
                                                     </div>
                                                 </div>

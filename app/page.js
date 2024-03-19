@@ -1,3 +1,4 @@
+import Preloader from '@/components/preloader'
 import HeaderBanners from '@/components/index-page/header_banners'
 import AboutUs from '@/components/index-page/about_us'
 import Catalog from '@/components/index-page/catalog'
@@ -25,6 +26,8 @@ export default async function Page() {
   
   return (
     <main className="relative font-[Manrope] bg-[#fff]">
+      {/* <Preloader /> */}
+
       <HeaderBanners banners={banners.data}/>
       
       <AboutUs data={data.data.attributes} stats={stats.data} />

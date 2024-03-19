@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import CheckAuthUser from "@/components/checkAuthUser"
 import GetUserInfo from "./getUserInfo"
 import UserInfo from "./userInfo"
@@ -15,7 +16,7 @@ export default function Page() {
             <GetUserInfo />
 
             <article className='link_path mobile_none pt-[13vh]'>
-                <a href='/' className='text-[#000] opacity-70'>Главная / </a><span>Личный кабинет</span>
+                <Link href='/' className='text-[#000] opacity-70'>Главная / </Link><span>Личный кабинет</span>
             </article>
                 
             <section className='userpage_info mobile_none pt-[60px]'>
@@ -32,7 +33,7 @@ export default function Page() {
             
             <article className='link_path mobile_block_link pt-[130px] flex flex-row justify-between w-[95%]'>
                 <div>
-                    <a href='/' className='text-[#000] opacity-70'>Главная / </a><span>Личный кабинет</span>
+                    <Link href='/' className='text-[#000] opacity-70'>Главная / </Link><span>Личный кабинет</span>
                 </div>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.5"><path d="M12.3145 3.39977C12.9665 2.69332 13.2925 2.3401 13.639 2.13406C14.4749 1.63691 15.5042 1.62145 16.3541 2.09328C16.7063 2.28882 17.0423 2.63211 17.7144 3.31867C18.3865 4.00523 18.7225 4.34851 18.914 4.70831C19.3758 5.57648 19.3607 6.62794 18.874 7.48187C18.6723 7.83576 18.3266 8.1688 17.635 8.83488L9.4068 16.76C8.09627 18.0223 7.441 18.6534 6.62205 18.9733C5.80311 19.2931 4.9028 19.2696 3.10219 19.2225L2.85721 19.2161C2.30904 19.2018 2.03496 19.1946 1.87564 19.0138C1.71631 18.833 1.73807 18.5538 1.78157 17.9954L1.80519 17.6922C1.92763 16.1206 1.98885 15.3348 2.29574 14.6284C2.60264 13.9221 3.13201 13.3485 4.19075 12.2014L12.3145 3.39977Z" stroke="#707070" stroke-width="1.5" stroke-linejoin="round"/><path d="M11.375 3.5L17.5 9.625" stroke="#707070" stroke-width="1.5" stroke-linejoin="round"/><path d="M12.25 19.25L19.25 19.25" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
             </article>
@@ -51,7 +52,7 @@ export default function Page() {
 
             <section className='userpage_blocks mobile_none pb-[60px]'>
             
-                <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
+                <Link className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
                     <div>
                     <h2>Доставки</h2>
                     <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,9 +60,9 @@ export default function Page() {
                     </svg>
                     </div>
                     <p>Проверить статус доставки</p>
-                </a>
+                </Link>
             
-                <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
+                <Link className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
                     <div>
                     <h2>Покупки</h2>
                     <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,9 +70,9 @@ export default function Page() {
                     </svg>
                     </div>
                     <p>История ваших покупок</p>
-                </a>
+                </Link>
             
-                <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
+                <Link className='blocks_block w-[25%] bg-[#f4f4f4]' href='#'>
                     <div>
                     <h2>Чеки</h2>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,13 +82,13 @@ export default function Page() {
                     </svg>
                     </div>
                     <p>Смотреть</p>
-                </a>
+                </Link>
             
             </section>
             
             <section className='userpage_blocks mobile_block_link w-[95%] pl-[5%] pb-[60px]'>
             
-                <a className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
+                <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
                     <div>
                     <h2>Доставки</h2>
                     <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,9 +96,9 @@ export default function Page() {
                     </svg>
                     </div>
                     <p>Проверить статус доставки</p>
-                </a>
+                </Link>
             
-                <a className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
+                <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
                     <div>
                         <h2>Покупки</h2>
                         <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,9 +106,9 @@ export default function Page() {
                         </svg>
                     </div>
                     <p>История ваших покупок</p>
-                </a>
+                </Link>
             
-                <a className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
+                <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
                     <div>
                         <h2>Чеки</h2>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +118,7 @@ export default function Page() {
                         </svg>
                     </div>
                     <p>Смотреть</p>
-                </a>
+                </Link>
             
             </section>
         </main>

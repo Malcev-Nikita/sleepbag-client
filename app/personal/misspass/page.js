@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 export const metadata = {
@@ -23,7 +24,7 @@ export default function Page() {
               <button type='submit' className='mt-[25px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-[23px] rounded-xl'>Продолжить</button>
             </div>
             <div className='flex flex-row justify-end gap-[60px] text-[#F97316] font-[500] text-[21px]'>
-                <a href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Вернуться ко входу</a>
+                <Link href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Вернуться ко входу</Link>
             </div>
           </div>
         </section>
@@ -50,7 +51,7 @@ export default function Page() {
                         <label for='email' className='text-xl pb-[15px]'>Адрес электронной почты</label>
                         <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
                         <button type='submit' className='mt-[25px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-xl rounded-xl'>Продолжить</button>
-                        <a href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Вернуться ко входу</a>
+                        <Link href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Вернуться ко входу</Link>
                     </form>
   
                 </div>
