@@ -12,15 +12,25 @@ export default function AuthForm() {
 
     async function onSubmit(event) {
         event.preventDefault()
-     
-        const data = await authUser(identifier, password)
 
-        if(data != null) {
-            const dataUser = await userInfo(data.jwt)
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-            localStorage.setItem('userJWT', data.jwt)
-            localStorage.setItem('userInfo', dataUser.data)
-            window.location.href = "/personal";
+        if(identifier.match(emailRegex) && password.length >= 6) {
+            const data = await authUser(identifier, password)
+
+            if(data != null) {
+                const dataUser = await userInfo(data.jwt)
+
+                localStorage.setItem('userJWT', data.jwt)
+                localStorage.setItem('userInfo', dataUser.data)
+                window.location.href = "/personal";
+            }
+            else {
+                alert('Пользователь не найден')
+            }
+        } 
+        else {
+            alert('Ошикбка ввода данных')
         }
     }
 
