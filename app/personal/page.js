@@ -86,7 +86,7 @@ export default function Page() {
             
             </section>
             
-            <section className='userpage_blocks mobile_block_link w-[95%] pl-[5%] pb-[60px]'>
+            <section className='userpage_blocks mobile_block_block w-[95%] pl-[5%] pb-[60px]'>
             
                 <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='#'>
                     <div>

@@ -129,7 +129,7 @@ export default function Page() {
 
                 <p className='font-semibold text-[28px] text-[#f97316]'>30 000 ₽</p>
 
-                <div className='flex flex-row gap-[10px]'>
+                <div className='mp_buttons flex flex-row gap-[10px]'>
                   <button className='rounded-[10px] text-[#8d8d8d] justify-center bg-[#e6e9ec] w-[52px] h-[52px] text-[35px] flex items-center'>-</button>
                   <p className='text-[35px]'>1</p>
                   <button className='rounded-[10px] text-[#8d8d8d] justify-center bg-[#e6e9ec] w-[52px] h-[52px] text-[35px] flex items-center mr-[40px]'>+</button>
