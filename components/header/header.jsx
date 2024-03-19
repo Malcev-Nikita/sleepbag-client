@@ -51,7 +51,7 @@ export default function Header() {
         <header className='header fixed z-10 top-[22px] left-[50%] translate-x-[-50%]'>
             <div className="header_nav w-[90vw] m-auto bg-[#1A1A1A] rounded-[23px] flex items-center justify-between px-[70px] py-[18px]">
             
-                <button onClick={() => BurgerClick()}>
+                <button className='burger_button hidden' onClick={() => BurgerClick()}>
                     <svg width="32" height="16" className='burger_button hidden' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>

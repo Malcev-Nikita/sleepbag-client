@@ -3,6 +3,7 @@ import Catalog from '@/components/catalog/slug/catalog'
 import { getProductSlug } from '@/services/catalog/page'
 import { cookies } from 'next/headers'
 import { markdown } from 'markdown'
+import ProductSwiper from '@/components/catalog/slug/slider'
 
 
 export const metadata = {
@@ -31,7 +32,7 @@ export default async function Page({params}) {
 
             <section className='productData.data_card mobile_none flex flex-row'>
                 <div className='w-[50%]'>
-                    <productSwiper />           
+                    <ProductSwiper images={productData.data[0].attributes.image.data} />           
                 </div>
 
                 <div className='w-[50%]'>
