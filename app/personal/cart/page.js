@@ -41,7 +41,7 @@ export default function Page() {
             
             <div className='flex flex-row justify-end'>
               
-              <label for='product1'>
+              <label className='product_photo' for='product1'>
                   <label for='product1' className='absolute'></label>
 
                   <input id='product1' type="checkbox" className='option-input checkbox absolute hidden translate-y-[20px] translate-x-[10px]'/>

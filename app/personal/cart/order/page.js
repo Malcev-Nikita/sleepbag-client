@@ -102,7 +102,7 @@ export default function Page() {
                                 <p>Оплата картами или СБП</p>
                             </div>
                             <div>
-                                <input id='kassa' className='input_radio' type='radio'></input>
+                                <input id='kassa' className='input_radio' type='radio' checked></input>
                             </div>
                         </label>
                     </div>
@@ -297,7 +297,7 @@ export default function Page() {
                             <p>Оплата картами или СБП</p>
                         </div>
                         <div>
-                            <input id='kassa_mobile' className='input_radio' type='radio'></input>
+                            <input id='kassa_mobile' className='input_radio' type='radio' checked></input>
                         </div>
                     </label>
                     <div className='flex flex-col gap-[15px]'>

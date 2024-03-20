@@ -31,7 +31,7 @@ export default function Catalog() {
                                                 </div>
                 
                                                 <div className='object_desc'>
-                                                    <h1>{product.attributes.name}</h1>
+                                                    <h3>{product.attributes.name}</h3>
                                                     <p>В наличии - {product.attributes.count} шт.</p>
                                                     <p className='object_desc_text'>{product.attributes.description}</p>
                 
