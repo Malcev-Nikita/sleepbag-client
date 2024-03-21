@@ -308,7 +308,7 @@ header .cart .content{
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(29, 29, 29);
+  background: rgba(29, 29, 29, 0);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1310,11 +1310,11 @@ li span{
   }
   
   ::-webkit-scrollbar-track {
-    background: rgb(29, 29, 29);
+    background: rgba(29, 29, 29, 0);
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #F97316;
+    background-color: #F97316;
     border-radius: 8px;
     /* border: 3px solid #fff; */
   }

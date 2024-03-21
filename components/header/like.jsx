@@ -5,50 +5,52 @@ import { useDispatch, useSelector } from "react-redux"
 import { changeFavorites } from "@/store/favorites/favorites.slice"
 
 function LikeClick() {
-    if(document.querySelector('.cart').classList.contains('active')) {
-        document.querySelector('.cart').classList.remove('active')
-
-        anime({
-            targets: 'main',
-            filter: "blur(0px)",
-            duration: 500,
-            easing: 'spring(1, 100, 20, 10)'
-        })
-
-        anime({
-            targets: '.cart',
-            top: '-100vh',
-            duration: 500,
-            easing: 'spring(1, 100, 20, 10)'
-        })
-    }
-    else {
-        document.querySelector('.cart').classList.add('active')
-
-        anime({
-            targets: 'main',
-            filter: "blur(4px)",
-            duration: 500,
-            easing: 'spring(1, 100, 20, 10)'
-        })
-        
-        if(window.innerWidth > 768) {
+    Array.from(document.querySelectorAll('.cart')).forEach(cart => {
+        if(cart.classList.contains('active')) {
+            cart.classList.remove('active')
+    
             anime({
-                targets: '.cart.active',
-                top: '10vh',
-                duration: 700,
-                easing: 'spring(1, 100, 15, 5)'
+                targets: 'main',
+                filter: "blur(0px)",
+                duration: 500,
+                easing: 'spring(1, 100, 20, 10)'
+            })
+    
+            anime({
+                targets: '.cart',
+                top: '-100vh',
+                duration: 500,
+                easing: 'spring(1, 100, 20, 10)'
             })
         }
         else {
+            cart.classList.add('active')
+    
             anime({
-                targets: '.cart.active',
-                top: '0vh',
-                duration: 700,
-                easing: 'spring(1, 100, 15, 5)'
+                targets: 'main',
+                filter: "blur(4px)",
+                duration: 500,
+                easing: 'spring(1, 100, 20, 10)'
             })
+            
+            if(window.innerWidth > 768) {
+                anime({
+                    targets: '.cart.active',
+                    top: '10vh',
+                    duration: 700,
+                    easing: 'spring(1, 100, 15, 5)'
+                })
+            }
+            else {
+                anime({
+                    targets: '.cart.active',
+                    top: '0vh',
+                    duration: 700,
+                    easing: 'spring(1, 100, 15, 5)'
+                })
+            }
         }
-    }
+    }) 
 }
 
 export function Like() {
