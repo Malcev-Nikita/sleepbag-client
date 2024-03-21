@@ -1382,7 +1382,9 @@ li span{
     flex-direction: column;
   }
   .cart{
-    width: 100vw;
+    width: 100vw !important;
+    margin: 0% !important;
+    padding: 0px !important;
     right: 0;
   }
   .inputs_text{
@@ -1404,6 +1406,8 @@ li span{
   }
   .catalog_main{
     justify-content: center;
+    padding-left: 5%;
+    width: 95%;
   }
   .catalog_object{
     width: 100%;
@@ -1414,6 +1418,9 @@ li span{
     display: flex;
     justify-content: center;
     padding: 5px;
+  }
+  .object_photo img{
+    width: 100%;
   }
   .object_desc{
     padding: 10px;
