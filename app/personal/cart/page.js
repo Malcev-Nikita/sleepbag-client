@@ -125,7 +125,7 @@ export default function Page() {
 
               <div className='ml-[7%] flex flex-col justify-between w-[70%]'>
   
-                <h4 className='font-semibold w-[100%] text-[23px]'>Органайзер SleepBag01</h4>
+                <h4 className='product_name font-semibold w-[100%] text-[23px]'>Органайзер SleepBag01</h4>
 
                 <p className='font-semibold text-[28px] text-[#f97316]'>30 000 ₽</p>
 

@@ -1305,6 +1305,36 @@ li span{
   }
 }
 @media (max-width: 576px){
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(29, 29, 29);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #F97316;
+    border-radius: 8px;
+    /* border: 3px solid #fff; */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #43b3ae;
+  }
+  .mp_buttons button{
+    height: 40px;
+    width: 40px;
+  }
+  .mp_buttons{
+    align-items: center;
+  }
+  .product_name{
+    font-size: 21px;
+  }
+  .link_path {
+    padding-top: 12vh;
+  }
   .section_header{
     padding-left: 5%;
   }
