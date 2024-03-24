@@ -12,6 +12,7 @@ import HeaderMenu from './menu';
 import Favorites from './favorites';
 import { Like, LikeClose } from './like';
 import BurgerMenu from './burgerMenu';
+import { getCart } from '@/store/cart/cart.slice';
 
 
 export default function Header() {
@@ -20,6 +21,7 @@ export default function Header() {
     useEffect(() => {
         if(localStorage.getItem('userJWT')) {
             dispatch(getFavorites(localStorage.getItem('userJWT')))
+            dispatch(getCart(localStorage.getItem('userJWT')))
         }
         dispatch(getProducts())
     }, [dispatch]);

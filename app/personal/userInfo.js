@@ -22,7 +22,7 @@ export default function UserInfo() {
                 if(data.phone) setPhone(data.phone)
     
                 setFirstReload(false)
-            }, 300)
+            }, 500)
         }
     })
 
