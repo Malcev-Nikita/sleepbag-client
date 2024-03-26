@@ -158,7 +158,7 @@
   right: 3% !important; 
 }
 
-.info_right_block:hover .pen1{
+.info_right_block:hover .pen1, .share_link:hover .pen1{
   opacity: 1 !important;
   transition: 0.2s;
 }
