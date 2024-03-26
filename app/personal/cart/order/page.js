@@ -122,9 +122,9 @@ export default function Page() {
                 <form className='p-[35px] bg-[#f4f4f4] mt-[32px] rounded-[32px] flex flex-col'>
                     <p className='font-[600] text-[24px] mb-[35px]'>Ваш заказ</p>
                     
-                    <div className='flex flex-row gap-[35px] p-[25px]'>
+                    <div className='flex flex-row justify-between py-[25px]'>
                         <div className='w-[50%]'>
-                            <Image alt='Изображение товара' src='/images/catalog_photo.png' width='241' height='137' className='w-[100%] h-[100%] rounded-[7px]'></Image>
+                            <Image alt='Изображение товара' src='/images/catalog_photo.png' width='241' height='137' className='w-[100%] h-[170px] rounded-[7px]'></Image>
                         </div>
                         <div>
                             <h4 className='font-semibold w-[100%] text-[22px]'>Органайзер SleepBag01</h4>
