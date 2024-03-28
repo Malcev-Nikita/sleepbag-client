@@ -1048,7 +1048,6 @@ li span{
 }
 .product_photo img{
   position: relative !important;
-  bottom: 30px !important;
 }
 .catalog_category:hover{
   box-shadow: #F97316 0px 0px 20px -8px;
