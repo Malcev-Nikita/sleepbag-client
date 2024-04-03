@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { addFavorite } from '@/services/favorites';
+import { addProductCart } from '@/services/cart';
 
 
 export const getCart = createAsyncThunk(
@@ -39,7 +39,7 @@ export const cartSlice = createSlice({
         state.items.carts.push(product)
       }
 
-      addFavorite(action.payload.jwt, action.payload.userId, state.items.carts)
+      addProductCart(action.payload.jwt, action.payload.userId, state.items.carts)
     },
   },
   extraReducers: (builder) => {
