@@ -2,19 +2,21 @@
 
 import Image from 'next/image'
 import Link from 'next/link';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Virtual } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/virtual';
 
 
 export default function HeaderBanners({banners}) {
     return (
         <section className='section_header_banners h-[100vh] pt-0' aria-label="Header Banner Section">
-            <Swiper className='h-[100%] w-screen' modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} loop={true}>
+            <Swiper className='h-[100%] w-screen' modules={[Navigation, Pagination, Virtual, A11y]} navigation pagination={{ clickable: true }} virtual>
                 {banners.map((item, index) => (
-                    <SwiperSlide key={index} role="banner" aria-label={`Banner ${index + 1}`}>
+                    <SwiperSlide key={index} role="banner" aria-label={`Banner ${index + 1}`} virtualIndex={index}>
                         {item.attributes.bg_photo.data.attributes.mime.includes('video') ? (
                             <video autoPlay loop muted loading="lazy" className='header_banner_bg  aspect-video w-[100%] h-[100%] object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.bg_photo.data.attributes.url}></video>
                         ) : (
