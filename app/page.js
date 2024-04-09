@@ -1,14 +1,12 @@
 import Preloader from '@/components/preloader'
-import HeaderBanners from '@/components/index-page/header_banners'
-import AboutUs from '@/components/index-page/about_us'
-import Catalog from '@/components/index-page/catalog'
-import Reasons from '@/components/index-page/reasons'
-import Works from '@/components/index-page/works'
-import AboutProduction from '@/components/index-page/about_production'
+import HeaderBanners from '@/components/Index-page/header_banners'
+import AboutUs from '@/components/Index-page/about_us'
+import Catalog from '@/components/Index-page/catalog'
+import Reasons from '@/components/Index-page/reasons'
+import Works from '@/components/Index-page/works'
+import AboutProduction from '@/components/Index-page/about_production'
 
-import { getProductionContent, getStats, getTeasers, getBanners, getWorks } from '@/services/index_page/page'
-
-import { getIndexPageContent } from '@/services/index_page/page'
+import { getProductionContent, getBanners, getIndexPageContent, getStats, getTeasers, getWorks } from '@/services/Index_page/page'
 
 
 export const metadata = {
