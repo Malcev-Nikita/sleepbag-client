@@ -19,7 +19,7 @@ export default function page() {
                         </div>
 
                         <div className='object_desc'>
-                            <h3>Органайзер "SleepBag01"</h3>
+                            <h3>Органайзер SleepBag01</h3>
                             <p>В наличии - 2 шт.</p>
                             <p className='object_desc_text'>lksgjnsldnsdnsdnlsfs</p>
 

@@ -69,7 +69,7 @@ export default function page() {
                     <hr className="my-[25px] h-[2px] bg-[#000] opacity-20"/>
                         <div className="flex text-[22px] flex-row justify-between">
                             <Image alt='Изображение товара' src='/images/catalog_photo.png' width='141' height='107' className='w-[200px] h-[115px] rounded-[5px]'></Image>                
-                            <h3 className="font-[600]">Органайзер "Слайдер"</h3>
+                            <h3 className="font-[600]">Органайзер Слайдер</h3>
                             <p>1 шт.</p>
                             <p className="font-[600] text-[#f97316]">30 000 ₽</p>
                         </div>
