@@ -1,9 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link';
 import { useSelector } from 'react-redux'
-import { LikeCatalog } from '@/features/like';
 import CatalogItem from '@/entities/index-page/catalog-item';
 
 

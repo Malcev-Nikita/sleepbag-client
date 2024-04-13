@@ -1,5 +1,6 @@
 'use client'
 
+import { markdown } from 'markdown'
 import Image from 'next/image'
 import React, { useState } from 'react';
 import { Thumbs } from 'swiper/modules';
@@ -8,9 +9,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-export default function WorksSlider({work, index, description}) {
+export default function WorksSlider({ work, index }) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const description = {__html: markdown.toHTML(work.attributes.description)}
 
     return (
         <article key={index} className="prod_object w-[49%] flex justify-between gap-[12px]" role="listitem">
@@ -39,5 +40,5 @@ export default function WorksSlider({work, index, description}) {
                 </Swiper>
             </div>
         </article>
-    );
+    )
 }

@@ -1,8 +1,5 @@
-'use client'
-
 import Link from 'next/link';
-import WorksSlider from './works_slider'
-import { markdown } from 'markdown'
+import WorksSlider from '@/entities/index-page/works-slider';
 
 
 export default function Works({data, works}) {
@@ -18,13 +15,7 @@ export default function Works({data, works}) {
             </div>
 
             <div className="flex production_main flex-wrap justify-between mt-[100px]" role="list">
-                {works.map((work, index) => {
-                    const description = {__html: markdown.toHTML(work.attributes.description)}
-
-                    return (
-                        <WorksSlider key={index} work={work} index={index} description={description} />
-                    )
-                })}
+                {works.map((work, index) => <WorksSlider work={ work } index={ index } /> )}
             </div>
 
             <div className="flex items-center flex-col w-[100%]">
