@@ -8,7 +8,7 @@ import StoreProvider from '@/store/StoreProvider';
 
 import { usePathname } from 'next/navigation'
 
-import './globals.css';
+import "./globals.css";
 
 
 export default function RootLayout({ children }) {
