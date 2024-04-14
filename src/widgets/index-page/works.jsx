@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import WorksSlider from '@/entities/index-page/works-slider';
+import { indexPageLoad } from '@/store/preloader/preloader.slice';
 
 
 export default function Works({data, works}) {
@@ -15,7 +16,7 @@ export default function Works({data, works}) {
             </div>
 
             <div className="flex production_main flex-wrap justify-between mt-[100px]" role="list">
-                {works.map((work, index) => <WorksSlider work={ work } index={ index } /> )}
+                {works.map((work, index) => <WorksSlider key={ indexPageLoad } work={ work } index={ index } /> )}
             </div>
 
             <div className="flex items-center flex-col w-[100%]">

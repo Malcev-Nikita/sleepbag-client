@@ -13,7 +13,7 @@ export default function AboutProduction({data, productions}) {
             </header>
 
             <article className="flex flex-col gap-[50px]" role="article">
-                {productions.map((production, index) => <ProductionItem production={ production } index={ index } /> )}
+                {productions.map((production, index) => <ProductionItem key={ index } production={ production } index={ index } /> )}
             </article>
 
             <footer className="h-[550px] aboutus_footer rounded-[10px] overflow-hidden p-0" role="contentinfo" itemprop="manufacturer" dangerouslySetInnerHTML={production_media()} />

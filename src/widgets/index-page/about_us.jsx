@@ -38,7 +38,7 @@ export default function AboutUs({data, stats}) {
                         <div className='text-[20px]' dangerouslySetInnerHTML={about_second_description()} />
 
                         <div className='flex gap-[60px] mt-[30px]' role="contentinfo">
-                            {stats.map((stat, index) => <StatItem stat={ stat } index={ index } />)}
+                            {stats.map((stat, index) => <StatItem key={ index } stat={ stat } index={ index } />)}
                         </div>
                     </div>
                 </div>

@@ -41,6 +41,8 @@
 
 * Документация Next JS: [https://nextjs.org/docs/](https://nextjs.org/docs/)
 * Документация Redux: [https://redux.js.org/](https://redux.js.org/)
+* Документация Tailwind: [https://tailwindcss.com/](https://tailwindcss.com/)
+* Документация Swiper: [https://swiperjs.com/react](https://swiperjs.com/react)
 * Документация Anime JS: [https://animejs.com/](https://animejs.com/)
 * Документация Strapi CMS: [https://strapi.io/documentation/](https://strapi.io/documentation/)
 

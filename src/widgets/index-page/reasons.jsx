@@ -12,7 +12,7 @@ export default function Reasons({data, teasers}) {
             </header>
 
             <div className='flex main_reasons flex-wrap justify-between gap-y-[60px] mt-[100px]' role="list">
-                {teasers.map((teaser, index) => <TeaserItem teaser={ teaser } index={ index } /> )}
+                {teasers.map((teaser, index) => <TeaserItem key={ index } teaser={ teaser } index={ index } /> )}
             </div>
         </section>
     )

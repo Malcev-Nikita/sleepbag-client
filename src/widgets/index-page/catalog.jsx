@@ -23,7 +23,7 @@ export default function Catalog({data}) {
                 </div>
             
                 <div className='catalog_main'>
-                    {productsItems.data.map(product => <CatalogItem product={ product } favoritesItems={ favoritesItems } /> )}
+                    {productsItems.data.map(product => <CatalogItem key={ product.id } product={ product } favoritesItems={ favoritesItems } /> )}
                 </div>
                 <div className='flex justify-center'>
                     <Link href='/catalog' className='down_button'>
@@ -49,7 +49,7 @@ export default function Catalog({data}) {
                 </div>
             
                 <div className='catalog_main'>
-                    {productsItems.data.map(product => <CatalogItem product={ product } favoritesItems={ favoritesItems } /> )}
+                    {productsItems.data.map(product => <CatalogItem key={ product.id } product={ product } favoritesItems={ favoritesItems } /> )}
                 </div>
                 <div className='flex justify-center'>
                     <Link href='/catalog' className='down_button'>
