@@ -1,9 +1,9 @@
 import HeaderBanners from '@/widgets/index-page/header-banners'
-import AboutUs from '@/widgets/index-page/about_us'
+import AboutUs from '@/widgets/index-page/about-us'
 import Catalog from '@/widgets/index-page/catalog'
 import Reasons from '@/widgets/index-page/reasons'
 import Works from '@/widgets/index-page/works'
-import AboutProduction from '@/widgets/index-page/about_production'
+import AboutProduction from '@/widgets/index-page/about-production'
 
 
 export default function MainPage({ data, stats, teasers, banners, works, productions }) {

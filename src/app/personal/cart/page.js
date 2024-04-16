@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import CheckAuthUser from "@/components/checkAuthUser"
+import CheckAuthUser from '@/features/check-auth-user';
 import CartProducts from './cartProducts';
 
 export const metadata = {

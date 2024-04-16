@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CheckAuthUser from "@/components/checkAuthUser"
+import CheckAuthUser from '@/features/check-auth-user';
 import GetUserInfo from "./getUserInfo"
 import UserInfo from "./userInfo"
 

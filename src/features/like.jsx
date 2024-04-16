@@ -76,7 +76,7 @@ export function LikeClose() {
 }
 
 
-export function addFavoritesItem(id, productsItems, dispatch) {
+export function AddFavoritesItem(id, productsItems, dispatch) {
     let productPush = null
     let productClone = {};
 

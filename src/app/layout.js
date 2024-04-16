@@ -1,10 +1,9 @@
 'use client'
 
-import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
-import Preloader from '@/components/preloader';
+import Header from '@/widgets/header';
+import Footer from '@/widgets/footer';
 
-import StoreProvider from '@/store/StoreProvider';
+import StoreProvider from '@/store/store-provider';
 
 import { usePathname } from 'next/navigation'
 

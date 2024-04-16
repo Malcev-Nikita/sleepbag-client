@@ -2,7 +2,7 @@
 
 import anime from "animejs"
 
-export default function BurgerBtn() {
+export default function BurgerOpen() {
     function BurgerClick() {
         if(document.querySelector('.burger_menu').classList.contains('active')) {
             document.querySelector('.burger_menu').classList.remove('active')
@@ -27,11 +27,9 @@ export default function BurgerBtn() {
     }
 
     return (
-        <button className="close" onClick={() => BurgerClick()}>
-            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                <g id="SVGRepo_iconCarrier"> <path d="M19 5L5 19M5.00001 5L19 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
+        <button className='burger_button hidden' onClick={() => BurgerClick()}>
+            <svg width="32" height="16" className='burger_button hidden' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
         </button>
     )

@@ -3,17 +3,16 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { getFavorites } from '@/store/favorites/favorites.slice';
 import { getProducts } from '@/store/products/products.slice';
-
-import anime from "animejs"
-
-import HeaderMenu from './menu';
-import Favorites from './favorites';
-import { Like, LikeClose } from './like';
-import BurgerMenu from './burgerMenu';
 import { getCart } from '@/store/cart/cart.slice';
 
+import BurgerOpen from '@/shared/header/burger-open';
+import HeaderMenu from '@/shared/header/header-menu';
+import BurgerMenu from '@/shared/header/burger-menu';
+import Favorites from '@/shared/header/favorites';
+import { Like, LikeClose } from '@/features/like';
 
 export default function Header() {
     const dispatch = useDispatch()
@@ -26,38 +25,10 @@ export default function Header() {
         dispatch(getProducts())
     }, [dispatch]);
 
-    function BurgerClick() {
-        if(document.querySelector('.burger_menu').classList.contains('active')) {
-            document.querySelector('.burger_menu').classList.remove('active')
-    
-            anime({
-                targets: '.burger_menu',
-                top: '-100vh',
-                duration: 500,
-                easing: 'spring(1, 100, 20, 10)'
-            })
-        }
-        else {
-            document.querySelector('.burger_menu').classList.add('active')
-            
-            anime({
-                targets: '.burger_menu.active',
-                top: '0vh',
-                duration: 700,
-                easing: 'spring(1, 100, 15, 5)'
-            })
-        }
-    }
-
-
     return (
         <header className='header fixed z-10 top-[22px] left-[50%] translate-x-[-50%]'>
             <div className="header_nav w-[90vw] m-auto bg-[#1A1A1A] rounded-[23px] flex items-center justify-between px-[70px] py-[18px]">
-                <button className='burger_button hidden' onClick={() => BurgerClick()}>
-                    <svg width="32" height="16" className='burger_button hidden' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+                <BurgerOpen />
 
                 <Link className='logo_link' href='/'>                    
                     <svg width="192" height="32" viewBox="0 0 192 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +66,7 @@ export default function Header() {
             <div className="cart mobile_none absolute right-[5vw] top-[-100vh] h-[85vh] w-[40vw] bg-[#262626] rounded-[33px]">
                 <div className="flex justify-between px-[52px] pt-[38px] pb-[0px]">
                     <h3 className='text-[#F97316] text-[24px] font-semibold uppercase'>Избранные товары</h3> 
+
                     <LikeClose/> 
                 </div>
                 <div className='cart_hr'/>
@@ -122,5 +94,5 @@ export default function Header() {
 
             <BurgerMenu />
         </header>
-    );
+    )
 }

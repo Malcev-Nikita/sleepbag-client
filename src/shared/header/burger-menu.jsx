@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getFooterContent } from "@/services/footer/footer";
-import BurgerBtn from "./burgerBtn";
+import BurgerBtn from "./burger-close";
 
 export default async function BurgerMenu() {
     const data = await getFooterContent();

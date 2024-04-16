@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { getIndexMenus } from '@/services/header/header';
+import HeaderMenuItem from '@/entities/header/header-menu-item';
 
 
 export default async function HeaderMenu() {
@@ -7,9 +7,7 @@ export default async function HeaderMenu() {
 
     return (
         <div className='header_main_links flex gap-[35px]'>
-            {index_menu.data.map(element => (
-                <Link key={element.id} href={element.attributes.link} className='text-[#f4f4f4] opacity-80 text-[18px]'>{element.attributes.name}</Link>
-            ))}
+            {index_menu.data.map(element => <HeaderMenuItem key={ element.id } element={ element } />)}
         </div>
     )
 }
