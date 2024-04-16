@@ -62,7 +62,7 @@ export default function ContactsPage() {
 
                 </section>
 
-                <Ymap width='100%' height='650px' x_position={ 55.75 } y_position={ 37.57 } zoom={ 9 } />
+                <Ymap x_position={ 55.75 } y_position={ 37.57 } zoom={ 9 } />
             </div>
             
             <section className='section_contact mobile_none relative flex flex-col items-center'>
