@@ -20,7 +20,7 @@ export default function CatalogSlugCategoties({ categories, productIndex }) {
         return (
             <section id='catalog' className='section_catalog relative pt-0'>            
                 <div className='catalog_main container m-auto'>
-                    {productsItems.data.map(product => <CatalogSlugCategoriesItem key={ productIndex } product={ product } categories={ categories } favoritesItems={ favoritesItems } /> )}
+                    {productsItems.data.map(product => <CatalogSlugCategoriesItem key={ productIndex } product={ product } productIndex={ productIndex } categories={ categories } favoritesItems={ favoritesItems } /> )}
                 </div>
             </section>
         )

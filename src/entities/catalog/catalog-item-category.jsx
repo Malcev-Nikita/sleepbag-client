@@ -10,7 +10,7 @@ export default function CatalogItemCategory({ favoritesItems, product }) {
         }
         else {
             return (
-                <ProductAuth favoritesItems={ favoritesItems } />
+                <ProductAuth favoritesItems={ favoritesItems } product={ product } />
             )
         }
     }
