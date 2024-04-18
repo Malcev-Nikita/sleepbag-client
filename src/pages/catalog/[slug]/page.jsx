@@ -2,6 +2,7 @@ import Link from 'next/link'
 import CatalogSwiper from '@/widgets/catalog/catalog-swiper'
 import CatalogSlugLike from '@/widgets/catalog/catalog-slug-like'
 import CatalogSlugCategories from '@/widgets/catalog/catalog-slug-categories'
+import CatalogSlugTabs from '@/widgets/catalog/catalog-slug-tabs'
 import { getProductSlug } from '@/services/catalog/page'
 import { markdown } from 'markdown'
 
@@ -72,6 +73,8 @@ export default async function CatalogPageSlug({ params }) {
                     </p>
                 </div>
             </section>
+
+            <CatalogSlugTabs detailDescription={ detailDescription } otherInfo={ otherInfo } />
 
             <section className='mobile_none'>
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
