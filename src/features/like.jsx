@@ -103,7 +103,7 @@ export function LikeCatalog({id, active}) {
     const dispatch = useDispatch()
 
     return (
-        <button className="favorite_like" active={active} id={id} onClick={() => addFavoritesItem(id, productsItems, dispatch)}>
+        <button className="favorite_like" active={active} id={id} onClick={() => AddFavoritesItem(id, productsItems, dispatch)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <path d="M1 8.625C1 4.04167 4.64583 3 6.72917 3C9.33333 3 11.4167 5.08333 12.4583 6.64583C13.5 5.08333 15.5833 3 18.1875 3C20.2708 3 23.9167 4.04167 23.9167 8.625C23.9167 15.5 12.4583 21.75 12.4583 21.75C12.4583 21.75 1 15.5 1 8.625Z" stroke="white" stroke-width="1.5"/>
             </svg>
