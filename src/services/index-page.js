@@ -9,7 +9,7 @@ export const getIndexPageContent = async () => {
         },
     });
   
-    if (!response.ok) throw new Error("Unable to fetch posts.");
+    if (!response.ok) return null;
   
     return response.json();
 };
@@ -25,7 +25,7 @@ export const getProductionContent = async () => {
         },
     });
   
-    if (!response.ok) throw new Error("Unable to fetch posts.");
+    if (!response.ok) return null;
   
     return response.json();
 };
@@ -41,7 +41,7 @@ export const getStats = async () => {
         },
     });
   
-    if (!response.ok) throw new Error("Unable to fetch posts.");
+    if (!response.ok) return null;
   
     return response.json();
 };
@@ -58,7 +58,7 @@ export const getTeasers = async () => {
         },
     });
   
-    if (!response.ok) throw new Error("Unable to fetch posts.");
+    if (!response.ok) return null;
   
     return response.json();
 };
@@ -75,7 +75,7 @@ export const getBanners = async () => {
         },
     });
   
-    if (!response.ok) throw new Error("Unable to fetch posts.");
+    if (!response.ok) return null;
   
     return response.json();
 };
@@ -92,7 +92,7 @@ export const getWorks = async () => {
         },
     });
   
-    if (!response.ok) throw new Error("Unable to fetch posts.");
+    if (!response.ok) return null;
   
     return response.json();
 };

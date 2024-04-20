@@ -8,6 +8,8 @@ import StoreProvider from '@/store/store-provider';
 import { usePathname } from 'next/navigation'
 
 import "./globals.css";
+import Script from 'next/script';
+import Preloader from '@/widgets/preloader';
 
 
 export default function RootLayout({ children }) {
@@ -22,6 +24,8 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className='overflow-x-hidden'>
+        <Preloader />
+
         <StoreProvider>
             <Header/>
 
@@ -33,6 +37,20 @@ export default function RootLayout({ children }) {
               <Footer footer='short' />
             )}
         </StoreProvider>
+
+        <Script>
+          {`
+            const preloader = document.querySelector('.preloader')
+
+            setTimeout(() => {
+              preloader.style.opacity = 0
+            }, 300)
+
+            setTimeout(() => {
+              preloader.style.display = 'none'
+            }, 800)
+          `}
+        </Script>
       </body>
     </html>
   );

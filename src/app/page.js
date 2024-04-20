@@ -14,15 +14,15 @@ export default async function Page() {
   const banners = await getBanners();
   const works = await getWorks();
   const productions = await getProductionContent();
-  
+
   return (
     <MainPage 
-      data={data} 
-      stats={stats} 
-      teasers={teasers} 
-      banners={banners} 
-      works={works} 
-      productions={productions} 
+      data={ data } 
+      stats={ stats } 
+      teasers={ teasers } 
+      banners={ banners } 
+      works={ works } 
+      productions={ productions } 
     />
   )
 }
