@@ -1,7 +1,7 @@
 'use client'
 
 import { userInfo } from "@/services/personal/personal"
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 
 export default function GetUserInfo() {
     useEffect(() => {

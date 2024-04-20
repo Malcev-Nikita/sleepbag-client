@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 import InputMask from "react-input-mask";
 import { userInfoUpdate } from "@/services/personal/personal";
 
-export default function UserInfo() {
+export default function UserForm() {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
