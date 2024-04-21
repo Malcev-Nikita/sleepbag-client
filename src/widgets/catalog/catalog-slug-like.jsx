@@ -1,6 +1,6 @@
 'use client'
 
-import { LikeCatalog } from "@/features/like"
+import { LikeCatalogBlack } from "@/features/like"
 import { useEffect, useState } from "react"
 import { useSelector } from 'react-redux'
 
@@ -14,16 +14,19 @@ export default function CatalogSlugLike({ productId }) {
         }
     })
 
-    console.log(favoritesItems)
+    let likeCatalog = null;
 
-    if(userJWT && favoritesItems) {
-        {favoritesItems.favorites.map(favorite => {
-            if(productId == favorite.id) {
-                return (<LikeCatalog id={productId} key={productId} active='true' />)
+    if (userJWT && favoritesItems) {
+        favoritesItems.favorites.forEach(favorite => {
+            if (productId === favorite.id) {
+                likeCatalog = <LikeCatalogBlack id={productId} key={productId} active='true' />
             }
-            else {
-                return (<LikeCatalog id={productId} key={productId} active='false' />)
-            }
-        })}
+        })
+
+        if (!likeCatalog) {
+            likeCatalog = <LikeCatalogBlack id={productId} key={productId} active='false' />
+        }
     }
+
+    return likeCatalog;
 }
