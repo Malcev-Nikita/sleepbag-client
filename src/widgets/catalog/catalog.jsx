@@ -15,7 +15,7 @@ export default function Catalog() {
                 <div className='catalog_main container m-auto'>
                     {productsItems.data.map(product => <CatalogItem key={ product.id } product={ product } category={ category } favoritesItems={ favoritesItems } /> )}
                 </div>
-          </section>
+            </section>
         )
     } 
     else if(productsItems != null) {
