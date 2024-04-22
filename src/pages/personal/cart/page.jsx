@@ -1,5 +1,4 @@
-import Breadcrumbs from '@/widgets/breadcrumbs';
-import BreadcrumbsMobile from '@/widgets/breadcrumbs-mobile';
+import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
 
 export default function CartPage() {
     const breadcrumbs = [
@@ -32,7 +31,7 @@ export default function CartPage() {
                     </label> */}
 
                         <h3 className='col2'>Товар</h3>
-                        
+
                         <div className='cols flex flex-row justify-between w-[30%]'>
                             <h3>Цена за шт.</h3>
                             <h3>Количество</h3>

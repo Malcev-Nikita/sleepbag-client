@@ -2,8 +2,7 @@ import Link from 'next/link';
 import CheckAuthUser from '@/features/check-auth-user';
 import GetUserInfo from '@/features/get-user-info';
 import UserForm from '@/widgets/person/user-form';
-import Breadcrumbs from '@/widgets/breadcrumbs';
-import BreadcrumbsMobile from '@/widgets/breadcrumbs-mobile';
+import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
 
 export default function PersonPage() {
     const breadcrumbs = [
