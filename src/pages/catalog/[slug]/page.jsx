@@ -22,7 +22,7 @@ export default async function CatalogPageSlug({ params }) {
         <main className="container m-auto font-[Manrope]">
             <article className='link_path pt-[13vh]'><Link href='/' className='text-[#000] opacity-70'>Главная / </Link><Link href='/catalog' className='text-[#000] opacity-70'>Каталог / </Link><span>{productData.data[0].attributes.name}</span></article>
 
-            <section className='productData.data_card mobile_none flex flex-row'>
+            <section className='productData.data_card mobile_none flex gap-[35px] flex-row'>
                 <div className='w-[50%]'>
                     <CatalogSwiper images={productData.data[0].attributes.image.data} />           
                 </div>

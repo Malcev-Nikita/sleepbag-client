@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function page() {
+    const breadcrumbs = [
+        { label: 'Главная', href: '/' },
+        { label: 'Личный кабинет',  href: '/personal'},
+        { label: 'Мои заказы'}
+      ]
     return(
         <main className="container m-auto">
             <article className='link_path pt-[17vh]'>

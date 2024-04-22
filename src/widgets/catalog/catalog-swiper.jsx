@@ -13,7 +13,7 @@ export default function CatalogSwiper({images}) {
 
     return (
         <article className="w-[100%] flex justify-between gap-[12px]" role="listitem">
-            <div className='w-[70px]'>
+            <div className='w-[13%]'>
                 <Swiper className='productions__thumbswiper' modules={[Thumbs]} watchSlidesProgress onSwiper={setThumbsSwiper} slidesPerView={5}>
                     {images.map(image => (
                         <SwiperSlide key={image.id} className='w-[100%] rounded-[7px] overflow-hidden'>
@@ -23,7 +23,7 @@ export default function CatalogSwiper({images}) {
                 </Swiper>
             </div>
             
-            <div className="w-[80%]">
+            <div className="w-[100%]">
                 <Swiper className='w-[100%]' modules={[Thumbs]} thumbs={{ swiper: thumbsSwiper }}>
                     {images.map(image => (
                         <SwiperSlide key={image.id} className='w-[100%] rounded-[7px] overflow-hidden'>

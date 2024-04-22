@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import CheckAuthUser from '@/features/check-auth-user';
 import CartProducts from './cartProducts';
+import { Breadcrumbs, BreadcrumbsMobile } from '@/widgets/breadcrumbs';
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,13 +10,17 @@ export const metadata = {
 }
 
 export default function Page() {
+    const breadcrumbs = [
+      { label: 'Главная', href: '/' },
+      { label: 'Личный кабинет',  href: '/personal'},
+      { label: 'Корзина'}
+    ] 
   return (
     <main className="container m-auto font-[Manrope]">
         <CheckAuthUser />
         
-        <article className='link_path pt-[17vh]'>
-          <Link href='/' className='text-[#000] opacity-70'>Главная / </Link><span className='text-orange-500'>Корзина</span>
-        </article>
+        <BreadcrumbsMobile breadcrumbs={ breadcrumbs } />
+        <Breadcrumbs breadcrumbs={ breadcrumbs } />
         
         <section className='m-0 pt-[33px] w-[100%] flex flex-col'>
           
