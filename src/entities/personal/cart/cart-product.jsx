@@ -1,5 +1,5 @@
 import Image from "next/image"
-import ButtonsCount from "./buttonsCount"
+import ButtonsCount from "@/shared/personal/cart/buttons-count"
 
 export default function CartProduct({product, productsItems}) {
     return (

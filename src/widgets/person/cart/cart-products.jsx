@@ -1,7 +1,7 @@
 'use client'
 
 import { useSelector } from "react-redux"
-import CartProduct from "./product"
+import CartProduct from "@/entities/personal/cart/cart-product"
 
 export default function CartProducts() {
     const cartItems = useSelector(state => state.cart.items)
