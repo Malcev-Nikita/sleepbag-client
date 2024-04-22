@@ -9,7 +9,7 @@ export default function PersonPage() {
     const breadcrumbs = [
         { label: 'Главная', href: '/' },
         { label: 'Личный кабинет'},
-      ]
+    ]
 
     return (
         <main className="container m-auto personal_page font-[Manrope]">
