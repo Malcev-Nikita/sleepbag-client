@@ -5,9 +5,16 @@ import CatalogSlugCategories from '@/widgets/catalog/catalog-slug-categories'
 import CatalogSlugTabs from '@/widgets/catalog/catalog-slug-tabs'
 import { getProductSlug } from '@/services/catalog/page'
 import { markdown } from 'markdown'
+import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
 
 export default async function CatalogPageSlug({ params }) {
     const productData = await getProductSlug(params.slug)
+
+    const breadcrumbs = [
+        { label: 'Главная', href: '/' },
+        { label: 'Каталог', href: '/catalog' },
+        { label: productData.data[0].attributes.name},
+    ]
 
     let detailDescription = null
     let otherInfo = null
@@ -20,8 +27,8 @@ export default async function CatalogPageSlug({ params }) {
 
     return (
         <main className="container m-auto font-[Manrope]">
-            <article className='link_path pt-[13vh]'><Link href='/' className='text-[#000] opacity-70'>Главная / </Link><Link href='/catalog' className='text-[#000] opacity-70'>Каталог / </Link><span>{productData.data[0].attributes.name}</span></article>
-
+            <Breadcrumbs breadcrumbs={ breadcrumbs } />
+            
             <section className='productData.data_card mobile_none flex gap-[35px] flex-row'>
                 <div className='w-[50%]'>
                     <CatalogSwiper images={productData.data[0].attributes.image.data} />           
