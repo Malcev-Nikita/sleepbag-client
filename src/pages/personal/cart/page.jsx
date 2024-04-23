@@ -53,16 +53,17 @@ export default function CartPage() {
                     <div className='text-[20px] text-[#8d8d8d] font-[200] flex flex-col text-right'>
                         <p>Стоимость доставки: <Link className='underline' href='#'>Выбрать способ доставки</Link></p>
                         <p>Доставка: Бесплатно</p>
-                        <p>
+
+                        <div>
                             Сумма: 
                             <CartProductsPrice />
-                        </p>
+                        </div>
                     </div>
                     
-                    <p className='text-[30px] mt-[16px] text-right text-[#f97316] font-semibold'>
+                    <div className='text-[30px] mt-[16px] text-right text-[#f97316] font-semibold'>
                         Итого: 
                         <CartProductsPrice />
-                    </p>
+                    </div>
                    
                     <div className='flex justify-end'>
                         <Link href='/personal/cart/order' className='mt-[16px] rounded bg-[#202020] w-[30%] h-[55px] text-[18px] text-[#fff] gap-[15px] flex flex-row items-center justify-center'>
