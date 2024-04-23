@@ -29,6 +29,7 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     changeCart: (state, action) => {
+      console.log(action.payload)
       const product = action.payload.product
       const isExist = state.items.carts.some(p => p.id === product.id)
 
@@ -49,6 +50,6 @@ export const cartSlice = createSlice({
   },
 })
 
-export const { changeFavorites } = cartSlice.actions
+export const { changeCart } = cartSlice.actions
 
 export default cartSlice.reducer

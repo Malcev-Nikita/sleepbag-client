@@ -8,12 +8,10 @@ export default function ButtonLike({ product }) {
     const isProductLiked = favoritesItems.favorites.some(favorite => favorite.id === product.id);
 
     return (
-        <div className="">
-            <LikeCatalogBlack 
-                id={product.id} 
-                key={product.id} 
-                active={isProductLiked ? 'true' : 'false'} 
-            />
-        </div>
+        <LikeCatalogBlack 
+            id={product.id} 
+            key={product.id} 
+            active={isProductLiked ? 'true' : 'false'} 
+        />
     )
 }
