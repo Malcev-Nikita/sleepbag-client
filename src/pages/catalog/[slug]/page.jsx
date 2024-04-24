@@ -6,6 +6,7 @@ import CatalogSlugTabs from '@/widgets/catalog/catalog-slug-tabs'
 import { getProductSlug } from '@/services/catalog/page'
 import { markdown } from 'markdown'
 import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
+import ButtonChangeCartSlug from '@/shared/catalog/[slug]/button-change-cart-slug'
 
 export default async function CatalogPageSlug({ params }) {
     const productData = await getProductSlug(params.slug)
@@ -60,15 +61,15 @@ export default async function CatalogPageSlug({ params }) {
                     </div> */}
                     <div className='flex flex-col pb-[20px] gap-[12px]'>
                         <p>{productData.data[0].attributes.count} шт. в наличии</p>
-                        <div className='flex flex-row gap-[6px]'>
+                        {/* <div className='flex flex-row gap-[6px]'>
                             <button className='bg-[#e6e9ec] items-center justify-center aspect-square w-[7%]'>-</button>
                             <input className='border-solid border-[1px] border-[#e6e9ec] w-[13%] text-center' value={1}></input>
                             <button className='bg-[#e6e9ec] items-center justify-center aspect-square w-[7%]'>+</button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='productData.data_buttons flex flex-row items-center pb-[20px] gap-[15px]'>
-                        <button className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>Добавить в корзину</button>
-                        <button className='rounded-[10px] border-solid border-[#000] border-[1px] tracking-widest w-[35%] h-[56px] text-[18px] items-center justify-center'>Купить сейчас</button>
+                        <ButtonChangeCartSlug product={productData} />
+                        {/* <button className='rounded-[10px] border-solid border-[#000] border-[1px] tracking-widest w-[35%] h-[56px] text-[18px] items-center justify-center'>Купить сейчас</button> */}
 
                         <CatalogSlugLike productId={ productData.data[0].id } />
                     </div>
