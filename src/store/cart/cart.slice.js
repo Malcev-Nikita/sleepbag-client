@@ -29,7 +29,6 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     changeCart: (state, action) => {
-      console.log(action.payload)
       const product = action.payload.product
       const isExist = state.items.carts.some(p => p.id === product.id)
 

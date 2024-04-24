@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { LikeCatalog } from '@/features/like';
+import ButtonChangeCart from '@/shared/catalog/button-change-cart';
 
 export default function ProductAuth({ favoritesItems, product }) {
     return (
@@ -33,7 +34,8 @@ export default function ProductAuth({ favoritesItems, product }) {
 
                 <div className='object_buttons'>
                     <Link className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</Link>
-                    <button className='object_button2'>Добавить в корзину</button>
+
+                    <ButtonChangeCart product={product} />
                 </div>
             </div>
         </div>
