@@ -1,5 +1,4 @@
 export default function Receipt() {
-    console.log(1)
     return (
         <div className="receipts_text text-[22px] flex flex-row items-center justify-between">
             <div className="flex flex-row gap-[5px]">
