@@ -1,7 +1,7 @@
 import PersonPage from '@/pages/personal/page';
 
 export const metadata = {
-  title: 'Личный кабинет',
+  title: 'SleepBag Спальники-Органайзеры: Личный кабинет',
   description: 'Личный кабинет',
 }
 
