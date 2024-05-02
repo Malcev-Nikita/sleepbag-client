@@ -1,3 +1,5 @@
+import CheckAuthUser from "@/features/check-auth-user";
+import GetUserInfo from "@/features/get-user-info";
 import { Breadcrumbs } from "@/widgets/breadcrumbs";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,8 +10,13 @@ export default function OrdersPage() {
         { label: 'Личный кабинет',  href: '/personal'},
         { label: 'Мои заказы'}
     ]
+    
     return(
         <main className="container m-auto">
+            <CheckAuthUser />
+
+            <GetUserInfo />
+
             <Breadcrumbs breadcrumbs={ breadcrumbs } />
 
             <section className="pt-[40px]">

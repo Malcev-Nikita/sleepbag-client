@@ -22,7 +22,7 @@ export default function AuthForm() {
                 const dataUser = await userInfo(data.jwt)
 
                 localStorage.setItem('userJWT', data.jwt)
-                localStorage.setItem('userInfo', dataUser.data)
+                localStorage.setItem('userData', dataUser.data)
                 window.location.href = "/personal";
             }
             else {
