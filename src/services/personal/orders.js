@@ -1,11 +1,12 @@
 // ------------------------------- // 
 // ----- Заказы пользователя ----- //
 // ------------------------------- //
-export const getOrdersUser = async (userID) => {
+export const getOrdersUser = async (userID, jwt) => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/orders?filters[user]=${userID}&populate=*`, { 
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jwt}`,
         },
     });
   
