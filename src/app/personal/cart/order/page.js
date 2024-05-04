@@ -12,7 +12,7 @@ export default function Page() {
     <main className="container m-auto font-[Manrope]">
         
         <article className='link_path pt-[17vh]'>
-          <Link href='/' className='text-[#000] opacity-70'>Главная / </Link><Link href='/personal/cart' className='text-[#000] opacity-70'>Корзина / </Link><span className='text-orange-500'>Оформление заказа</span>
+          <a href='/' className='text-[#000] opacity-70'>Главная / </a><a href='/personal/cart' className='text-[#000] opacity-70'>Корзина / </a><span className='text-orange-500'>Оформление заказа</span>
         </article>
         
         <section className='mobile_none m-0 pt-[33px] w-[100%] flex flex-col'>
@@ -158,12 +158,12 @@ export default function Page() {
                         <label for='accept' className='absolute w-[30px] h-[30px]'>
                             <input id='accept' type="checkbox" className='option-input2 w-[30px] h-[30px] checkbox absolute hidden translate-y-[20px] translate-x-[10px]'/>
                         </label>
-                        <p className='ml-[60px] text-[20px] text-[#505050]'>Я принимаю условия <Link href='#' className='text-[20px] text-[#000] underline'>публичной оферты</Link> и <Link href='#' className='text-[20px] text-[#000] underline'>политики конфеденциальности</Link>, а также даю согласие на обработку персональных данных</p>
+                        <p className='ml-[60px] text-[20px] text-[#505050]'>Я принимаю условия <a href='#' className='text-[20px] text-[#000] underline'>публичной оферты</a> и <a href='#' className='text-[20px] text-[#000] underline'>политики конфеденциальности</a>, а также даю согласие на обработку персональных данных</p>
                     </label>
                 </div>
                 <div className='flex flex-col gap-[17px] h-[10%]'>
                     <button className='text-center text-[#fff] text-[22px] rounded-[10px] h-[50%] bg-[#f97316]'>Оформить заказ</button>
-                    <Link href='/personal/cart' className='text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[50%] bg-tranparent'>Вернуться к корзине</Link>
+                    <a href='/personal/cart' className='text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[50%] bg-tranparent'>Вернуться к корзине</a>
                 </div>
             
             </div>
@@ -209,7 +209,7 @@ export default function Page() {
                         </svg>
                     </button>
                     
-                    <Link href='/personal/cart' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к корзине</Link>
+                    <a href='/personal/cart' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к корзине</a>
 {/* ----------------------------- */}
                     <div className='flex flex-row items-center mb-[15px] justify-between w-[100%]'>
                         <div className='flex flex-row items-center w-[80%] gap-[15px]'>
@@ -246,7 +246,7 @@ export default function Page() {
                         </svg>
                     </button>
                     
-                    <Link href='#' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к личным данным</Link>
+                    <a href='#' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к личным данным</a>
 {/* ------------------------- */}
                     <div className='flex flex-row items-center mb-[25px] justify-between w-[100%]'>
                         <div className='flex flex-row items-center w-[80%] gap-[15px]'>
@@ -276,7 +276,7 @@ export default function Page() {
                         </svg>
                     </button>
                     
-                    <Link href='#' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к адресу доставки</Link>
+                    <a href='#' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к адресу доставки</a>
                     
 
                     <div className='flex flex-row items-center mb-[25px] justify-between w-[100%]'>
@@ -310,7 +310,7 @@ export default function Page() {
                     </div>
                     <button className='text-center mt-[35px] flex flex-row items-center justify-center gap-[10px] mb-[15px] text-[#fff] text-[22px] rounded-[10px] w-[100%] h-[6vh] bg-[#f97316]'>Оплатить заказ</button>
                     
-                    <Link href='/personal/cart' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к корзине</Link>
+                    <a href='/personal/cart' className='mb-[100px] text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[6vh] bg-tranparent'>Вернуться к корзине</a>
                 </form>
             </div>
 

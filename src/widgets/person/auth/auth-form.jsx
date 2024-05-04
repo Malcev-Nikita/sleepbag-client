@@ -44,7 +44,7 @@ export default function AuthForm() {
             
             <button type="submit" className='mt-[25px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-xl rounded-xl'>Авторизоваться</button>
             
-            <Link href='/personal/misspass' className='text-right font-semibold text-[#f97316] pt-[15px]'>Забыли пароль?</Link>
+            <a href='/personal/misspass' className='text-right font-semibold text-[#f97316] pt-[15px]'>Забыли пароль?</a>
         </form>
     )
 }

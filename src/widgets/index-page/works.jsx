@@ -20,7 +20,7 @@ export default function Works({data, works}) {
             </div>
 
             <div className="flex items-center flex-col w-[100%]">
-                <Link className='down_button' href='#' role="link">
+                <a className='down_button' href='#' role="link">
                     <button>
                         <span className='text-[#F97316] text-[14px] font-semibold font-[Manrope]' dangerouslySetInnerHTML={works_button()} />
 
@@ -28,7 +28,7 @@ export default function Works({data, works}) {
                             <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" strokeLinecap="square" />
                         </svg>
                     </button>
-                </Link>
+                </a>
             </div>
         </section>
     )

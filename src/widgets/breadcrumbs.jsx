@@ -8,7 +8,7 @@ export function Breadcrumbs({ breadcrumbs }) {
                     <li key={index}>
                         {
                             breadcrumb.href ? (
-                                <Link href={breadcrumb.href} className="text-[#000] opacity-70">{breadcrumb.label}</Link>
+                                <a href={breadcrumb.href} className="text-[#000] opacity-70">{breadcrumb.label}</a>
                             ) : (
                                 <span className="separator">{breadcrumb.label}</span>
                             )
@@ -32,7 +32,7 @@ export function BreadcrumbsMobile({ breadcrumbs }) {
                     <li key={index}>
                         {
                             breadcrumb.href ? (
-                                <Link href={breadcrumb.href} className="text-[#000] opacity-70">{breadcrumb.label}</Link>
+                                <a href={breadcrumb.href} className="text-[#000] opacity-70">{breadcrumb.label}</a>
                             ) : (
                                 <span className="separator">{breadcrumb.label}</span>
                             )

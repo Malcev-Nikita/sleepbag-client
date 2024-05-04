@@ -26,7 +26,7 @@ export default function Catalog({data}) {
                     {productsItems.data.map(product => <CatalogItem key={ product.id } product={ product } favoritesItems={ favoritesItems } /> )}
                 </div>
                 <div className='flex justify-center'>
-                    <Link href='/catalog' className='down_button'>
+                    <a href='/catalog' className='down_button'>
                         <button>
                             <span className='text-[#f97316]' dangerouslySetInnerHTML={catalog_button()} />
 
@@ -34,7 +34,7 @@ export default function Catalog({data}) {
                                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
                             </svg>
                         </button>
-                    </Link>
+                    </a>
                 </div>
           </section>
         )
@@ -52,7 +52,7 @@ export default function Catalog({data}) {
                     {productsItems.data.map(product => <CatalogItem key={ product.id } product={ product } favoritesItems={ favoritesItems } /> )}
                 </div>
                 <div className='flex justify-center'>
-                    <Link href='/catalog' className='down_button'>
+                    <a href='/catalog' className='down_button'>
                         <button>
                             <span className='text-[#f97316]' dangerouslySetInnerHTML={catalog_button()} />
 
@@ -60,7 +60,7 @@ export default function Catalog({data}) {
                                 <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
                             </svg>
                         </button>
-                    </Link>
+                    </a>
                 </div>
           </section>
         )

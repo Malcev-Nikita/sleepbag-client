@@ -1,7 +1,6 @@
 import OrderButtons from "@/shared/personal/orders/order-buttons";
 import OrderStatus from "@/shared/personal/orders/order-status";
 import OrderSwiper from "@/shared/personal/orders/order-swiper";
-import Image from "next/image";
 
 export default function OrderItem({order, productsItems}) {
     return (
@@ -15,7 +14,7 @@ export default function OrderItem({order, productsItems}) {
                 </div>
             </div>
 
-            <p className="font-[400] text-[#8d8d8d] text-[18px] mobile_price">{order.attributes.cost} ₽</p>
+            <p className="font-[400] text-[#8d8d8d] text-[18px] mobile_price">{order.attributes.total_amount} ₽</p>
 
             <div className="flex flex-row items-end justify-between">
                 <div className="flex gap-[10px]">

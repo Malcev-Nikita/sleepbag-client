@@ -30,11 +30,11 @@ export default function AuthPage() {
                     </div>
 
                     <div className='flex flex-col text-[#fff] text-[21px]'>
-                        <Link href='/personal/misspass' className='text-right font-semibold text-[#f97316] text-[21px] pt-[15px]'>Забыли пароль?</Link>                    
+                        <a href='/personal/misspass' className='text-right font-semibold text-[#f97316] text-[21px] pt-[15px]'>Забыли пароль?</a>                    
                         
                         <button type='submit' className='mt-[15px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-[23px] rounded-xl'>Продолжить</button>
                         
-                        <p className='text-right mt-[15px]'>У вас ещё нет аккаунта? <Link href='/personal/reg' className='text-right font-semibold text-[#f97316] pt-[15px]'>Зарегистрироваться</Link></p>
+                        <p className='text-right mt-[15px]'>У вас ещё нет аккаунта? <a href='/personal/reg' className='text-right font-semibold text-[#f97316] pt-[15px]'>Зарегистрироваться</a></p>
                     </div>
                 </div>
             </section>
@@ -48,7 +48,7 @@ export default function AuthPage() {
                         
                         <div className='h-[80px] text-right text-base'>
                             <p className='m-[0px] text-gray-600'>У вас ещё нет аккаунта?</p>
-                            <Link className='m-[0px] text-[#f97316] font-semibold' href='/personal/reg'>Зарегистрироваться</Link>
+                            <a className='m-[0px] text-[#f97316] font-semibold' href='/personal/reg'>Зарегистрироваться</a>
                         </div>
                     </div>
                     

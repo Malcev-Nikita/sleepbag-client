@@ -20,7 +20,7 @@ export default function ProductNotAuth({ product }) {
                 </div>
 
                 <div className='object_buttons'>
-                    <Link className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</Link>
+                    <a className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</a>
                 </div>
             </div>
         </div>

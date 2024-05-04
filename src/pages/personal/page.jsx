@@ -46,7 +46,7 @@ export default function PersonPage() {
 
             <section className='userpage_blocks mobile_none pb-[60px]'>
             
-                <Link className='blocks_block w-[25%] bg-[#f4f4f4]' href='/personal/orders'>
+                <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='/personal/orders'>
                     <div>
                     <h2>Заказы</h2>
                     <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,9 +54,9 @@ export default function PersonPage() {
                     </svg>
                     </div>
                     <p>Проверить статус доставки</p>
-                </Link>
+                </a>
             
-                <Link className='blocks_block w-[25%] bg-[#f4f4f4]' href='/personal/purchases'>
+                <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='/personal/purchases'>
                     <div>
                     <h2>Покупки</h2>
                     <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,9 +64,9 @@ export default function PersonPage() {
                     </svg>
                     </div>
                     <p>История ваших покупок</p>
-                </Link>
+                </a>
             
-                <Link className='blocks_block w-[25%] bg-[#f4f4f4]' href='/personal/receipts'>
+                <a className='blocks_block w-[25%] bg-[#f4f4f4]' href='/personal/receipts'>
                     <div>
                     <h2>Чеки</h2>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,13 +76,13 @@ export default function PersonPage() {
                     </svg>
                     </div>
                     <p>Смотреть</p>
-                </Link>
+                </a>
             
             </section>
             
             <section className='userpage_blocks mobile_block_block w-[95%] pl-[5%] pb-[60px]'>
             
-                <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='/personal/orders'>
+                <a className='blocks_block w-[100%] bg-[#f4f4f4]' href='/personal/orders'>
                     <div>
                     <h2>Заказы</h2>
                     <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,9 +90,9 @@ export default function PersonPage() {
                     </svg>
                     </div>
                     <p>Проверить статус доставки</p>
-                </Link>
+                </a>
             
-                <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='/personal/purchases'>
+                <a className='blocks_block w-[100%] bg-[#f4f4f4]' href='/personal/purchases'>
                     <div>
                         <h2>Покупки</h2>
                         <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,9 +100,9 @@ export default function PersonPage() {
                         </svg>
                     </div>
                     <p>История ваших покупок</p>
-                </Link>
+                </a>
             
-                <Link className='blocks_block w-[100%] bg-[#f4f4f4]' href='/personal/receipts'>
+                <a className='blocks_block w-[100%] bg-[#f4f4f4]' href='/personal/receipts'>
                     <div>
                         <h2>Чеки</h2>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +112,7 @@ export default function PersonPage() {
                         </svg>
                     </div>
                     <p>Смотреть</p>
-                </Link>
+                </a>
             
             </section>
         </main>

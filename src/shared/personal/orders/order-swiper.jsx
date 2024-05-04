@@ -15,9 +15,9 @@ export default function OrderSwiper({order, productsItems}) {
                     if (orderProduct.id === product.id) {
                         return (
                             <SwiperSlide key={productIndex} aria-label={`Banner ${index + 1}`} virtualIndex={index}>
-                                <Link href={'/catalog/' + product.attributes.slug}>
+                                <a href={'/catalog/' + product.attributes.slug}>
                                     <Image alt='Изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} width={141} height={107} className='w-[100%] aspect-[16/9] object-cover rounded-[5px] order_image' />
-                                </Link>
+                                </a>
                             </SwiperSlide>
                         );
                     }

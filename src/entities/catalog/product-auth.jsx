@@ -33,7 +33,7 @@ export default function ProductAuth({ favoritesItems, product }) {
                 </div>
 
                 <div className='object_buttons'>
-                    <Link className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</Link>
+                    <a className='object_button1' href={'/catalog/' + product.attributes.slug}>Подробнее</a>
 
                     <ButtonChangeCart product={product} />
                 </div>

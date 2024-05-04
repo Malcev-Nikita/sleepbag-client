@@ -44,7 +44,7 @@ export default function RegPage() {
 
                     <div className='flex flex-col text-[#fff] mt-[35px] text-[21px]'>
                         <button type='submit' className='flex justify-center items-center text-white bg-[#f97316] h-[62px] text-[23px] rounded-xl'>Зарегистрироваться</button>
-                        <p className='text-center mt-[15px]'>Уже есть аккаунт? <Link href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Войти</Link></p>
+                        <p className='text-center mt-[15px]'>Уже есть аккаунт? <a href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Войти</a></p>
                     </div>
                 </div>
             </section>
@@ -58,7 +58,7 @@ export default function RegPage() {
                         
                         <div className='h-[80px] w-[100%] text-right text-base'>
                             <p className='m-[0px] text-gray-600'>Уже есть аккаунт?</p>
-                            <Link className='m-[0px] text-[#f97316] font-semibold' href='/personal/auth'>Войти</Link>
+                            <a className='m-[0px] text-[#f97316] font-semibold' href='/personal/auth'>Войти</a>
                         </div>
                     </div>
 
