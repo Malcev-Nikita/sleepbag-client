@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link';
+
 import AuthForm from '@/widgets/person/auth/auth-form';
 
 export default function AuthPage() {

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link';
+
 import RegForm from '@/widgets/person/reg/reg-form';
 
 export default function RegPage() {

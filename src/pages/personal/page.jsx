@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import CheckAuthUser from '@/features/check-auth-user';
 import GetUserInfo from '@/features/get-user-info';
 import UserForm from '@/widgets/person/user-form';

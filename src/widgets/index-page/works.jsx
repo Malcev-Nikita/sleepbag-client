@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import WorksSlider from '@/entities/index-page/works-slider';
 import { indexPageLoad } from '@/store/preloader/preloader.slice';
 

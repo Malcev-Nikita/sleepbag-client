@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link';
+
 import { LikeCatalog } from '@/features/like';
 import ButtonChangeCart from '@/shared/catalog/button-change-cart';
 

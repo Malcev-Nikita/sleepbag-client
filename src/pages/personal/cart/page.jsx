@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link';
+
 import CheckAuthUser from '@/features/check-auth-user';
 import CartProducts from '@/widgets/person/cart/cart-products';
 import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';

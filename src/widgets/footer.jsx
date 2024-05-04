@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import FAQ from '@/shared/footer/faq';
 import Questions from '@/shared/footer/questions';
 import { getFooterContent, getFAQ, getIndexMenus, getInfoMenus, getOtherMenus } from '@/services/footer/footer';
