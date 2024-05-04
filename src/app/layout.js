@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
             )}
         </StoreProvider>
 
-        <Script>
+        <Script id="my-script">
           {`
             const preloader = document.querySelector('.preloader')
 

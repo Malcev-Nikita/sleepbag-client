@@ -33,7 +33,7 @@ export default function OrdersContent() {
                 
                 {orders.data.map(order => {
                     return (
-                        <OrderItem order={ order } productsItems={ productsItems } />
+                        <OrderItem key={order.id} order={ order } productsItems={ productsItems } />
                     )
                 })}
             </section>
