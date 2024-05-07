@@ -43,6 +43,12 @@ export default function OrderForm() {
         // Проверка политики
         if(policy) {
 
+            sendData.city = city
+            sendData.adress = adress
+            sendData.entrance = entrance
+            sendData.apartment = apartment
+            sendData.comment = comment
+
             // Проверка ФИО
             if(fullname.trim().match(fullnameRegex)) {
                 sendData.fullname = fullname
