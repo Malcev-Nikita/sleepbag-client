@@ -4,6 +4,7 @@ import CheckAuthUser from '@/features/check-auth-user';
 import CartProducts from '@/widgets/person/cart/cart-products';
 import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
 import CartProductsPrice from '@/shared/personal/cart/cart-products-price';
+import GetUserInfo from '@/features/get-user-info';
 
 export default function CartPage() {
     const breadcrumbs = [
@@ -15,6 +16,8 @@ export default function CartPage() {
     return (
         <main className="container m-auto font-[Manrope]">
             <CheckAuthUser />
+
+            <GetUserInfo />
         
             <Breadcrumbs breadcrumbs={ breadcrumbs } />
         

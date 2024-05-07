@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit'
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { addProductCart } from '@/services/cart';
 
-
 export const getCart = createAsyncThunk(
   'user/cart',
   async (jwt) => {
@@ -21,6 +20,7 @@ export const getCart = createAsyncThunk(
 
 const initialState = {
   items: null,
+  totalPrice: 0,
   loading: 'idle',
 }
 
@@ -41,6 +41,17 @@ export const cartSlice = createSlice({
 
       addProductCart(action.payload.jwt, action.payload.userId, state.items.carts)
     },
+    getPrice: (state) => {
+      let price = 0;
+
+      if(state.items) {
+        state.items.carts.forEach(element => {
+          price += element.price
+        });
+      }
+
+      state.totalPrice = price
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(getCart.fulfilled, (state, action) => {
@@ -49,6 +60,6 @@ export const cartSlice = createSlice({
   },
 })
 
-export const { changeCart } = cartSlice.actions
+export const { changeCart, getPrice } = cartSlice.actions
 
 export default cartSlice.reducer
