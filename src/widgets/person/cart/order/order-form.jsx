@@ -4,9 +4,20 @@ import OrderProduct from '@/entities/personal/cart/order/order-product'
 import { getPrice } from '@/store/cart/cart.slice'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import InputMask from "react-input-mask";
 
 export default function OrderForm() {
     const dispatch = useDispatch()
+
+    const [policy, setPolicy] = useState(false)
+    const [fullname, setFullname] = useState("")
+    const [phone, setPhone] = useState("")
+    const [email, setEmail] = useState("")
+    const [city, setCity] = useState("")
+    const [adress, setAdress] = useState("")
+    const [entrance, setEntrance] = useState("")
+    const [apartment, setApartment] = useState("")
+    const [comment, setComment] = useState("")
 
     const cart = useSelector(state => state.cart.items)
     const productsItems = useSelector(state => state.products.items)
@@ -19,11 +30,56 @@ export default function OrderForm() {
         }
     })
 
-    console.log(cart)
+    function formSubmit(e) {
+        e.preventDefault()
+
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        const fullnameRegex = /^[А-ЯЁ][а-яё]{2,}\s[А-ЯЁ][а-яё]{1,}\s[А-ЯЁ][а-яё]{2,}$/
+
+        const sendData = {}
+
+        setFullname(fullname.trim())
+
+        // Проверка политики
+        if(policy) {
+
+            // Проверка ФИО
+            if(fullname.trim().match(fullnameRegex)) {
+                sendData.fullname = fullname
+            }
+            else {
+                alert('ФИО введёно неверно')
+            }
+
+            // Проверка номера телефона
+            if(phone) {
+                if(!phone.includes('_')) {
+                    sendData.phone = phone
+                }
+                else {
+                    alert('Номер введён неверно')
+                }
+            }
+            else {
+                alert('Номер введён неверно')
+            }
+
+            // Проверка почты
+            if(email.match(emailRegex)) {
+                sendData.email = email
+            } 
+            else {
+                alert('Email введено неверно')
+            }
+        }
+        else {
+            alert("Обязательно принять условия публичной оферты и политики конфиденциальности")
+        }
+    }
 
     if(cart && productsItems) {
         return (
-            <form className='flex flex-row mb-[140px] gap-[250px] mt-[77px]'>
+            <form onSubmit={e => formSubmit(e)} className='flex flex-row mb-[140px] gap-[250px] mt-[77px]'>
                 <div className='w-[50%]'>
                     <div className='mb-[130px]'>
                         <div className='mb-[15px]'>
@@ -34,37 +90,37 @@ export default function OrderForm() {
                     
                             <div className='mb-[15px]'>
                                 <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>ФИО</p>
-                                <input type='name' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов Иван Иванович' id='name' name='name' required/>
+                                <input type='name' value={fullname} onChange={e => setFullname(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов Иван Иванович' id='name' name='name' required/>
                             </div>
                     
                             <div className='mb-[15px]'>
                                 <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>Номер телефона</p>
-                                <input type='phone' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='+7 (999) 999-99-99' id='phone' name='phone' required/>
+                                <InputMask mask="+7 (999) 999-99-99" onChange={e => setPhone(e.target.value)} value={phone} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' id='PHONE' name='PHONE' placeholder='Телефон' />
                             </div>
                     
                             <div className='mb-[15px]'>
                                 <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>Электронная почта</p>
-                                <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='xxxxxxxx@xxxx.xxx' id='email' name='email' required/>
+                                <input type='email' value={email} onChange={e => setEmail(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='xxxxxxxx@xxxx.xxx' id='email' name='email' required/>
                             </div>
                     
                             <div className='mb-[15px]'>
                                 <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>Населённый пункт</p>
-                                <input type='city' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Москва, Московская область, Россия' id='city' name='city' required/>
+                                <input type='city' value={city} onChange={e => setCity(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Москва, Московская область, Россия' id='city' name='city'/>
                             </div>
                     
                             <div className='mb-[15px]'>
                                 <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>Улица и номер дома</p>
-                                <input type='address' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='ул.Татищева 73А' id='address' name='address' required/>
+                                <input type='address' value={adress} onChange={e => setAdress(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='ул.Татищева 73А' id='address' name='address'/>
                             </div>
                     
                             <div className='flex flex-row gap-[25px]'>
                                 <div className='w-[50%]'>
                                     <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>Номер подъезда</p>
-                                    <input type='address' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='4' id='entrance' name='entrance' required/>
+                                    <input type='address' value={entrance} onChange={e => setEntrance(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='4' id='entrance' name='entrance'/>
                                 </div>
                                 <div className='w-[50%]'>
                                     <p className='text-[#000] text-[20px] font-[500] mb-[15px]'>Номер квартиры</p>
-                                    <input type='address' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='17' id='number' name='number' required/>
+                                    <input type='address' value={apartment} onChange={e => setApartment(e.target.value)} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='17' id='number' name='number'/>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +169,7 @@ export default function OrderForm() {
                                 <h3 className='font-[500] text-[21px]'>Комментарий к заказу</h3>
                             </div>
                             <div>
-                                <textarea className="w-[100%] h-[140px] border-[2px] border-gray-400 border-solid focus:outline-orange-500 text-black font-semibold rounded-[10px] pl-[24px] pt-[18px] pb-[18px] resize-none" name="QUESTION"/>
+                                <textarea value={comment} onChange={e => setComment(e.target.value)} className="w-[100%] h-[140px] border-[2px] border-gray-400 border-solid focus:outline-orange-500 text-black font-semibold rounded-[10px] pl-[24px] pt-[18px] pb-[18px] resize-none" name="QUESTION"/>
                             </div>
                         </div>
                     </div>
@@ -150,7 +206,7 @@ export default function OrderForm() {
                     <div className='my-[20px]'>
                         <label for='accept'>
                             <label for='accept' className='absolute w-[30px] h-[30px]'>
-                                <input id='accept' type="checkbox" className='option-input2 w-[30px] h-[30px] checkbox absolute translate-y-[20px] translate-x-[10px]'/>
+                                <input id='accept' type="checkbox" checked={policy} onChange={e => setPolicy(e.target.checked)} className='option-input2 w-[30px] h-[30px] checkbox absolute translate-y-[20px] translate-x-[10px]'/>
                             </label>
     
                             <p className='ml-[60px] text-[20px] text-[#505050]'>Я принимаю условия <a href='#' className='text-[20px] text-[#000] underline'>публичной оферты</a> и <a href='#' className='text-[20px] text-[#000] underline'>политики конфеденциальности</a>, а также даю согласие на обработку персональных данных</p>
@@ -158,7 +214,7 @@ export default function OrderForm() {
                     </div>
     
                     <div className='flex flex-col gap-[17px] h-[10%]'>
-                        <button className='text-center text-[#fff] text-[22px] rounded-[10px] h-[50%] bg-[#f97316]'>Оформить заказ</button>
+                        <button type='submit' className='text-center text-[#fff] text-[22px] rounded-[10px] h-[50%] bg-[#f97316]'>Оформить заказ</button>
                         <a href='/personal/cart' className='text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[50%] bg-tranparent'>Вернуться к корзине</a>
                     </div>
                 </div>
