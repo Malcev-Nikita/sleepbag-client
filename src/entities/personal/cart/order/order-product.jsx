@@ -7,7 +7,7 @@ export default function OrderProduct({product, productsItems}) {
                 {productsItems.data.map(item => {
                     if(item.id == product.id) {
                         return (
-                            <Image alt='Изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.image.data[0].attributes.url} width='241' height='137' className='w-[100%] h-[170px] rounded-[7px]' />
+                            <Image key={item.id} alt='Изображение товара' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.image.data[0].attributes.url} width='241' height='137' className='w-[100%] h-[170px] rounded-[7px]' />
                         )                   
                     }
                 })}

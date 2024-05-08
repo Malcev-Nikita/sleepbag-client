@@ -218,7 +218,7 @@ export default function OrderForm() {
                         <p className='font-[600] text-[24px] mb-[35px]'>Ваш заказ</p>
                         
                         {cart.carts.map(item => 
-                            <OrderProduct product={item} productsItems={productsItems} />    
+                            <OrderProduct key={item.id} product={item} productsItems={productsItems} />    
                         )}
                         
                         <hr className='bg-[#8d8d8d] opacity-30 h-[2px]'/>
