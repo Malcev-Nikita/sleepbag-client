@@ -40,9 +40,9 @@ export default function CartPage() {
 
                         <h3 className='col2'>Товар</h3>
 
-                        <div className='cols flex flex-row justify-between w-[30%]'>
+                        <div className='cols flex flex-row justify-between w-[20%]'>
                             <h3>Цена за шт.</h3>
-                            <h3>Количество</h3>
+                            {/* <h3>Количество</h3> */}
                             <h3>Стоимость</h3>
                         </div>
                     </div>

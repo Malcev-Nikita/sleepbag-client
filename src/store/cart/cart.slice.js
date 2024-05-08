@@ -41,6 +41,11 @@ export const cartSlice = createSlice({
 
       addProductCart(action.payload.jwt, action.payload.userId, state.items.carts)
     },
+    cleanCart: (state, action) => {
+      state.items.carts = null
+
+      addProductCart(action.payload.jwt, action.payload.userId, null)
+    },
     getPrice: (state) => {
       let price = 0;
 
@@ -60,6 +65,6 @@ export const cartSlice = createSlice({
   },
 })
 
-export const { changeCart, getPrice } = cartSlice.actions
+export const { changeCart, cleanCart, getPrice } = cartSlice.actions
 
 export default cartSlice.reducer

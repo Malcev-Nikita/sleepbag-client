@@ -20,17 +20,17 @@ export default function CartProduct({product, productsItems}) {
                 })}
             </label>
 
-            <div className='prod_desc flex flex-col w-[31%] ml-[4%]'>
+            <div className='prod_desc flex flex-col w-[41%] ml-[4%]'>
                 <h4 className='font-semibold text-[20px]'>{product.name}</h4>
                 <p className='text-[18px]'>В наличии - {product.count} шт.</p>
             </div>
 
-            <div className='ml-[17%] flex flex-row justify-between w-[30%]'>
+            <div className='ml-[17%] flex flex-row justify-between w-[20%]'>
                 <div className='font-semibold'>
                     <p className='text-[22px] text-[#8d8d8d]'>{product.price} ₽</p>
                 </div>
 
-                <ButtonsCount product={product} />
+                {/* <ButtonsCount product={product} /> */}
 
                 <div className='flex flex-col'>
                     <p className='font-semibold text-[22px] pb-[28px] text-[#f97316]'>{product.price} ₽</p>

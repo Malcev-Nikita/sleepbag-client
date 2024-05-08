@@ -1,10 +1,11 @@
 'use client'
 
 import OrderProduct from '@/entities/personal/cart/order/order-product'
-import { getPrice } from '@/store/cart/cart.slice'
+import { cleanCart, getPrice } from '@/store/cart/cart.slice'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import InputMask from "react-input-mask";
+import { postOrder } from '@/services/personal/orders'
 
 export default function OrderForm() {
     const dispatch = useDispatch()
@@ -19,9 +20,13 @@ export default function OrderForm() {
     const [apartment, setApartment] = useState("")
     const [comment, setComment] = useState("")
 
+    const [canClick, setCanClick] = useState(true);
+
     const cart = useSelector(state => state.cart.items)
     const productsItems = useSelector(state => state.products.items)
     const price = useSelector(state => state.cart.totalPrice)
+    const userJwt = useSelector(state => state.user.userJwt)
+    const userData = useSelector(state => state.user.userData)
     
 
     useEffect(() => {
@@ -30,7 +35,7 @@ export default function OrderForm() {
         }
     })
 
-    function formSubmit(e) {
+    async function formSubmit(e) {
         e.preventDefault()
 
         const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -40,47 +45,74 @@ export default function OrderForm() {
 
         setFullname(fullname.trim())
 
-        // Проверка политики
-        if(policy) {
+        if (canClick) {
+            setCanClick(false);
 
-            sendData.city = city
-            sendData.adress = adress
-            sendData.entrance = entrance
-            sendData.apartment = apartment
-            sendData.comment = comment
+            // Проверка политики
+            if(policy && userJwt && price > 0) {
 
-            // Проверка ФИО
-            if(fullname.trim().match(fullnameRegex)) {
-                sendData.fullname = fullname
-            }
-            else {
-                alert('ФИО введёно неверно')
-            }
+                const currentDate = new Date();
+                const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
 
-            // Проверка номера телефона
-            if(phone) {
-                if(!phone.includes('_')) {
-                    sendData.phone = phone
+                sendData.user = cart.id
+                sendData.products = cart.carts
+                sendData.cost = price
+                sendData.status = 2
+                sendData.total_amount = price
+                sendData.delivery_address = city + " : " + adress + " : " + entrance + " : " + apartment
+                sendData.order_date = formattedDate
+                sendData.comment = comment
+
+                // Проверка ФИО
+                if(fullname.trim().match(fullnameRegex)) {
+                    sendData.fullname = fullname
+                }
+                else {
+                    alert('ФИО введёно неверно')
+                }
+
+                // Проверка номера телефона
+                if(phone) {
+                    if(!phone.includes('_')) {
+                        sendData.phone = phone
+                    }
+                    else {
+                        alert('Номер введён неверно')
+                    }
                 }
                 else {
                     alert('Номер введён неверно')
                 }
+
+                // Проверка почты
+                if(email.match(emailRegex)) {
+                    sendData.email = email
+                } 
+                else {
+                    alert('Email введено неверно')
+                }
+
+                if("fullname" in sendData && "phone" in sendData && "email" in sendData) {
+                    const res = await postOrder(userJwt, sendData)
+
+                    if(res.data) {
+                        dispatch(cleanCart({jwt: userJwt, userId: userData.id}))
+                        window.location.href = "/personal"
+                    }
+                }
+            }
+            else if(price == 0) {
+                alert("Корзина пуста")
             }
             else {
-                alert('Номер введён неверно')
+                alert("Обязательно принять условия публичной оферты и политики конфиденциальности")
             }
 
-            // Проверка почты
-            if(email.match(emailRegex)) {
-                sendData.email = email
-            } 
-            else {
-                alert('Email введено неверно')
-            }
-        }
-        else {
-            alert("Обязательно принять условия публичной оферты и политики конфиденциальности")
-        }
+            // Задержка перед следующем нажатием
+            setTimeout(() => {
+              setCanClick(true);
+            }, 2000); 
+          }
     }
 
     if(cart && productsItems) {
@@ -220,7 +252,7 @@ export default function OrderForm() {
                     </div>
     
                     <div className='flex flex-col gap-[17px] h-[10%]'>
-                        <button type='submit' className='text-center text-[#fff] text-[22px] rounded-[10px] h-[50%] bg-[#f97316]'>Оформить заказ</button>
+                        <button type='submit' disabled={!canClick} className='text-center text-[#fff] text-[22px] rounded-[10px] h-[50%] bg-[#f97316]'>Оформить заказ</button>
                         <a href='/personal/cart' className='text-center items-center flex justify-center text-[#000] text-[22px] border-[1px] border-black border-solid rounded-[10px] h-[50%] bg-tranparent'>Вернуться к корзине</a>
                     </div>
                 </div>
