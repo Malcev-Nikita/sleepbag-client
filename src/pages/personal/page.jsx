@@ -3,6 +3,7 @@ import CheckAuthUser from '@/features/check-auth-user';
 import GetUserInfo from '@/features/get-user-info';
 import UserForm from '@/widgets/person/user-form';
 import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
+import QuitButton from '@/shared/personal/quit-button';
 
 export default function PersonPage() {
     const breadcrumbs = [
@@ -113,8 +114,9 @@ export default function PersonPage() {
                     </div>
                     <p>Смотреть</p>
                 </a>
-            
             </section>
+
+            <QuitButton />
         </main>
     )
 }

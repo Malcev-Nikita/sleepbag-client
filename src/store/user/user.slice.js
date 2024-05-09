@@ -14,10 +14,14 @@ export const userSlice = createSlice({
     },
     setUserJwt(state, action) {
       state.userJwt = action.payload
+    },
+    quitUser(state) {
+      state.userData = null
+      state.userJwt = null
     }
   },
 })
 
-export const { setUserData, setUserJwt } = userSlice.actions
+export const { setUserData, setUserJwt, quitUser } = userSlice.actions
 
 export default userSlice.reducer

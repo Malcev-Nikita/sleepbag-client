@@ -2,7 +2,6 @@ import Image from 'next/image'
 
 
 export default function ProductNotAuth({ product }) {
-    console.log(product)
     return (
         <div className='catalog_object' key={product.id}>
             <div className='object_photo'>
