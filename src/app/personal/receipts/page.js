@@ -1,4 +1,4 @@
-import ReceiptsPage from "@/pages/personal/receipts/page";
+import ReceiptsPage from "@/windows/personal/receipts/page";
 
 export const metadata = {
     title: 'SleepBag Спальники-Органайзеры: Чеки',

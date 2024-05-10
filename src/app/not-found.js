@@ -1,4 +1,4 @@
-import NotFoundPage from '@/pages/not-found'
+import NotFoundPage from '@/windows/not-found'
  
 export default function NotFound() {
   return (

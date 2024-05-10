@@ -1,5 +1,5 @@
 import { getProductionContent, getBanners, getIndexPageContent, getStats, getTeasers, getWorks } from '@/services/index-page'
-import MainPage from '@/pages/page'
+import MainPage from '@/windows/page'
 
 
 export const metadata = {

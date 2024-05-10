@@ -1,4 +1,4 @@
-import RegPage from '@/pages/personal/reg/page';
+import RegPage from '@/windows/personal/reg/page';
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Регистрация',

@@ -1,4 +1,4 @@
-import AuthPage from '@/pages/personal/auth/page';
+import AuthPage from '@/windows/personal/auth/page';
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Авторизация',

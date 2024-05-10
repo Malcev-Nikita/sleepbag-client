@@ -1,4 +1,4 @@
-import CartPage from '@/pages/personal/cart/page';
+import CartPage from '@/windows/personal/cart/page';
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Корзина',

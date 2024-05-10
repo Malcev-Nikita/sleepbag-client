@@ -1,4 +1,4 @@
-import ContactsPage from "@/pages/contacts/page"
+import ContactsPage from "@/windows/contacts/page"
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Контакты',

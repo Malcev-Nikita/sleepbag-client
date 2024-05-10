@@ -1,4 +1,4 @@
-import OrdersPage from "@/pages/personal/orders/page"
+import OrdersPage from "@/windows/personal/orders/page"
 
 export const metadata = {
     title: 'SleepBag Спальники-Органайзеры: Оформление заказа',

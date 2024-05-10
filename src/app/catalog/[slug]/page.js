@@ -1,4 +1,4 @@
-import CatalogPageSlug from '@/pages/catalog/[slug]/page'
+import CatalogPageSlug from '@/windows/catalog/[slug]/page'
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Продукт',

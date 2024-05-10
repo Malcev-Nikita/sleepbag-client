@@ -1,4 +1,4 @@
-import PersonPage from '@/pages/personal/page';
+import PersonPage from '@/windows/personal/page';
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Личный кабинет',

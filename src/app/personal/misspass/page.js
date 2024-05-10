@@ -1,4 +1,4 @@
-import MisspassPage from '@/pages/personal/misspass/page';
+import MisspassPage from '@/windows/personal/misspass/page';
 
 export const metadata = {
   title: 'SleepBag Спальники-Органайзеры: Забыл пароль',
