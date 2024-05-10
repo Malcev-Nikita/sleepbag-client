@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getFooterContent } from "@/services/footer/footer";
 import BurgerBtn from "./burger-close";
 

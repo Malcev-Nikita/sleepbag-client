@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function Breadcrumbs({ breadcrumbs }) {
     return (
         <nav className="breadcrumb mobile_none pt-[135px]" aria-label="breadcrumbs">

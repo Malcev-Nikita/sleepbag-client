@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export default function OK({ href }) {
     return (
         <a href={ href } className='contacts_socials'> 

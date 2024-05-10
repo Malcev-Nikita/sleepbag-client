@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function OrderButtons({ order }) {
     if(order.attributes.status.data.id == 2) {
         return (

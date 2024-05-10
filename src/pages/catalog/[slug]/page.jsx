@@ -1,12 +1,12 @@
-import Link from 'next/link'
 import CatalogSwiper from '@/widgets/catalog/catalog-swiper'
 import CatalogSlugLike from '@/widgets/catalog/catalog-slug-like'
 import CatalogSlugCategories from '@/widgets/catalog/catalog-slug-categories'
 import CatalogSlugTabs from '@/widgets/catalog/catalog-slug-tabs'
 import { getProductSlug } from '@/services/catalog/page'
 import { markdown } from 'markdown'
-import { Breadcrumbs, BreadcrumbsMobile} from '@/widgets/breadcrumbs';
+import { Breadcrumbs} from '@/widgets/breadcrumbs';
 import ButtonChangeCartSlug from '@/shared/catalog/[slug]/button-change-cart-slug'
+import GetUserInfo from '@/features/get-user-info'
 
 export default async function CatalogPageSlug({ params }) {
     const productData = await getProductSlug(params.slug)
@@ -28,6 +28,8 @@ export default async function CatalogPageSlug({ params }) {
 
     return (
         <main className="container m-auto font-[Manrope]">
+            <GetUserInfo />
+
             <Breadcrumbs breadcrumbs={ breadcrumbs } />
             
             <section className='productData.data_card mobile_none flex gap-[35px] flex-row'>
