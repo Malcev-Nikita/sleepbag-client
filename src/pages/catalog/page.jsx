@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Catalog from '@/widgets/catalog/catalog'
 import Categories from '@/widgets/catalog/catalog-categories'
 import { getCatalogPageContent, getCategoriesProducts } from '@/services/catalog/page'
+import CatalogFilter from '@/widgets/catalog/catalog-filter'
 
 export default async function CatalogPage() {
     const data = await getCatalogPageContent()
@@ -54,11 +55,7 @@ export default async function CatalogPage() {
                         <div className='header_line_mobile hidden'></div>
                     </div>
                     
-                    <div className='catalog_filters mb-[70px]'>
-                    <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
-                    <input className='catalog_filter focus:outline-none' placeholder='Введите ширину багажного автомобиля'></input>
-                </div>
-                
+                    {/* <CatalogFilter /> */}
                 </section>
             </div>
             
