@@ -57,7 +57,6 @@ export default async function CatalogPage() {
                     <div className='catalog_filters mb-[70px]'>
                     <input className='catalog_filter' placeholder='Введите длину багажного автомобиля'></input>
                     <input className='catalog_filter focus:outline-none' placeholder='Введите ширину багажного автомобиля'></input>
-                    <button className='filter_button focus:outline-none'>Применить фильтры</button>
                 </div>
                 
                 </section>
