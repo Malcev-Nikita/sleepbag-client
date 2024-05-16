@@ -3,6 +3,7 @@
 import anime from "animejs"
 import { useDispatch, useSelector } from "react-redux"
 import { changeFavorites } from "@/store/favorites/favorites.slice"
+import { useState } from "react"
 
 function LikeClick() {
     Array.from(document.querySelectorAll('.cart')).forEach(cart => {

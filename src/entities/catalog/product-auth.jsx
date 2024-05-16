@@ -9,17 +9,16 @@ export default function ProductAuth({ favoritesItems, product }) {
             <div className='object_photo'>
                 <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + product.attributes.image.data[0].attributes.url} alt='Изображение товара' width={364} height={320}/>
 
-                {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : ('')}
-                {
-                    favoritesItems.favorites.map(favorite => {
+                {favoritesItems.favorites.length == 0 ? (<LikeCatalog id={product.id} active='false' />) : (
+                    favoritesItems.favorites.map((favorite, index) => {
                         if(product.id == favorite.id) {
-                            return (<LikeCatalog id={product.id} key={product.id} active='true' />)
+                            return <LikeCatalog id={product.id} key={index} active='true' />
                         }
                         else {
-                            return (<LikeCatalog id={product.id} key={product.id} active='false' />)
+                            return <LikeCatalog id={product.id} key={index} active='false' />
                         }
                     })
-                }
+                )}
             </div>
 
             <div className='object_desc'>

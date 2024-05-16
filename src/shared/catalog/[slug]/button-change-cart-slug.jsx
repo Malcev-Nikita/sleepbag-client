@@ -14,7 +14,7 @@ export default function ButtonChangeCartSlug({product}) {
         if (cart.carts.some(item => item.id === product.data[0].id)) {
             return (
                 <button onClick={() => dispatch(changeCart({product: product.data[0], jwt: userJwt, userId: userData.id}))} className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>
-                    Убрать из корзину
+                    Убрать из корзины
                 </button>
             );
         } 

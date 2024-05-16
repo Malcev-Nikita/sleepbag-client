@@ -39,6 +39,8 @@ export const favoritesSlice = createSlice({
         state.items.favorites.push(product)
       }
 
+      console.log(isExist)
+
       addFavorite(action.payload.jwt, action.payload.userId, state.items.favorites)
     },
   },
