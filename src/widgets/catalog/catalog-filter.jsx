@@ -9,13 +9,6 @@ export default function CatalogFilter() {
     const [width, setWidth] = useState("0мм")
 
     function lengthCheck(e) {
-        if(e.target.value.length <= 2) {
-            setLength("0мм")
-        }
-        else {
-            setLength(length.substring(1, length.length))
-        }
-
         if(e.target.value[e.target.value.length - 1].match(regex)) {
             setLength(length.substring(0, length.length - 2) + e.target.value[e.target.value.length - 1] + "мм")
         }
@@ -24,10 +17,26 @@ export default function CatalogFilter() {
         }
     }
 
+    function widthCheck(e) {
+        if(e.target.value[e.target.value.length - 1].match(regex)) {
+            setWidth(width.substring(0, width.length - 2) + e.target.value[e.target.value.length - 1] + "мм")
+        }
+        else if(e.target.value.length < width.length) {
+            setWidth(width.substring(0, width.length - 3) +"мм")
+        }
+    }
+
     return (
-        <div className='catalog_filters mb-[70px]'>
-            <input onChange={e => lengthCheck(e)} value={length} className='catalog_filter' placeholder='Введите длину багажного автомобиля' />
-            <input className='catalog_filter' value={width} placeholder='Введите ширину багажного автомобиля' />
+        <div className='catalog_filters mb-[40px]'>
+            <div className="flex flex-col">
+                <label htmlFor="input_length" className="text-[20px] font-medium mb-[10px]">Введите длину багажного автомобиля</label>
+                <input onChange={e => lengthCheck(e)} value={length} id="input_length" className='catalog_filter' placeholder='Введите длину багажного автомобиля' />
+            </div>
+
+            <div className="flex flex-col">
+                <label htmlFor="input_length" className="text-[20px] font-medium mb-[10px]">Введите ширину багажного автомобиля</label>
+                <input className='catalog_filter' onChange={e => widthCheck(e)} value={width} placeholder='Введите ширину багажного автомобиля' />
+            </div>
         </div>
     )
 }

@@ -55,7 +55,7 @@ export default async function CatalogPage() {
                         <div className='header_line_mobile hidden'></div>
                     </div>
                     
-                    {/* <CatalogFilter /> */}
+                    <CatalogFilter />
                 </section>
             </div>
             
