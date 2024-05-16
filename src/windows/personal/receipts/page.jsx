@@ -11,7 +11,7 @@ export default function ReceiptsPage() {
     ]
     
     return (
-        <main className="container m-auto">
+        <main className="container m-auto min-h-[100vh]">
             <CheckAuthUser />
             
             <GetUserInfo />
