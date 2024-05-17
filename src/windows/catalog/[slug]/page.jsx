@@ -32,7 +32,7 @@ export default async function CatalogPageSlug({ params }) {
 
             <Breadcrumbs breadcrumbs={ breadcrumbs } />
             
-            <section className='productData.data_card mobile_none flex gap-[35px] flex-row'>
+            <section className='productData.data_card flex gap-[35px] flex-row'>
                 <div className='w-[50%]'>
                     <CatalogSwiper images={productData.data[0].attributes.image.data} />           
                 </div>
@@ -69,11 +69,28 @@ export default async function CatalogPageSlug({ params }) {
                             <button className='bg-[#e6e9ec] items-center justify-center aspect-square w-[7%]'>+</button>
                         </div> */}
                     </div>
-                    <div className='productData.data_buttons flex flex-row items-center pb-[20px] gap-[15px]'>
+                    <div className='productData.data_buttons flex flex-row items-center pb-[20px] gap-[15px] relative'>
                         <ButtonChangeCartSlug product={productData} />
                         {/* <button className='rounded-[10px] border-solid border-[#000] border-[1px] tracking-widest w-[35%] h-[56px] text-[18px] items-center justify-center'>Купить сейчас</button> */}
 
                         <CatalogSlugLike productId={ productData.data[0].id } />
+
+                        <div className="notication_catalog absolute top-[100%] bg-[#F4F4F4] px-[18px] py-[24px] rounded-[6px]">
+                            <div className="">
+                                <button className="notification_catalog_close absolute top-[10px] right-[20px]">
+                                    <span className='w-[1.5px] h-[18px] bg-[#1A1A1A] block rotate-[45deg] opacity-60 absolute' />
+                                    <span className='w-[1.5px] h-[18px] bg-[#1A1A1A] block rotate-[-45deg] opacity-60 absolute' />
+                                </button>
+
+                                <h3 className='font-semibold text-[#121212] text-[18px]'>
+                                    Органайзер «SleepBag 01»
+                                </h3>
+
+                                <p className='text-[#8D8D8D] text-[16px] font-normal mt-[16px]'>
+                                    Товар добавлен в корзину
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     
                     <p className='category_text text-[#8d8d8d]'>Категория: 
@@ -86,14 +103,15 @@ export default async function CatalogPageSlug({ params }) {
 
             <CatalogSlugTabs detailDescription={ detailDescription } otherInfo={ otherInfo } />
 
-            <section className='mobile_none'>
+            <section className=''>
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
                 
                 <CatalogSlugCategories categories={productData.data[0].attributes.categories.data} productIndex={productData.data[0]} />
             </section>
             
+
             {/* Мобилка */}
-            <section className='productData.data_card mobile_block flex flex-col'>
+            {/* <section className='productData.data_card mobile_block flex flex-col'>
                 <div>
                     <productSwiper />           
                 </div>
@@ -136,8 +154,7 @@ export default async function CatalogPageSlug({ params }) {
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
 
                 <CatalogSlugCategories categories={productData.data[0].attributes.categories.data} productIndex={productData.data[0]} />
-            </section>
-
+            </section> */}
         </main>
     )
 }

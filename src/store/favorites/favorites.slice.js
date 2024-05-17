@@ -13,6 +13,13 @@ export const getFavorites = createAsyncThunk(
         'Authorization': `Bearer ${jwt}`,
       },
     });
+
+    if(!response.ok) {
+      localStorage.removeItem('userJWT')
+      localStorage.removeItem('userData')
+
+      window.location.href = window.location.pathname
+    }
       
     return response.json();
   }
@@ -38,8 +45,6 @@ export const favoritesSlice = createSlice({
       else {
         state.items.favorites.push(product)
       }
-
-      console.log(isExist)
 
       addFavorite(action.payload.jwt, action.payload.userId, state.items.favorites)
     },

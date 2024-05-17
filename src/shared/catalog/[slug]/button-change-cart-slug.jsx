@@ -9,18 +9,22 @@ export default function ButtonChangeCartSlug({product}) {
     const cart = useSelector(state => state.cart.items)
     const userJwt = useSelector(state => state.user.userJwt)
     const userData = useSelector(state => state.user.userData)
+
+    function clickButton(productChange) {
+        dispatch(changeCart({product: productChange, jwt: userJwt, userId: userData.id}))
+    }
     
     if(cart && userJwt && userData) {
         if (cart.carts.some(item => item.id === product.data[0].id)) {
             return (
-                <button onClick={() => dispatch(changeCart({product: product.data[0], jwt: userJwt, userId: userData.id}))} className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>
+                <button onClick={() => clickButton(product.data[0])} className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>
                     Убрать из корзины
                 </button>
             );
         } 
         else {
             return (
-                <button onClick={() => dispatch(changeCart({product: product.data[0], jwt: userJwt, userId: userData.id}))} className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>
+                <button onClick={() => clickButton(product.data[0])} className='rounded-[10px] bg-[#f97316] w-[35%] h-[56px] text-[#fff] text-[18px] items-center justify-center tracking-widest'>
                     Добавить в корзину
                 </button>
             );

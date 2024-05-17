@@ -16,8 +16,8 @@ export default function CatalogSlugLike({ productId }) {
 
     let likeCatalog = null;
 
-    if (userJWT && favoritesItems) {
-        favoritesItems.favorites.forEach(favorite => {
+    if (userJWT && favoritesItems && "favorites" in favoritesItems) {
+        favoritesItems.favorites.map(favorite => {
             if (productId === favorite.id) {
                 likeCatalog = <LikeCatalogBlack id={productId} key={productId} active='true' />
             }
