@@ -75,22 +75,7 @@ export default async function CatalogPageSlug({ params }) {
 
                         <CatalogSlugLike productId={ productData.data[0].id } />
 
-                        <div className="notication_catalog absolute top-[100%] bg-[#F4F4F4] px-[18px] py-[24px] rounded-[6px]">
-                            <div className="">
-                                <button className="notification_catalog_close absolute top-[10px] right-[20px]">
-                                    <span className='w-[1.5px] h-[18px] bg-[#1A1A1A] block rotate-[45deg] opacity-60 absolute' />
-                                    <span className='w-[1.5px] h-[18px] bg-[#1A1A1A] block rotate-[-45deg] opacity-60 absolute' />
-                                </button>
-
-                                <h3 className='font-semibold text-[#121212] text-[18px]'>
-                                    Органайзер «SleepBag 01»
-                                </h3>
-
-                                <p className='text-[#8D8D8D] text-[16px] font-normal mt-[16px]'>
-                                    Товар добавлен в корзину
-                                </p>
-                            </div>
-                        </div>
+                        <div className="notication_catalog absolute top-[90%] flex flex-col gap-[10px]" />
                     </div>
                     
                     <p className='category_text text-[#8d8d8d]'>Категория: 
