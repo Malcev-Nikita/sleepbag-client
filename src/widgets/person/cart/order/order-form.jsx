@@ -35,6 +35,14 @@ export default function OrderForm() {
         }
     })
 
+    useEffect(() => {
+        if(userData) {
+            setFullname(userData.surname + " " + userData.name);
+            setPhone(userData.phone);
+            setEmail(userData.email);
+        }
+    }, [userData]);
+
     async function formSubmit(e) {
         e.preventDefault()
 
