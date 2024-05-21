@@ -105,7 +105,7 @@ export default function OrderForm() {
 
                     if(res.data) {
                         dispatch(cleanCart({jwt: userJwt, userId: userData.id}))
-                        window.location.href = "/personal"
+                        window.location.href = "/personal/cart/order/access"
                     }
                 }
             }
