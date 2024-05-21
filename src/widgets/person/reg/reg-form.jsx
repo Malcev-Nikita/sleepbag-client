@@ -29,7 +29,12 @@ export default function RegForm() {
             }
         }
         else {
-            alert('Ошибка данных')
+            if (password.length < 6) {
+                alert('Пароль должен быть больше 6 символов')
+            }
+            else {
+                alert('Ошибка данных')
+            }
         }
     }
 
