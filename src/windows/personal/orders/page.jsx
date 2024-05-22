@@ -11,7 +11,7 @@ export default function OrdersPage() {
     ]
 
     return(
-        <main className="container m-auto">
+        <main className="min-h-[100vh] container m-auto">
             <CheckAuthUser />
 
             <GetUserInfo />
