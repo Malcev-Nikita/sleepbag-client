@@ -32,7 +32,7 @@ export default async function CatalogPageSlug({ params }) {
 
             <Breadcrumbs breadcrumbs={ breadcrumbs } />
             
-            <section className='productData.data_card flex gap-[35px] flex-row'>
+            <section className='productData.data_card mobile_none flex gap-[35px] flex-row'>
                 <div className='w-[50%]'>
                     <CatalogSwiper images={productData.data[0].attributes.image.data} />           
                 </div>
@@ -88,7 +88,7 @@ export default async function CatalogPageSlug({ params }) {
 
             <CatalogSlugTabs detailDescription={ detailDescription } otherInfo={ otherInfo } />
 
-            <section className=''>
+            <section className='mobile_none'>
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
                 
                 <CatalogSlugCategories categories={productData.data[0].attributes.categories.data} productIndex={productData.data[0]} />
@@ -96,9 +96,13 @@ export default async function CatalogPageSlug({ params }) {
             
 
             {/* Мобилка */}
-            {/* <section className='productData.data_card mobile_block flex flex-col'>
-                <div>
+            <section className='productData.data_card mobile_block flex flex-col'>
+                {/* <div>
                     <productSwiper />           
+                </div> */}
+                
+                <div className='w-[100%]'>
+                    <CatalogSwiper images={productData.data[0].attributes.image.data} />           
                 </div>
 
                 <div className=''>
@@ -139,7 +143,7 @@ export default async function CatalogPageSlug({ params }) {
                 <h3 className='text-[20px] pb-[40px] font-[600]'>СМОТРИТЕ ТАКЖЕ</h3>
 
                 <CatalogSlugCategories categories={productData.data[0].attributes.categories.data} productIndex={productData.data[0]} />
-            </section> */}
+            </section>
         </main>
     )
 }

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function OrderProduct({product, productsItems}) {
     return (
-        <div className='flex flex-row justify-between py-[25px]'>
+        <div className='flex gap-[35px] flex-row justify-between py-[25px]'>
             <div className='w-[50%]'>
                 {productsItems.data.map(item => {
                     if(item.id == product.id) {

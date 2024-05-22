@@ -30,12 +30,12 @@ export default function CatalogFilter() {
         <div className='catalog_filters mb-[40px]'>
             <div className="flex flex-col">
                 <label htmlFor="input_length" className="text-[20px] font-medium mb-[10px]">Введите длину багажного автомобиля</label>
-                <input onChange={e => lengthCheck(e)} value={length} id="input_length" className='catalog_filter' placeholder='Введите длину багажного автомобиля' />
+                <input onChange={e => lengthCheck(e)} id="input_length" className='catalog_filter' placeholder='Введите длину багажного автомобиля' />
             </div>
 
             <div className="flex flex-col">
                 <label htmlFor="input_length" className="text-[20px] font-medium mb-[10px]">Введите ширину багажного автомобиля</label>
-                <input className='catalog_filter' onChange={e => widthCheck(e)} value={width} placeholder='Введите ширину багажного автомобиля' />
+                <input className='catalog_filter' onChange={e => widthCheck(e)} placeholder='Введите ширину багажного автомобиля' />
             </div>
         </div>
     )

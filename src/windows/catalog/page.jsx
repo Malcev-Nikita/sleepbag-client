@@ -39,7 +39,7 @@ export default async function CatalogPage() {
                 
                 <Categories data={categoriesProducts.data} />
                     
-                <div className='catalog_view_all justify-end pb-[70px]'>
+                {/* <div className='catalog_view_all justify-end pb-[70px]'>
                     <button>
                         <span className='text-[#f97316]' dangerouslySetInnerHTML={categories_button()} />
 
@@ -47,7 +47,7 @@ export default async function CatalogPage() {
                             <path d="M9.30864 9.625L14 5.625M14 5.625L9.30864 1.625M14 5.625L0.518518 5.625" stroke="#F97316" stroke-linecap="square"/>
                         </svg>
                     </button>
-                </div>
+                </div> */}
 
                 <div className='section_header flex items-center mb-[40px]'>
                     <div className='header_line'></div>
