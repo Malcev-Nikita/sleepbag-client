@@ -1060,10 +1060,15 @@ li span{
   gap: 10px;
   background-color: #e6e9ec;
   font-size: 18px;
-  font-weight:500;
+  font-weight: 500;
   height: 65px;
   width: calc(21% - 20px);
   transition: .2s;
+}
+
+.catalog_category_mobile svg {
+  height: 15px;
+  width: 16px;
 }
 .product_photo img{
   position: relative !important;
