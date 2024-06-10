@@ -73,7 +73,7 @@ export default function Categories({data}) {
     };
 
     return (
-        <div className={`${isLargeScreen ? 'catalog_categories pb-[43px]' : 'catalog_categories_mobile overflow-hidden w-[100%] flex flex-col bg-[#E6E9EC] rounded-[7px] relative ml-[2.5%] mb-[43px] mt-[12px] px-[25px] py-[26px]'}`}>
+        <div className={`${isLargeScreen ? 'catalog_categories pb-[43px]' : 'catalog_categories_mobile overflow-hidden h-[68px] w-[100%] flex flex-col bg-[#E6E9EC] rounded-[7px] relative ml-[2.5%] mb-[43px] mt-[12px] px-[25px] py-[26px]'}`}>
             {isLargeScreen ? null : (
                 <div className="w-[100%] pb-[26px] flex justify-between items-center" onClick={e => toggleCategory(e)}>
                     <div className="flex gap-[15px] items-center">

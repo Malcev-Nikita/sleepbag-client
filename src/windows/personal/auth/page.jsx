@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import AuthForm from '@/widgets/person/auth/auth-form';
+import AuthFormMobile from '@/widgets/person/auth/auth-form-mobile';
 
 export default function AuthPage() {
     return (
@@ -16,27 +17,7 @@ export default function AuthPage() {
                 
                 <hr className='my-[30px] opacity-60 h-[2px] bg-[#cacaca]'/>
                 
-                <div className='mobile_block_code flex flex-col'>
-                    <div className='flex flex-col gap-[30px]'>        
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Введите ваш адрес эл.почты</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
-                        </div>
-
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Введите пароль</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Пароль' id='pass' name='pass' required/>
-                        </div>
-                    </div>
-
-                    <div className='flex flex-col text-[#fff] text-[21px]'>
-                        <a href='/personal/misspass' className='text-right font-semibold text-[#f97316] text-[21px] pt-[15px]'>Забыли пароль?</a>                    
-                        
-                        <button type='submit' className='mt-[15px] flex justify-center items-center text-white bg-[#f97316] h-[62px] text-[23px] rounded-xl'>Продолжить</button>
-                        
-                        <p className='text-right mt-[15px]'>У вас ещё нет аккаунта? <a href='/personal/reg' className='text-right font-semibold text-[#f97316] pt-[15px]'>Зарегистрироваться</a></p>
-                    </div>
-                </div>
+                <AuthFormMobile />
             </section>
 
             <div className='mobile_none container m-auto flex justify-center'>

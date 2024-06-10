@@ -75,12 +75,14 @@ export default function CartPage() {
             
             <form className='mobile_form bg-[#f4f4f4] rounded-[32px] ml-[2%] mt-[20px] p-[15px] flex flex-col'>
                 
-                <div className='flex flex-row justify-end'>
-                <label className='flex col_all text-[22px] flex-row'>
-                    <label for='all' className='absolute'>
-                    <input id='all' type="checkbox" className='option-input checkbox top-[-17px] right-[37px] absolute hidden translate-y-[20px] translate-x-[10px]'/>
-                    </label> Выбрать всё</label>
-                </div>
+                {/* <div className='flex flex-row justify-end'>
+                    <label className='flex col_all text-[22px] flex-row'>
+                        <label for='all' className='absolute'>
+                            <input id='all' type="checkbox" className='option-input checkbox top-[-17px] right-[37px] absolute hidden translate-y-[20px] translate-x-[10px]'/>
+                        </label> 
+                        Выбрать всё
+                    </label>
+                </div> */}
                 
                 <hr className='mt-[20px] h-[2px] opacity-30 bg-[#8d8d8d] mb-[25px]'/>
                 

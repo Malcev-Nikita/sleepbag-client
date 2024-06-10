@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import RegForm from '@/widgets/person/reg/reg-form';
+import RegFormMobile from '@/widgets/person/reg/reg-form-mobile';
 
 export default function RegPage() {
     return (
@@ -14,39 +15,7 @@ export default function RegPage() {
                 
                 <hr className='my-[30px] opacity-60 h-[2px] bg-[#cacaca]'/>
                     
-                <div className='mobile_block_code flex flex-col'>
-                    <div className='flex flex-col gap-[30px]'>
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Введите ваш адрес эл.почты</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='E-mail' id='email' name='email' required/>
-                        </div>
-
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Введите имя</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иван' id='email' name='email' required/>
-                        </div>
-
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Введите фамилию</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов' id='email' name='email' required/>
-                        </div>
-
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Введите ваш номер телефона</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='+7 999 999 99 99' id='email' name='email' required/>
-                        </div>
-
-                        <div>
-                            <p className='text-[#fff] text-[23px] mb-[15px]'>Придумайте пароль</p>
-                            <input type='email' className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Пароль' id='pass' name='pass' required/>
-                        </div>
-                    </div>
-
-                    <div className='flex flex-col text-[#fff] mt-[35px] text-[21px]'>
-                        <button type='submit' className='flex justify-center items-center text-white bg-[#f97316] h-[62px] text-[23px] rounded-xl'>Зарегистрироваться</button>
-                        <p className='text-center mt-[15px]'>Уже есть аккаунт? <a href='/personal/auth' className='text-right font-semibold text-[#f97316] pt-[15px]'>Войти</a></p>
-                    </div>
-                </div>
+                <RegFormMobile />
             </section>
 
             <div className='mobile_none container m-auto flex justify-center'>
