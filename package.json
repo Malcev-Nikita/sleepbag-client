@@ -19,7 +19,8 @@
     "react-input-mask": "^2.0.4",
     "react-redux": "^9.1.0",
     "reselect": "^5.1.0",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "yookassa": "^0.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
