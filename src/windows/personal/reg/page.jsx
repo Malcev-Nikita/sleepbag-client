@@ -11,7 +11,7 @@ export default function RegPage() {
             <Image alt='Фоновое изображение' className='forgot_pass_mobile hidden aspect-video w-[100%] h-[120vh] object-cover' src='/bg/forgot_pass_mobile.png' width={1920} height={1080}/>
 
             <section className='mobile_block font-[Manrope] absolute translate-y-[-110%] container m-auto flex justify-center'>
-                <header className='text-[28px] font-[Unbounded] font-[700] text-[#F97316]'>РЕГИСТРАЦИЯ</header>
+                <header className='mobile_block_header_reg text-[28px] font-[Unbounded] font-[700] text-[#F97316]'>РЕГИСТРАЦИЯ</header>
                 
                 <hr className='my-[30px] opacity-60 h-[2px] bg-[#cacaca]'/>
                     

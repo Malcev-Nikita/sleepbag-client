@@ -212,7 +212,7 @@
 }
 
 .header_banner_bg {
-  filter: brightness(0.6);
+  filter: brightness(0.9);
 }
 .banners_buttons{
   margin-top: 95px;
@@ -2569,5 +2569,13 @@ li span{
   .header_nav{
     border-radius: 0;
     width: 100vw;
+  }
+}
+@media (min-width: 320px) and (max-width: 429px){
+  .mobile_block_header{
+    margin-top: -150px;
+  }
+  .mobile_block_header_reg{
+    margin-top: -900px;
   }
 }

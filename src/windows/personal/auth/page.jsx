@@ -11,7 +11,7 @@ export default function AuthPage() {
             <Image alt='Фоновое изображение' className='forgot_pass_mobile hidden aspect-video w-[100%] h-[100vh] object-cover' src='/bg/forgot_pass_mobile.png' width={1920} height={1080}/>
             
             <section className='mobile_block absolute translate-y-[-140%] container m-auto flex justify-center'>
-                <header className='text-[28px] font-[Unbounded] font-[700] text-[#F97316]'>
+                <header className='mobile_block_header text-[28px] font-[Unbounded] font-[700] text-[#F97316]'>
                     АВТОРИЗАЦИЯ
                 </header>
                 
