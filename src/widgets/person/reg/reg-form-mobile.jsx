@@ -53,7 +53,7 @@ export default function RegFormMobile() {
 
                 <div>
                     <p className='text-[#fff] text-[23px] mb-[15px]'>Введите фамилию</p>
-                    <input type='text' name='surname' onChange={(e) => setSurname(e.target.value)} value={surname} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов' id='surname' name='surname' required/>
+                    <input type='text' name='surname' onChange={(e) => setSurname(e.target.value)} value={surname} className='w-[100%] h-[62px] focus:outline-orange-500 border-[1px] border-gray-500 text-xl pl-[27px] pb-[20px] pt-[20px] rounded-xl' placeholder='Иванов' id='surname' required/>
                 </div>
 
                 <div>

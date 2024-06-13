@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import InputMask from "react-input-mask";
 import { postOrder } from '@/services/personal/orders'
-import YookassaCreatePayment from '@/services/yookassa/create-payment'
+// import YookassaCreatePayment from '@/services/yookassa/create-payment'
 
 
 export default function OrderForm() {
@@ -107,25 +107,26 @@ export default function OrderForm() {
 
                     if(res.data) {
                         dispatch(cleanCart({jwt: userJwt, userId: userData.id}))
+                        
+                        window.location.href = '/personal/cart/order/access';
+                        // const response = await fetch(YookassaCreatePayment, {
+                        //     method: 'POST',
+                        //     headers: {
+                        //         'Content-Type': 'application/json'
+                        //     },
+                        //     body: JSON.stringify({
+                        //         cost: sendData.cost,
+                        //         description: `Заказ на сумму ${sendData.cost}`
+                        //     })
+                        // });
 
-                        const response = await fetch(YookassaCreatePayment, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                cost: sendData.cost,
-                                description: `Заказ на сумму ${sendData.cost}`
-                            })
-                        });
+                        // const payment = await response.json();
 
-                        const payment = await response.json();
-
-                        if (payment.confirmation && payment.confirmation.confirmation_url) {
-                            window.location.href = payment.confirmation.confirmation_url;
-                        } else {
-                            alert('Ошибка при создании платежа');
-                        }
+                        // if (payment.confirmation && payment.confirmation.confirmation_url) {
+                        //     window.location.href = payment.confirmation.confirmation_url;
+                        // } else {
+                        //     alert('Ошибка при создании платежа');
+                        // }
                     }
                 }
             }
