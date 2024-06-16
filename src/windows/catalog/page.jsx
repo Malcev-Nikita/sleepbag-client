@@ -49,13 +49,13 @@ export default async function CatalogPage() {
                     </button>
                 </div> */}
 
-                <div className='section_header flex items-center mb-[40px]'>
-                    <div className='header_line'></div>
+                    {/* <div className='section_header flex items-center mb-[40px]'>
+                        <div className='header_line'></div>
                         <h2>ФИЛЬТРЫ</h2>
                         <div className='header_line_mobile hidden'></div>
                     </div>
-                    
-                    <CatalogFilter />
+                        
+                    <CatalogFilter /> */}
                 </section>
             </div>
             

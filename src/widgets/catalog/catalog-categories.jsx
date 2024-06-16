@@ -52,7 +52,7 @@ export default function Categories({data}) {
 
         if(isLargeScreen) {
             return (
-                <button className="category_button" key={category.id} data-category-slug={category.attributes.slug} onClick={() => dispatch(categoryChange(category.attributes.slug))}>
+                <button className="category_button catalog_category" key={category.id} data-category-slug={category.attributes.slug} onClick={() => dispatch(categoryChange(category.attributes.slug))}>
                     <div dangerouslySetInnerHTML={svg()} />
                     <p>{category.attributes.name}</p>
                 </button>
@@ -63,7 +63,7 @@ export default function Categories({data}) {
                 <div className="catalog_category_mobile">
                     <hr className="bg-[#B9B9B9] h-[2px]" />
 
-                    <button className="category_button" key={category.id} data-category-slug={category.attributes.slug} onClick={() => dispatch(categoryChange(category.attributes.slug))}>
+                    <button className="category_button w-[100%] flex items-center gap-[8px] py-[15px]" key={category.id} data-category-slug={category.attributes.slug} onClick={() => dispatch(categoryChange(category.attributes.slug))}>
                         <div className="" dangerouslySetInnerHTML={svg()} />
                         <p className="text-[12px] font-semibold">{category.attributes.name}</p>
                     </button>
